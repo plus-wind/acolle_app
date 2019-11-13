@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 #users controller
   get '/mypage', to: 'users#show'
-  patch '/uesrs', to: 'users#change'
+  patch '/users', to: 'users#change'
 #users/registrations controller
   namespace :user do
     get '/unsubscribe', to: 'registrations#unsubscribe'
