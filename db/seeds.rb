@@ -259,9 +259,9 @@ Song.create!(
 User.create!(
   [
     {
-      name_familry_kanji: "田中",
+      name_family_kanji: "田中",
       name_first_kanji: "一郎",
-      name_familry_furigana: "たなか",
+      name_family_furigana: "たなか",
       name_first_furigana: "いちろう",
       postal_code: "1234567",
       address_prefecture: "北海道",
@@ -274,9 +274,9 @@ User.create!(
       delete_flag: "0",
     },
     {
-      name_familry_kanji: "鈴木",
+      name_family_kanji: "鈴木",
       name_first_kanji: "二郎",
-      name_familry_furigana: "すずき",
+      name_family_furigana: "すずき",
       name_first_furigana: "じろう",
       postal_code: "7654321",
       address_prefecture: "神奈川県",
