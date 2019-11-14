@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def order
-    @user = User.find(1)
+    @users = User.all
   end
 
   def confirmation

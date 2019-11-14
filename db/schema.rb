@@ -154,9 +154,9 @@ ActiveRecord::Schema.define(version: 2019_11_13_060634) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name_familry_kanji", null: false
+    t.string "name_family_kanji", null: false
     t.string "name_first_kanji", null: false
-    t.string "name_familry_furigana", null: false
+    t.string "name_family_furigana", null: false
     t.string "name_first_furigana", null: false
     t.string "postal_code", null: false
     t.string "address_prefecture", null: false
