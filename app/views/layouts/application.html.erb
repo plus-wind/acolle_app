@@ -14,20 +14,21 @@
         <nav class="nav navbar-nav navbar-left">
          <span>Acolle</span>
         </nav>
+        <nav class="nav navbar-nav navbar-"
       <nav>
         <ul class="nav navbar-nav navbar-right">
 
 
         <% if user_signed_in? %>
         <li>
-          <%= link_to " 商品", user_path(current_user.id), class:"glyphicon glyphicon-home home" %>
+          <%= link_to " 商品", root_path, class:"glyphicon glyphicon-home home" %>
         </li>
 
         <li>
           <%= link_to  user.name, users_path(current_user.id), class:"glyphicon glyphicon-user users" %>
         </li>
         <li>
-          <%= link_to " カート", books_path, class:"glyphicon glyphicon-book books" %>
+          <%= link_to " カート", carts_path(current_user.id), class:"glyphicon glyphicon-cart carts" %>
           </a>
         </li>
 
