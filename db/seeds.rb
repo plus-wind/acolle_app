@@ -14,7 +14,7 @@ Address.create!(
       user_id: "1",
       delivery_name_family_kanji: "橋下",
       delivery_name_first_kanji: "三郎",
-      delivery_name_family_furigana: "ハシモト"
+      delivery_name_family_furigana: "ハシモト",
       delivery_name_first_furigana: "サブロウ",
       delivery_postal_code: "0000000",
       delivery_address_prefecture: "北海道",
@@ -26,7 +26,7 @@ Address.create!(
       user_id: "2",
       delivery_name_family_kanji: "高橋",
       delivery_name_first_kanji: "四郎",
-      delivery_name_family_furigana: "タカハシ"
+      delivery_name_family_furigana: "タカハシ",
       delivery_name_first_furigana: "シロウ",
       delivery_postal_code: "1234567",
       delivery_address_prefecture: "北海道",
@@ -40,7 +40,7 @@ Address.create!(
 Admin.create!(
              email: "admin@example.jp",
              password:  "11111111",
-             password_confirmation: "11111111"
+             password_confirmation: "11111111",
              admin: true)
 #arrivals_seed
 Arrival.create!(
@@ -95,7 +95,7 @@ Contact.create!(
         user_id: "2",
         category: "1",
         contact_status: "0",
-        text: "You're rock!! cancel that !!!!!! WHAT A HELL"
+        text: "You're rock!! cancel that !!!!!! WHAT A HELL",
         reply_text: "reply to: You're rock!! cancel that !!!!!! WHAT A HELL",
     }
   ]
@@ -170,14 +170,14 @@ Order_item.create!(
     {
       order_id: "1",
       item_id: "1",
-      order_price: "2000"
-      order_number: "1"
+      order_price: "2000",
+      order_number: "1",
     },
     {
       order_id: "2",
       item_id: "2",
-      order_price: "3000"
-      order_number: "1"
+      order_price: "3000",
+      order_number: "1",
     }
   ]
 )
@@ -188,7 +188,7 @@ Order.create!(
       user_id: "1",
       delivery_name_family_kanji: "橋下",
       delivery_name_first_kanji: "三郎",
-      delivery_name_family_furigana: "ハシモト"
+      delivery_name_family_furigana: "ハシモト",
       delivery_name_first_furigana: "サブロウ",
       delivery_postal_code: "0000000",
       delivery_address_prefecture: "北海道",
@@ -203,7 +203,7 @@ Order.create!(
       user_id: "1",
       delivery_name_family_kanji: "高橋",
       delivery_name_first_kanji: "四郎",
-      delivery_name_family_furigana: "タカハシ"
+      delivery_name_family_furigana: "タカハシ",
       delivery_name_first_furigana: "シロウ",
       delivery_postal_code: "1234567",
       delivery_address_prefecture: "北海道",
