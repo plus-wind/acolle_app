@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 #contacts controller
   resources :contacts, only:[:create, :new]
 
-namespace :admin do
+namespace :admins do
 #admins/orders controller
   get '/orders', to: 'orders#index'
   patch '/orders/:id', to: 'orders#change'
