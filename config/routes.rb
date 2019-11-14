@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/mypage', to: 'users#show'
   patch '/users', to: 'users#change'
 #users/registrations controller
-  namespace :user do
+  namespace :users do
     get '/unsubscribe', to: 'registrations#unsubscribe'
     get '/unsubscribe/complete', to: 'registrations#complete'
   end

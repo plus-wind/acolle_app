@@ -40,8 +40,7 @@ Address.create!(
 Admin.create!(
              email: "admin@example.jp",
              password:  "11111111",
-             password_confirmation: "11111111",
-             admin: true)
+)
 #arrivals_seed
 Arrival.create!(
   [
@@ -105,11 +104,11 @@ Disc.create!(
   [
     {
       item_id: '1',
-      disk_name: 'disk1',
+      disc_name: 'disk1',
     },
     {
       item_id: '2',
-      disk_name: 'disk2',
+      disc_name: 'disk2',
     }
   ]
 )
@@ -164,8 +163,8 @@ Label.create!(
     }
   ]
 )
-#orders_items_seed
-Order_item.create!(
+#order_items_seed
+OrderItem.create!(
   [
     {
       order_id: "1",
@@ -239,19 +238,19 @@ Review.create!(
 Song.create!(
   [
     {
-      disk_id: '1',
+      disc_id: '1',
       song: 'カブトムシ',
     },
     {
-      disk_id: '2',
+      disc_id: '2',
       song: 'クワガタ',
     },
     {
-      disk_id: '2',
+      disc_id: '2',
       song: 'カタツムリ',
     },
     {
-      disk_id: '1',
+      disc_id: '1',
       song: 'カマキリ',
     }
   ]
@@ -271,7 +270,7 @@ User.create!(
       address_building: "テスト荘",
       phone_number: "09012345678",
       email: "test@gmail.com",
-      encrypted_password: "test",
+      password:  "11111111",
       delete_flag: "0",
     },
     {
@@ -286,7 +285,7 @@ User.create!(
       address_building: "テストレジデンス",
       phone_number: "09043218765",
       email: "test2@gmail.com",
-      encrypted_password: "test2",
+      password:  "22222222",
       delete_flag: "0",
     }
   ]
