@@ -837,3 +837,1013 @@ Processing by Admins::ItemsController#index as HTML
 Completed 200 OK in 4158ms (Views: 4136.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-11-14 12:18:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2345ms (Views: 2328.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-14 12:18:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (218.4ms)
+Completed 200 OK in 535ms (Views: 519.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-14 12:18:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 316ms (Views: 304.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-14 12:18:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 385ms (Views: 382.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-15 02:29:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1480ms (Views: 1464.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 02:29:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (78.7ms)
+Completed 200 OK in 405ms (Views: 385.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-15 02:29:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 301ms (Views: 299.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 02:29:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 381ms (Views: 379.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 02:31:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 359ms (Views: 358.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 02:31:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 401ms (Views: 399.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_up" for 10.0.2.2 at 2019-11-15 02:32:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 423ms (Views: 409.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 02:43:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 362ms (Views: 360.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 02:44:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 338ms (Views: 336.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 02:46:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 354ms (Views: 353.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:31:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/registrations/new.html.erb within layouts/application (71.0ms)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 6.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name_family_kanji' for #<User:0x00005568d885fe08>):
+    12: 
+    13:     <div class="field">
+    14:       <%= f.label :name_family_kanji%><br />
+    15:       <%= f.text_field :name_family_kanji, autofocus: true  %>
+    16:     </div>
+    17: 
+    18:     <div class="field">
+  
+app/views/users/registrations/new.html.erb:15:in `block in _app_views_users_registrations_new_html_erb___4129997682226322870_46954395933720'
+app/views/users/registrations/new.html.erb:10:in `_app_views_users_registrations_new_html_erb___4129997682226322870_46954395933720'
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:33:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (23.9ms)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x00005568d94606a8>):
+    12: 
+    13:     <div class="field">
+    14:       <%= f.label :name_family_kanji%><br />
+    15:       <%= f.text_field :name, autofocus: true  %>
+    16:     </div>
+    17: 
+    18:     <div class="field">
+  
+app/views/users/registrations/new.html.erb:15:in `block in _app_views_users_registrations_new_html_erb___4129997682226322870_46954405030340'
+app/views/users/registrations/new.html.erb:10:in `_app_views_users_registrations_new_html_erb___4129997682226322870_46954405030340'
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:33:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name_family_kanji' for #<User:0x00005568d69707b8>):
+    12: 
+    13:     <div class="field">
+    14:       <%= f.label :name_family_kanji %><br />
+    15:       <%= f.text_field :name_family_kanji, autofocus: true  %>
+    16:     </div>
+    17: 
+    18:     <div class="field">
+  
+app/views/users/registrations/new.html.erb:15:in `block in _app_views_users_registrations_new_html_erb___4129997682226322870_46954382529680'
+app/views/users/registrations/new.html.erb:10:in `_app_views_users_registrations_new_html_erb___4129997682226322870_46954382529680'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "addresses"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "delivery_name_family_kanji" varchar NOT NULL, "delivery_name_first_kanji" varchar NOT NULL, "delivery_name_family_furigana" varchar NOT NULL, "delivery_name_first_furigana" varchar NOT NULL, "delivery_postal_code" varchar NOT NULL, "delivery_address_prefecture" varchar NOT NULL, "delivery_address_city" varchar NOT NULL, "delivery_address_number" varchar NOT NULL, "delivery_address_building" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "admins"[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "arrivals"[0m
+  ↳ db/schema.rb:42
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "arrivals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "item_id" integer NOT NULL, "arrival_number" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists"[0m
+  ↳ db/schema.rb:49
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts"[0m
+  ↳ db/schema.rb:55
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "item_id" integer NOT NULL, "cart_item_number" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:55
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts"[0m
+  ↳ db/schema.rb:63
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "category" integer NOT NULL, "contact_status" integer NOT NULL, "text" text NOT NULL, "reply_text" text NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:63
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "discs"[0m
+  ↳ db/schema.rb:73
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "discs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "item_id" integer NOT NULL, "disc_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:73
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "genres"[0m
+  ↳ db/schema.rb:80
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "genre_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:80
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "items"[0m
+  ↳ db/schema.rb:86
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_id" integer NOT NULL, "label_id" integer NOT NULL, "genre_id" integer NOT NULL, "item_name" varchar NOT NULL, "item_type" varchar NOT NULL, "item_image_id" varchar, "item_price" integer NOT NULL, "item_release_date" datetime NOT NULL, "item_delete_flag" integer NOT NULL, "item_view" bigint NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:86
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "labels"[0m
+  ↳ db/schema.rb:101
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "labels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "label_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:101
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "order_items"[0m
+  ↳ db/schema.rb:107
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "order_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer NOT NULL, "item_id" integer NOT NULL, "order_price" integer NOT NULL, "order_number" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:107
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  ↳ db/schema.rb:116
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "delivery_name_family_kanji" varchar NOT NULL, "delivery_name_first_kanji" varchar NOT NULL, "delivery_name_family_furigana" varchar NOT NULL, "delivery_name_first_furigana" varchar NOT NULL, "delivery_postal_code" varchar NOT NULL, "delivery_address_prefecture" varchar NOT NULL, "delivery_address_city" varchar NOT NULL, "delivery_address_number" varchar NOT NULL, "delivery_address_building" varchar, "order_status" integer NOT NULL, "total_fee" integer NOT NULL, "postage" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:116
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews"[0m
+  ↳ db/schema.rb:134
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "item_id" integer NOT NULL, "review_title" varchar NOT NULL, "review_content" text NOT NULL, "satisfaction" decimal NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:134
+  [1m[35m (4.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "songs"[0m
+  ↳ db/schema.rb:144
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "songs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "song" varchar NOT NULL, "disc_id" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:144
+  [1m[35m (2.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:151
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name_family_kanji" varchar NOT NULL, "name_first_kanji" varchar NOT NULL, "name_family_furigana" varchar NOT NULL, "name_first_furigana" varchar NOT NULL, "postal_code" varchar NOT NULL, "address_prefecture" varchar NOT NULL, "address_city" varchar NOT NULL, "address_number" varchar NOT NULL, "address_building" varchar, "phone_number" varchar NOT NULL, "delete_flag" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:151
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:151
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:151
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191113060634)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191113060134),
+(20191113060445),
+(20191113055917),
+(20191113050709),
+(20191113055513),
+(20191113060026),
+(20191113060104),
+(20191113055958),
+(20191113050653),
+(20191113060015),
+(20191113060121),
+(20191113055936),
+(20191113055841),
+(20191113060039);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (3.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-15 03:38:02.954184"], ["updated_at", "2019-11-15 03:38:02.954184"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "addresses"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "delivery_name_family_kanji" varchar NOT NULL, "delivery_name_first_kanji" varchar NOT NULL, "delivery_name_family_furigana" varchar NOT NULL, "delivery_name_first_furigana" varchar NOT NULL, "delivery_postal_code" varchar NOT NULL, "delivery_address_prefecture" varchar NOT NULL, "delivery_address_city" varchar NOT NULL, "delivery_address_number" varchar NOT NULL, "delivery_address_building" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "admins"[0m
+  ↳ db/schema.rb:30
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  ↳ db/schema.rb:30
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "arrivals"[0m
+  ↳ db/schema.rb:42
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "arrivals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "item_id" integer NOT NULL, "arrival_number" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:42
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists"[0m
+  ↳ db/schema.rb:49
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:49
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts"[0m
+  ↳ db/schema.rb:55
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "item_id" integer NOT NULL, "cart_item_number" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:55
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "contacts"[0m
+  ↳ db/schema.rb:63
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "category" integer NOT NULL, "contact_status" integer NOT NULL, "text" text NOT NULL, "reply_text" text NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:63
+  [1m[35m (3.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "discs"[0m
+  ↳ db/schema.rb:73
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "discs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "item_id" integer NOT NULL, "disc_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:73
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "genres"[0m
+  ↳ db/schema.rb:80
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "genre_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:80
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "items"[0m
+  ↳ db/schema.rb:86
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_id" integer NOT NULL, "label_id" integer NOT NULL, "genre_id" integer NOT NULL, "item_name" varchar NOT NULL, "item_type" varchar NOT NULL, "item_image_id" varchar, "item_price" integer NOT NULL, "item_release_date" datetime NOT NULL, "item_delete_flag" integer NOT NULL, "item_view" bigint NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:86
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "labels"[0m
+  ↳ db/schema.rb:101
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "labels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "label_name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:101
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "order_items"[0m
+  ↳ db/schema.rb:107
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "order_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "order_id" integer NOT NULL, "item_id" integer NOT NULL, "order_price" integer NOT NULL, "order_number" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:107
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  ↳ db/schema.rb:116
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "delivery_name_family_kanji" varchar NOT NULL, "delivery_name_first_kanji" varchar NOT NULL, "delivery_name_family_furigana" varchar NOT NULL, "delivery_name_first_furigana" varchar NOT NULL, "delivery_postal_code" varchar NOT NULL, "delivery_address_prefecture" varchar NOT NULL, "delivery_address_city" varchar NOT NULL, "delivery_address_number" varchar NOT NULL, "delivery_address_building" varchar, "order_status" integer NOT NULL, "total_fee" integer NOT NULL, "postage" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:116
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews"[0m
+  ↳ db/schema.rb:134
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "item_id" integer NOT NULL, "review_title" varchar NOT NULL, "review_content" text NOT NULL, "satisfaction" decimal NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:134
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "songs"[0m
+  ↳ db/schema.rb:144
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "songs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "song" varchar NOT NULL, "disc_id" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:144
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:151
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name_family_kanji" varchar NOT NULL, "name_first_kanji" varchar NOT NULL, "name_family_furigana" varchar NOT NULL, "name_first_furigana" varchar NOT NULL, "postal_code" varchar NOT NULL, "address_prefecture" varchar NOT NULL, "address_city" varchar NOT NULL, "address_number" varchar NOT NULL, "address_building" varchar, "phone_number" varchar NOT NULL, "delete_flag" integer NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:151
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:151
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:151
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191113060634)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (8.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191113060134),
+(20191113060445),
+(20191113055917),
+(20191113050709),
+(20191113055513),
+(20191113060026),
+(20191113060104),
+(20191113055958),
+(20191113050653),
+(20191113060015),
+(20191113060121),
+(20191113055936),
+(20191113055841),
+(20191113060039);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (2.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-15 03:38:03.198382"], ["updated_at", "2019-11-15 03:38:03.198382"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (2.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-11-15 03:38:03.209258"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAddress Create (4.4ms)[0m  [1m[32mINSERT INTO "addresses" ("user_id", "delivery_name_family_kanji", "delivery_name_first_kanji", "delivery_name_family_furigana", "delivery_name_first_furigana", "delivery_postal_code", "delivery_address_prefecture", "delivery_address_city", "delivery_address_number", "delivery_address_building", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["delivery_name_family_kanji", "橋下"], ["delivery_name_first_kanji", "三郎"], ["delivery_name_family_furigana", "ハシモト"], ["delivery_name_first_furigana", "サブロウ"], ["delivery_postal_code", "0000000"], ["delivery_address_prefecture", "北海道"], ["delivery_address_city", "テスト市"], ["delivery_address_number", "テスト3-3-3"], ["delivery_address_building", "テストビル"], ["created_at", "2019-11-15 03:38:03.238331"], ["updated_at", "2019-11-15 03:38:03.238331"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAddress Create (1.9ms)[0m  [1m[32mINSERT INTO "addresses" ("user_id", "delivery_name_family_kanji", "delivery_name_first_kanji", "delivery_name_family_furigana", "delivery_name_first_furigana", "delivery_postal_code", "delivery_address_prefecture", "delivery_address_city", "delivery_address_number", "delivery_address_building", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["delivery_name_family_kanji", "高橋"], ["delivery_name_first_kanji", "四郎"], ["delivery_name_family_furigana", "タカハシ"], ["delivery_name_first_furigana", "シロウ"], ["delivery_postal_code", "1234567"], ["delivery_address_prefecture", "北海道"], ["delivery_address_city", "DMM市"], ["delivery_address_number", "DMM3-3-3"], ["delivery_address_building", "DMM"], ["created_at", "2019-11-15 03:38:03.247133"], ["updated_at", "2019-11-15 03:38:03.247133"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[36mAdmin Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@example.jp"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mAdmin Create (2.5ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.jp"], ["encrypted_password", "$2a$11$L22H6zzKQD3rd/8QBxLmq.QSTiNK3tQq0vvP3C0uIQVzsV7nC83VC"], ["created_at", "2019-11-15 03:38:03.391142"], ["updated_at", "2019-11-15 03:38:03.391142"]]
+  ↳ db/seeds.rb:40
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[36mArrival Create (2.3ms)[0m  [1m[32mINSERT INTO "arrivals" ("item_id", "arrival_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["item_id", 1], ["arrival_number", 1], ["created_at", "2019-11-15 03:38:03.413556"], ["updated_at", "2019-11-15 03:38:03.413556"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[36mArrival Create (2.6ms)[0m  [1m[32mINSERT INTO "arrivals" ("item_id", "arrival_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["item_id", 2], ["arrival_number", 2], ["created_at", "2019-11-15 03:38:03.419096"], ["updated_at", "2019-11-15 03:38:03.419096"]]
+  ↳ db/seeds.rb:45
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:45
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mArtist Create (2.3ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["artist_name", "歌手1"], ["created_at", "2019-11-15 03:38:03.433273"], ["updated_at", "2019-11-15 03:38:03.433273"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mArtist Create (1.8ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["artist_name", "歌手2"], ["created_at", "2019-11-15 03:38:03.438415"], ["updated_at", "2019-11-15 03:38:03.438415"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:69
+  [1m[36mCart Create (3.5ms)[0m  [1m[32mINSERT INTO "carts" ("user_id", "item_id", "cart_item_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 1], ["item_id", 1], ["cart_item_number", 1], ["created_at", "2019-11-15 03:38:03.452065"], ["updated_at", "2019-11-15 03:38:03.452065"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:69
+  [1m[36mCart Create (4.0ms)[0m  [1m[32mINSERT INTO "carts" ("user_id", "item_id", "cart_item_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["item_id", 2], ["cart_item_number", 1], ["created_at", "2019-11-15 03:38:03.459918"], ["updated_at", "2019-11-15 03:38:03.459918"]]
+  ↳ db/seeds.rb:69
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:69
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:84
+  [1m[36mContact Create (2.2ms)[0m  [1m[32mINSERT INTO "contacts" ("user_id", "category", "contact_status", "text", "reply_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["category", 0], ["contact_status", 0], ["text", "You're rock!! cancel that !!!!!!"], ["reply_text", "reply to: You're rock!! cancel that !!!!!!"], ["created_at", "2019-11-15 03:38:03.478640"], ["updated_at", "2019-11-15 03:38:03.478640"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:84
+  [1m[36mContact Create (1.9ms)[0m  [1m[32mINSERT INTO "contacts" ("user_id", "category", "contact_status", "text", "reply_text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["category", 1], ["contact_status", 0], ["text", "You're rock!! cancel that !!!!!! WHAT A HELL"], ["reply_text", "reply to: You're rock!! cancel that !!!!!! WHAT A HELL"], ["created_at", "2019-11-15 03:38:03.484119"], ["updated_at", "2019-11-15 03:38:03.484119"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:103
+  [1m[36mDisc Create (2.1ms)[0m  [1m[32mINSERT INTO "discs" ("item_id", "disc_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["item_id", 1], ["disc_name", "disk1"], ["created_at", "2019-11-15 03:38:03.501051"], ["updated_at", "2019-11-15 03:38:03.501051"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:103
+  [1m[36mDisc Create (3.1ms)[0m  [1m[32mINSERT INTO "discs" ("item_id", "disc_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["item_id", 2], ["disc_name", "disk2"], ["created_at", "2019-11-15 03:38:03.506854"], ["updated_at", "2019-11-15 03:38:03.506854"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:116
+  [1m[36mGenre Create (2.2ms)[0m  [1m[32mINSERT INTO "genres" ("genre_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["genre_name", "洋楽"], ["created_at", "2019-11-15 03:38:03.527031"], ["updated_at", "2019-11-15 03:38:03.527031"]]
+  ↳ db/seeds.rb:116
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:116
+  [1m[36mGenre Create (2.0ms)[0m  [1m[32mINSERT INTO "genres" ("genre_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["genre_name", "邦楽"], ["created_at", "2019-11-15 03:38:03.534008"], ["updated_at", "2019-11-15 03:38:03.534008"]]
+  ↳ db/seeds.rb:116
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:127
+  [1m[36mItem Create (3.8ms)[0m  [1m[32mINSERT INTO "items" ("artist_id", "label_id", "genre_id", "item_name", "item_type", "item_image_id", "item_price", "item_release_date", "item_delete_flag", "item_view", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["artist_id", 1], ["label_id", 1], ["genre_id", 1], ["item_name", "CD名１"], ["item_type", "シングル"], ["item_image_id", ""], ["item_price", 1111], ["item_release_date", "2019-01-01 00:00:00"], ["item_delete_flag", 0], ["item_view", 11111], ["created_at", "2019-11-15 03:38:03.557598"], ["updated_at", "2019-11-15 03:38:03.557598"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:127
+  [1m[36mItem Create (2.1ms)[0m  [1m[32mINSERT INTO "items" ("artist_id", "label_id", "genre_id", "item_name", "item_type", "item_image_id", "item_price", "item_release_date", "item_delete_flag", "item_view", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["artist_id", 2], ["label_id", 2], ["genre_id", 2], ["item_name", "CD名２"], ["item_type", "アルバム"], ["item_image_id", ""], ["item_price", 2222], ["item_release_date", "2019-02-02 00:00:00"], ["item_delete_flag", 0], ["item_view", 11111], ["created_at", "2019-11-15 03:38:03.564735"], ["updated_at", "2019-11-15 03:38:03.564735"]]
+  ↳ db/seeds.rb:127
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:127
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:156
+  [1m[36mLabel Create (2.1ms)[0m  [1m[32mINSERT INTO "labels" ("label_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["label_name", "ソニーミュージック"], ["created_at", "2019-11-15 03:38:03.576327"], ["updated_at", "2019-11-15 03:38:03.576327"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:156
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:156
+  [1m[36mLabel Create (2.1ms)[0m  [1m[32mINSERT INTO "labels" ("label_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["label_name", "カニーミュージック"], ["created_at", "2019-11-15 03:38:03.581193"], ["updated_at", "2019-11-15 03:38:03.581193"]]
+  ↳ db/seeds.rb:156
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:156
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:167
+  [1m[36mOrderItem Create (2.2ms)[0m  [1m[32mINSERT INTO "order_items" ("order_id", "item_id", "order_price", "order_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 1], ["item_id", 1], ["order_price", 2000], ["order_number", 1], ["created_at", "2019-11-15 03:38:03.594442"], ["updated_at", "2019-11-15 03:38:03.594442"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:167
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:167
+  [1m[36mOrderItem Create (2.1ms)[0m  [1m[32mINSERT INTO "order_items" ("order_id", "item_id", "order_price", "order_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["order_id", 2], ["item_id", 2], ["order_price", 3000], ["order_number", 1], ["created_at", "2019-11-15 03:38:03.599563"], ["updated_at", "2019-11-15 03:38:03.599563"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:167
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:184
+  [1m[36mOrder Create (4.3ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "delivery_name_family_kanji", "delivery_name_first_kanji", "delivery_name_family_furigana", "delivery_name_first_furigana", "delivery_postal_code", "delivery_address_prefecture", "delivery_address_city", "delivery_address_number", "delivery_address_building", "order_status", "total_fee", "postage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["delivery_name_family_kanji", "橋下"], ["delivery_name_first_kanji", "三郎"], ["delivery_name_family_furigana", "ハシモト"], ["delivery_name_first_furigana", "サブロウ"], ["delivery_postal_code", "0000000"], ["delivery_address_prefecture", "北海道"], ["delivery_address_city", "テスト市"], ["delivery_address_number", "テスト3-3-3"], ["delivery_address_building", "テストビル"], ["order_status", 0], ["total_fee", 2500], ["postage", 500], ["created_at", "2019-11-15 03:38:03.619022"], ["updated_at", "2019-11-15 03:38:03.619022"]]
+  ↳ db/seeds.rb:184
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:184
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:184
+  [1m[36mOrder Create (2.3ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "delivery_name_family_kanji", "delivery_name_first_kanji", "delivery_name_family_furigana", "delivery_name_first_furigana", "delivery_postal_code", "delivery_address_prefecture", "delivery_address_city", "delivery_address_number", "delivery_address_building", "order_status", "total_fee", "postage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["delivery_name_family_kanji", "高橋"], ["delivery_name_first_kanji", "四郎"], ["delivery_name_family_furigana", "タカハシ"], ["delivery_name_first_furigana", "シロウ"], ["delivery_postal_code", "1234567"], ["delivery_address_prefecture", "北海道"], ["delivery_address_city", "DMM市"], ["delivery_address_number", "DMM3-3-3"], ["delivery_address_building", "DMM"], ["order_status", 0], ["total_fee", 1500], ["postage", 500], ["created_at", "2019-11-15 03:38:03.626487"], ["updated_at", "2019-11-15 03:38:03.626487"]]
+  ↳ db/seeds.rb:184
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:184
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:219
+  [1m[36mReview Create (2.1ms)[0m  [1m[32mINSERT INTO "reviews" ("user_id", "item_id", "review_title", "review_content", "satisfaction", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["item_id", 1], ["review_title", "良かったよーん"], ["review_content", "感動しすぎて頭がおかしくなりました。とてもいい曲です"], ["satisfaction", 5.0], ["created_at", "2019-11-15 03:38:03.642561"], ["updated_at", "2019-11-15 03:38:03.642561"]]
+  ↳ db/seeds.rb:219
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:219
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:219
+  [1m[36mReview Create (2.3ms)[0m  [1m[32mINSERT INTO "reviews" ("user_id", "item_id", "review_title", "review_content", "satisfaction", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 2], ["item_id", 2], ["review_title", "悪かったよーん"], ["review_content", "うるさすぎて頭がおかしくなりました。とてもわるい曲です"], ["satisfaction", 1.0], ["created_at", "2019-11-15 03:38:03.648213"], ["updated_at", "2019-11-15 03:38:03.648213"]]
+  ↳ db/seeds.rb:219
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:219
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:238
+  [1m[36mSong Create (1.9ms)[0m  [1m[32mINSERT INTO "songs" ("song", "disc_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["song", "カブトムシ"], ["disc_id", 1], ["created_at", "2019-11-15 03:38:03.661118"], ["updated_at", "2019-11-15 03:38:03.661118"]]
+  ↳ db/seeds.rb:238
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:238
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:238
+  [1m[36mSong Create (1.6ms)[0m  [1m[32mINSERT INTO "songs" ("song", "disc_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["song", "クワガタ"], ["disc_id", 2], ["created_at", "2019-11-15 03:38:03.666010"], ["updated_at", "2019-11-15 03:38:03.666010"]]
+  ↳ db/seeds.rb:238
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:238
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:238
+  [1m[36mSong Create (2.0ms)[0m  [1m[32mINSERT INTO "songs" ("song", "disc_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["song", "カタツムリ"], ["disc_id", 2], ["created_at", "2019-11-15 03:38:03.670280"], ["updated_at", "2019-11-15 03:38:03.670280"]]
+  ↳ db/seeds.rb:238
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:238
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:238
+  [1m[36mSong Create (1.6ms)[0m  [1m[32mINSERT INTO "songs" ("song", "disc_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["song", "カマキリ"], ["disc_id", 1], ["created_at", "2019-11-15 03:38:03.675282"], ["updated_at", "2019-11-15 03:38:03.675282"]]
+  ↳ db/seeds.rb:238
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:238
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mUser Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name_family_kanji", "name_first_kanji", "name_family_furigana", "name_first_furigana", "postal_code", "address_prefecture", "address_city", "address_number", "address_building", "phone_number", "delete_flag", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test@gmail.com"], ["encrypted_password", "$2a$11$qVgPJbAosyI7ywG9VC4bo..tGjs8H/G/9VZgs9wdn2zv8Khz9Ws2e"], ["name_family_kanji", "田中"], ["name_first_kanji", "一郎"], ["name_family_furigana", "たなか"], ["name_first_furigana", "いちろう"], ["postal_code", "1234567"], ["address_prefecture", "北海道"], ["address_city", "テスト市"], ["address_number", "テスト1-2-3"], ["address_building", "テスト荘"], ["phone_number", "09012345678"], ["delete_flag", 0], ["created_at", "2019-11-15 03:38:03.795140"], ["updated_at", "2019-11-15 03:38:03.795140"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test2@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name_family_kanji", "name_first_kanji", "name_family_furigana", "name_first_furigana", "postal_code", "address_prefecture", "address_city", "address_number", "address_building", "phone_number", "delete_flag", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test2@gmail.com"], ["encrypted_password", "$2a$11$hKc82Hgr3oQuovh6vgTqAOcGGs.cjtbxIqrJu0uWNJVoaZX9JebhC"], ["name_family_kanji", "鈴木"], ["name_first_kanji", "二郎"], ["name_family_furigana", "すずき"], ["name_first_furigana", "じろう"], ["postal_code", "7654321"], ["address_prefecture", "神奈川県"], ["address_city", "テスト市"], ["address_number", "テスト11-11-11"], ["address_building", "テストレジデンス"], ["phone_number", "09043218765"], ["delete_flag", 0], ["created_at", "2019-11-15 03:38:03.904539"], ["updated_at", "2019-11-15 03:38:03.904539"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+Started GET "/" for 10.0.2.2 at 2019-11-15 03:38:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1460ms (Views: 1445.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:38:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 413ms (Views: 382.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:39:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 346ms (Views: 345.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:40:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 357ms (Views: 356.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:40:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.3ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 350ms (Views: 349.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:46:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 404ms (Views: 403.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 03:47:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 350ms (Views: 348.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:08:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 417ms (Views: 416.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:09:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 366ms (Views: 364.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:09:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 486ms (Views: 484.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:10:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 355ms (Views: 354.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:11:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 391ms (Views: 389.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:12:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 386ms (Views: 385.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:12:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 347ms (Views: 346.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:12:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 363ms (Views: 361.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:13:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 435ms (Views: 433.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:14:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 408ms (Views: 406.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:15:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 411ms (Views: 409.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:15:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/shared/_links.html.erb (0.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 358ms (Views: 356.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:30:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (60.3ms)
+Completed 200 OK in 427ms (Views: 425.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:36:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 386ms (Views: 384.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 04:40:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 369ms (Views: 367.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 10:10:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 424ms (Views: 422.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-15 10:11:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 1440ms (Views: 1417.7ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-11-15 10:12:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"63o0QdtNEQ8rY/dSuu9an6NCHpzrOZwmwKHP6zf5XBHwpiqUsNfNTYRes9uZ5upHvg7XNyCYYY0GLSb6EeQmHw==", "user"=>{"name_family_kanji"=>"桐生", "name_first_kanji"=>"かずま", "name_family_furigana"=>"きりゅう", "email"=>"q@q", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "postal_code"=>"1111111", "address_prefecture"=>"東京都", "address_city"=>"DMM市", "address_number"=>"DMM1-1", "address_building"=>"六本木ビル", "phone_number"=>"11111111111"}, "commit"=>"新規登録"}
+Unpermitted parameters: :name_family_kanji, :name_first_kanji, :name_family_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "q@q"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "q@q"], ["encrypted_password", "$2a$11$XkSAcvPT91u49XgI0KYaVuUbR6SDvFuV3oWyZD3424Gkaue0dsl8m"], ["created_at", "2019-11-15 10:12:44.473458"], ["updated_at", "2019-11-15 10:12:44.473458"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 3.5ms)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: users.name_family_kanji: INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)):
+  
+sqlite3 (1.4.1) lib/sqlite3/statement.rb:108:in `step'
+sqlite3 (1.4.1) lib/sqlite3/statement.rb:108:in `block in each'
+sqlite3 (1.4.1) lib/sqlite3/statement.rb:107:in `loop'
+sqlite3 (1.4.1) lib/sqlite3/statement.rb:107:in `each'
+activerecord (5.2.3) lib/active_record/connection_adapters/sqlite3_adapter.rb:222:in `to_a'
+activerecord (5.2.3) lib/active_record/connection_adapters/sqlite3_adapter.rb:222:in `block (2 levels) in exec_query'
+activesupport (5.2.3) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.3) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.3) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.3) lib/active_record/connection_adapters/sqlite3_adapter.rb:213:in `block in exec_query'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract_adapter.rb:581:in `block (2 levels) in log'
+/usr/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract_adapter.rb:580:in `block in log'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract_adapter.rb:571:in `log'
+activerecord (5.2.3) lib/active_record/connection_adapters/sqlite3_adapter.rb:212:in `exec_query'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/database_statements.rb:130:in `exec_insert'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/database_statements.rb:162:in `insert'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `insert'
+activerecord (5.2.3) lib/active_record/persistence.rb:187:in `_insert_record'
+activerecord (5.2.3) lib/active_record/persistence.rb:734:in `_create_record'
+activerecord (5.2.3) lib/active_record/counter_cache.rb:184:in `_create_record'
+activerecord (5.2.3) lib/active_record/locking/optimistic.rb:70:in `_create_record'
+activerecord (5.2.3) lib/active_record/attribute_methods/dirty.rb:140:in `_create_record'
+activerecord (5.2.3) lib/active_record/callbacks.rb:346:in `block in _create_record'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+activesupport (5.2.3) lib/active_support/callbacks.rb:816:in `_run_create_callbacks'
+activerecord (5.2.3) lib/active_record/callbacks.rb:346:in `_create_record'
+activerecord (5.2.3) lib/active_record/timestamp.rb:102:in `_create_record'
+activerecord (5.2.3) lib/active_record/persistence.rb:705:in `create_or_update'
+activerecord (5.2.3) lib/active_record/callbacks.rb:342:in `block in create_or_update'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+activesupport (5.2.3) lib/active_support/callbacks.rb:816:in `_run_save_callbacks'
+activerecord (5.2.3) lib/active_record/callbacks.rb:342:in `create_or_update'
+activerecord (5.2.3) lib/active_record/persistence.rb:275:in `save'
+activerecord (5.2.3) lib/active_record/validations.rb:46:in `save'
+activerecord (5.2.3) lib/active_record/transactions.rb:310:in `block (2 levels) in save'
+activerecord (5.2.3) lib/active_record/transactions.rb:387:in `block in with_transaction_returning_status'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/database_statements.rb:267:in `block in transaction'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/transaction.rb:239:in `block in within_new_transaction'
+/usr/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/transaction.rb:236:in `within_new_transaction'
+activerecord (5.2.3) lib/active_record/connection_adapters/abstract/database_statements.rb:267:in `transaction'
+activerecord (5.2.3) lib/active_record/transactions.rb:212:in `transaction'
+activerecord (5.2.3) lib/active_record/transactions.rb:385:in `with_transaction_returning_status'
+activerecord (5.2.3) lib/active_record/transactions.rb:310:in `block in save'
+activerecord (5.2.3) lib/active_record/transactions.rb:325:in `rollback_active_record_state!'
+activerecord (5.2.3) lib/active_record/transactions.rb:309:in `save'
+activerecord (5.2.3) lib/active_record/suppressor.rb:44:in `save'
+devise (4.7.1) app/controllers/devise/registrations_controller.rb:19:in `create'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
