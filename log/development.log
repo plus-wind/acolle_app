@@ -2753,3 +2753,34 @@ ActionView::Template::Error (undefined local variable or method `search_path' fo
     32:               <% end %>
   
 app/views/layouts/application.html.erb:29:in `_app_views_layouts_application_html_erb___137590579799176847_70325941313260'
+Started GET "/" for 10.0.2.2 at 2019-11-16 08:03:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    59:     </div>
+    60:   </header>
+    61:     <%= yield %>
+    62:     <ul><% @items.each do |post| %>
+    63:       <%= link_to item.item_name, post %>
+    64:       <% end %>
+    65:     </ul>
+  
+app/views/layouts/application.html.erb:62:in `_app_views_layouts_application_html_erb___137590579799176847_70325996588560'
+Started GET "/" for 10.0.2.2 at 2019-11-16 08:03:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 370ms (Views: 356.1ms | ActiveRecord: 0.6ms)
+
+
