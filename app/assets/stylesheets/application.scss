@@ -17,3 +17,45 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+body {
+	line-height: 1.42857143
+}
+
+header {
+	color: white;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.body {
+    padding-top: 80px;
+	margin-top: 51px;
+}
+.navbar-nav {
+	float: left;
+	margin: 0;
+}
+
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+p, ol, ul, td {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	line-height:18px;
+	margin: 33px;
+}
+
+p {
+	margin: 0 0 10px;
+}
+header, .navbar-left, span {
+	font-size: 20px;
+	padding-top: 10px;
+}
