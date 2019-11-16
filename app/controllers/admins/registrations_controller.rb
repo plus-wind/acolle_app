@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-class Users::RegistrationsController < Devise::RegistrationsController
-  before_action :configure_permitted_parameters, if: :devise_controller?
+class Admins::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -26,12 +25,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # DELETE /resource
-  def destroy
-    resource.delete_flag = 1
-    resource.save
-    Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
-    redirect_to users_unsubscribe_complete_path
-  end
+  # def destroy
+  #   super
+  # end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
@@ -63,29 +59,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-
-  def unsubscribe
-  end
-
-  def complete
-  end
-
-  def after_sign_up_path_for(resource)
-    root_path
-  end
-
-  protected
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name_family_kanji,
-                                                       :name_first_kanji,
-                                                       :name_family_furigana,
-                                                       :name_first_furigana,
-                                                       :postal_code,
-                                                       :address_prefecture,
-                                                       :address_city,
-                                                       :address_number,
-                                                       :address_building,
-                                                       :phone_number,
-                                                       ])
-  end
 end

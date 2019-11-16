@@ -43,7 +43,7 @@ namespace :admins do
   post '/items/:id/arrivals', to: 'arrivals#create'
 #admins/users controller
   resources :users, only:[:index, :show, :edit, :update]
-  patch '/uesrs', to: 'users#change'
+  #patch '/uesrs', to: 'users#change'
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]
 #admins/contacts controller
