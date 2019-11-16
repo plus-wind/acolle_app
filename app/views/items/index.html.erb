@@ -1,9 +1,35 @@
 <div class="container">
-<div class="row">
-<div class="col-md-12">
-	<p>画像</p>
+	<div class="row1">
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-10">
+			<p><strong>Acolle</strong><br>
+			   アーティスト愛の詰まった<br>
+			   CDコレクション</p>
+		</div>
+		<div class="col-md-1">
+		</div>
+	</div>
+	<div class="row2">
+		<div class="col-md-12">
+			<div class="sales-ranking-headline">週間売上ランキング</div>
+			<div class="sales-ranking-date">日付入れる</div>
+		    <div class="sales-ranking-content">
+		    	<% @hash_sales_ranking.each do |item_key, item_sales| %>
+		    	<% item = Item.find(item_key) %>
+				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+				<%= item.artist.artist_name %>
+				<%= link_to item.item_name, item_path(item.id) %>
+  				<%= item.item_price %>
+  			    <% end %>
+		    </div>
+		</div>
+	</div>
+    <% @items.each do |item| %>
+				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+				<%= item.artist.artist_name %>
+				<%= link_to item.item_name, item_path(item.id) %>
+  				<%= item.item_price %>
+  				<% end %>
 </div>
-</div>
-<div class="row">
-</div>
-</div>
+

@@ -1,3 +1,39 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.row1{
+	height: 650px;
+	background-image: url("home_test.jpg");
+	background-size: cover;
+	opacity: 1.0;
+
+	.col-md-1{
+		height: 650px;
+	}
+	.col-md-10{
+		height: 650px;
+		padding: 200px 0;
+		text-align: center;
+
+		strong{
+			font-size: 60px;
+		}
+
+		p{
+			font-size: 40px;
+			color: white;
+		}
+	}
+}
