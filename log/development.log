@@ -1304,3 +1304,1452 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 438ms (Views: 419.8ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:52:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 448ms (Views: 425.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:52:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 382ms (Views: 365.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:54:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 423ms (Views: 406.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:54:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 440ms (Views: 425.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:55:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 368ms (Views: 352.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:58:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 405ms (Views: 386.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:59:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 399ms (Views: 383.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:59:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 418ms (Views: 402.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:59:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 424ms (Views: 406.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 04:59:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 405ms (Views: 390.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:01:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 384ms (Views: 366.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:01:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 394ms (Views: 377.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:02:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2171ms (Views: 2152.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:08:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 353ms (Views: 337.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:10:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 378ms (Views: 360.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:10:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 416ms (Views: 400.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:10:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 398ms (Views: 395.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:10:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 376ms (Views: 372.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:19:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 398ms (Views: 394.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:20:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 350ms (Views: 345.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:20:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 389ms (Views: 386.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:24:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 412ms (Views: 408.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:24:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 360ms (Views: 357.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:24:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 399ms (Views: 396.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:25:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 495ms (Views: 492.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:30:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 397ms (Views: 393.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:32:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 420ms (Views: 416.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:34:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 467ms (Views: 464.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:34:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 420ms (Views: 416.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:35:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 456ms (Views: 450.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:35:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 471ms (Views: 468.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:35:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 406ms (Views: 402.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:35:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 344ms (Views: 336.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:35:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 439ms (Views: 434.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:36:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 417ms (Views: 414.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:36:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 413ms (Views: 406.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:42:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 445ms (Views: 440.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 05:45:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 402ms (Views: 399.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:45:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 379ms (Views: 361.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:45:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 474ms (Views: 457.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:47:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 706ms (Views: 682.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:48:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2312ms (Views: 2294.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:48:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1980ms (Views: 1962.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:51:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2390ms (Views: 2367.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 05:52:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 375ms (Views: 359.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:05:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 359ms (Views: 342.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:05:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 397ms (Views: 380.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:05:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 359ms (Views: 343.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:05:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 414ms (Views: 395.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:05:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 398ms (Views: 380.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:05:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 365ms (Views: 350.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:05:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 402ms (Views: 383.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:05:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 347ms (Views: 329.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:09:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 395ms (Views: 380.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:09:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 339ms (Views: 322.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:09:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 340ms (Views: 324.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:09:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 312ms (Views: 297.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:09:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.6ms)
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:09:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 329ms (Views: 311.0ms | ActiveRecord: 1.8ms)
+
+
+Completed 200 OK in 707ms (Views: 691.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:09:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 355ms (Views: 338.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:09:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 299ms (Views: 282.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 317ms (Views: 302.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 349ms (Views: 329.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 350ms (Views: 332.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 329ms (Views: 313.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 290ms (Views: 275.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:15 +0000
+  Rendering items/index.html.erb within layouts/application
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  Rendered items/index.html.erb within layouts/application (0.7ms)
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 569ms (Views: 551.4ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 423ms (Views: 408.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 370ms (Views: 355.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 356ms (Views: 338.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:10:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 400ms (Views: 383.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:11:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 380ms (Views: 362.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:12:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 344ms (Views: 327.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:12:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 383ms (Views: 366.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:12:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 365ms (Views: 348.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:12:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 325ms (Views: 309.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:13:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 329ms (Views: 312.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:13:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 360ms (Views: 343.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:14:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 405ms (Views: 384.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:15:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2309ms (Views: 2282.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:15:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 483ms (Views: 467.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 405ms (Views: 385.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:25:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 403ms (Views: 384.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:25:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 389ms (Views: 371.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:25:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 350ms (Views: 333.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:26:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2065ms (Views: 2046.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:26:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 367ms (Views: 350.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:26:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 389ms (Views: 371.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:27:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 442ms (Views: 437.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:29:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 448ms (Views: 443.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:29:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 366ms (Views: 361.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:30:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 414ms (Views: 411.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:34:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 373ms (Views: 370.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:36:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 348ms (Views: 343.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:36:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 416ms (Views: 413.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:36:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 369ms (Views: 364.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:40:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 411ms (Views: 407.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:41:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 362ms (Views: 357.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:43:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 439ms (Views: 435.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:43:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 400ms (Views: 397.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:43:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 335ms (Views: 327.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 06:43:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 409ms (Views: 405.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:44:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 435ms (Views: 412.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:45:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 362ms (Views: 334.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:46:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 364ms (Views: 348.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:47:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 440ms (Views: 425.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:47:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 375ms (Views: 360.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:47:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 413ms (Views: 395.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:48:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2219ms (Views: 2197.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:53:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 358ms (Views: 341.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:55:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 574ms (Views: 551.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:55:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 374ms (Views: 358.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:58:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2055ms (Views: 2034.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 06:59:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 490ms (Views: 472.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:00:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 391ms (Views: 374.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:02:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 419ms (Views: 401.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 07:02:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 417ms (Views: 412.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 07:03:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 400ms (Views: 395.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 07:04:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 355ms (Views: 351.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:04:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 383ms (Views: 366.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 07:04:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 385ms (Views: 379.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-16 07:04:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 453ms (Views: 449.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-16 07:07:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 376ms (Views: 372.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-11-16 07:20:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 406ms (Views: 402.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 07:20:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 362ms (Views: 359.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-11-16 07:20:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r12m0p3wM9JUbsKGkww828nyNe+EIP9ah1U6DzFZYuAbCKBfYBqF1IAvu/LN1XSqBs8zvMPWyZzyWpTXyc2NZQ==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 9ms (ActiveRecord: 2.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r12m0p3wM9JUbsKGkww828nyNe+EIP9ah1U6DzFZYuAbCKBfYBqF1IAvu/LN1XSqBs8zvMPWyZzyWpTXyc2NZQ==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+Unpermitted parameters: :email, :remember_me
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 485ms (Views: 360.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-11-16 07:21:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/GEAUHvE0IpUNMVyPZ3hMeaGDAsRE+OOKRgVEgsjEEr6G/p89cLWAxYK4DTmbGbZRuHPwRpsygn/GRXaapnvdw==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 9ms (ActiveRecord: 2.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/GEAUHvE0IpUNMVyPZ3hMeaGDAsRE+OOKRgVEgsjEEr6G/p89cLWAxYK4DTmbGbZRuHPwRpsygn/GRXaapnvdw==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+Unpermitted parameters: :email, :remember_me
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 494ms (Views: 376.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-16 07:21:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 363ms (Views: 359.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:41:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 361ms (Views: 345.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:41:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 347ms (Views: 331.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:43:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 509ms (Views: 491.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:52:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 641ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x00005646752800c0>:0x00007fec05ebf390>):
+    26:             <input class="btn my-2 my-sm-0" type="search" placeholder="検索..." aria-label="検索...">
+    27:             <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
+    28:             <p>検索</p>
+    29:               <%= form_tag(search_path,:method => 'get') do %>
+    30:               <%= text_field_tag :search %>
+    31:               <%= submit_tag 'Search', :name => nil %>
+    32:               <% end %>
+  
+app/views/layouts/application.html.erb:29:in `_app_views_layouts_application_html_erb___137590579799176847_70325844159480'
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:55:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 517ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x00005646752800c0>:0x00007fec059e9618>):
+    26:             <input class="btn my-2 my-sm-0" type="search" placeholder="検索..." aria-label="検索...">
+    27:             <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
+    28:             <p>検索</p>
+    29:               <%= form_tag(search_path,:method => 'get') do %>
+    30:               <%= text_field_tag :search %>
+    31:               <%= submit_tag 'Search', :name => nil %>
+    32:               <% end %>
+  
+app/views/layouts/application.html.erb:29:in `_app_views_layouts_application_html_erb___137590579799176847_70325841658440'
+Started GET "/" for 10.0.2.2 at 2019-11-16 07:55:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27
+  Rendering items/index.html.erb within layouts/application
+  Rendered items/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 547ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `search_path' for #<#<Class:0x00005646752800c0>:0x00007fec11878c00>):
+    26:             <input class="btn my-2 my-sm-0" type="search" placeholder="検索..." aria-label="検索...">
+    27:             <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
+    28:             <p>検索</p>
+    29:               <%= form_tag(search_path,:method => 'get') do %>
+    30:               <%= text_field_tag :search %>
+    31:               <%= submit_tag 'Search', :name => nil %>
+    32:               <% end %>
+  
+app/views/layouts/application.html.erb:29:in `_app_views_layouts_application_html_erb___137590579799176847_70325941313260'

@@ -23,7 +23,7 @@ body {
 }
 
 header {
-	color: white;
+	color: red($color: #000000);
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
@@ -35,22 +35,22 @@ h1, .h1, h2, .h2, h3, .h3 {
     // padding-top: 80px;
 	margin-top: 51px;
 }
-// .navbar-nav {
-// 	float: left;
-// 	margin: 0;
-// }
+.navbar-nav {
+	float: left;
+	margin: 0;
+}
 
-// ul, ol {
-// 	margin-top: 0;
-// 	margin-bottom: 10px;
-// }
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
 
-// p, ol, ul, td {
-// 	font-family: verdana, arial, helvetica, sans-serif;
-// 	font-size: 13px;
-// 	line-height:18px;
-// 	margin: 33px;
-// }
+p, ol, ul, td {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	line-height:18px;
+	margin: 33px;
+}
 
 p {
 	margin: 0 0 10px;
@@ -58,4 +58,11 @@ p {
 header, .navbar-left, span {
 	font-size: 20px;
 	padding-top: 10px;
+}
+
+input.form-control {
+    width: 400px;
+}
+.pull-left {
+    float: left;
 }

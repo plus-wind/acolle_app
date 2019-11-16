@@ -9,54 +9,59 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
+    <header class="navbar navbar-fixed-top navbar-default">
       <div class="container">
         <nav class="nav navbar-nav navbar-left">
-         <span>Acolle</span>
+          <span>Acolle</span>
         </nav>
-        <p class="navbar-text">在庫検索</p>
-        <form class="navbar-form">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="キーワード">
-          </div>
-          <button type="submit" class="btn btn-info">検索</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-
-
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to " 商品", root_path, class:"glyphicon glyphicon-home home" %>
-          </li>
-  
-          <li>
-            <%= link_to  user.name, users_path(current_user.id), class:"glyphicon glyphicon-user users" %>
-          </li>
-          <li>
-            <%= link_to " カート", carts_path(current_user.id), class:"glyphicon glyphicon-cart carts" %>
-          </li>
-  
-          <li>
-            <%= link_to " ログアウト", destroy_user_session_path, method: :delete, class:"glyphicon glyphicon-log-out logout" %>
-          </li>
+        <nav class="input-group ">
+          <ul class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              アーティスト
+              <span class="caret"></span>
+            </button>
+              <span class="dropdown-menu">曲名</span>
+              <%# <nav class="navbar navbar-light bg-light"> %>
+            <form class="form-inline">
+            <input class="btn my-2 my-sm-0" type="search" placeholder="検索..." aria-label="検索...">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
+            </form>
+          <%# </nav> %>
+          </ul><!-- /.input-group-btn -->
+          <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to " 商品", root_path, class:"glyphicon glyphicon-home home" %>
+            </li>
+            <li>
+              <%= link_to  "#{current_user.name_family_kanji}さん", users_path(current_user.id), class:"glyphicon glyphicon-user users" %>
+            </li>
+            <li>
+              <%= link_to " カート", carts_path(current_user.id), class:"glyphicon glyphicon-cart carts" %>
+            </li>
+            <li>
+              <%= link_to " ログアウト", destroy_user_session_path, method: :delete, class:"glyphicon glyphicon-log-out logout" %>
+            </li>
   
           <% else %>
-          <li>
-            <%= link_to "商品", root_path, class:"glyphicon glyphicon-cart carts" %>
-          </li>
-          <li>
-            <%= link_to "ログイン", new_user_session_path, class:"glyphicon" %>
-          </li>
-  
-          <li>
-            <%= link_to "新規登録", new_user_registration_path, class:"glyphicon sign-up" %>
-          </li>
-
-        <% end %>
-        </ul>
-      </nav>
+            <li>
+              <%= link_to "商品", root_path, class:"glyphicon glyphicon-cart carts" %>
+            </li>
+            <li>
+              <%= link_to "ログイン", new_user_session_path, class:"glyphicon" %>
+            </li>
+            <li>
+              <%= link_to "新規登録", new_user_registration_path, class:"glyphicon sign-up" %>
+            </li>
+          <% end %>
+          </ul>
+        </nav><!-- /.input-group -->
     </div>
   </header>
     <%= yield %>
+    <ul><% @items.each do |post| %>
+      <%= link_to item.item_name, post %>
+      <% end %>
+    </ul>
   </body>
 </html>
