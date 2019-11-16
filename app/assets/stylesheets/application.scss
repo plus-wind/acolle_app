@@ -17,6 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// tamura
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 body {
 	line-height: 1.42857143
@@ -32,7 +38,6 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .body {
-    // padding-top: 80px;
 	margin-top: 51px;
 }
 .navbar-nav {
@@ -60,9 +65,14 @@ header, .navbar-left, span {
 	padding-top: 10px;
 }
 
-input.form-control {
+.form-control {
     width: 400px;
 }
 .pull-left {
     float: left;
 }
+// .input-group-btn {
+//     display: inline-block;
+// }
+
+// tamura

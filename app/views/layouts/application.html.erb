@@ -21,12 +21,10 @@
               <span class="caret"></span>
             </button>
               <span class="dropdown-menu">曲名</span>
-              <%# <nav class="navbar navbar-light bg-light"> %>
-            <form class="form-inline">
-            <input class="btn my-2 my-sm-0" type="search" placeholder="検索..." aria-label="検索...">
-            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">検索</button>
-            </form>
-          <%# </nav> %>
+            <%= search_form_for @search, url: root_path do |f| %>
+            <%= f.text_field :artist_id_cont, placeholder: '検索...', class:"form-control" %>
+            <%= f.submit "検索", class:"btn btn-primary mb-2" %>
+            <% end %>
           </ul><!-- /.input-group-btn -->
           <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
@@ -59,5 +57,14 @@
     </div>
   </header>
     <%= yield %>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-xs-offset-9">
+            <%= link_to "お問い合わせ",  contacts_path%>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
