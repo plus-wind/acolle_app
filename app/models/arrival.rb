@@ -1,2 +1,0 @@
-class Arrival < ApplicationRecord
-end

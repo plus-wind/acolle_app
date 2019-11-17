@@ -10,22 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_17_050130) do
-
-  create_table "addresses", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "delivery_name_family_kanji", null: false
-    t.string "delivery_name_first_kanji", null: false
-    t.string "delivery_name_family_furigana", null: false
-    t.string "delivery_name_first_furigana", null: false
-    t.string "delivery_postal_code", null: false
-    t.string "delivery_address_prefecture", null: false
-    t.string "delivery_address_city", null: false
-    t.string "delivery_address_number", null: false
-    t.string "delivery_address_building"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2019_11_13_050709) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -39,168 +24,12 @@ ActiveRecord::Schema.define(version: 2019_11_17_050130) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "arrivals", force: :cascade do |t|
-    t.integer "item_id", null: false
-    t.integer "arrival_number", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "artists", force: :cascade do |t|
-    t.string "artist_name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "cart_items", force: :cascade do |t|
-    t.integer "quantity"
-    t.integer "item_id"
-    t.integer "cart_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
-    t.index ["item_id"], name: "index_cart_items_on_item_id"
-  end
-
-  create_table "carts", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "item_id", null: false
-    t.integer "cart_item_number", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "contacts", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "category", null: false
-    t.integer "contact_status", null: false
-    t.text "text", null: false
-    t.text "reply_text", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "discs", force: :cascade do |t|
-    t.integer "item_id", null: false
-    t.string "disc_name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "genres", force: :cascade do |t|
-    t.string "genre_name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "impressions", force: :cascade do |t|
-    t.string "impressionable_type"
-    t.integer "impressionable_id"
-    t.integer "user_id"
-    t.string "controller_name"
-    t.string "action_name"
-    t.string "view_name"
-    t.string "request_hash"
-    t.string "ip_address"
-    t.string "session_hash"
-    t.text "message"
-    t.text "referrer"
-    t.text "params"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["controller_name", "action_name", "ip_address"], name: "controlleraction_ip_index"
-    t.index ["controller_name", "action_name", "request_hash"], name: "controlleraction_request_index"
-    t.index ["controller_name", "action_name", "session_hash"], name: "controlleraction_session_index"
-    t.index ["impressionable_type", "impressionable_id", "ip_address"], name: "poly_ip_index"
-    t.index ["impressionable_type", "impressionable_id", "params"], name: "poly_params_request_index"
-    t.index ["impressionable_type", "impressionable_id", "request_hash"], name: "poly_request_index"
-    t.index ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
-    t.index ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
-    t.index ["user_id"], name: "index_impressions_on_user_id"
-  end
-
-  create_table "items", force: :cascade do |t|
-    t.integer "artist_id", null: false
-    t.integer "label_id", null: false
-    t.integer "genre_id", null: false
-    t.string "item_name", null: false
-    t.string "item_type", null: false
-    t.string "item_image_id"
-    t.integer "item_price", null: false
-    t.datetime "item_release_date", null: false
-    t.integer "item_delete_flag", null: false
-    t.integer "impressions_count", default: 0
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "labels", force: :cascade do |t|
-    t.string "label_name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "order_items", force: :cascade do |t|
-    t.integer "order_id", null: false
-    t.integer "item_id", null: false
-    t.integer "order_price", null: false
-    t.integer "order_number", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "delivery_name_family_kanji", null: false
-    t.string "delivery_name_first_kanji", null: false
-    t.string "delivery_name_family_furigana", null: false
-    t.string "delivery_name_first_furigana", null: false
-    t.string "delivery_postal_code", null: false
-    t.string "delivery_address_prefecture", null: false
-    t.string "delivery_address_city", null: false
-    t.string "delivery_address_number", null: false
-    t.string "delivery_address_building"
-    t.integer "order_status", null: false
-    t.integer "total_fee", null: false
-    t.integer "postage", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "item_id", null: false
-    t.string "review_title", null: false
-    t.text "review_content", null: false
-    t.decimal "satisfaction", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "songs", force: :cascade do |t|
-    t.string "song", null: false
-    t.integer "disc_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name_family_kanji", null: false
-    t.string "name_first_kanji", null: false
-    t.string "name_family_furigana", null: false
-    t.string "name_first_furigana", null: false
-    t.string "postal_code", null: false
-    t.string "address_prefecture", null: false
-    t.string "address_city", null: false
-    t.string "address_number", null: false
-    t.string "address_building"
-    t.string "phone_number", null: false
-    t.integer "delete_flag", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
