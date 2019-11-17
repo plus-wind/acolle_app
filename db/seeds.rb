@@ -146,7 +146,7 @@ Item.create!(
       item_price: '1111',
       item_release_date: '2019/01/01',
       item_delete_flag: '0',
-      item_view: '11111',
+      impressions_count: '0',
     },
     {
       artist_id: '2',
@@ -158,7 +158,7 @@ Item.create!(
       item_price: '2222',
       item_release_date: '2019/02/02',
       item_delete_flag: '0',
-      item_view: '11111',
+      impressions_count: '0',
     },
     {
       artist_id: '2',
@@ -170,7 +170,7 @@ Item.create!(
       item_price: '3333',
       item_release_date: '2019/02/02',
       item_delete_flag: '0',
-      item_view: '11111',
+      impressions_count: '0',
     },
     {
       artist_id: '2',
@@ -182,7 +182,7 @@ Item.create!(
       item_price: '4444',
       item_release_date: '2019/02/02',
       item_delete_flag: '0',
-      item_view: '11111',
+      impressions_count: '0',
     },
     {
       artist_id: '2',
@@ -194,7 +194,7 @@ Item.create!(
       item_price: '5555',
       item_release_date: '2019/02/02',
       item_delete_flag: '0',
-      item_view: '11111',
+      impressions_count: '0',
     }
   ]
 )

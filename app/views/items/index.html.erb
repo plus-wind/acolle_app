@@ -12,24 +12,51 @@
 	</div>
 	<div class="row2">
 		<div class="col-md-12">
-			<div class="sales-ranking-headline">週間売上ランキング</div>
-			<div class="sales-ranking-date">日付入れる</div>
-		    <div class="sales-ranking-content">
-		    	<% @hash_sales_ranking.each do |item_key, item_sales| %>
-		    	<% item = Item.find(item_key) %>
-				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg" %>
-				<%= item.artist.artist_name %>
-				<%= link_to item.item_name, item_path(item.id) %>
-  				<%= item.item_price %>
-  			    <% end %>
-		    </div>
+			<div class="ranking-header clearfix">
+				<p class="ranking-headline"><週間売上枚数ランキング></p>
+				<p class="ranking-date">mm/dd 〜 mm/dd</p>
+			</div>
+		    <% item_keys = @hash_sales_ranking.keys %>
+		    <% item_keys.each.with_index(1) do |item_key, i| %>
+		    <div class="ranking-content">
+		    	<h4><%= "第#{i}位" %></h4>
+		   		<% item = Item.find(item_key) %>
+				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'180x150' %>
+				<p><%= item.artist.artist_name %></p>
+				<p><%= link_to item.item_name, item_path(item.id) %></p>
+  				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
+  			</div>
+  			<% end %>
 		</div>
 	</div>
-    <% @items.each do |item| %>
-				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+	<div class="row2">
+		<div class="col-md-12">
+			<div class="ranking-header clearfix">
+				<p class="ranking-headline"><週間アクセス数ランキング></p>
+				<p class="ranking-date">mm/dd 〜 mm/dd</p>
+			</div>
+			<% @most_viewed.each.with_index(1) do |item, i| %>
+		    <div class="ranking-content">
+    			<h4><%= "第#{i}位" %></h4>
+				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'180x150' %>
+				<p><%= item.artist.artist_name %></p>
+				<p><%= link_to item.item_name, item_path(item.id) %></p>
+  				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
+ 		    </div>
+  			<% end %>
+		</div>
+	</div>
+	<div class="row3">
+		<div class="col-md-12">
+			<p class="index-headline"><商品一覧></p>
+		    <div class="index-content">
+    			<% @items.each do |item| %>
+				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'120x120' %>
 				<%= item.artist.artist_name %>
 				<%= link_to item.item_name, item_path(item.id) %>
   				<%= item.item_price %>
   				<% end %>
+		    </div>
+		</div>
+	</div>
 </div>
-

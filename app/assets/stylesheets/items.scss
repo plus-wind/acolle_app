@@ -37,3 +37,36 @@
 		}
 	}
 }
+
+.row2{
+	.ranking-header{
+		margin: 20px 0 10px 0;
+		border-bottom-style: solid;
+	}
+
+	.ranking-headline{
+		font-size: 20px;
+		margin: 0;
+		float:left;
+	}
+	.ranking-date{
+		margin: 5px 20px 0 20px;
+		float:left;
+	}
+	.ranking-content{
+		float:left;
+
+		p{
+			margin: 0;
+			text-align: center;
+		}
+	}
+}
+
+.row3{
+	.index-headline{
+		margin: 20px 0 10px 0;
+		border-bottom-style: solid;
+		font-size: 20px;
+	}
+}
