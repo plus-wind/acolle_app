@@ -15,21 +15,21 @@ class ApplicationController < ActionController::Base
 	end
 
 
-	def after_sign_in_path_for(resource)
-		user_path(@user.id)
-	end
+	# def after_sign_in_path_for(resource)
+	# 	user_path
+	# end
 	def after_sign_out_path_for(resource)
 		flash[:notice] = "Signed out successfully."
 		root_path
 	end
 
 	def authenticate_user
-		if @current_user == nil
+		if current_user == nil
 			redirect_to new_user_session_path
 		end
 	end
 
 	def set_current_user
-		@current_user = User.find_by(id: session[:user_id])
+		current_user = User.find_by(id: session[:user_id])
 	end
 end
