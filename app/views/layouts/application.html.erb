@@ -58,8 +58,10 @@
     </header>
     <div class = "space" style = "height: 70px;"></div>
     <%= yield %>
+    <div class="wrapper">
     <footer>
-            <%= link_to "お問い合わせ",  contacts_path%>
+            <p><%= link_to "お問い合わせ",  contacts_path%></p>
     </footer>
+    </div>
   </body>
 </html>
