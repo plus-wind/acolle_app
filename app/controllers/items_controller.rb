@@ -1,12 +1,13 @@
 class ItemsController < ApplicationController
 	def index
-		@items = Item.all
+		@items = Item.page(params[:page]).reverse_order
 		@hash_sales_ranking = OrderItem.rank_sales_items
 		@most_viewed = Item.order('impressions_count DESC').take(4)
 	end
 	def show
 		@item = Item.find(params[:id])
 	    impressionist(@item, nil)
+	    @cart = Cart.new
 	end
 	def search
 		@hash_sales_ranking = OrderItem.rank_sales_items

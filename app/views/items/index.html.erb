@@ -66,6 +66,7 @@
 		    </div>
 			<% end %>
 		</div>
+		<div class="pagenate"><%= paginate @items, class: "paginate" %></div>
 	</div>
 </div>
 <%= link_to 'テスト ログアウトする用', destroy_user_session_path, method: :delete %>

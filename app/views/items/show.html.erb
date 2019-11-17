@@ -6,6 +6,39 @@
   				<strong>閲覧数:</strong>
                 <%= @item.impressions_count %>
 
-
-<h1>CD詳細</h1>
-<%= attachment_image_tag @item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'300×300' %>
+<div class="container">
+	<div class="row4">
+		<h1>CD詳細</h1>
+		<div class="col-md-5">
+	    <%= attachment_image_tag @item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'350x350' %>
+		</div>
+		<div class="col-md-7">
+			<p>アルバム名：<%= @item.item_name %></p>
+			<p>アーティスト名：<%= @item.artist.artist_name %></p>
+			<p>発売日：<%= @item.item_release_date.strftime('%y/%m/%d') %></p>
+			<p>レーベル：<%= @item.label.label_name %></p>
+			<p>ジャンル：<%= @item.genre.genre_name %></p>
+			<p>価格：<%= (@item.item_price*1.1).round(0) %>円</p>
+			<%= form_for(@cart, url: cart_path) do |f| %>
+			<%= f.number_field :cart_item_number, min: "0", :style=>"width: 30px;" %>
+			<%= f.submit 'カートへ追加' %>
+			<% end %>
+		</div>
+	</div>
+	<div class="row5">
+		<div class="col-md-12">
+			<h3>収録曲いちらん</h3>
+			<% @item.discs.each do |d| %>
+			<%= "#{d.disc_name}" %>
+				<% d.songs.each.with_index(1) do |s, i| %>
+				<%= "#{i}.""#{s.song}" %>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+	<div class="row6">
+		<div class="col-md-12">
+			<h3>レビュー一覧</h3>
+		</div>
+	</div>
+</div>

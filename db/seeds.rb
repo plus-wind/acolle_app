@@ -95,19 +95,6 @@ Contact.create!(
     }
   ]
 )
-#discs_seed
-Disc.create!(
-  [
-    {
-      item_id: '1',
-      disc_name: 'disk1',
-    },
-    {
-      item_id: '2',
-      disc_name: 'disk2',
-    }
-  ]
-)
 #genres_seed
 Genre.create!(
   [
@@ -268,6 +255,27 @@ Review.create!(
         }
     ]
 )
+#discs_seed
+Disc.create!(
+  [
+    {
+      item_id: '1',
+      disc_name: 'Disk1',
+    },
+    {
+      item_id: '2',
+      disc_name: 'disk1',
+    },
+    {
+      item_id: '1',
+      disc_name: 'Disk2',
+    },
+    {
+      item_id: '2',
+      disc_name: 'disk2',
+    }
+  ]
+)
 #songs_seed
 Song.create!(
   [
@@ -286,6 +294,14 @@ Song.create!(
     {
       disc_id: '1',
       song: 'カマキリ',
+    },
+    {
+      disc_id: '3',
+      song: 'コオロギ',
+    },
+    {
+      disc_id: '3',
+      song: 'フンコロガシ',
     }
   ]
 )
