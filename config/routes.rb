@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get '/mypage', to: 'users#show'
   patch '/users', to: 'users#change'
 #users/registrations controller
-  namespace :users do
-    get '/unsubscribe', to: 'registrations#unsubscribe'
-    get '/unsubscribe/complete', to: 'registrations#complete'
+  devise_scope :user do
+    get 'users/unsubscribe', to: 'users/registrations#unsubscribe'
+    get 'users/unsubscribe/complete', to: 'users/registrations#complete'
   end
 #orders controller
   get '/order', to: 'orders#order'
@@ -17,7 +17,6 @@ Rails.application.routes.draw do
 #items controller
   resources :items, only:[:show]
   root to: 'items#index'
-  #get '/items/:id', to: 'items#show'
 #carts controller
   get '/cart', to: 'carts#index'
   post '/items/:id/cart', to: 'carts#add'
@@ -44,7 +43,7 @@ namespace :admins do
   post '/items/:id/arrivals', to: 'arrivals#create'
 #admins/users controller
   resources :users, only:[:index, :show, :edit, :update]
-  patch '/uesrs', to: 'users#change'
+  #patch '/uesrs', to: 'users#change'
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]
 #admins/contacts controller
