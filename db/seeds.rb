@@ -6,7 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+#labels_seed
+Label.create!(
+  [
+    {
+        label_name: "ソニーミュージック",
+    },
+    {
+        label_name: "カニーミュージック",
+    }
+  ]
+)
 # addresses_seed
 Address.create!(
   [
@@ -65,21 +75,7 @@ Artist.create!(
     }
   ]
 )
-#carts_seed
-Cart.create!(
-  [
-    {
-      user_id: "1",
-      item_id: "1",
-      cart_item_number: "1",
-    },
-    {
-      user_id: "2",
-      item_id: "2",
-      cart_item_number: "1",
-    }
-  ]
-)
+
 #contacts_seed
 Contact.create!(
   [
@@ -136,7 +132,7 @@ Item.create!(
       item_price: '1111',
       item_release_date: '2019/01/01',
       item_delete_flag: '0',
-      item_view: '11111',
+      impressions_count: '0',
     },
     {
       artist_id: '2',
@@ -148,21 +144,47 @@ Item.create!(
       item_price: '2222',
       item_release_date: '2019/02/02',
       item_delete_flag: '0',
-      item_view: '11111',
-    }
-  ]
-)
-#labels_seed
-Label.create!(
-  [
-    {
-        label_name: "ソニーミュージック",
+      impressions_count: '0',
     },
     {
-        label_name: "カニーミュージック",
+      artist_id: '2',
+      label_id: '2',
+      genre_id: '2',
+      item_name: 'CD名3',
+      item_type: 'アルバム',
+      item_image_id: '',
+      item_price: '3333',
+      item_release_date: '2019/02/02',
+      item_delete_flag: '0',
+      impressions_count: '0',
+    },
+    {
+      artist_id: '2',
+      label_id: '2',
+      genre_id: '2',
+      item_name: 'CD名4',
+      item_type: 'アルバム',
+      item_image_id: '',
+      item_price: '4444',
+      item_release_date: '2019/02/02',
+      item_delete_flag: '0',
+      impressions_count: '0',
+    },
+    {
+      artist_id: '2',
+      label_id: '2',
+      genre_id: '2',
+      item_name: 'CD名5',
+      item_type: 'アルバム',
+      item_image_id: '',
+      item_price: '5555',
+      item_release_date: '2019/02/02',
+      item_delete_flag: '0',
+      impressions_count: '0',
     }
   ]
 )
+
 #order_items_seed
 OrderItem.create!(
   [
@@ -176,7 +198,19 @@ OrderItem.create!(
       order_id: "2",
       item_id: "2",
       order_price: "3000",
-      order_number: "1",
+      order_number: "2",
+    },
+    {
+      order_id: "2",
+      item_id: "3",
+      order_price: "3000",
+      order_number: "3",
+    },
+    {
+      order_id: "2",
+      item_id: "2",
+      order_price: "3000",
+      order_number: "2",
     }
   ]
 )
@@ -287,6 +321,21 @@ User.create!(
       email: "test2@gmail.com",
       password:  "22222222",
       delete_flag: "0",
+    }
+  ]
+)
+#carts_seed
+Cart.create!(
+  [
+    {
+      user_id: "1",
+      item_id: "1",
+      cart_item_number: "1",
+    },
+    {
+      user_id: "2",
+      item_id: "2",
+      cart_item_number: "2",
     }
   ]
 )
