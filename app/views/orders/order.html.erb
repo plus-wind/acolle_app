@@ -1,19 +1,27 @@
 <body>
   <h1>商品購入ページ</h1>
   <h2>購入者情報</h2>
+  <!-- ユーザー情報を表示 -->
   <table class = "table">
     <tbody>
-      <!-- ユーザー情報を表示 -->
       <tr>
         <th>名前</th>
         <th><%=@full_name %></th>
       </tr>
-      <!-- 住所を情報を表示 -->
+    </tbody>
+  </table>
+  <!-- 住所を情報を表示 -->
+  <table class = "table">
+    <tbody>
       <tr>
         <th>住所</th>
         <th><%= @user_address%></th>
       </tr>
-      <!-- お届け先を情報を表示 -->
+    </tbody>
+  </table>
+  <!-- お届け先を情報を表示 -->
+  <table class = "table">
+    <tbody>
       <tr>
         <th>お届け先</th>
         <th>
@@ -24,7 +32,11 @@
           <input type="radio" name="example" value="サンプル">新しい配送先</<input>
         </th>
       </tr>
-      <!-- 支払い方法を選択 -->
+    </tbody>
+  </table>
+  <!-- 支払い方法を選択 -->
+  <table class = "table">
+    <tbody>
       <tr>
         <th>お支払い情報</th>
         <th>
@@ -34,22 +46,21 @@
           <br>
           <input type="radio" name="example" value="サンプル">代引き
         </th>
-      <!-- 商品情報を表示 -->
-      <h2>商品情報</h2>
-      <thead>
-        <th>商品名</th>
-        <th>アーティスト名</th>
-        <th></th>
-      </thead>
-        <% @carts.each do |cart| %>
-          <tr>
-            <td><%= attachment_image_tag item, :profile_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
-            <td><%= cart.item.item_name %></td>
-            <td><%= cart.item.item_name %></td>
-          </tr>
-        <% end %>
+      </tr>
     </tbody>
-
+  </table>
+  <!-- 商品情報を表示 -->
+  <table class = "table">
+    <tbody>
+      <% @carts.each do |cart| %>
+        <h2>商品情報</h2>
+        <tr>
+          <td><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+          <td><%= cart.item.item_name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </body>
 
 
