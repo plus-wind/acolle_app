@@ -63,11 +63,13 @@ ActiveRecord::Schema.define(version: 2019_11_17_050130) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "item_id", null: false
+    t.integer "user_id"
+    t.integer "item_id"
     t.integer "cart_item_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_carts_on_item_id"
+    t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -129,7 +131,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_050130) do
     t.integer "item_price", null: false
     t.datetime "item_release_date", null: false
     t.integer "item_delete_flag", null: false
-    t.bigint "item_view", null: false
+    t.integer "impressions_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
