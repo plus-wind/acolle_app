@@ -24,10 +24,10 @@
         </li>
 
         <li>
-          <%= link_to  user.name, users_path(current_user.id), class:"glyphicon glyphicon-user users" %>
+          <%= link_to "ようこそ#{current_user.name_family_kanji}さん", users_path(current_user.id), class:"glyphicon glyphicon-user users" %>
         </li>
         <li>
-          <%= link_to " カート", carts_path(current_user.id), class:"glyphicon glyphicon-cart carts" %>
+          <%= link_to " カート", cart_path, class:"glyphicon glyphicon-cart carts" %>
           </a>
         </li>
 
