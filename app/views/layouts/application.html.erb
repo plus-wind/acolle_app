@@ -32,7 +32,7 @@
               <%= link_to " 商品", root_path, class:"glyphicon glyphicon-home home" %>
             </li>
             <li>
-              <%= link_to  "#{current_user.name_family_kanji}さん", users_path(current_user.id), class:"glyphicon glyphicon-user users" %>
+              <%= link_to  "#{current_user.name_family_kanji}さん", mypage_path, class:"glyphicon glyphicon-user users" %>
             </li>
             <li>
               <%= link_to " カート", cart_path, class:"glyphicon glyphicon-cart carts" %>
