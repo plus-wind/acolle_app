@@ -12,8 +12,13 @@ class ItemsController < ApplicationController
 		@hash_sales_ranking = OrderItem.rank_sales_items
 		@most_viewed = Item.order('impressions_count DESC').take(4)
 		if params[:search_flag] == "1"
-			@artists = Artist.joins(:items).where("artist_name LIKE ?", "%#{params[:search_word]}%")
-			@artists.id = @items.artist_id
+			@artists = Artist.where("artist_name LIKE ?", "%#{params[:search_word]}%")
+			@items = []
+			@artists.each do |a|
+				a.items.each do |i|
+					@items << i
+				end
+			end
 		elsif params[:search_flag] == "2"
 			@items = Item.joins(discs: :songs).where("song LIKE ?", "%#{params[:search_word]}%")
 		end
