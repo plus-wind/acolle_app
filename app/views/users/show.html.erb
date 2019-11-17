@@ -22,7 +22,7 @@
 		</tr>
 		<tr>
 			<td>ご住所</td>
-			<td>〒<%= @user.postal_code %>  <%= @user.address_prefecture %>
+			<td>〒<%= @user.postal_code.insert(3, "-") %>  <%= @user.address_prefecture %>
 				<%= @user.address_city %><%= @user.address_number %>
 				<%= @user.address_building %>
 			</td>
@@ -47,7 +47,7 @@
 		</tr>
 		<tr>
 			<td>ご住所</td>
-			<td>〒<%= address.delivery_postal_code %>  <%= address.delivery_address_prefecture %><%= address.delivery_address_city %><%= address.delivery_address_number %><%= address.delivery_address_building %></td>
+			<td>〒<%= address.delivery_postal_code.insert(3, "-") %>  <%= address.delivery_address_prefecture %><%= address.delivery_address_city %><%= address.delivery_address_number %><%= address.delivery_address_building %></td>
 		</tr>
 
 	</table>
