@@ -48,15 +48,23 @@
 	</div>
 	<div class="row3">
 		<div class="col-md-12">
-			<p class="index-headline"><商品一覧></p>
-		    <div class="index-content">
-    			<% @items.each do |item| %>
-				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'120x120' %>
-				<%= item.artist.artist_name %>
-				<%= link_to item.item_name, item_path(item.id) %>
-  				<%= item.item_price %>
-  				<% end %>
+			<p class="search-headline"><歌手名/曲名 検索></p>
+		    <div class="search-content">
+
 		    </div>
 		</div>
 	</div>
-</div>
+	<div class="row4">
+		<div class="col-md-12">
+			<p class="index-headline"><商品一覧></p>
+    		<% @items.each do |item| %>
+		    <div class="index-content">
+				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'120x120' %>
+				<p><%= item.artist.artist_name %></p>
+				<p><%= link_to item.item_name, item_path(item.id) %></p>
+  				<p><%= item.item_price %></p>
+		    </div>
+			<% end %>
+		</div>
+	</div>
+</div>d
