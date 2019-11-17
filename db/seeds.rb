@@ -65,21 +65,7 @@ Artist.create!(
     }
   ]
 )
-#carts_seed
-Cart.create!(
-  [
-    {
-      user_id: "1",
-      item_id: "1",
-      cart_item_number: "1",
-    },
-    {
-      user_id: "2",
-      item_id: "2",
-      cart_item_number: "1",
-    }
-  ]
-)
+
 #contacts_seed
 Contact.create!(
   [
@@ -287,6 +273,21 @@ User.create!(
       email: "test2@gmail.com",
       password:  "22222222",
       delete_flag: "0",
+    }
+  ]
+)
+#carts_seed
+Cart.create!(
+  [
+    {
+      user_id: "1",
+      item_id: "1",
+      cart_item_number: "1",
+    },
+    {
+      user_id: "2",
+      item_id: "2",
+      cart_item_number: "2",
     }
   ]
 )
