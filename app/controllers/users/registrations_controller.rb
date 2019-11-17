@@ -65,6 +65,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def unsubscribe
+    @user = User.params(current_id[:password])
   end
 
   def complete

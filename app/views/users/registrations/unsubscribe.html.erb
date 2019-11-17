@@ -1,10 +1,12 @@
 <div class="container">
 	<h1>退会確認</h1>
 
-    <%= form_tag _path do %>
- 	 <%= text_field_tag :password %>
-	 <%= submit_tag %>
+	<%= form_for(@user) do |f| %>
+  		<%= f.label :"パスワードを入力して下さい。" %></br>
+  		<%= f.password_field :password %>
 	<% end %>
+
+	<%= link_to "戻る", mypage_path, class:"btn-sm btn" %>
 
 	<%= link_to "退会する", current_user_path, class:"btn-sm btn-danger", method: :delete,  "data-confirm" => "本当に退会しますか？　この処理は取り消せません" %>
 
