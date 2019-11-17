@@ -43,7 +43,7 @@
       </thead>
         <% @carts.each do |cart| %>
           <tr>
-            <td><%= attachment_image_tag cart.item, :profile_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+            <td><%= attachment_image_tag item, :profile_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
             <td><%= cart.item.item_name %></td>
             <td><%= cart.item.item_name %></td>
           </tr>
