@@ -50,13 +50,14 @@
 		<div class="col-md-12">
 			<p class="search-headline"><歌手名/曲名 検索></p>
 		    <div class="search-content">
+		    	<%= form_tag(search_path, method: :post) do %>
+		    		<%= radio_button_tag :search_flag, 1, checked: true %>アーティスト
+					<%= radio_button_tag :search_flag, 2 %>曲
+					<%= text_field_tag :search_word %>
+					<%= submit_tag "検索" %>
+				<% end %>
 		    </div>
-		</div>
-	</div>
-	<div class="row4">
-		<div class="col-md-12">
-			<p class="index-headline"><商品一覧></p>
-    		<% @items.each do |item| %>
+		    <% @items.each do |item| %>
 		    <div class="index-content">
 				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'120x120' %>
 				<p><%= item.artist.artist_name %></p>

@@ -6,4 +6,5 @@ class Item < ApplicationRecord
 	is_impressionable counter_cache: true
     has_many :carts
     has_many :users, through: :carts
+    has_many :discs
 end
