@@ -1,12 +1,25 @@
 <div class = "container">
-    <div class = "row">
-        <div class = "col-md-4">
-        <button class="btn btn-default">button要素</button>
+    <div class = "row-1">
+        <div class = "col-md-4" style = "padding-top: 30px;">
+        <button class="btn btn-default btn-lg">カートを空にする</button>
         </div>
     </div>
-    <div>
-    <% @carts.each do |item| %>
-    <%= item.item_id %>
-	<% end %>
+    <div class = "row-2">
+        <table class = "table">
+            <tbody>
+                <% @carts.each do |cart| %>
+                <h2>商品情報</h2>
+                <tr>
+                    <td><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+                    <td><%= cart.item.item_name %></td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
     </div>
+    <div class = "row-3">
+        <div class = "col-md-10">
+        <%= link_to "商品購入ページへ", order_path, class:"btn btn-success btn-lg", style:"float: right;" %>
+        <div>
+    <div>
 </div>
