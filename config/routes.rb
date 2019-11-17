@@ -15,8 +15,9 @@ Rails.application.routes.draw do
   get '/order/confirmation', to: 'orders#confirmation'
   get '/order/complete', to: 'orders#complete'
 #items controller
+  resources :items, only:[:show]
   root to: 'items#index'
-  get '/items/:id', to: 'items#show'
+  #get '/items/:id', to: 'items#show'
 #carts controller
   get '/cart', to: 'carts#index'
   post '/items/:id/cart', to: 'carts#add'
