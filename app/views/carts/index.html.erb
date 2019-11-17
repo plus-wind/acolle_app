@@ -1,7 +1,12 @@
 <div class = "container">
     <div class = "row">
-        <div class = col-md-4>
-        <button class="btn-default">Default</button>
+        <div class = "col-md-4">
+        <button class="btn btn-default">button要素</button>
         </div>
+    </div>
+    <div>
+    <% @carts.each do |item| %>
+    <%= item.item_id %>
+	<% end %>
     </div>
 </div>
