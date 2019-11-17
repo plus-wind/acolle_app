@@ -3,63 +3,53 @@
   <h2>購入者情報</h2>
   <!-- ユーザー情報を表示 -->
   <table class = "table">
-    <tbody>
-      <tr>
-        <th>名前</th>
-        <th><%=@full_name %></th>
-      </tr>
-    </tbody>
+    <tr>
+      <td>名前</td>
+      <td><%=@full_name %></td>
+    </tr>
   </table>
   <!-- 住所を情報を表示 -->
   <table class = "table">
-    <tbody>
-      <tr>
-        <th>住所</th>
-        <th><%= @user_address%></th>
-      </tr>
-    </tbody>
+    <tr>
+      <td>住所</td>
+      <td><%= @user_address%></td>
+    </tr>
   </table>
   <!-- お届け先を情報を表示 -->
   <table class = "table">
-    <tbody>
-      <tr>
-        <th>お届け先</th>
-        <th>
-          <input type="radio" name="example" value="サンプル" checked>上記の住所と同じ
-          <br>
-          <input type="radio" name="example" value="サンプル">その他の配送先</<input>
-          <br>
-          <input type="radio" name="example" value="サンプル">新しい配送先</<input>
-        </th>
-      </tr>
-    </tbody>
+    <tr>
+      <td>お届け先</td>
+      <td>
+        <input type="radio" name="address" value="サンプル" checked >上記の住所と同じ
+        <br>
+        <input type="radio" name="address" value="サンプル">その他の配送先
+        <br>
+        <input type="radio" name="address" value="サンプル">新しい配送先
+      </td>
+    </tr>
   </table>
   <!-- 支払い方法を選択 -->
   <table class = "table">
-    <tbody>
       <tr>
-        <th>お支払い情報</th>
-        <th>
-          <input type="radio" name="example" value="サンプル" checked>クレジットカード
+        <td>お支払い情報</td>
+        <td>
+          <input type="radio" name="pay" value="サンプル" checked>クレジットカード
           <br>
-          <input type="radio" name="example" value="サンプル">銀行振込
+          <input type="radio" name="pay" value="サンプル">銀行振込
           <br>
-          <input type="radio" name="example" value="サンプル">代引き
-        </th>
+          <input type="radio" name="pay" value="サンプル">代引き
+        </td>
       </tr>
-    </tbody>
   </table>
   <!-- 商品情報を表示 -->
+          <h2>商品情報</h2>
   <table class = "table">
-    <tbody>
       <% @carts.each do |cart| %>
-        <h2>商品情報</h2>
         <tr>
           <td><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
           <td><%= cart.item.item_name %></td>
         </tr>
       <% end %>
-    </tbody>
   </table>
 </body>
 
