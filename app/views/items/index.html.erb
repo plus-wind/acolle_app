@@ -21,7 +21,7 @@
 		    <div class="ranking-content">
 		    	<h4><%= "第#{i}位" %></h4>
 		   		<% item = Item.find(item_key) %>
-				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'180x150' %>
+				<%= attachment_image_tag item, :item_image, :fill, 180, 150, fallback: "no_image.jpg", size:'180x150' %>
 				<p><%= item.artist.artist_name %></p>
 				<p><%= link_to item.item_name, item_path(item.id) %></p>
   				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
@@ -38,7 +38,7 @@
 			<% @most_viewed.each.with_index(1) do |item, i| %>
 		    <div class="ranking-content">
     			<h4><%= "第#{i}位" %></h4>
-				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'180x150' %>
+				<%= attachment_image_tag item, :item_image, :fill, 180, 150, fallback: "no_image.jpg", size:'180x150' %>
 				<p><%= item.artist.artist_name %></p>
 				<p><%= link_to item.item_name, item_path(item.id) %></p>
   				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
@@ -59,7 +59,7 @@
 		    </div>
 		    <% @items.each do |item| %>
 		    <div class="index-content">
-				<%= attachment_image_tag item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'120x120' %>
+				<%= attachment_image_tag item, :item_image, :fill, 120, 120, fallback: "no_image.jpg", size:'120x120' %>
 				<p><%= item.artist.artist_name %></p>
 				<p><%= link_to item.item_name, item_path(item.id) %></p>
   				<p><%= item.item_price %></p>

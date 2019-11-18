@@ -10,7 +10,7 @@
 	<div class="row4">
 		<h1>CD詳細</h1>
 		<div class="col-md-5">
-	    <%= attachment_image_tag @item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'350x350' %>
+	    <%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'350x350' %>
 		</div>
 		<div class="col-md-7">
 			<p>アルバム名：<%= @item.item_name %></p>
@@ -41,6 +41,8 @@
 	<div class="row6">
 		<div class="col-md-12">
 			<h3>レビュー一覧</h3>
+			<%= @satisfaction_average %>
+			<p><%= @satisfaction_count %>件</p>
 			<% @item.reviews.each do |r| %>
 			<div class="reviews-container">
 				<h3><%= r.review_title %></h3>
