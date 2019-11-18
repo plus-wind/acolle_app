@@ -40,7 +40,7 @@
 			<% @item.reviews.each do |r| %>
 			<div class="reviews-container">
 				<h3><%= r.review_title %></h3>
-				<%= r.satisfaction %><p>満足度 : <%= rating_for r, 'satisfaction', enable_half: true %></p>
+				<%= r.satisfaction %>
 				<%= r.review_content %>
 				<%= r.user.name_family_kanji + r.user.name_first_kanji %>
 				<%= r.created_at.strftime('%y/%m/%d') %>
