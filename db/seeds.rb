@@ -130,19 +130,6 @@ Contact.create!(
     }
   ]
 )
-#discs_seed
-Disc.create!(
-  [
-    {
-      item_id: '1',
-      disc_name: 'disk1',
-    },
-    {
-      item_id: '2',
-      disc_name: 'disk2',
-    }
-  ]
-)
 #genres_seed
 Genre.create!(
   [
@@ -300,8 +287,36 @@ Review.create!(
             review_title: "悪かったよーん",
             review_content: "うるさすぎて頭がおかしくなりました。とてもわるい曲です",
             satisfaction: "1",
+        },
+        {
+            user_id: "2",
+            item_id: "1",
+            review_title: "悪かったよーん",
+            review_content: "うるさすぎて頭がおかしくなりました。とてもわるい曲です",
+            satisfaction: "3",
         }
     ]
+)
+#discs_seed
+Disc.create!(
+  [
+    {
+      item_id: '1',
+      disc_name: 'Disk1',
+    },
+    {
+      item_id: '2',
+      disc_name: 'disk1',
+    },
+    {
+      item_id: '1',
+      disc_name: 'Disk2',
+    },
+    {
+      item_id: '2',
+      disc_name: 'disk2',
+    }
+  ]
 )
 #songs_seed
 Song.create!(
@@ -321,10 +336,17 @@ Song.create!(
     {
       disc_id: '1',
       song: 'カマキリ',
+    },
+    {
+      disc_id: '3',
+      song: 'コオロギ',
+    },
+    {
+      disc_id: '3',
+      song: 'フンコロガシ',
     }
   ]
 )
-
 #carts_seed
 Cart.create!(
   [
@@ -332,6 +354,11 @@ Cart.create!(
       user_id: "1",
       item_id: "1",
       cart_item_number: "1",
+    },
+    {
+      user_id: "1",
+      item_id: "2",
+      cart_item_number: "2",
     },
     {
       user_id: "2",
