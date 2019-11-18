@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class = "row-2">
-        <table class = "table">
+        <table class = "table1">
             <tbody>
                 <% @carts.each do |cart| %>
                 <h2>カート情報</h2>
@@ -16,7 +16,7 @@
                     <%= link_to "削除", cart_path(cart), method: :delete, class:"btn-sm btn-danger" %>
                     </td>
                 </tr>
-                
+
                 <% end %>
             </tbody>
         </table>
@@ -24,6 +24,6 @@
     <div class = "row-3">
         <div class = "col-md-10 goorder">
         <%= link_to "商品購入ページへ", order_path, class:"btn btn-success btn-lg", style:"float: right;" %>
-        <div>
-    <div>
+        </div>
+    </div>
 </div>
