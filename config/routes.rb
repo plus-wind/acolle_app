@@ -16,19 +16,13 @@ Rails.application.routes.draw do
   get '/order/complete', to: 'orders#complete'
 #items controller
   resources :items, only:[:show]
+  post '/search',  to: 'items#search'
   root to: 'items#index'
 #carts controller
   get '/cart', to: 'carts#index'
   post '/items/:id/cart', to: 'carts#add'
-  delete '/cart/:id', to: 'carts#remove'
-  delete '/cart', to: 'carts#destroy'
-  resources :items
-
-  resources :carts, only: [:show]
-
-  # post '/add_item' => 'carts#add_item'
-  # post '/update_item' => 'carts#update_item'
-  # delete '/delete_item' => 'carts#delete_item'
+  delete '/cart.:id', to: 'carts#remove'
+  delete '/carts', to: 'carts#destroy'
 #reviews controller
   resources :reviews, only:[:edit, :update, :destroy]
   get '/items/:id/reviews', to: 'reviews#new'
