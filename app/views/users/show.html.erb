@@ -53,5 +53,16 @@
 	</table>
 	<% end %>
 	<h3>購入履歴</h3>
+	<% @orders.each do |order| %>
+		<div><%= order.created_at.strftime('%Y/%m/%d') %>  <%= order.order_status %></div>
 
+			<% @order_items.each do |oi| %>
+				<%= oi.item.item_image_id %>
+			<% end %>
+
+		<div><p>送付先：<%= order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji %>   様宛       <%= order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %></p></div>
+		<div>送料:<%= order.postage %>   円</div>
+		<div>決済方法：◯○決済             合計：<%= order.total_fee %>円</div>
+	<% end %>
 </div>
+
