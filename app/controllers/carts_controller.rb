@@ -26,9 +26,10 @@ class CartsController < ApplicationController
   end
 
   def destroy
-    @cart = Cart.find(params[:id])
-    @cart.destroy_all
-    redirect_to root_path
+    @carts = Cart.where(user_id:current_user.id)
+    @carts.destroy_all
+    flash[:notice] = "カートが空になりました"
+    redirect_to cart_path
   end
 
   # def setup_cart_item!

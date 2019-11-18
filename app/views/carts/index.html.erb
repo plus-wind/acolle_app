@@ -1,23 +1,31 @@
-<div class = "container" id="test">
+<p><%= flash[:notice] %></p>
+<div class = "container">
     <div class = "row-1 clearfix">
-        <div class = "col-md-4" style = "padding-top: 30px;">
+        <div class = "col-md-4" style = "padding-top: 30px; padding-bottom: 10px;">
             <h2>カート情報</h2>
-            <button class="btn btn-default btn-lg">カートを空にする</button>
+            <%= link_to "カートを空にする", carts_path, method: :delete, class:"btn btn-default btn-lg" %>
         </div>
     </div>
     <% @carts.each do |cart| %>
         <div class = "row-12 clearfix cart-box">
             <th><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
             </th>
+            <th>
             <%= cart.item.item_name %>
-            <%= cart.cart_item_number %> 枚
-            <%= cart.item.item_price %> 円(税込)
             </th>
-            <%= link_to "削除", cart_path(cart), method: :delete, class:"btn-sm btn-danger", style:"float: right;" %>
+            <div class = "col-2 cart-info">
+                <%= form_for(cart, url:root_path) do |f| %>
+                <%= f.number_field :cart_item_number, style:"width: 40px;" %>
+                <% end %>
+                <div class = "cart-price">
+                    <%= cart.item.item_price %> 円(税込)
+                    <%= link_to "削除", cart_path(cart), method: :delete, class:"btn-sm btn-danger"%>
+                </div>
+            </div>
         </div>
     <% end %>
     <div class = "row-3">
-        <div class = "col-md-12">
+        <div class = "col-md-12 submitbutton">
         <%= link_to "商品購入ページへ", order_path, class:"btn btn-success btn-lg", style:"float: right;" %>
         </div>
     </div>
