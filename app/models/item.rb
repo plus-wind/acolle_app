@@ -7,5 +7,6 @@ class Item < ApplicationRecord
 	belongs_to :genre
 	attachment :item_image
 	is_impressionable counter_cache: true
-
+	has_many :order_items
+	has_many :orders, through: :order_items
 end
