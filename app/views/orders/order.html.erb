@@ -37,29 +37,28 @@
   </table>
   <!-- 商品情報を表示 -->
   <h2>商品情報</h2>
+    <% total_price = 0.to_i%>
     <% @carts.each do |cart| %>
       <section class="cart-item clearfix" >
         <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
         <%= cart.item.item_name %>
         <%= cart.cart_item_number %> 枚
         <%= cart.item.item_price %> 円(税込)
-        <% total_price = 0.to_i%>
         <% total_price += cart.item.item_price * cart.cart_item_number%>
       </section>
     <% end %>
     <div>
-      <p>送料</p><%= order.postage %>
-      <p>合計金額<p><%= total_price + order.postage %>
+      <p>送料</p><%= @order.postage %>
+      <p>合計金額<p><%= total_price + @order.postage %>
     </div>
 
   <div class="container">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2"></div>
-          <button class="btn btn-default">default</button>
-          <button class="btn btn-success">success</button>
+        <div class="col-lg-8 col-lg-offset-2"></div>
+          <%= link_to '戻る', :back , class: "btn btn-default" %> 
+          <%= link_to '注文内容確認ページへ', order_confirmation_path , class: "btn btn-success" %>
         </div>
       </div>
   </<%=>
 </body>
-
 
