@@ -3,6 +3,7 @@ class CartsController < ApplicationController
 
   def index
     p current_user
+    # @cart = Cart.find(params[:id])
     @carts = Cart.where(user_id:current_user.id)
   end
 
@@ -21,7 +22,7 @@ class CartsController < ApplicationController
   def remove
     @cart = Cart.find(params[:id])
     @cart.destroy
-    redirect_to current_user.carts
+    redirect_to cart_path
   end
 
   def destroy
@@ -32,7 +33,7 @@ class CartsController < ApplicationController
 
   private
 
-  def setup_cart_item!
-    @cart = current_user.carts.find_by(item_id: params[:item_id])
-  end
+  # def setup_cart_item!
+  #   @cart = current_user.carts.find_by(item_id: params[:item_id])
+  # end
 end

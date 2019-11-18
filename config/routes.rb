@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 #carts controller
   get '/cart', to: 'carts#index'
   post '/items/:id/cart', to: 'carts#add'
-  delete '/cart/:id', to: 'carts#remove'
-  delete '/cart', to: 'carts#destroy'
+  delete '/cart.:id', to: 'carts#remove'
+  delete '/carts', to: 'carts#destroy'
 #reviews controller
   resources :reviews, only:[:edit, :update, :destroy]
   get '/items/:id/reviews', to: 'reviews#new'
