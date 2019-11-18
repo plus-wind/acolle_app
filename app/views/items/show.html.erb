@@ -27,18 +27,29 @@
 	</div>
 	<div class="row5">
 		<div class="col-md-12">
-			<h3>収録曲いちらん</h3>
+			<h3>収録曲一覧</h3>
 			<% @item.discs.each do |d| %>
-			<%= "#{d.disc_name}" %>
+			<div class="disc-container">
+				<h3><%= "#{d.disc_name}" %></h3>
 				<% d.songs.each.with_index(1) do |s, i| %>
-				<%= "#{i}.""#{s.song}" %>
+				<p><%= "#{i}.""#{s.song}" %></p>
 				<% end %>
+			</div>
 			<% end %>
 		</div>
 	</div>
 	<div class="row6">
 		<div class="col-md-12">
 			<h3>レビュー一覧</h3>
+			<% @item.reviews.each do |r| %>
+			<div class="reviews-container">
+				<h3><%= r.review_title %></h3>
+				<%= r.satisfaction %>
+				<%= r.review_content %>
+				<%= r.user.name_family_kanji + r.user.name_first_kanji %>
+				<%= r.created_at.strftime('%y/%m/%d') %>
+			</div>
+			<% end %>
 		</div>
 	</div>
 </div>

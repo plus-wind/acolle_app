@@ -6,6 +6,41 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#users_seed
+User.create!(
+  [
+    {
+      name_family_kanji: "田中",
+      name_first_kanji: "一郎",
+      name_family_furigana: "たなか",
+      name_first_furigana: "いちろう",
+      postal_code: "1234567",
+      address_prefecture: "北海道",
+      address_city: "テスト市",
+      address_number: "テスト1-2-3",
+      address_building: "テスト荘",
+      phone_number: "09012345678",
+      email: "test@gmail.com",
+      password:  "11111111",
+      delete_flag: "0",
+    },
+    {
+      name_family_kanji: "鈴木",
+      name_first_kanji: "二郎",
+      name_family_furigana: "すずき",
+      name_first_furigana: "じろう",
+      postal_code: "7654321",
+      address_prefecture: "神奈川県",
+      address_city: "テスト市",
+      address_number: "テスト11-11-11",
+      address_building: "テストレジデンス",
+      phone_number: "09043218765",
+      email: "test2@gmail.com",
+      password:  "22222222",
+      delete_flag: "0",
+    }
+  ]
+)
 #labels_seed
 Label.create!(
   [
@@ -252,6 +287,13 @@ Review.create!(
             review_title: "悪かったよーん",
             review_content: "うるさすぎて頭がおかしくなりました。とてもわるい曲です",
             satisfaction: "1",
+        },
+        {
+            user_id: "2",
+            item_id: "1",
+            review_title: "悪かったよーん",
+            review_content: "うるさすぎて頭がおかしくなりました。とてもわるい曲です",
+            satisfaction: "3",
         }
     ]
 )
@@ -302,41 +344,6 @@ Song.create!(
     {
       disc_id: '3',
       song: 'フンコロガシ',
-    }
-  ]
-)
-#users_seed
-User.create!(
-  [
-    {
-      name_family_kanji: "田中",
-      name_first_kanji: "一郎",
-      name_family_furigana: "たなか",
-      name_first_furigana: "いちろう",
-      postal_code: "1234567",
-      address_prefecture: "北海道",
-      address_city: "テスト市",
-      address_number: "テスト1-2-3",
-      address_building: "テスト荘",
-      phone_number: "09012345678",
-      email: "test@gmail.com",
-      password:  "11111111",
-      delete_flag: "0",
-    },
-    {
-      name_family_kanji: "鈴木",
-      name_first_kanji: "二郎",
-      name_family_furigana: "すずき",
-      name_first_furigana: "じろう",
-      postal_code: "7654321",
-      address_prefecture: "神奈川県",
-      address_city: "テスト市",
-      address_number: "テスト11-11-11",
-      address_building: "テストレジデンス",
-      phone_number: "09043218765",
-      email: "test2@gmail.com",
-      password:  "22222222",
-      delete_flag: "0",
     }
   ]
 )
