@@ -164,7 +164,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_050130) do
     t.string "delivery_address_building"
     t.integer "order_status", null: false
     t.integer "total_fee", null: false
-    t.integer "postage", null: false
+    t.integer "postage", default: 500
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

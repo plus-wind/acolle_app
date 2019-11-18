@@ -334,6 +334,11 @@ Cart.create!(
       cart_item_number: "1",
     },
     {
+      user_id: "1",
+      item_id: "2",
+      cart_item_number: "2",
+    },
+    {
       user_id: "2",
       item_id: "2",
       cart_item_number: "2",
