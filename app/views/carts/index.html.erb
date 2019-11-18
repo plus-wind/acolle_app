@@ -8,7 +8,7 @@
         <table class = "table">
             <tbody>
                 <% @carts.each do |cart| %>
-                <h2>商品情報</h2>
+                <h2>カート情報</h2>
                 <tr>
                     <td><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
                     <td>
@@ -16,6 +16,7 @@
                     <%= link_to "削除", cart_path(cart), method: :delete, class:"btn-sm btn-danger" %>
                     </td>
                 </tr>
+                
                 <% end %>
             </tbody>
         </table>

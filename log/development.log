@@ -28976,3 +28976,300 @@ ActionView::Template::Error (SQLite3::SQLException: no such column: order_items.
   
 app/views/users/show.html.erb:59:in `block in _app_views_users_show_html_erb__2230132731650861603_47033768129520'
 app/views/users/show.html.erb:56:in `_app_views_users_show_html_erb__2230132731650861603_47033768129520'
+Started GET "/" for 10.0.2.2 at 2019-11-18 03:36:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT  SUM("order_items"."order_number") AS sum_order_number, "order_items"."item_id" AS order_items_item_id FROM "order_items" GROUP BY "order_items"."item_id" ORDER BY sum_order_number desc LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/models/order_item.rb:3
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY impressions_count DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/controllers/items_controller.rb:5
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:60
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/items/index.html.erb:69
+  Rendered items/index.html.erb within layouts/application (3593.4ms)
+Started GET "/" for 10.0.2.2 at 2019-11-18 03:36:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT  SUM("order_items"."order_number") AS sum_order_number, "order_items"."item_id" AS order_items_item_id FROM "order_items" GROUP BY "order_items"."item_id" ORDER BY sum_order_number desc LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/models/order_item.rb:3
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY impressions_count DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/controllers/items_controller.rb:5
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:60
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/items/index.html.erb:69
+  Rendered items/index.html.erb within layouts/application (123.2ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 4474ms (Views: 4409.0ms | ActiveRecord: 20.8ms)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 654ms (Views: 626.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-11-18 03:36:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 366ms (Views: 363.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-11-18 03:36:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MRhZdHKHa8Hui7MkivYA98IK74H3sWae+XScN4IUqiFE6PAf4tTHdut3CQbr7DBzAWb5EMGVVmhceCOWRK+4og==", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 175ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-18 03:36:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT  SUM("order_items"."order_number") AS sum_order_number, "order_items"."item_id" AS order_items_item_id FROM "order_items" GROUP BY "order_items"."item_id" ORDER BY sum_order_number desc LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/models/order_item.rb:3
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY impressions_count DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/controllers/items_controller.rb:5
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:60
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/items/index.html.erb:69
+  Rendered items/index.html.erb within layouts/application (96.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 434ms (Views: 402.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-18 03:41:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT  SUM("order_items"."order_number") AS sum_order_number, "order_items"."item_id" AS order_items_item_id FROM "order_items" GROUP BY "order_items"."item_id" ORDER BY sum_order_number desc LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/models/order_item.rb:3
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY impressions_count DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/controllers/items_controller.rb:5
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:60
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/items/index.html.erb:69
+  Rendered items/index.html.erb within layouts/application (100.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 2066ms (Views: 2043.7ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-18 03:41:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT  SUM("order_items"."order_number") AS sum_order_number, "order_items"."item_id" AS order_items_item_id FROM "order_items" GROUP BY "order_items"."item_id" ORDER BY sum_order_number desc LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/models/order_item.rb:3
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY impressions_count DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/controllers/items_controller.rb:5
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:60
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/items/index.html.erb:69
+  Rendered items/index.html.erb within layouts/application (95.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 2004ms (Views: 1982.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-11-18 03:42:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT  SUM("order_items"."order_number") AS sum_order_number, "order_items"."item_id" AS order_items_item_id FROM "order_items" GROUP BY "order_items"."item_id" ORDER BY sum_order_number desc LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/models/order_item.rb:3
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY impressions_count DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/controllers/items_controller.rb:5
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:23
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:25
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:42
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/items/index.html.erb:60
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:63
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/items/index.html.erb:69
+  Rendered items/index.html.erb within layouts/application (119.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+Completed 200 OK in 2236ms (Views: 2208.0ms | ActiveRecord: 8.8ms)
+
+
