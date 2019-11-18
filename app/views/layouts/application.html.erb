@@ -32,7 +32,7 @@
               <%= link_to " 商品", root_path, class:"glyphicon glyphicon-home home" %>
             </li>
             <li>
-              <%= link_to  "#{current_user.name_family_kanji}さん", users_path(current_user.id), class:"glyphicon glyphicon-user users" %>
+              <%= link_to  "#{current_user.name_family_kanji}さん", mypage_path, class:"glyphicon glyphicon-user users" %>
             </li>
             <li>
               <%= link_to " カート", cart_path, class:"glyphicon glyphicon-cart carts" %>
@@ -54,15 +54,23 @@
           <% end %>
           </ul>
         </nav><!-- /.input-group -->
+
+    </div>
+  </header>
+
+
       </div>
     </header>
+<<<<<<< HEAD
+
+=======
+    <div class = "space" style = "height: 70px;"></div>
+>>>>>>> develop
     <%= yield %>
-    <footer class = "footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-3 col-xs-offset-9">
+    <div class="wrapper">
     <footer>
-            <%= link_to "お問い合わせ",  contacts_path%>
+            <p><%= link_to "お問い合わせ",  contacts_path%></p>
     </footer>
+    </div>
   </body>
 </html>
