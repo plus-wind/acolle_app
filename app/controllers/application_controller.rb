@@ -1,17 +1,20 @@
 class ApplicationController < ActionController::Base
-	before_action :set_current_user
 	before_action :set_search
+
+
 	before_action :configure_permitted_parameters, if: :devise_controller?
-	
+
+
 	def set_search
 		@search = Item.ransack(params[:q])
 		@search_items = @search.result
 	end
 
+
 	protect_from_forgery with: :exception
 
 	helper_method :current_cart
-  
+
 	def current_cart
 	  if session[:cart_id]
 		@cart = Cart.find(session[:cart_id])
@@ -43,4 +46,5 @@ class ApplicationController < ActionController::Base
 	def set_current_user
 		current_user = User.find_by(id: session[:user_id])
 	end
+
 end
