@@ -13,14 +13,12 @@
             <%= cart.cart_item_number %> 枚
             <%= cart.item.item_price %> 円(税込)
             </th>
-            <td>
             <%= link_to "削除", cart_path(cart), method: :delete, class:"btn-sm btn-danger", style:"float: right;" %>
-            </td>
         </div>
     <% end %>
     <div class = "row-3">
-        <div class = "col-md-10 goorder">
-        <%= link_to "商品購入ページへ", order_path, class:"btn btn-success btn-lg" %>
+        <div class = "col-md-12">
+        <%= link_to "商品購入ページへ", order_path, class:"btn btn-success btn-lg", style:"float: right;" %>
         </div>
     </div>
 </div>
