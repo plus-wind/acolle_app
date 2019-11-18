@@ -35,7 +35,7 @@
               <%= link_to  "#{current_user.name_family_kanji}さん", users_path(current_user.id), class:"glyphicon glyphicon-user users" %>
             </li>
             <li>
-              <%= link_to " カート", carts_path(current_user.id), class:"glyphicon glyphicon-cart carts" %>
+              <%= link_to " カート", cart_path, class:"glyphicon glyphicon-cart carts" %>
             </li>
             <li>
               <%= link_to " ログアウト", destroy_user_session_path, method: :delete, class:"glyphicon glyphicon-log-out logout" %>
@@ -54,17 +54,15 @@
           <% end %>
           </ul>
         </nav><!-- /.input-group -->
-    </div>
-  </header>
+      </div>
+    </header>
     <%= yield %>
-    <footer>
+    <footer class = "footer">
       <div class="container">
         <div class="row">
           <div class="col-xs-3 col-xs-offset-9">
+    <footer>
             <%= link_to "お問い合わせ",  contacts_path%>
-          </div>
-        </div>
-      </div>
     </footer>
   </body>
 </html>

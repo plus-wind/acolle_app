@@ -8,9 +8,7 @@ class ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 	    impressionist(@item, nil)
 	    @cart = Cart.new
-        @satisfaction = @item.reviews.group(:item_id).sum(:satisfaction)
-
-		@reviews = @item.reviews
+        # @satisfaction = @item.reviews.group(:item_id).sum(:satisfaction)
 	end
 	def search
 		@hash_sales_ranking = OrderItem.rank_sales_items

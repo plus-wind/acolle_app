@@ -1,55 +1,65 @@
 <body>
   <h1>商品購入ページ</h1>
   <h2>購入者情報</h2>
+  <!-- ユーザー情報を表示 -->
   <table class = "table">
-    <tbody>
-      <!-- ユーザー情報を表示 -->
-      <tr>
-        <th>名前</th>
-        <th><%=@full_name %></th>
-      </tr>
-      <!-- 住所を情報を表示 -->
-      <tr>
-        <th>住所</th>
-        <th><%= @user_address%></th>
-      </tr>
-      <!-- お届け先を情報を表示 -->
-      <tr>
-        <th>お届け先</th>
-        <th>
-          <input type="radio" name="example" value="サンプル" checked>上記の住所と同じ
-          <br>
-          <input type="radio" name="example" value="サンプル">その他の配送先</<input>
-          <br>
-          <input type="radio" name="example" value="サンプル">新しい配送先</<input>
-        </th>
-      </tr>
-      <!-- 支払い方法を選択 -->
-      <tr>
-        <th>お支払い情報</th>
-        <th>
-          <input type="radio" name="example" value="サンプル" checked>クレジットカード
-          <br>
-          <input type="radio" name="example" value="サンプル">銀行振込
-          <br>
-          <input type="radio" name="example" value="サンプル">代引き
-        </th>
-      <!-- 商品情報を表示 -->
-      <h2>商品情報</h2>
-      <thead>
-        <th>商品名</th>
-        <th>アーティスト名</th>
-        <th></th>
-      </thead>
-        <% @carts.each do |cart| %>
-          <tr>
-            <td><%= attachment_image_tag item, :profile_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
-            <td><%= cart.item.item_name %></td>
-            <td><%= cart.item.item_name %></td>
-          </tr>
-        <% end %>
-    </tbody>
+    <tr>
+      <td>名前</td>
+      <td><%=@full_name %></td>
+    </tr>
+  <!-- 住所を情報を表示 -->
+    <tr>
+      <td>住所</td>
+      <td><%= @user_address%></td>
+    </tr>
+  <!-- お届け先を情報を表示 -->
+    <tr>
+      <td>お届け先</td>
+      <td>
+        <input type="radio" name="address" value="サンプル" checked >上記の住所と同じ
+        <br>
+        <input type="radio" name="address" value="サンプル">その他の配送先
+        <br>
+        <input type="radio" name="address" value="サンプル">新しい配送先
+      </td>
+    </tr>
+  <!-- 支払い方法を選択 -->
+    <tr>
+      <td>お支払い情報</td>
+      <td>
+        <input type="radio" name="pay" value="サンプル" checked>クレジットカード
+        <br>
+        <input type="radio" name="pay" value="サンプル">銀行振込
+        <br>
+        <input type="radio" name="pay" value="サンプル">代引き
+      </td>
+    </tr>
+  </table>
+  <!-- 商品情報を表示 -->
+  <h2>商品情報</h2>
+    <% @carts.each do |cart| %>
+      <section class="cart-item clearfix" >
+        <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+        <%= cart.item.item_name %>
+        <%= cart.cart_item_number %> 枚
+        <%= cart.item.item_price %> 円(税込)
+        <% total_price = 0.to_i%>
+        <% total_price += cart.item.item_price * cart.cart_item_number%>
+      </section>
+    <% end %>
+    <div>
+      <p>送料</p><%= order.postage %>
+      <p>合計金額<p><%= total_price + order.postage %>
+    </div>
 
+  <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2"></div>
+          <button class="btn btn-default">default</button>
+          <button class="btn btn-success">success</button>
+        </div>
+      </div>
+  </<%=>
 </body>
 
 
