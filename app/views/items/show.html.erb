@@ -36,6 +36,7 @@
 		<div class="col-md-12">
 			<h3>レビュー一覧</h3>
 			<%= @satisfaction_average %>
+			<% binding.pry %>
 			<p><%= @satisfaction_count %>件</p>
 			<% @item.reviews.each do |r| %>
 			<div class="reviews-container">

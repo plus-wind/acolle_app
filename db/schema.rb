@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_16_113413) do
+ActiveRecord::Schema.define(version: 2019_11_18_045604) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(version: 2019_11_16_113413) do
     t.string "artist_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "average_caches", force: :cascade do |t|
+    t.integer "rater_id"
+    t.string "rateable_type"
+    t.integer "rateable_id"
+    t.float "avg", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "carts", force: :cascade do |t|
@@ -159,12 +168,30 @@ ActiveRecord::Schema.define(version: 2019_11_16_113413) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "overall_averages", force: :cascade do |t|
+    t.string "rateable_type"
+    t.integer "rateable_id"
+    t.float "overall_avg", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rating_caches", force: :cascade do |t|
+    t.string "cacheable_type"
+    t.integer "cacheable_id"
+    t.float "avg", null: false
+    t.integer "qty", null: false
+    t.string "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "item_id", null: false
     t.string "review_title", null: false
     t.text "review_content", null: false
-    t.decimal "satisfaction", null: false
+    t.float "satisfaction", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
