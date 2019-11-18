@@ -206,36 +206,6 @@ Item.create!(
     }
   ]
 )
-
-#order_items_seed
-OrderItem.create!(
-  [
-    {
-      order_id: "1",
-      item_id: "1",
-      order_price: "2000",
-      order_number: "1",
-    },
-    {
-      order_id: "2",
-      item_id: "2",
-      order_price: "3000",
-      order_number: "2",
-    },
-    {
-      order_id: "2",
-      item_id: "3",
-      order_price: "3000",
-      order_number: "3",
-    },
-    {
-      order_id: "2",
-      item_id: "2",
-      order_price: "3000",
-      order_number: "2",
-    }
-  ]
-)
 #orders_seed
 Order.create!(
   [
@@ -271,6 +241,37 @@ Order.create!(
     }
   ]
 )
+#order_items_seed
+OrderItem.create!(
+  [
+    {
+      order_id: "1",
+      item_id: "1",
+      order_price: "2000",
+      order_number: "1",
+    },
+    {
+      order_id: "2",
+      item_id: "2",
+      order_price: "3000",
+      order_number: "2",
+    },
+    {
+      order_id: "2",
+      item_id: "3",
+      order_price: "3000",
+      order_number: "3",
+    },
+    {
+      order_id: "2",
+      item_id: "2",
+      order_price: "3000",
+      order_number: "2",
+    }
+  ]
+)
+
+
 #reviews_seed
 Review.create!(
     [
