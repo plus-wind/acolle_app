@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/order/complete', to: 'orders#complete'
 #items controller
   resources :items, only:[:show]
+  post '/search',  to: 'items#search'
   root to: 'items#index'
 #carts controller
   get '/cart', to: 'carts#index'

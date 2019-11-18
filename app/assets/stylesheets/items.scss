@@ -24,7 +24,7 @@
 	}
 	.col-md-10{
 		height: 650px;
-		padding: 200px 0;
+		padding: 250px 0;
 		text-align: center;
 
 		strong{
@@ -34,6 +34,7 @@
 		p{
 			font-size: 40px;
 			color: white;
+			line-height:40px;
 		}
 	}
 }
@@ -69,14 +70,6 @@
 		border-bottom-style: solid;
 		font-size: 20px;
 	}
-}
-
-.row4{
-	.index-headline{
-		margin: 20px 0 10px 0;
-		border-bottom-style: solid;
-		font-size: 20px;
-	}
 	.index-content{
 		float:left;
 
@@ -84,5 +77,16 @@
 			margin: 0;
 			text-align: center;
 		}
+
+	}
+	.pagenate{
+		text-align: center;
+	}
+}
+
+.row5{
+	.disc-container{
+		width: 300px;
+		float: left;
 	}
 }
