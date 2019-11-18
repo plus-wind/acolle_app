@@ -1,6 +1,6 @@
-class CreateRatingCaches < ActiveRecord::Migration[4.2]
+class CreateRatingCaches < ActiveRecord::Migration[5.2]
 
-def self.up
+  def self.up
       create_table :rating_caches do |t|
         t.belongs_to :cacheable, :polymorphic => true
         t.float :avg, :null => false

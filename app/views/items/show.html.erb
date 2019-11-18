@@ -36,12 +36,11 @@
 		<div class="col-md-12">
 			<h3>レビュー一覧</h3>
 			<%= @satisfaction_average %>
-			<% binding.pry %>
 			<p><%= @satisfaction_count %>件</p>
 			<% @item.reviews.each do |r| %>
 			<div class="reviews-container">
 				<h3><%= r.review_title %></h3>
-				<%= r.satisfaction %>
+				<%= r.satisfaction %><p>満足度 : <%= rating_for r, 'satisfaction', enable_half: true %></p>
 				<%= r.review_content %>
 				<%= r.user.name_family_kanji + r.user.name_first_kanji %>
 				<%= r.created_at.strftime('%y/%m/%d') %>
@@ -50,6 +49,3 @@
 		</div>
 	</div>
 </div>
-
-
-        <!--/星評価-->

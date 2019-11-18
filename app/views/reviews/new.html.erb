@@ -5,7 +5,8 @@
 <p>満足度：<%= @satisfaction_average %></p>
 <p><%= @satisfaction_count %>件</p>
 
-<%= form_for(@review, url: review_path) do |f| %>
+
+<%= form_for(@review, url: item_reviews_path(@item.id)) do |f| %>
     	<p>満足度</p><%= f.number_field :satisfaction, min: "1", max: "5",:style=>"width: 30px;" %>
     	<p>タイトル</p><%= f.text_field :review_title %>
 		<p>本文</p><%= f.text_area :review_content %>

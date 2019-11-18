@@ -1,4 +1,4 @@
-class CreateOverallAverages < ActiveRecord::Migration[4.2]
+class CreateOverallAverages < ActiveRecord::Migration[5.2]
 
   def self.up
     create_table :overall_averages do |t|
@@ -11,6 +11,4 @@ class CreateOverallAverages < ActiveRecord::Migration[4.2]
   def self.down
     drop_table :overall_averages
   end
-
 end
-
