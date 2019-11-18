@@ -1,0 +1,13 @@
+<h1>商品レビューを投稿する</h1>
+<%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'350x350' %>
+<p>購入日：<%= @order_item.created_at.strftime('%y/%m/%d') %></p>
+<p>商品名：<%= @item.item_name %></p>
+<p>満足度：<%= @satisfaction_average %></p>
+<p><%= @satisfaction_count %>件</p>
+
+<%= form_for(@review, url: review_path) do |f| %>
+    	<p>満足度</p><%= f.number_field :satisfaction, min: "1", max: "5",:style=>"width: 30px;" %>
+    	<p>タイトル</p><%= f.text_field :review_title %>
+		<p>本文</p><%= f.text_area :review_content %>
+    	<%= f.submit '投稿する' %>
+ <% end %>
