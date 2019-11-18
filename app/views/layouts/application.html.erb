@@ -4,8 +4,10 @@
     <title>AcolleApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+​
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <% self_css_path = "/assets/"+controller.controller_name  %>
+  <%= stylesheet_link_tag self_css_path, :media => "all" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
@@ -29,7 +31,7 @@
           <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li>
-              <%= link_to " 商品", root_path, class:"glyphicon glyphicon-home home" %>
+              <%= link_to " 商品", root_path, class:"glyphicon" %>
             </li>
             <li>
               <%= link_to  "#{current_user.name_family_kanji}さん", mypage_path, class:"glyphicon glyphicon-user users" %>
@@ -54,16 +56,14 @@
           <% end %>
           </ul>
         </nav><!-- /.input-group -->
-
+​
     </div>
   </header>
-
-
+​
+​
       </div>
     </header>
-
     <div class = "space" style = "height: 70px;"></div>
-
     <%= yield %>
     <div class="wrapper">
     <footer>

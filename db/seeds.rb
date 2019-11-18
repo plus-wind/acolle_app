@@ -56,7 +56,7 @@ Label.create!(
 Address.create!(
   [
     {
-      user_id: "1",
+      user_id: "2",
       delivery_name_family_kanji: "橋下",
       delivery_name_first_kanji: "三郎",
       delivery_name_family_furigana: "ハシモト",
@@ -68,11 +68,23 @@ Address.create!(
       delivery_address_building: "テストビル",
     },
     {
-      user_id: "2",
-      delivery_name_family_kanji: "高橋",
-      delivery_name_first_kanji: "四郎",
-      delivery_name_family_furigana: "タカハシ",
-      delivery_name_first_furigana: "シロウ",
+      user_id: "1",
+      delivery_name_family_kanji: "田中",
+      delivery_name_first_kanji: "太郎",
+      delivery_name_family_furigana: "やまだ",
+      delivery_name_first_furigana: "たろう",
+      delivery_postal_code: "1234567",
+      delivery_address_prefecture: "北海道",
+      delivery_address_city: "DMM市",
+      delivery_address_number: "DMM3-3-3",
+      delivery_address_building: "DMM",
+    },
+    {
+      user_id: "1",
+      delivery_name_family_kanji: "山田",
+      delivery_name_first_kanji: "太郎",
+      delivery_name_family_furigana: "やまだ",
+      delivery_name_first_furigana: "たろう",
       delivery_postal_code: "1234567",
       delivery_address_prefecture: "北海道",
       delivery_address_city: "DMM市",
@@ -206,36 +218,6 @@ Item.create!(
     }
   ]
 )
-
-#order_items_seed
-OrderItem.create!(
-  [
-    {
-      order_id: "1",
-      item_id: "1",
-      order_price: "2000",
-      order_number: "1",
-    },
-    {
-      order_id: "2",
-      item_id: "2",
-      order_price: "3000",
-      order_number: "2",
-    },
-    {
-      order_id: "2",
-      item_id: "3",
-      order_price: "3000",
-      order_number: "3",
-    },
-    {
-      order_id: "2",
-      item_id: "2",
-      order_price: "3000",
-      order_number: "2",
-    }
-  ]
-)
 #orders_seed
 Order.create!(
   [
@@ -271,6 +253,36 @@ Order.create!(
     }
   ]
 )
+#order_items_seed
+OrderItem.create!(
+  [
+    {
+      order_id: "1",
+      item_id: "1",
+      order_price: "2000",
+      order_number: "1",
+    },
+    {
+      order_id: "2",
+      item_id: "2",
+      order_price: "3000",
+      order_number: "2",
+    },
+    {
+      order_id: "2",
+      item_id: "3",
+      order_price: "3000",
+      order_number: "3",
+    },
+    {
+      order_id: "2",
+      item_id: "2",
+      order_price: "3000",
+      order_number: "2",
+    }
+  ]
+)
+
 #reviews_seed
 Review.create!(
     [
