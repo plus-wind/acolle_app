@@ -9,6 +9,10 @@
 		margin-top: 90px;
 		height: 235px;
 
+		img {
+	    width: 30px;
+		}
+
 		.star-average{
 			font-size: 40px;
 			float: left;
@@ -31,7 +35,14 @@
 		font-size: 20px;
 		float: left;
 	}
-	.review-form{
-		
+	.review-form img {
+		width: 30px;
 	}
 }
+
+
+
+
+
+
+
