@@ -30,4 +30,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+log/development.log
 tmp/cache/bootsnap-load-path-cache
+tmp/cache/assets/sprockets/v3.0/RR/RRiI305vg1wl9k26EJ-O_AZHr5x7_R2-84WPQVY8bBk.cache

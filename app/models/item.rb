@@ -10,7 +10,4 @@ class Item < ApplicationRecord
 	is_impressionable counter_cache: true
 	has_many :order_items
 	has_many :orders, through: :order_items
-
-
-
 end
