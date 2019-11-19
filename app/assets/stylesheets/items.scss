@@ -13,80 +13,176 @@
 	clear: both;
 }
 
+/*商品一覧ページ*/
+
 .row1{
-	height: 650px;
+	height: 550px;
 	background-image: url("home_test.jpg");
 	background-size: cover;
 	opacity: 1.0;
 
-	.col-md-1{
-		height: 650px;
-	}
-	.col-md-10{
-		height: 650px;
-		padding: 250px 0;
-		text-align: center;
+	.col-md-12{
+		height: 550px;
 
-		strong{
-			font-size: 60px;
-		}
-
-		p{
-			font-size: 40px;
+		h1{
+			padding-top: 150px;
 			color: white;
-			line-height:40px;
+			text-align: center;
+			line-height: 60px;
+
+			strong{
+				font-size: 60px;
+			}
 		}
 	}
 }
 
 .row2{
-	.ranking-header{
-		margin: 20px 0 10px 0;
-		border-bottom-style: solid;
+
+	.col-md-12{
+		margin: 15px 0;
 	}
 
-	.ranking-headline{
-		font-size: 20px;
-		margin: 0;
-		float:left;
-	}
-	.ranking-date{
-		margin: 5px 20px 0 20px;
-		float:left;
+	.headline{
+		margin: 0 10px;
+		border-bottom-style: solid;
+
+		.ranking-headline{
+			margin: 0;
+			float:left;
+		}
+		.ranking-date{
+			margin: 5px 20px 0 20px;
+			float:left;
+		}
+
 	}
 	.ranking-content{
 		float:left;
+		margin: 0 15px;
 
 		p{
-			margin: 0;
+			margin: -5px;
 			text-align: center;
 		}
 	}
-}
-
-.row3{
-	.search-headline{
-		margin: 20px 0 10px 0;
-		border-bottom-style: solid;
-		font-size: 20px;
+	.search-content{
+		margin: 20px;
 	}
 	.index-content{
 		float:left;
 
 		p{
-			margin: 0;
+			margin: -5px;
 			text-align: center;
 		}
-
-	}
-	.pagenate{
-		text-align: center;
 	}
 }
 
-.row5{
-	.disc-container{
-		width: 300px;
+.pagenate{
+	text-align: center;
+	font-size: 20px;
+}
+
+
+/*商品詳細ページ*/
+.row3{
+
+	table{
+		margin-top: 20px;
+		width: 400px;
+
+		th{
+			width: 200px;
+			height: 40px;
+			text-align: center;
+			font-weight: normal;
+		}
+	}
+	.cart-content{
+		margin: 20px 0 0 230px;
+		width: 200px;
+	}
+	p{
 		float: left;
+		margin: 0 20px;
 	}
 }
+
+/*タブ用*/
+.wrap{
+	width: 90%;
+	max-width: 800px;
+
+	#tab-menu li {
+		float: left;
+		list-style-type: none;
+		width: 50%;
+	}
+	#tab-menu a {
+		color: #fff;
+		text-decoration: none;
+		display: block;
+		padding: 20px;
+		text-align: center;
+		background: #000;
+		border: 1px solid #000;
+		border-bottom: none;
+	}
+	#tab-menu .active {
+		background: #fff;
+		color: #000;
+	}
+	#tab-contents p{
+		color:#000;
+		line-height: 2.5;
+	}
+	#tab-contents .tab {
+		padding: 30px;
+		background: #fff;
+		border: 1px solid #000;
+		border-top: none;
+
+			p{
+				float: left;
+				margin: 0 7px;
+			}
+
+		.review-headline{
+			padding-top: 50px;
+
+			h4{
+				margin-top: 5px;
+				float: left;
+			}
+			#star-average{
+				float: left;
+				margin: 2px 10px;
+				font-size: 20px;
+			}
+			#star-rate{
+				float: left;
+				margin: 5px 0;
+			}
+			h5{
+				float: left;
+				margin: 10px 10px;
+			}
+		}
+		.reviews-container{
+			margin: 10px;
+
+			#star-number{
+				float: left;
+				margin: 2px 10px;
+			}
+			#star-rate{
+				float: left;
+			}
+			p{
+				float: left;
+			}
+		}
+	}
+}
+
