@@ -16,6 +16,11 @@ class ApplicationController < ActionController::Base
 	def after_sign_out_path_for(resource)
 		root_path
 	end
+	def authenticate_user
+		if current_user == nil
+			redirect_to new_user_session_path
+		end
+	end
 
 	def set_current_user
 		current_user = User.find_by(id: session[:user_id])
