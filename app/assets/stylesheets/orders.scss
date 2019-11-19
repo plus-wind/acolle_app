@@ -2,34 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-.clearfix::after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.table tr td{
-  border: solid 1px;/*表全体を線で囲う*/
-}
-
-.btn {
-  width: 200px;
-}
-
-.btn-default {
-  float: left
-}
 
 .btn-success {
   float: right
 }
 
-.cart-item {
-  height: 120px;
-  border-bottom: solid 1px;
-}
