@@ -28,8 +28,9 @@
 		    	</tr>
 		    </table>
 		    <div class="cart-content">
-				<%= form_for(@cart, url: cart_path) do |f| %>
+				<%= form_for(@cart, url: item_cart_path(@item)) do |f| %>
 				<p><%= f.number_field :cart_item_number, min: "1", :style=>"width: 30px;" %>枚</p>
+				<p><%= f.hidden_field :item_id, value:@item.id %>枚</p>
 				<%= f.submit 'カートへ追加' %>
 				<% end %>
 			</div>
