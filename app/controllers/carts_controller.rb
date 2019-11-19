@@ -8,15 +8,15 @@ class CartsController < ApplicationController
   end
 
   # 商品一覧画面から、「商品購入」を押した時のアクション
-  # def add
-  #   if @cart.blank?
-  #     @cart = current_user.carts.build(item_id: params[:item_id])
-  #   end
+  def add
+    if @cart.blank?
+      @cart = current_user.carts.build(cart_id: params[:cart_id])
+    end
 
-  #   @cart.quantity += params[:quantity].to_i
-  #   @cart.save
-  #   redirect_to root_path
-  # end
+    @cart.cart_item_number += params[:cart_item_number].to_i
+    @cart.save
+    redirect_to root_path
+  end
 
  # カート詳細画面から、「削除」を押した時のアクション
   def remove
