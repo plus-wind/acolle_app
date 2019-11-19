@@ -65,28 +65,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def unsubscribe
-    @user = User.params(current_id[:password])
+    @user = User.params[:id]
   end
 
   def complete
   end
 
-  def after_sign_up_path_for(resource)
-    root_path
-  end
 
   protected
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name_family_kanji,
-                                                       :name_first_kanji,
-                                                       :name_family_furigana,
-                                                       :name_first_furigana,
-                                                       :postal_code,
-                                                       :address_prefecture,
-                                                       :address_city,
-                                                       :address_number,
-                                                       :address_building,
-                                                       :phone_number,
-                                                       ])
-  end
+
+    def after_sign_up_path_for(resource)
+      root_path
+  　end
+
+
+
+end
 end
