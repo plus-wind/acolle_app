@@ -93,6 +93,7 @@
       <div class="field">
         <%= f.label :"お電話番号　　　　　　　" %>
         <%= f.text_field :phone_number, autofocus: true  %>
+        <%= f.hidden_field :delete_flag, :value => 0 %>
       </div>
     </div>
 
