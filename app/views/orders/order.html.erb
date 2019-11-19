@@ -24,12 +24,12 @@
           <!-- 支払い方法を選択 -->
           <section class="section clearfix">
             <div class="title">支払い方法</div><br>
-              <input type="radio" name="pay" value="サンプル" checked>クレジットカード
-              <br>
-              <input type="radio" name="pay" value="サンプル">銀行振込
-              <br>
-              <input type="radio" name="pay" value="サンプル">代引き
-            </div>
+              <%= form_tag(pay_path, method: :post) do %>
+                <%= radio_button_tag :pay_flag, 1, checked: true %>クレジット<br>
+                <%= radio_button_tag :pay_flag, 2 %>銀行振込<br>
+                <%= radio_button_tag :pay_flag, 3 %>代引き<br>
+                <%= submit_tag "次へ" %>
+            <% end %>
           </section>
           <!-- 商品情報を表示 -->
           <h2>商品情報</h2>

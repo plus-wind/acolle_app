@@ -6,11 +6,18 @@ class OrdersController < ApplicationController
     @delivery = current_user.addresses
     @carts = current_user.carts
     @order = Order.new(postage:500)
-
   end
 
   def confirmation
     @address = current_user.addresses
+    if params[:pay_flag] == "1"
+      @shiharai = "クレジットカード"
+    elsif params[:pay_flag] == "2"
+      @shiharai = "振込"
+    else params[:pay_flag] == "3"
+      @shiharai = "代引き"
+    end
+    render :confirmation
   end
 
   def complete
