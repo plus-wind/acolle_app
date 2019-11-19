@@ -19,7 +19,7 @@
 			<p>レーベル：<%= @item.label.label_name %></p>
 			<p>ジャンル：<%= @item.genre.genre_name %></p>
 			<p>価格：<%= (@item.item_price*1.1).round(0) %>円</p>
-			<%= form_for(@cart, url: cart_path) do |f| %>
+			<%= form_for(@cart, url: '/items/:id/cart') do |f| %>
 			<%= f.number_field :cart_item_number, min: "0", :style=>"width: 30px;" %>
 			<%= f.submit 'カートへ追加' %>
 			<% end %>
