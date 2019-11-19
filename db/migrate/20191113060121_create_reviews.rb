@@ -5,7 +5,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.integer :item_id, null: false
       t.string :review_title, null: false
       t.text :review_content, null: false
-      t.decimal :satisfaction, null: false
+      t.float :satisfaction, null: false
       t.timestamps null: false
     end
   end

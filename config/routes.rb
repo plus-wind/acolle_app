@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   devise_for :admins
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   get '/order/confirmation', to: 'orders#confirmation'
   get '/order/complete', to: 'orders#complete'
 #items controller
-  resources :items, only:[:show]
+  # resources :items, only:[:show]  #下に移動してあります！！！！！！！！！
   post '/search',  to: 'items#search'
   root to: 'items#index'
 #carts controller
@@ -24,9 +25,12 @@ Rails.application.routes.draw do
   delete '/cart.:id', to: 'carts#remove'
   delete '/carts', to: 'carts#destroy'
 #reviews controller
-  resources :reviews, only:[:edit, :update, :destroy]
-  get '/items/:id/reviews', to: 'reviews#new'
-  post '/items/:id/reviews', to: 'reviews#create'
+resources :reviews, only:[:edit, :update, :destroy]
+resources :items, only:[:show] do
+  resources :reviews, only:[:new, :create]
+end
+  # get '/items/:id/reviews', to: 'reviews#new'
+  # post '/items/:id/reviews', to: 'reviews#create'
 #addresses controller
   resources :addresses, only:[:create, :update, :destroy]
 #contacts controller
