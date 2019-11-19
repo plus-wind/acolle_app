@@ -2,8 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.col-md-12{
+	height: 325px;
 
-.item-info{
-	margin: 100px 0;
-	height: 400px;
+	.item-info{
+		margin-top: 90px;
+		height: 235px;
+
+		.star-average{
+			font-size: 40px;
+			float: left;
+		}
+		#star-rate{
+			float: left;
+			line-height: 50px;
+			margin: 0 20px;
+		}
+		.count{
+			float: left;
+			line-height: 55px;
+			margin: 0 5px;
+		}
+	}
+}
+
+.col-md-offset-1{
+	p{
+		font-size: 20px;
+		float: left;
+	}
+	.review-form{
+		
+	}
 }
