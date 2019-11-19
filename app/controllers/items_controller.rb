@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
 	end
 	def show
 		@item = Item.find(params[:id])
+		@reviews = @item.reviews
 	    impressionist(@item, nil)
 	    @cart = Cart.new
         @satisfaction_average = @item.reviews.average(:satisfaction)

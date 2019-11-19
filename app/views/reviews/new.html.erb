@@ -1,21 +1,41 @@
-<h1>商品レビューを投稿する</h1>
-<%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'350x350' %>
-<p>購入日：<%= @order_item.created_at.strftime('%y/%m/%d') %></p>
-<p>商品名：<%= @item.item_name %></p>
-<p>満足度：<%= @satisfaction_average %></p>
-<div id="star-rate"></div>
-          <script>
-          $('#star-rate').raty({
-            size: 36,
-            starOff:  '<%= ('star-off.png') %>',
-            starOn : '<%= ('star-on.png') %>',
-            starHalf: '<%= ('star-half.png') %>',
-            half: true,
-            readOnly: true,
-            score: <%= @satisfaction_average %>,
-          });
-          </script>
-<p><%= @satisfaction_count %>件</p>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-5">
+				<h1>レビュー投稿</h1>
+				<%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'350x350' %>
+			</div>
+			<div class="col-md-7">
+				<div class="item-info">
+					<h3>商品名：<%= @item.item_name %></h3>
+					<h3>購入日：<%= @order_item.created_at.strftime('%y/%m/%d') %></h3>
+					<h3>レビュー平均</h3>
+					<%= @satisfaction_average.round(2) %>
+					<div id="star-rate"></div>
+				          <script>
+				          $('#star-rate').raty({
+				            size: 36,
+				            starOff:  '<%= ('star-off.png') %>',
+				            starOn : '<%= ('star-on.png') %>',
+				            starHalf: '<%= ('star-half.png') %>',
+				            half: true,
+				            readOnly: true,
+				            score: <%= @satisfaction_average %>,
+				          });
+				          </script>
+					<p><%= @satisfaction_count %>件</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
 
 
 <%= form_for(@review, url: item_reviews_path(@item.id)) do |f| %>
