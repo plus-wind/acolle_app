@@ -1,28 +1,39 @@
+<p><%= flash[:notice] %></p>
 <div class = "container">
-    <div class = "row-1">
-        <div class = "col-md-4" style = "padding-top: 30px;">
-        <button class="btn btn-default btn-lg">カートを空にする</button>
+    <div class = "row-1 clearfix">
+        <div class = "col-md-4" style = "padding-top: 30px; padding-bottom: 10px;">
+            <h2>カート情報</h2>
+            <%= link_to "カートを空にする", carts_path, method: :delete, class:"btn btn-default btn-lg" %>
         </div>
     </div>
-    <div class = "row-2">
-        <table class = "table">
-            <tbody>
-                <% @carts.each do |cart| %>
-                <h2>商品情報</h2>
-                <tr>
-                    <td><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
-                    <td>
-                    <%= cart.item.item_name %>
-                    <%= link_to "削除", cart_path(cart), method: :delete, class:"btn-sm btn-danger" %>
-                    </td>
-                </tr>
+    <% total_price = 0.to_i%>
+    <% @carts.each do |cart| %>
+        <div class = "row-12 clearfix cart-box">
+            <th><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+            </th>
+            <th>
+            <%= cart.item.item_name %>
+            </th>
+            <div class = "col-2 cart-info">
+                <%= form_for(cart, url:root_path) do |f| %>
+                <%= f.number_field :cart_item_number, style:"width: 40px;" %>
                 <% end %>
-            </tbody>
-        </table>
+                <div class = "cart-price">
+                    <%= cart.item.item_price %> 円(税込)
+                    <% total_price += cart.item.item_price * cart.cart_item_number %>
+                    <%= link_to "削除", cart_path(cart), method: :delete, class:"btn-sm btn-danger"%>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    <div class = "row-12">
+        <div class = "cart-total-price">
+            <span>合計：<%= total_price %> 円(税込)</span>
+        </div>
     </div>
     <div class = "row-3">
-        <div class = "col-md-10 goorder">
-        <%= link_to "商品購入ページへ", order_path, class:"btn btn-success btn-lg", style:"float: right;" %>
-        <div>
-    <div>
+        <div class = "col-md-12 submitbutton">
+        <%= link_to "商品購入ページへ", order_path, class:"btn btn-primary btn-lg", style:"float: right;" %>
+        </div>
+    </div>
 </div>

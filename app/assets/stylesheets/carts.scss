@@ -12,3 +12,36 @@
 	display: block;
 	clear: both;
 }
+
+.row-6 {
+	float: left;
+	padding-top: 20px;
+}
+
+tbody {
+	border: solid 1px;
+}
+
+.cart-box {
+	border: solid 1px;
+}
+
+.cart-info {
+	float: right;
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+
+.cart-price {
+	float: right;
+}
+
+.submitbutton {
+	padding: 10px;
+}
+
+.cart-total-price {
+	float: right;
+	padding-top: 10px;
+	padding-right: 10px;
+}

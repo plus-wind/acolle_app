@@ -13,4 +13,7 @@ class User < ApplicationRecord
   def reviewed_by?(user)
     reviews.where(user_id: current_id&&params[:item_id]).exists?
   end
+
+  ratyrate_rater
+
 end
