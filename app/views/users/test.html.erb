@@ -1,0 +1,68 @@
+<div class="mypage_title container">
+	<h1 class="c1-2exam5">こんにちは  <%= @user.name_family_kanji %>  <%= @user.name_first_kanji %>  様</h1>
+</div>
+<div class="info_container">
+	<h3>お客様情報</h3>
+	<table class="table table-bordered">
+		<tr>
+			<td>氏名</td>
+			<td><%= @user.name_family_kanji %>  <%= @user.name_first_kanji %></td>
+		</tr>
+		<tr>
+			<td>氏名（フリガナ）</td>
+			<td><%= @user.name_family_furigana %>  <%= @user.name_first_furigana %></td>
+		</tr>
+		<tr>
+			<td>メールアドレス</td>
+			<td><%= @user.email %></td>
+		</tr>
+		<tr>
+			<td>パスワード</td>
+			<td><%= @user.password %></td>
+		</tr>
+		<tr>
+			<td>ご住所</td>
+			<td>〒<%= @user.postal_code.insert(3, "-") %>  <%= @user.address_prefecture %>
+				<%= @user.address_city %><%= @user.address_number %>
+				<%= @user.address_building %>
+			</td>
+		</tr>
+		<tr>
+			<td>お電話番号</td>
+			<td><%= @user.phone_number %></td>
+		</tr>
+	</table>
+
+	<h3>その他のお届け先</h3>
+	<% @addresses.each.with_index(1) do |address,i| %>
+	<%= i %>
+	<table class="table table-bordered">
+		<tr>
+			<td>氏名</td>
+			<td><%= address.delivery_name_family_kanji %>  <%= address.delivery_name_first_kanji %></td>
+		</tr>
+		<tr>
+			<td>氏名（フリガナ）</td>
+			<td><%= address.delivery_name_family_furigana %>  <%= address.delivery_name_first_furigana %></td>
+		</tr>
+		<tr>
+			<td>ご住所</td>
+			<td>〒<%= address.delivery_postal_code.insert(3, "-") %>  <%= address.delivery_address_prefecture %><%= address.delivery_address_city %><%= address.delivery_address_number %><%= address.delivery_address_building %></td>
+		</tr>
+
+	</table>
+	<% end %>
+	<h3>購入履歴</h3>
+	<% @orders.each do |order| %>
+		<div><%= order.created_at.strftime('%Y/%m/%d') %>  <%= order.order_status %></div>
+
+			<% @order.each do || %>
+				<%= oi.item.item_image_id %>
+			<% end %>
+
+		<div><p>送付先：<%= order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji %>   様宛       <%= order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %></p></div>
+		<div>送料:<%= order.postage %>   円</div>
+		<div>決済方法：◯○決済             合計：<%= order.total_fee %>円</div>
+	<% end %>
+</div>
+
