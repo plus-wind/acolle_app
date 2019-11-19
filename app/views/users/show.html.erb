@@ -70,7 +70,7 @@
 					<span>
 						<span><%= oi.item.item_name %></span>
 						<span>
-							<% if order.reviewed_by?.present? %>
+							<% if order.reviewed_by?present? %>
 							 <%= link_to "レビューする", review_path(@user.oi) %>
 							 	<% else %>
 							 	<%= link_to "レビュー編集", edit_review_path(@user.oi) %>
