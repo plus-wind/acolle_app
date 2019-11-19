@@ -24,7 +24,7 @@
         <%= f.label :"氏名（フリガナ）　セイ" %>
         <%= f.text_field :name_family_furigana, autofocus: true  %>
         <%= f.label :"　メイ" %>
-        <%= f.text_field :name_first_kanji, autofocus: true  %>
+        <%= f.text_field :name_first_furigana, autofocus: true  %>
       </div>
     </div>
 
@@ -95,7 +95,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "新規登録", class: "btn-success" %>
+      <%= f.submit "新規登録", class: "btn btn-success" %>
     </div>
   <% end %>
 

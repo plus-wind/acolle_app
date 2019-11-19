@@ -9,4 +9,8 @@ class User < ApplicationRecord
 
   has_many :orders
   has_many :reviews
+
+  def reviewed_by?(user)
+    reviews.where(user_id: current_id&&params[:item_id]).exists?
+  end
 end
