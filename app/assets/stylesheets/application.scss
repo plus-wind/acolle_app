@@ -15,6 +15,12 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+//hasegawa
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .mypage_title{
 	margin-top:70px;
@@ -25,6 +31,7 @@
 	margin: 0 auto;
 }
 
+//
 .wrapper{
 	position: relative;
     padding-bottom: 120px;/*←footerの高さ*/
