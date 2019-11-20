@@ -15,8 +15,10 @@
             <%= cart.item.item_name %>
             </th>
             <div class = "col-2 cart-info">
-                <%= form_for(cart, url:root_path) do |f| %>
-                <%= f.number_field :cart_item_number, style:"width: 40px;" %>
+                <%= form_for(cart, url: '/cart/'+ cart.id.to_s ) do |f| %>
+                <%= f.hidden_field :id %>
+                個数：<%= f.number_field :cart_item_number, style:"width: 40px;" %>
+                <%= f.submit '変更', class:"btn-sm btn-primary" %>
                 <% end %>
                 <div class = "cart-price">
                     <%= cart.item.item_price %> 円(税込)
