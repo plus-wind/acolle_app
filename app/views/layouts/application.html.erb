@@ -16,7 +16,7 @@
         <nav class="nav navbar-nav navbar-left">
           <span>Acolle</span>
         </nav>
-        <nav class="input-group ">
+        <nav class="search-box">
             <%= form_tag(search_path, method: :post) do %>
 		    		<%= radio_button_tag :search_flag, 1, checked: true %>アーティスト
 					  <%= radio_button_tag :search_flag, 2 %>曲
@@ -33,7 +33,9 @@
               <%= link_to  " #{current_user.name_family_kanji}さん", mypage_path, class:"glyphicon glyphicon-user users" %>
             </li>
             <li>
-              <%= link_to " カート", cart_path, class:"glyphicon glyphicon-shopping-cart" %>
+              <%= link_to  cart_path, class:"glyphicon glyphicon-shopping-cart"  do %>
+              カート<span class='badge'><%= current_user.carts.count.to_i %></span></a>
+              <% end %>
             </li>
             <li>
               <%= link_to " ログアウト", destroy_user_session_path, method: :delete, class:"glyphicon glyphicon-log-out logout" %>
@@ -51,7 +53,7 @@
             </li>
           <% end %>
           </ul>
-        </nav><!-- /.input-group -->
+      </nav><!-- /.input-group -->
 
       </div>
     </header>

@@ -1,2 +1,3 @@
-class Admins::ContactsController < ApplicationController
+class Admins::ContactsController < ApplicationControlle
+    layout "admins"
 end
