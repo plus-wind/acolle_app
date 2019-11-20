@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  devise_for :admins
-  devise_for :users
+  devise_for :admins, controllers:{
+    sessions: 'admins/sessions'
+  }
+  devise_for :users, controllers:{
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 #users controller
   get '/mypage', to: 'users#show'
   patch '/users', to: 'users#change'
 #users/registrations controller
   devise_scope :user do
+    # get "sign_up", :to => "users/registrations#new"
+    # get "sign_in", :to => "users/sessions#new"
+    # get "sign_out", :to => "users/registrations#destroy"
     get 'users/unsubscribe', to: 'users/registrations#unsubscribe'
     get 'users/unsubscribe/complete', to: 'users/registrations#complete'
   end
@@ -48,6 +56,7 @@ namespace :admins do
   post '/items/:id/arrivals', to: 'arrivals#create'
 #admins/users controller
   resources :users, only:[:index, :show, :edit, :update]
+  post '/search',  to: 'users#search'
   #patch '/uesrs', to: 'users#change'
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]
