@@ -1,5 +1,7 @@
 class AddressesController < ApplicationController
 
-	def new
-	end
+  def change
+    @delivery = current_user.addresses
+  end
+
 end

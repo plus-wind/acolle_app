@@ -1,9 +1,30 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-.btn-success {
-  float: right
+section {
+  border: solid 1px;/*表全体を線で囲う*/
+  height: 120px;
 }
+
+section.pay {
+  margin-top: 20px;
+}
+.title {
+  display: inline-block;
+  width: 100px;
+  font-size: 20px;
+  // background-color: red;
+}
+
+.btn-edit{
+  display: inline-block;
+}
+
+.back {
+  float: left;
+}
+.order-Confirmation {
+  float: right;
+}
+
 
