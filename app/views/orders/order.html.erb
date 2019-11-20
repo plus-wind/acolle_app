@@ -5,57 +5,67 @@
     <div class="col-md-8 col-md-offset-2">
       <!-- 注文者情報を表示 -->
       <h2>商品購入ページ</h2>
-        <%= form_tag(order_confirmation_path, method: :get) do %>
-          <section>
+      <%= form_for(@order,url:order_confirmation_path) do |f|%>
+        <section>
           <div class="title">注文者情報</div><br>
-            <%= link_to '変更', edit_user_registration_path, class: "btn btn-default", style:"float: right;" %>
-            <br>
-            <%= @full_name %>
-            <br>
-            <%= @user_address%>
-          </section>
-      <!-- お届け先を情報を表示 -->
-          <section>
-          <div class="title">送付先</div><br>
-            <%= link_to '変更', address_change_path, class: "btn btn-default", style:"float: right;" %>
-            <br>
-            <% if @delivery_flag == 0 %>
-              <% @delivery.first(1).each do |d| %>
-                <%= d.delivery_name_family_kanji+ " " + d.delivery_name_first_kanji %><br>
-                <%= "〒" + d.delivery_postal_code.insert(3, "-") + "　" + d.delivery_address_prefecture + d.delivery_address_city + d.delivery_address_number + d.delivery_address_building %>
-              <% end %>
-            <% elsif @delivery_flag == 1 %>
-                <%= @delivery.delivery_name_family_kanji+ " " + @delivery.delivery_name_first_kanji %><br>
-                <%= "〒" + @delivery.delivery_postal_code.insert(3, "-") + "　" + @delivery.delivery_address_prefecture + @delivery.delivery_address_city + @delivery.delivery_address_number + @delivery.delivery_address_building %>
-            <% end %>
-          </section>
-      <!-- 支払い方法を選択 -->
-          <section>
-            <div class="title">支払い方法</div><br>
-              <%= radio_button_tag :pay_flag, 1, checked: true %>クレジット<br>
-              <%= radio_button_tag :pay_flag, 2 %>銀行振込<br>
-              <%= radio_button_tag :pay_flag, 3 %>代引き<br>
-          </section>
-      <!-- 商品情報を表示 -->
-          <div class="title">商品情報</div><br>
-            <% total_price = 0 %>
-            <% @carts.each do |cart| %>
-              <section>
-                <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
-                <%= cart.item.item_name %>
-                <%= cart.cart_item_number %> 枚
-                <%= cart.item.item_price %> 円(税込)
-                <% total_price += cart.item.item_price * cart.cart_item_number%>
-              </section>
-            <% end %>
+          <%= link_to '変更', edit_user_registration_path, class: "btn btn-default", style:"float: right;" %>
+          <br>
+          <%= @full_name %>
+          <br>
+          <%= @user_address%>
+        </section>
+        <!-- お届け先を情報を表示 -->
+        <section>
+        <div class="title">送付先</div><br>
+        <%= link_to '変更', address_change_path, class: "btn btn-default", style:"float: right;" %>
+        <br>
+        <% if @delivery_flag == 0 %>
+          <% @delivery_list.first(1).each do |d| %>
+            <%= d.delivery_name_family_kanji+ " " + d.delivery_name_first_kanji %><br>
+            <%= "〒" + d.delivery_postal_code.insert(3, "-") + "　" + d.delivery_address_prefecture + d.delivery_address_city + d.delivery_address_number + d.delivery_address_building %>
+          <% end %>
+        <% elsif @delivery_flag == 1 %>
+            <%= @delivery.delivery_name_family_kanji+ " " + @delivery.delivery_name_first_kanji %><br>
+            <%= "〒" + @delivery.delivery_postal_code.insert(3, "-") + "　" + @delivery.delivery_address_prefecture + @delivery.delivery_address_city + @delivery.delivery_address_number + @delivery.delivery_address_building %>
+        <% end %>
+        </section>
+        <!-- 支払い方法を選択 -->
+        <section>
+          <div class="title">支払い方法</div><br>
+            <%= radio_button_tag :pay_flag, 1, checked: true %>クレジット<br>
+            <%= radio_button_tag :pay_flag, 2 %>銀行振込<br>
+            <%= radio_button_tag :pay_flag, 3 %>代引き<br>
+        </section>
+        <!-- 商品情報を表示 -->
+        <div class="title">商品情報</div><br>
+          <% total_price = 0 %>
+          <% @carts.each do |cart| %>
+            <section>
+              <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+              <%= cart.item.item_name %>
+              <%= cart.cart_item_number %> 枚
+              <%= cart.item.item_price %> 円(税込)
+              <% total_price += cart.item.item_price * cart.cart_item_number %>
+            </section>
+          <% end %>
           <p style="text-align: right">送料:<%= @order.postage %>円 </p>
           <p style="text-align: right">合計金額:<%= total_price + @order.postage %>円(税込)</p>
+          <% @total_fee = total_price%>
           <%= link_to '戻る', :back , class: "btn btn-default back" %>
           <%= submit_tag "注文内容確認ページへ" ,:class=>"order-Confirmation" %>
-        </div>
+          <%= f.hidden_field :user_id, value: @delivery.user_id %>
+          <%= f.hidden_field :delivery_name_family_kanji, value: @delivery.delivery_name_family_kanji %>
+          <%= f.hidden_field :delivery_name_first_kanji, value: @delivery.delivery_name_first_kanji %>
+          <%= f.hidden_field :delivery_name_family_furigana, value: @delivery.delivery_name_family_furigana %>
+          <%= f.hidden_field :delivery_name_first_furigana, value: @delivery.delivery_name_first_furigana %>
+          <%= f.hidden_field :delivery_postal_code, value: @delivery.delivery_postal_code %>
+          <%= f.hidden_field :delivery_address_prefecture, value: @delivery.delivery_address_prefecture %>
+          <%= f.hidden_field :delivery_address_city, value: @delivery.delivery_address_city %>
+          <%= f.hidden_field :delivery_address_number, value: @delivery.delivery_address_number %>
+          <%= f.hidden_field :delivery_address_building, value: @delivery.delivery_address_building %>
+          <%= f.hidden_field :total_fee, value: @total_fee %>
       <% end %>
     </div>
   </div>
 </div>
 </body>
-
