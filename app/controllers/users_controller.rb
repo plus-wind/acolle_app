@@ -6,3 +6,4 @@ class UsersController < ApplicationController
 	  @orders = @user.orders
 	end
 end
+

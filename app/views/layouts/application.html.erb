@@ -31,6 +31,7 @@
           <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li>
+
               <%= link_to " 商品", root_path, class:"glyphicon glyphicon-music" %>
             </li>
             <li>
@@ -42,7 +43,7 @@
             <li>
               <%= link_to " ログアウト", destroy_user_session_path, method: :delete, class:"glyphicon glyphicon-log-out logout" %>
             </li>
-  
+
           <% else %>
             <li>
               <%= link_to " 商品", root_path, class:"glyphicon glyphicon-music" %>
@@ -56,10 +57,10 @@
           <% end %>
           </ul>
         </nav><!-- /.input-group -->
-​
-    </div>
-  </header>
-​
+
+      </div>
+    </header>
+
     <div class = "space" style = "height: 70px;"></div>
     <%= yield %>
     <div class="wrapper">
