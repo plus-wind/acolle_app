@@ -17,17 +17,12 @@
           <span>Acolle</span>
         </nav>
         <nav class="input-group ">
-          <ul class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              アーティスト
-              <span class="caret"></span>
-            </button>
-              <span class="dropdown-menu">曲名</span>
-            <%= search_form_for @search, url: root_path do |f| %>
-            <%= f.text_field :artist_id_cont, placeholder: '検索...', class:"form-control" %>
-            <%= f.submit "検索", class:"btn btn-primary mb-2" %>
-            <% end %>
-          </ul><!-- /.input-group-btn -->
+            <%= form_tag(search_path, method: :post) do %>
+		    		<%= radio_button_tag :search_flag, 1, checked: true %>アーティスト
+					  <%= radio_button_tag :search_flag, 2 %>曲
+					  <%= text_field_tag :search_word %>
+					  <%= submit_tag "検索" %>
+				    <% end %>
           <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li>
