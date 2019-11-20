@@ -8,7 +8,6 @@
 			<div class="col-md-7">
 				<div class="item-info">
 					<h3>商品名：<%= @item.item_name %></h3>
-					<h3>購入日：<%= @order_item.created_at.strftime('%y/%m/%d') %></h3>
 					<h3>レビュー平均</h3>
 					<div class="star-average"><%= @satisfaction_average.round(2) %></div>
 					<div id="star-rate"></div>

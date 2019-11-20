@@ -9,8 +9,14 @@
 				<div class="item-info">
 					<h3>商品名：<%= @item.item_name %></h3>
 					<h3>購入日：<%= @order_item.created_at.strftime('%y/%m/%d') %></h3>
+					<% if @satisfaction_average.nil? %>
+					<p>※レビューはございません</p>
+					<% else %>
 					<h3>レビュー平均</h3>
-					<div class="star-average"><%= @satisfaction_average.round(2) %></div>
+					<div class="star-average">
+						<%= @satisfaction_average.round(2) %>
+					<% end %>
+					</div>
 					<div id="star-rate"></div>
 				          <script>
 				          $('#star-rate').raty({
@@ -23,7 +29,10 @@
 				            score: <%= @satisfaction_average %>,
 				          });
 				          </script>
+				    <% if @satisfaction_average.nil? %>
+				    <% else %>
 					<div class="count"><%= @satisfaction_count %>件</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
