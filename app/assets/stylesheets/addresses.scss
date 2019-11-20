@@ -1,3 +1,19 @@
 // Place all the styles related to the addresses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ------------------------------------------------------
+// change
+
+.delivery-address {
+  margin-bottom: 20px;
+}
+
+.btn-change {
+  float: right;
+}
+
+section {
+  border: solid 1px;/*表全体を線で囲う*/
+  height: 120px;
+}

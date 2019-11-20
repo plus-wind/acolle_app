@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   end
 #orders controller
   get '/order', to: 'orders#order'
-  post '/order', to: 'orders#order', as:'pay'
   get '/order/confirmation', to: 'orders#confirmation'
   get '/order/complete', to: 'orders#complete'
 #items controller
@@ -33,7 +32,8 @@ end
   # get '/items/:id/reviews', to: 'reviews#new'
   # post '/items/:id/reviews', to: 'reviews#create'
 #addresses controller
-  resources :addresses, only:[:create, :update, :destroy]
+  resources :addresses, only:[:create, :update, :destroy, :change]
+  get '/address/change', to: 'addresses#change'
 #contacts controller
   resources :contacts, only:[:create, :new]
 

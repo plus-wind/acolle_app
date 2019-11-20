@@ -1,15 +1,13 @@
 // Place all the styles related to the orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-main {
-  width: 800px;
-  width: 800px;
-  margin: 0 auto;
-}
-
 section {
   border: solid 1px;/*表全体を線で囲う*/
-  height: 100px;
+  height: 120px;
+}
+
+section.pay {
+  margin-top: 20px;
 }
 .title {
   display: inline-block;
@@ -22,29 +20,11 @@ section {
   display: inline-block;
 }
 
-.cart-item {
-  height: 120px;
-  border-bottom: solid 1px;
-}
-
-.thankyou {
-  text-align: center;
-}
-
-.item-index {
-  width: 400px;
-  margin: 0 auto;
-}
-
-.pay-container {
-  text-align: right;
-}
-
 .back {
   float: left;
 }
-
-.ok {
+.order-Confirmation {
   float: right;
 }
+
 
