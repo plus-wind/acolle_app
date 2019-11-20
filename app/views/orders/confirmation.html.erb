@@ -4,42 +4,53 @@
       <div class="col-lg-8 col-lg-offset-2">
         <h2 class=>注文内容確認</h2>
           <!-- 商品情報を表示 -->
+          <%= form_for(@order,url:order_confirmation_path, html: {method: "put"} ) do |f|%>
           <div class="title">商品情報</div><br>
             <% total_price = 0 %>
-            <% @carts.each do |cart| %>
-              <section class="item">
-                <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
-                <%= cart.item.item_name %>
-                <%= cart.cart_item_number %> 枚
-                <p style="text-align: right"><%= cart.item.item_price %> 円(税込) </p>
-                <% total_price += cart.item.item_price * cart.cart_item_number%>
-              </section>
-            <% end %>
-            <section class="pay">
-              <div class="title">支払い情報</div><br>
-              <p><%= @shiharai %></p>
-              <p style="text-align: right">送料:<%= @order.postage %>円 </p>
-              <p style="text-align: right">合計金額:<%= total_price + @order.postage %>円(税込)</p>
-            </section>
-            <section class="delivery">
-              <% if @delivery_flag == 0 %>
-              <% @delivery.first(1).each do |d| %>
-                <%= d.delivery_name_family_kanji+ " " + d.delivery_name_first_kanji %><br>
-                <%= "〒" + d.delivery_postal_code.insert(3, "-") + "　" + d.delivery_address_prefecture + d.delivery_address_city + d.delivery_address_number + d.delivery_address_building %>
+              <% @carts.each do |cart| %>
+                <section class="item">
+                  <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+                  <%= cart.item.item_name %>
+                  <%= cart.cart_item_number %> 枚
+                  <p style="text-align: right"><%= cart.item.item_price %> 円(税込) </p>
+                  <% total_price += cart.item.item_price * cart.cart_item_number%>
+                </section>
               <% end %>
-            <% elsif @delivery_flag == 1 %>
-                <%= @delivery.delivery_name_family_kanji+ " " + @delivery.delivery_name_first_kanji %><br>
-                <%= "〒" + @delivery.delivery_postal_code.insert(3, "-") + "　" + @delivery.delivery_address_prefecture + @delivery.delivery_address_city + @delivery.delivery_address_number + @delivery.delivery_address_building %>
-            <% end %>
+              <section class="pay">
+                <div class="title">支払い情報</div><br>
+                <p><%= @shiharai %></p>
+                <p style="text-align: right">送料:<%= @order.postage %>円 </p>
+                <p style="text-align: right">合計金額:<%= total_price + @order.postage %>円(税込)</p>
+              </section>
+              <section class="order">
+                <div class="title">お届け先</div><br>
+                <%= @order.delivery_name_family_kanji + "　" + @order.delivery_name_first_kanji %><br>
+                <%= "〒" + @order.delivery_postal_code + "　" + @order.delivery_address_prefecture + @order.delivery_address_city + @order.delivery_address_number + @order.delivery_address_building %>
             </section>
             <%= link_to '戻る', :back , class: "btn btn-default back" %>
-            <%= link_to '確定', order_confirmation_path , class: "btn btn-success ok" %>
+            <%= submit_tag '確定', class: "btn btn-success ok" %>
+
+              <%= f.hidden_field :user_id, value: @order.user_id %>
+              <%= f.hidden_field :delivery_name_family_kanji, value: @order.delivery_name_family_kanji %>
+              <%= f.hidden_field :delivery_name_first_kanji, value: @order.delivery_name_first_kanji %>
+              <%= f.hidden_field :delivery_name_family_furigana, value: @order.delivery_name_family_furigana %>
+              <%= f.hidden_field :delivery_name_first_furigana, value: @order.delivery_name_first_furigana %>
+              <%= f.hidden_field :delivery_postal_code, value: @order.delivery_postal_code %>
+              <%= f.hidden_field :delivery_address_prefecture, value: @order.delivery_address_prefecture %>
+              <%= f.hidden_field :delivery_address_city, value: @order.delivery_address_city %>
+              <%= f.hidden_field :delivery_address_number, value: @order.delivery_address_number %>
+              <%= f.hidden_field :delivery_address_building, value: @order.delivery_address_building %>
+              <%= f.hidden_field :delivery_address_number, value: @order.delivery_address_number %>
+              <%= f.hidden_field :order_status, value: 0 %>
+              <%= f.hidden_field :total_fee, value: @order.total_fee %>
+              <%= f.hidden_field :postage, value: @order.postage %>
+          <% end %>
       </div>
     </div>
   </div>
 
 
       <p><%= @name %></>
-<%#  %>
 
 </body>
+
