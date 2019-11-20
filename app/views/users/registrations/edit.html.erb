@@ -48,12 +48,6 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
-    <div class="field">
-      <strong>(we need your current password to confirm your changes)</strong></br>
-      <%= f.label :"現在のパスワード　　　　" %>
-      <%= f.password_field :current_password, autocomplete: "current-password" %>
-    </div>
-
     <div class="postal_code line">
       <div class="field">
         <%= f.label :"郵便番号　　　　　　　　" %>
@@ -98,13 +92,15 @@
     </div>
 
   <div class="actions">
-    <%= f.submit "更新", class:"btn btn-success" %>
+  <div class="field">
+      <strong>(登録情報を変更した際は、現在のパスワードを入力して更新ボタンを押して下さい。)</strong></br>
+      <%= f.label :"現在のパスワード　　　　" %>
+      <%= f.password_field :current_password, autocomplete: "current-password" %>
+    </div>
+      <%= f.submit "更新", class:"btn btn-success" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<%= link_to "戻る", :back, class:"btn" %>
 </div>
