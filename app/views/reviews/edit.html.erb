@@ -1,0 +1,59 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-5">
+				<h1>レビュー編集</h1>
+				<%= attachment_image_tag @item, :item_image, :fill, 250, 250, fallback: "no_image.jpg", size:'250x250' %>
+			</div>
+			<div class="col-md-7">
+				<div class="item-info">
+					<h3>商品名：<%= @item.item_name %></h3>
+					<h3>レビュー平均</h3>
+					<div class="star-average"><%= @satisfaction_average.round(2) %></div>
+					<div id="star-rate"></div>
+				          <script>
+				          $('#star-rate').raty({
+				            size: 36,
+				            starOff:  '<%= ('star-off.png') %>',
+				            starOn : '<%= ('star-on.png') %>',
+				            starHalf: '<%= ('star-half.png') %>',
+				            half: true,
+				            readOnly: true,
+				            score: <%= @satisfaction_average %>,
+				          });
+				          </script>
+					<div class="count"><%= @satisfaction_count %>件</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1">
+			<%= form_for(@review) do |f| %>
+		 		<div class="review-form clearfix">
+		 		<p id="star">満足度: <%= f.hidden_field :satisfaction, id: :review_star %></p>
+ 					<!-- 評価javascript -->
+					<script>
+					  $('#star').raty({
+					    size     : 36,
+					    starOff: '<%= ('star-off.png') %>',
+					    starOn : '<%= ('star-on.png') %>',
+					    starHalf: '<%= ('star-half.png') %>',
+					    scoreName: 'review[satisfaction]',
+					    half: true,
+					  });
+					</script>
+				</div>
+				<div class="review-form clearfix">
+			    	<p>タイトル：</p>
+			    	<%= f.text_field :review_title, :style=>"width: 420px;" %>
+		    	</div>
+				<div class="review-form">
+					<p>本文：</p>
+					<%= f.text_area :review_content, :style=>"width: 460px;"  %>
+				</div>
+		    	<div class="col-md-offset-6"><%= f.submit '編集する' %></div>
+			<% end %>
+		</div>
+	</div>
+</div>

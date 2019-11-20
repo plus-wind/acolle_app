@@ -1,13 +1,13 @@
 <div class="container">
 	<h1>退会確認</h1>
 
-	<%= form_with(@user) do |f| %>
+	<%= form_with(@angou.authenticate(:password)) do |f| %>
   		<%= f.label :"パスワードを入力して下さい。" %></br>
   		<%= f.password_field :password %>
+
+	<%= f.submit "Cancel my account", registration_path(resource_name), data: { confirm: "本当に退会しますか?　この処理は取り消せません" }, method: :delete %>
 	<% end %>
 
 	<%= link_to "戻る", mypage_path, class:"btn-sm btn" %>
-
-	<%= link_to "退会する", user_registration, class:"btn-sm btn-danger", method: :delete,  "data-confirm" => "本当に退会しますか？　この処理は取り消せません" %>
 
 </div>
