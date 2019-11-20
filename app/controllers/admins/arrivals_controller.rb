@@ -1,5 +1,5 @@
 class Admins::ArrivalsController < ApplicationController
-
+    layout "admins"
   def search
 
   end
@@ -16,5 +16,4 @@ class Admins::ArrivalsController < ApplicationController
 
   def update
   end
-
 end
