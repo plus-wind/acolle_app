@@ -30,7 +30,7 @@
 		    <div class="cart-content">
 				<%= form_for(@cart, url: cart_path(@item)) do |f| %>
 				<p><%= f.number_field :cart_item_number, min: "1", :style=>"width: 30px;" %>枚</p>
-				<p><%= f.hidden_field :item_id, value:@item.id %>枚</p>
+				<p><%= f.hidden_field :item_id, value:@item.id %></p>
 				<%= f.submit 'カートへ追加' %>
 				<% end %>
 			</div>
@@ -59,7 +59,11 @@
 	        <div id="tab2" class="tab">
 				<div class ="review-headline clearfix">
 				  	<h4>レビュー平均：</h4>
+				  	<% if @satisfaction_average.nil? %>
+					<div id="star-average">※レビューはございません</div>
+					<% else %>
 				  	<div id="star-average"><%= @satisfaction_average.round(2) %></div>
+				  	<% end %>
 					<div id="star-rate"></div>
 			          <script>
 				          $('#star-rate').raty({

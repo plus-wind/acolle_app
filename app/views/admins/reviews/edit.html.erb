@@ -1,0 +1,59 @@
+<%= stylesheet_link_tag "admins/reviews", :media => "all" %>
+
+<div class="container">
+	<div class="row3">
+		<div class="col-md-12">
+			<h1>レビュー編集</h1>
+			<table class="table-edit" style="margin-top:30px;">
+				<tr>
+                	<th>顧客名：</th>
+                	<th><%= @review.user.name_family_kanji + @review.user.name_first_kanji %></th>
+		    	</tr>
+				<tr>
+                	<th>投稿日時：</th>
+                	<th><%= @review.created_at.strftime('%y/%m/%d %I:%M') %></th>
+		    	</tr>
+				<tr>
+                	<th>商品名：</th>
+                	<th><%= @review.item.item_name %></th>
+		    	</tr>
+		    </table>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<%= form_for(@review, url: admins_review_path(@review.id)) do |f| %>
+		 		<div class="review-form clearfix">
+		 		<p id="star">満足度: <%= f.hidden_field :satisfaction, id: :review_star %></p>
+					<script>
+					  $('#star').raty({
+					    size     : 36,
+					    starOff: '<%= ('star-off.png') %>',
+					    starOn : '<%= ('star-on.png') %>',
+					    starHalf: '<%= ('star-half.png') %>',
+					    scoreName: 'review[satisfaction]',
+					    half: true,
+					  });
+					</script>
+				</div>
+				<div class="review-form clearfix">
+			    	<p>タイトル：</p>
+			    	<%= f.text_field :review_title, :style=>"width: 420px;" %>
+		    	</div>
+				<div class="review-form">
+					<p>本文：</p>
+					<%= f.text_area :review_content, :style=>"width: 460px;"  %>
+				</div>
+		    	<div class="col-md-offset-5"><%= f.submit '更新する', class:"btn btn-default", :style=>"background-color:00FFFF;" %>
+		    	</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+

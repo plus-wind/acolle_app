@@ -279,6 +279,12 @@ OrderItem.create!(
       item_id: "4",
       order_price: "3000",
       order_number: "2",
+    },
+    {
+      order_id: "2",
+      item_id: "1",
+      order_price: "3000",
+      order_number: "2",
     }
   ]
 )

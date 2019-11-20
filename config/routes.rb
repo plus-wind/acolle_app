@@ -54,9 +54,11 @@ namespace :admins do
   #patch '/uesrs', to: 'users#change'
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]
+  post '/search',  to: 'reviews#search'
 #admins/contacts controller
   resources :contacts, only:[:index, :show, :create]
   get '/contacts/new', to: 'contacts#new'
 end
 
 end
+
