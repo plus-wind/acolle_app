@@ -1,6 +1,5 @@
-# frozen_string_literal: true
-
 class Users::RegistrationsController < Devise::RegistrationsController
+  #protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
@@ -65,20 +64,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   def unsubscribe
-    @user = User.params[:id]
+    @user = User.params(current_id[:password])
   end
 
   def complete
   end
 
+  def after_update_path_for(resource)
+    mypage_path
+  end
+
+  def after_sign_up_path_for(resource)
+    root_path
+　end
 
   protected
-
-    def after_sign_up_path_for(resource)
-      root_path
-  　end
-
-
-
-end
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:name_family_kanji, :name_first_kanji, :name_family_furigana, :name_first_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number, :delete_flag])
+      devise_parameter_sanitizer.permit(:sign_in, keys: [:name_family_kanji, :name_first_kanji, :name_family_furigana, :name_first_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number, :delete_flag])
+      devise_parameter_sanitizer.permit(:account_update, keys: [:name_family_kanji, :name_first_kanji, :name_family_furigana, :name_first_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number, :delete_flag])
+   end
+  end
 end

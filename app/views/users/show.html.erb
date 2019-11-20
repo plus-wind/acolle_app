@@ -68,16 +68,16 @@
 					<div style="float: left"><%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
 					</div>
 					<span>
-						<span><%= oi.item.item_name %></span>
-						<span>
-							<% if order.reviewed_by?.present? %>
-							 <%= link_to "レビューする", review_path(@user.oi) %>
-							 	<% else %>
-							 	<%= link_to "レビュー編集", edit_review_path(@user.oi) %>
+						<%= oi.item.item_name %>
+							<% review = Review.reviewed_by(current_user,oi.item)
+								if review.present?
+							%>
+							 	<%= link_to "レビュー編集", edit_review_path(review) %>
+							<% else %>
+							 	<%= link_to "レビューする", review_path(oi.item) %>
 							<% end %>
 
-						</span>
-						<span><%= oi.item.artist_id %><%= oi.order_number %>枚小計<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円</span>
+						<%= oi.item.artist_id %><%= oi.order_number %>枚小計<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円
 					</span>
 				</div>
 			</div>

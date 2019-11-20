@@ -21,7 +21,9 @@ Rails.application.routes.draw do
   root to: 'items#index'
 #carts controller
   get '/cart', to: 'carts#index'
-  post '/items/:id/cart', to: 'carts#add'
+  # post '/items/:id/cart', to: 'carts#add'   #下に移動してあります！！！！！！！！
+  post '/cart', to: 'carts#add'
+  patch '/cart/:id', to: 'carts#update'
   delete '/cart.:id', to: 'carts#remove'
   delete '/carts', to: 'carts#destroy'
 #reviews controller
