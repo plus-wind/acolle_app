@@ -72,9 +72,10 @@
 							<% review = Review.reviewed_by(current_user,oi.item)
 								if review.present?
 							%>
-							 	<%= link_to "レビュー編集", edit_review_path(review) %>
+							 	<%= link_to "レビュー編集", edit_review_path(review)
+ %>
 							<% else %>
-							 	<%= link_to "レビューする", review_path(oi.item) %>
+							 	<%= link_to "レビューする", new_item_review_path(oi.item) %>
 							<% end %>
 
 						<%= oi.item.artist_id %><%= oi.order_number %>枚小計<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円
