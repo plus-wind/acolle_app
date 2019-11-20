@@ -1,0 +1,22 @@
+<body>
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th>id</th>
+      <th>入荷日時</th>
+      <th>商品名</th>
+      <th>個数</th>
+      <th>ステータス</th>
+    </tr>
+    <% @arrivals.each do |a| %>
+    <tbody>
+    <tr>
+      <td><%= a.id %></td>
+      <td><%= a.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+      <td><%= a.item.item_name %></td>
+      <td><%= a.arrival_number%></td>
+      <td></td>
+    </tr>
+    </tbody>
+    <% end %>
+  </table>
+</body>

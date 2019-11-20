@@ -21,7 +21,9 @@ Rails.application.routes.draw do
   end
 #orders controller
   get '/order', to: 'orders#order'
-  get '/order/confirmation', to: 'orders#confirmation'
+  post '/order/confirmation', to: 'orders#confirmation'
+  put '/order/confirmation', to: 'orders#create'
+  post '/order', to: 'orders#create'
   get '/order/complete', to: 'orders#complete'
 #items controller
   # resources :items, only:[:show]  #下に移動してあります！！！！！！！！！
