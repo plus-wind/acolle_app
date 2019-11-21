@@ -1,0 +1,21 @@
+<div class = "container">
+    <div class = "row">
+        <h2 class = "edit-title" >商品詳細編集</h2>
+    </div>
+    <%= form_for (@item) do |i| %>
+    <div class = "row item-field">
+        <div class = "col-4 field">
+            <label for = "item_image">商品画像</label>
+            <%= i.attachment_field :item_image, placeholder: "商品画像", fallback: "no_image.jpg", size:"40x40"%>
+        </div>
+        <div class = "col-8">
+            <h5>ジャケット名</h5>
+            <li><%= i.select :item_type, [["シングル","シングル"],["アルバム","アルバム"],["EP","EP"]]%></li>
+            <li><%= i.text_field :item_name, autofocus: true %></li>
+            <li><%= i.number_field :artist_id, autofocus: true %><%= @item.artist.artist_name %></li>
+            <li><%= i.number_field :label_id, autofocus: true %><%= @item.label.label_name %></li>
+        </div>
+    </div>
+    <% end %>
+                
+</div>
