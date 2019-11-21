@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 #users controller
   get '/mypage', to: 'users#show'
   patch '/users', to: 'users#change'
+  patch '/retire', to: 'users#retire',as: 'retire'
 #users/registrations controller
   devise_scope :user do
     # get "sign_up", :to => "users/registrations#new"

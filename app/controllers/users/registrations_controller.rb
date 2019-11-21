@@ -68,6 +68,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:account_update, keys: [:name_family_kanji, :name_first_kanji, :name_family_furigana, :name_first_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number, :delete_flag])
   end
 
+  def update_resource(resource, params)
+    resource.update_without_password(params)
+  end
+
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
   #   super(resource)
@@ -84,8 +88,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #     devise_parameter_sanitizer.permit(:sign_in, keys: [:name_family_kanji, :name_first_kanji, :name_family_furigana, :name_first_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number, :delete_flag])
   #     devise_parameter_sanitizer.permit(:account_update, keys: [:name_family_kanji, :name_first_kanji, :name_family_furigana, :name_first_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number, :delete_flag])
   #   end
-  #   # def update_resource(resource, params)
-    #   resource.update_without_password(params)
-    # end
   # end
 end

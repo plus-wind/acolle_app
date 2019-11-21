@@ -1,0 +1,103 @@
+<%= stylesheet_link_tag "admins/users", :media => "all" %>
+
+<div class="signin_container container">
+<h2>登録情報の編集 </h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="name_kanji field">
+      <div class="field">
+        <%= f.label :"氏名　　　　　　　　　姓" %>
+        <%= f.text_field :name_family_kanji, autofocus: true  %>
+        <%= f.label :"　　名" %>
+        <%= f.text_field :name_first_kanji, autofocus: true  %>
+      </div>
+    </div>
+
+    <div class="name_furigana line">
+      <div class="field">
+        <%= f.label :"氏名（フリガナ）　　セイ" %>
+        <%= f.text_field :name_family_furigana, autofocus: true  %>
+        <%= f.label :"　メイ" %>
+        <%= f.text_field :name_first_furigana, autofocus: true  %>
+      </div>
+    </div>
+
+    <div class="email line">
+      <div class="field">
+        <%= f.label :"メールアドレス　　　　　" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= f.label :"新規パスワード　　　　　" %>
+      <%= f.password_field :password, autocomplete: "new-password" %>
+      <strong>(変更しない場合は空白)</strong>
+      <% if @minimum_password_length %>
+        <br />
+        <em><%= @minimum_password_length %> characters minimum</em>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= f.label :"新規パスワード（再入力）" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="postal_code line">
+      <div class="field">
+        <%= f.label :"郵便番号　　　　　　　　" %>
+        <%= f.text_field :postal_code, autofocus: true  %>
+      </div>
+    </div>
+
+    <div class="address_prefecture line">
+      <div class="field">
+        <%= f.label :"都道府県　　　　　　　　" %>
+        <%= f.text_field :address_prefecture, autofocus: true  %>
+      </div>
+    </div>
+
+    <div class="address_city line">
+      <div class="field">
+        <%= f.label :"住所１（市区町村）　　　" %>
+        <%= f.text_field :address_city, autofocus: true  %>
+      </div>
+    </div>
+
+    <div class="address_number line">
+      <div class="field">
+        <%= f.label :"住所２（番地）　　　　　" %>
+        <%= f.text_field :address_number, autofocus: true  %>
+      </div>
+    </div>
+
+    <div class="address_building line">
+      <div class="field">
+        <%= f.label :"住所３（建物名）　　　　" %>
+        <%= f.text_field :address_building, autofocus: true  %>
+      </div>
+    </div>
+
+    <div class="phone_number line">
+      <div class="field">
+        <%= f.label :"お電話番号　　　　　　　" %>
+        <%= f.text_field :phone_number, autofocus: true  %>
+        <%= f.hidden_field :delete_flag, :value => 0 %>
+      </div>
+    </div>
+
+  <div class="actions">
+      <%= f.submit "更新", class:"btn btn-primary" %>
+  </div>
+<% end %>
+
+
+<%= link_to "戻る", :back, class:"btn" %>
+</div>
