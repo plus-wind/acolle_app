@@ -27,6 +27,7 @@
                 	<th><%= (@item.item_price*1.1).round(0) %>円(税込)</th>
 		    	</tr>
 		    </table>
+		    <% if @arrivals_sum - @order_items_sum > 0 %>
 		    <div class="cart-content">
 				<%= form_for(@cart, url: cart_path(@item)) do |f| %>
 				<p><%= f.number_field :cart_item_number, min: "1", :style=>"width: 30px;" %>枚</p>
@@ -34,6 +35,9 @@
 				<%= f.submit 'カートへ追加' %>
 				<% end %>
 			</div>
+			<% else %>
+			   <div class="sales-status">売り切れ</div>
+			<% end %>
 		</div>
 	</div>
 
