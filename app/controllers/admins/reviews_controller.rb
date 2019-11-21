@@ -52,7 +52,21 @@ class Admins::ReviewsController < ApplicationController
     	review.update(review_params)
     	redirect_to admins_review_path
 	end
-
+	def sort
+		if params[:sort_type] == "1" && params[:sort_flag] == "1"
+			@reviews = Review.all.order('created_at ASC').page(params[:page]).per(2)
+			render :index
+		elsif params[:sort_type] == "1" && params[:sort_flag] == "2"
+			@reviews = Review.all.order('created_at DESC').page(params[:page]).per(2)
+			render :index
+		elsif params[:sort_type] == "2" && params[:sort_flag] == "1"
+			@reviews = Review.all.order('satisfaction ASC').page(params[:page]).per(2)
+			render :index
+		elsif params[:sort_type] == "2" && params[:sort_flag] == "2"
+			@reviews = Review.all.order('satisfaction DESC').page(params[:page]).per(2)
+			render :index
+		end
+	end
 	private
     def review_params
       params.require(:review).permit(:user_id, :item_id, :review_title, :review_content, :satisfaction)

@@ -55,6 +55,7 @@ namespace :admins do
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]
   post '/search',  to: 'reviews#search'
+  get '/sort/reviews',  to: 'reviews#sort'
 #admins/contacts controller
   resources :contacts, only:[:index, :show, :create]
   get '/contacts/new', to: 'contacts#new'

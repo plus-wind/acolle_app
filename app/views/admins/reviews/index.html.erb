@@ -20,18 +20,11 @@
 
 			<table class="table-bordered" style="margin-top:20px;">
 				<tr>
-					<% def sortTh(a,contName) %>
-                    <% if request.fullpath.include?('desc') %>
-                    <% link_to a, sort: contName %>
-                    <% else %>
-                	<% link_to a, sort: "#{contName} desc" %>
-                	<% end %>
-                	<% end %>
-                	<th><%= sortTh('No.','@review.id') %></th>
-                	<th><%= sortTh('日付','@review.created_at') %></th>
+					<th>No.</th>
+                	<th>日付<%= button_to "▲", admins_sort_reviews_path, {method: :get, params: {sort_type: '1', sort_flag: '1'}} %><%= button_to "▼", admins_sort_reviews_path, {method: :get, params: {sort_type: '1', sort_flag: '2'}} %></th>
                 	<th>顧客名</th>
                 	<th>商品名</th>
-                	<th><%= sortTh('満足度','@review.satisfaction') %></th>
+                	<th>満足度<%= button_to "▲", admins_sort_reviews_path, {method: :get, params: {sort_type: '2', sort_flag: '1'}} %><%= button_to "▼", admins_sort_reviews_path, {method: :get, params: {sort_type: '2', sort_flag: '2'}} %></th>
                 	<th>詳細</th>
 		    	</tr>
 		    	<% @reviews.each.with_index(1) do |r,i| %>
