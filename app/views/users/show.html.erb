@@ -62,35 +62,20 @@
 			<div>
 				<%= order.created_at.strftime('%Y/%m/%d') %>  <%= order.order_status %>
 			</div>
-
-
 				<% order.order_items.each do |oi| %>
-				<div><%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
-
-					</div>
-					<span>
-						<%= oi.item.item_name %>
-							<% review = Review.reviewed_by(current_user,oi.item)
+				<div>
+				<%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
+				<%= oi.item.item_name %>
+				<% review = Review.reviewed_by(current_user,oi.item)
 								if review.present?
 							%>
-							 	<%= link_to "レビュー編集", edit_review_path(review)
- %>
-							<% else %>
-							 	<%= link_to "レビューする", new_item_review_path(oi.item) %>
-							<% end %>
-
-					<%= oi.item.item_name %>
-						<% review = Review.reviewed_by(current_user,oi.item)
-							if review.present?
-						%>
-						 	<%= link_to "レビュー編集", edit_review_path(review) %>
+					<%= link_to "レビュー編集", edit_review_path(review) %>
 						<% else %>
-						 	<%= link_to "レビューする", review_path(oi.item) %>
+							 <%= link_to "レビューする", new_item_review_path(oi.item) %>
 						<% end %>
 
 					<%= oi.item.artist_id %><%= oi.order_number %>枚小計<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円
 				</div>
-
 				<% end %>
 
 			<div>送付先：<%= order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji %>   様宛       <%= order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %></div>
@@ -101,6 +86,5 @@
 	<div class="row">
 		<%= link_to "退会手続きへ", users_unsubscribe_path(@user), class:"btn btn-danger col-md-offset-10" %>
 	</div>
-</div>
 </div>
 
