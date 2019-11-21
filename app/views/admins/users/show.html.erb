@@ -41,7 +41,7 @@
 			<%= link_to "登録情報編集", edit_admins_user_path(@user.id), class:"btn btn-success col-md-2 col-md-offset-4" %>
 		</div>
 		<div class="row">
-			<%= link_to "会員情報削除", admins_user_path(@user.id), method: :patch, class:"btn btn-danger col-md-2 col-md-offset-4", method: :delete,  "data-confirm" => "本当に削除しますか？この操作は取り消せません。" %>
+			<%= link_to "会員情報削除", admins_user_path(@user.id), method: :patch, class:"btn btn-danger col-md-2 col-md-offset-4", "data-confirm" => "本当に削除しますか？この操作は取り消せません。" %>
 		</div>
 	</div>
 
