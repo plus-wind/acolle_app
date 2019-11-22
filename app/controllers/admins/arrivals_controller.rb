@@ -12,8 +12,17 @@ class Admins::ArrivalsController < ApplicationController
   end
 
   def edit
+    @arrival = Arrival.find(params[:id])
   end
 
   def update
+    arrival =Arrival.find(params[:id])
+    arrival.update(arrival_params)
+    redirect_to admins_arrivals_path
   end
+
+  private
+	def arrival_params
+		 params.require(:arrival).permit(:item_id, :arrival_number, :arrival_date)
+	end
 end
