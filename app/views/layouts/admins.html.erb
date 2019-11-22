@@ -18,7 +18,7 @@
         </nav>
         <nav>
           <ul class="nav navbar-nav navbar-left admins-link">
-          <% if user_signed_in? %>
+          <% if admin_signed_in? %>
             <li>
               <%= link_to "商品一覧", admins_items_path, class:"glyphicon" %>
             </li>

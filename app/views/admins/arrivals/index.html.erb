@@ -7,14 +7,17 @@
       <th>個数</th>
       <th>ステータス</th>
     </tr>
-    <% @arrivals.each do |a| %>
+    <% @arrivals.each do |arrival| %>
     <tbody>
     <tr>
-      <td><%= a.id %></td>
-      <td><%= a.created_at.strftime('%Y/%m/%d %H:%M') %></td>
-      <td><%= a.item.item_name %></td>
-      <td><%= a.arrival_number%></td>
-      <td></td>
+      <td><%= arrival.id %></td>
+      <td><%= arrival.arrival_date %></td>
+      <td><%= arrival.item.item_name %></td>
+      <td><%= arrival.arrival_number %></td>
+      <td>
+        <%= link_to "編集", edit_admins_arrival_path(arrival), class: 'btn btn-success' %>
+        <%= link_to "削除", admins_arrival_path(arrival),class: 'btn btn-danger' %>
+      </td>
     </tr>
     </tbody>
     <% end %>
