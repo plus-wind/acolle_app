@@ -16,10 +16,14 @@ class ApplicationController < ActionController::Base
 			end
 			@items = @items.reverse
 			@items = Kaminari.paginate_array(@items).page(params[:page]).per(3)
+			@day = Date.today.strftime('%y/%m/%d')
+			@week_ago = Date.today.ago(1.week).strftime('%y/%m/%d')
 		elsif params[:search_flag] == "2"
 			@items = Item.joins(discs: :songs).where("song LIKE ?", "%#{params[:search_word]}%")
 			@items = @items.reverse.uniq
 			@items = Kaminari.paginate_array(@items).page(params[:page]).per(3)
+			@day = Date.today.strftime('%y/%m/%d')
+			@week_ago = Date.today.ago(1.week).strftime('%y/%m/%d')
 		end
 		render :index
 	end

@@ -12,4 +12,7 @@ class User < ApplicationRecord
 
   ratyrate_rater
 
+  def self.find_first_by_auth_conditions(warden_conditions)
+    User.where(:email => warden_conditions[:email],:delete_flag=>0).first
+  end
 end

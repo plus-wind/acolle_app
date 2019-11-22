@@ -6,7 +6,7 @@
             <%= link_to "カートを空にする", carts_path, method: :delete, class:"btn btn-default btn-lg" %>
         </div>
     </div>
-    <% total_price = 0.to_i%>
+    <% total_price = total_price.to_i %>
     <% @carts.each do |cart| %>
         <div class = "row-12 clearfix cart-box">
             <th><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
@@ -21,6 +21,7 @@
                 <%= f.submit '変更', class:"btn-sm btn-primary" %>
                 <% end %>
                 <div class = "cart-price">
+                    <% cart.item.item_price = (cart.item.item_price * 1.1).round(0) %>
                     <%= cart.item.item_price %> 円(税込)
                     <% total_price += cart.item.item_price * cart.cart_item_number %>
                     <%= link_to "削除", cart_path(cart), method: :delete, class:"btn-sm btn-danger"%>
