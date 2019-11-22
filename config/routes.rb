@@ -61,6 +61,8 @@ namespace :admins do
   patch '/items/:id', to: 'items#change'
 #admins/arrivals controller
   resources :arrivals, only:[:index, :edit, :update, :destroy]
+  get '/search/arrivals',  to: 'arrivals#search'
+  get '/sort/arrivals',  to: 'arrivals#sort'
   # post '/items/:id/arrivals', to: 'arrivals#create'   #admins/items controllerに移動してます。
 #admins/users controller
   resources :users, only:[:index, :show, :edit, :update]
