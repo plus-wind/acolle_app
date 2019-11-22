@@ -1,23 +1,34 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
-  devise_for :admins
-  devise_for :users
+  devise_for :admins, controllers:{
+    sessions: 'admins/sessions'
+  }
+  devise_for :users, controllers:{
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
+  }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 #users controller
   get '/mypage', to: 'users#show'
   patch '/users', to: 'users#change'
+  patch '/retire', to: 'users#retire',as: 'retire'
 #users/registrations controller
   devise_scope :user do
+    # get "sign_up", :to => "users/registrations#new"
+    # get "sign_in", :to => "users/sessions#new"
+    # get "sign_out", :to => "users/registrations#destroy"
     get 'users/unsubscribe', to: 'users/registrations#unsubscribe'
     get 'users/unsubscribe/complete', to: 'users/registrations#complete'
   end
 #orders controller
   get '/order', to: 'orders#order'
-  get '/order/confirmation', to: 'orders#confirmation'
+  post '/order/confirmation', to: 'orders#confirmation'
+  put '/order/confirmation', to: 'orders#create'
+  post '/order', to: 'orders#create'
   get '/order/complete', to: 'orders#complete'
 #items controller
   # resources :items, only:[:show]  #reviews controllerに移動してあります！！！！！！！！！
-  post '/search',  to: 'items#search'
+  get '/search',  to: 'items#search'
   root to: 'items#index'
 #carts controller
   get '/cart', to: 'carts#index'
@@ -53,10 +64,11 @@ namespace :admins do
   # post '/items/:id/arrivals', to: 'arrivals#create'   #admins/items controllerに移動してます。
 #admins/users controller
   resources :users, only:[:index, :show, :edit, :update]
+  post '/search',  to: 'users#search'
   #patch '/uesrs', to: 'users#change'
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]
-  post '/search',  to: 'reviews#search'
+  post '/search/reviews',  to: 'reviews#search'
   get '/sort/reviews',  to: 'reviews#sort'
 #admins/contacts controller
   resources :contacts, only:[:index, :show, :create]

@@ -5,7 +5,7 @@
 		<div class="col-md-12">
 			<h1>レビュー一覧</h1>
 			<div class="search-content">
-		    	<%= form_tag(admins_search_path, method: :post) do %>
+		    	<%= form_tag(admins_search_reviews_path, method: :post) do %>
 		    		<div class="search-word">
 		    		<%= text_field_tag :search_word %>
 					<%= submit_tag "検索" %>

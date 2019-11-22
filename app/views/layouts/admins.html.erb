@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>AcolleApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <% self_css_path = "/assets/"+controller.controller_name  %>
+  <%= stylesheet_link_tag self_css_path, :media => "all" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar-default">
+      <div class="container">
+        <nav class="nav navbar-nav navbar-left">
+          <h1>Acolle</h1>
+        </nav>
+        <nav>
+          <ul class="nav navbar-nav navbar-left admins-link">
+          <% if admin_signed_in? %>
+            <li>
+              <%= link_to "商品一覧", admins_items_path, class:"glyphicon" %>
+            </li>
+            <li>
+              <%= link_to  "入荷履歴", admins_arrivals_path, class:"glyphicon" %>
+            </li>
+            <li>
+              <%= link_to "受注履歴", admins_orders_path, class:"glyphicon" %>
+            </li>
+            <li>
+              <%= link_to "顧客一覧", admins_users_path, class:"glyphicon" %>
+            </li>
+            <li>
+              <%= link_to "お問い合わせ", admins_contacts_path, class:"glyphicon" %>
+            </li>
+            <li>
+              <%= link_to "レビュー", admins_reviews_path, method: :delete, class:"glyphicon" %>
+            </li>
+            <li class = "admin-logout">
+              <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"glyphicon" %>
+            </li>
+
+          <% else %>
+          <% end %>
+          </ul>
+        </nav>
+​
+    </div>
+  </header>
+  <div class = "space" style = "height: 90px;"></div>
+  <%= yield %>
+
+  </body>

@@ -1,4 +1,7 @@
 class Admins::ReviewsController < ApplicationController
+
+    layout "admins"
+
 	def index
 		@reviews = Review.page(params[:page]).per(2).reverse_order
 	end
