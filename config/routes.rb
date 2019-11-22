@@ -27,8 +27,8 @@ Rails.application.routes.draw do
   post '/order', to: 'orders#create'
   get '/order/complete', to: 'orders#complete'
 #items controller
-  # resources :items, only:[:show]  #下に移動してあります！！！！！！！！！
-  post '/search',  to: 'items#search'
+  # resources :items, only:[:show]  #reviews controllerに移動してあります！！！！！！！！！
+  get '/search',  to: 'items#search'
   root to: 'items#index'
 #carts controller
   get '/cart', to: 'carts#index'
@@ -55,20 +55,25 @@ namespace :admins do
   get '/orders', to: 'orders#index'
   patch '/orders/:id', to: 'orders#change'
 #admins/items controller
-  resources :items, only: [:index, :show, :edit, :update, :new, :create]
+  resources :items, only: [:index, :show, :edit, :update, :new, :create] do
+      resources :arrivals, only:[:new, :create]
+  end
   patch '/items/:id', to: 'items#change'
 #admins/arrivals controller
   resources :arrivals, only:[:index, :edit, :update, :destroy]
-  post '/items/:id/arrivals', to: 'arrivals#create'
+  # post '/items/:id/arrivals', to: 'arrivals#create'   #admins/items controllerに移動してます。
 #admins/users controller
   resources :users, only:[:index, :show, :edit, :update]
   post '/search',  to: 'users#search'
   #patch '/uesrs', to: 'users#change'
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]
+  post '/search/reviews',  to: 'reviews#search'
+  get '/sort/reviews',  to: 'reviews#sort'
 #admins/contacts controller
   resources :contacts, only:[:index, :show, :create]
   get '/contacts/new', to: 'contacts#new'
 end
 
 end
+
