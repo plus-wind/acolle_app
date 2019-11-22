@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag "admins/items", :media => "all" %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-7">
+			<h2>商品詳細</h2>
+			<div class="item-container-left">
+				<%= attachment_image_tag @item, :item_image, :fill, 100, 100, fallback: "no_image.jpg", size:'100x100' %>
+				<p>タイプ: <%= @item.item_type %></p>
+				<p>ジャンル: <%= @item.genre.genre_name %></p>
+				<p>発売日: <%= @item.item_release_date.strftime('%y/%m/%d') %></p>
+				<p>価格(税別): <%= @item.item_price %>円</p>
+				<%= button_to "編集する", edit_admins_item_path, :style=>"background-color:yellow;" %>
+			</div>
+			<div class="item-container-right">
+				<p>商品名: <%= @item.item_name %></p>
+				<p>アーティスト名: <%= @item.artist.artist_name %></p>
+				<p>レーベル名: <%= @item.label.label_name %></p>
+				<P>曲名一覧</P>
+				<% @item.discs.each do |d| %>
+				<div class="disc-table">
+					<p style="text-decoration: underline; font-size:15px;"><%= d.disc_name %></p>
+					<div class="song-table">
+					<% d.songs.each.with_index(1) do |s, i| %>
+						<p><%= i %>.<%= s.song %></p>
+					<% end %>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="col-md-5">
+			<h2>入荷登録</h2>
+			<%= form_for(@arrival, url: admins_item_arrivals_path(@item)) do |f| %>
+			<p>追加数<%= f.text_field :arrival_number %></p>
+			<p>在庫数</p><%= @arrivals_sum - @order_items_sum %>
+			<p>入荷日時</p>
+			<%= f.hidden_field :item_id, value:@item.id %>
+			<%= f.submit "入荷登録する", class:"btn btn-default", :style=>"background-color:yellow;" %>
+			<% end %>
+		</div>
+	</div>
+</div>

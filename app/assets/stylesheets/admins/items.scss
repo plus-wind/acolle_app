@@ -1,3 +1,24 @@
 // Place all the styles related to the admin::items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.item-container-left{
+	width: 120px;
+	float: left;
+}
+.item-container-right{
+	float: left;
+	margin-left: 20px;
+
+	.disc-table{
+		float: left;
+		width: 120px;
+
+		p{
+			font-size: 10px;
+			margin: 0 3px 0 0;
+
+		}
+	}
+}
