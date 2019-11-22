@@ -20,12 +20,16 @@ class Admins::UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
-	def update
-	  user = User.find(params[:id])
-	  user.update(delete_flag: 1)
-	  redirect_to admins_users_path
+	def withdraw
+		user = User.find(params[:id])
+		user.update(delete_flag: 1)
+		redirect_to admins_users_path
 	end
 
 	def edit
+		@user = User.find(params[:id])
+	end
+
+	def update
 	end
 end

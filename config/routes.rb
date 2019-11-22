@@ -61,8 +61,9 @@ namespace :admins do
   resources :arrivals, only:[:index, :edit, :update, :destroy]
   post '/items/:id/arrivals', to: 'arrivals#create'
 #admins/users controller
-  resources :users, only:[:index, :show, :edit, :update]
+  resources :users, only:[:index, :show, :edit, :update, :destroy]
   post '/search',  to: 'users#search'
+  patch '/withdraw/:id',  to: 'users#withdraw', as: "withdraw"
   #patch '/uesrs', to: 'users#change'
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]
