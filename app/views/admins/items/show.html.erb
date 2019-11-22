@@ -39,11 +39,7 @@
 			<%= f.submit "入荷登録する", class:"btn btn-default", :style=>"background-color:yellow;" %>
 			<% end %>
 			<h2>販売ステータス</h2>
-			<% if @item.item_delete_flag = 1 %>
-			<%= button_to "販売中", admins_item(@item), {method: :get, params: { delete_flag: '0' } %>
-			<% elsif @item.item_delete_flag = 0 %>
-			<%= button_to "販売停止中", admins_item(@item), {method: :get, params: { delete_flag: '1' } %>
-			<% end %>
+			<%= link_to "販売中", admins_status_path(@item), method: :patch, remote: true, id:"status" %>
 		</div>
 	</div>
 </div>

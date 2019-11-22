@@ -1,0 +1,5 @@
+if (<%= @item.item_delete_flag %> == 0) {
+		$('#status').text('販売中');
+} else if (<%= @item.item_delete_flag %> == 1) {
+		$('#status').text('停止中');
+}
