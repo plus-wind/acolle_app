@@ -132,7 +132,7 @@ ActiveRecord::Schema.define(version: 2019_11_22_064948) do
     t.string "item_image_id"
     t.integer "item_price", null: false
     t.datetime "item_release_date", null: false
-    t.integer "item_delete_flag", null: false
+    t.integer "item_delete_flag", default: 0, null: false
     t.integer "impressions_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

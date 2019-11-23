@@ -51,7 +51,10 @@ class Admins::ArrivalsController < ApplicationController
   end
 
   def create
-
+    @item = Item.find(params[:arrival][:item_id])
+    @arrival = Arrival.new(arrival_params)
+    @arrival.save
+    redirect_to admins_arrivals_path
   end
 
   private

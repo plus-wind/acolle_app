@@ -155,7 +155,6 @@ Item.create!(
       item_image_id: '',
       item_price: '1111',
       item_release_date: '2019/01/01',
-      item_delete_flag: '0',
       impressions_count: '0',
     },
     {
@@ -167,7 +166,6 @@ Item.create!(
       item_image_id: '',
       item_price: '2222',
       item_release_date: '2019/02/02',
-      item_delete_flag: '0',
       impressions_count: '0',
     },
     {
@@ -179,7 +177,6 @@ Item.create!(
       item_image_id: '',
       item_price: '3333',
       item_release_date: '2019/02/02',
-      item_delete_flag: '0',
       impressions_count: '0',
     },
     {
@@ -191,7 +188,6 @@ Item.create!(
       item_image_id: '',
       item_price: '4444',
       item_release_date: '2019/02/02',
-      item_delete_flag: '0',
       impressions_count: '0',
     },
     {
@@ -203,22 +199,8 @@ Item.create!(
       item_image_id: '',
       item_price: '5555',
       item_release_date: '2019/02/02',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
       impressions_count: '0',
-    }
-  ]
-)
-
-#arrivals_seed
-Arrival.create!(
-  [
-    {
-      item_id: '1',
-      arrival_number: '10',
-    },
-    {
-      item_id: '2',
-      arrival_number: '5',
     }
   ]
 )
@@ -301,35 +283,35 @@ OrderItem.create!(
       item_id: "1",
       order_price: "2000",
       order_number: "10",
-      created_at: "2019-11-13 02:13:55"
+      created_at: "2019-11-13 02:13:55",
     },
     {
       order_id: "2",
       item_id: "2",
       order_price: "3000",
       order_number: "1",
-      created_at: "2019-11-14 02:13:55"
+      created_at: "2019-11-14 02:13:55",
     },
     {
       order_id: "2",
       item_id: "3",
       order_price: "3000",
       order_number: "3",
-      created_at: "2019-11-14 02:13:55"
+      created_at: "2019-11-14 02:13:55",
     },
     {
       order_id: "2",
       item_id: "4",
       order_price: "3000",
       order_number: "2",
-      created_at: "2019-11-14 02:13:55"
+      created_at: "2019-11-14 02:13:55",
     },
     {
       order_id: "2",
       item_id: "1",
       order_price: "3000",
       order_number: "2",
-      created_at: "2019-11-14 02:13:55"
+      created_at: "2019-11-14 02:13:55",
     }
   ]
 )
