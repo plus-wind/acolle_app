@@ -40,7 +40,7 @@
 			<%= form_for(@arrival, url: admins_item_arrivals_path(@item)) do |f| %>
 			<p>在庫数：<%= @arrivals_sum - @order_items_sum %></p>
 			<p>追加数：<%= f.text_field :arrival_number, :style=>"width: 50px;" %>枚</p>
-			<p>入荷日時</p>
+			<p>入荷日時：<%= f.text_field :arrival_date, :style=>"width: 100px;" %>(yyyy-mm-dd)</p>
 			<%= f.hidden_field :item_id, value:@item.id %>
 			<%= f.submit "入荷登録する", class:"btn btn-default", :style=>"background-color:yellow;" %>
 			<% end %>
