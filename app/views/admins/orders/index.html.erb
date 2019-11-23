@@ -1,0 +1,31 @@
+<h1>受注履歴</h1>
+	<table class="table" >
+		<tr class="active">
+	    	<th>受注ID</th>
+	    	<th>受注日</th>
+	    	<th>商品名</th>
+	    	<th>数量</th>
+	    	<th>受注ステータス</th>
+		</tr>
+		<% @orders.each do |order| %>
+		<tr>
+	    	<th><%= order.id %></th>
+	     	<th><%= order.created_at.strftime('%Y/%m/%d') %></th>
+	    	<th>
+	    		<% @order_item.each do |item| %>
+	    			<%= item_name.order.item %>
+	    		<% end %>
+	    	</th>
+	    	<th></th>
+	    	<% if order.order_status == 0 %>
+	    		<th class="bg-danger">受付</th>
+	    	<% elsif order.order_status == 1 %>
+	    		<th class="bg-warning">準備中</th>
+	    	<% else %>
+	    		<th class="bg-success">発送済</th>
+	    	<% end %>
+		</tr>
+
+
+	  	<% end %>
+	</table>
