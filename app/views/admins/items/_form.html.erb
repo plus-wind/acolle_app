@@ -1,6 +1,5 @@
-<%= form_for @item do |i| %>
+<!--<%= form_for @item do |i| %>
   <div class="field">
-    <%= i.label :item_name, "name" %>
     <%= i.text_field :item_name %>
   </div>
   <div class="field">
@@ -8,13 +7,9 @@
     <%= i.text_field :discs %>
   </div>
   <h3>Discs</h3>
-  <div id="tasks">
     <%= i.fields_for :discs do |disc| %>
-      <%= render 'disc_fields', i: disc %>
+      <%= render 'disc_fields', i: :disc %>
     <% end %>
-    <div id="links">
-      <%= link_to_add_association 'add disc',i, :discs %>
-    </div>
     <%= i.submit %>
   </div>
 <% end %>

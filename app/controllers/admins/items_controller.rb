@@ -4,12 +4,13 @@ class Admins::ItemsController < ApplicationController
 	end
 	def edit
 		@item = Item.find(params[:id])
-    	@disc = @item.discs.build
-    	@song = @disc.songs.build
+		@disc = @item.discs
+		# @song = @disc.songs
+
 	end
 
 private
-	def item_params
-		params.require(:item).permit(:item_name, :description, discs_attributes: [:id, :description, :done, :_destroy, songs_attributes: [:id, :description, :_destroy]])
-    end
+	# def item_params
+	# 	params.require(:item).permit(:item_name, :description, discs_attributes: [:id, :description, :done, :_destroy, songs_attributes: [:id, :description, :_destroy]])
+    # end
 end
