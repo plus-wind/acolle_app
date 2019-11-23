@@ -3,8 +3,6 @@ class Admins::OrdersController < ApplicationController
 
     def index
     	@orders = Order.all
-    	@order_item = OrderItem.all
-    	@items = Item.all
     end
 
     def show

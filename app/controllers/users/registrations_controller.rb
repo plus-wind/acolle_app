@@ -67,7 +67,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def configure_account_update_params
     devise_parameter_sanitizer.permit(:account_update, keys: [:name_family_kanji, :name_first_kanji, :name_family_furigana, :name_first_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number, :delete_flag])
   end
-
+  #↓Devise情報編集P、パスワード確認が不要になる
   def update_resource(resource, params)
     resource.update_without_password(params)
   end
