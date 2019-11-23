@@ -9,7 +9,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :item_image_id
       t.integer :item_price, null: false
       t.datetime :item_release_date, null: false
-      t.integer :item_delete_flag, null: false
+      t.integer :item_delete_flag, null: false, default: 0
       t.integer :impressions_count, default: 0
       t.timestamps null: false
     end
