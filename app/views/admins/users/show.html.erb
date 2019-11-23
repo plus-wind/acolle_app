@@ -1,0 +1,59 @@
+<%= stylesheet_link_tag "admins/users", :media => "all" %>
+
+<div class="a_users_container">
+	<h1>顧客情報詳細</h1>
+	<%= flash[:notice] %>
+		<table class="table table-bordered">
+		<tr>
+			<td class="active">会員ステータス</td>
+				<% if @user.delete_flag == 0 %>
+				<td class="bg-success">登録中</td>
+					<% else %>
+					<td class="bg-danger">退会</td>
+				<% end %>
+		</tr>
+		<tr>
+			<td class="active">顧客ID</td>
+			<td><%= @user.id %></td>
+		</tr>
+		<tr>
+			<td class="active">氏名</td>
+			<td><%= @user.name_family_kanji %>  <%= @user.name_first_kanji %></td>
+		</tr>
+		<tr>
+			<td class="active">氏名（フリガナ）</td>
+			<td><%= @user.name_family_furigana %>  <%= @user.name_first_furigana %></td>
+		</tr>
+		<tr>
+			<td class="active">メールアドレス</td>
+			<td><%= @user.email %></td>
+		</tr>
+		<tr>
+			<td class="active">パスワード</td>
+			<td><%= @user.password %></td>
+		</tr>
+		<tr>
+			<td class="active">ご住所</td>
+			<td>〒<%= @user.postal_code.insert(3, "-") %>  <%= @user.address_prefecture %>
+				<%= @user.address_city %><%= @user.address_number %>
+				<%= @user.address_building %>
+			</td>
+		</tr>
+		<tr>
+			<td class="active">お電話番号</td>
+			<td><%= @user.phone_number %></td>
+		</tr>
+	</table>
+	<div class="container">
+		<div class="row">
+			<%= link_to "登録情報編集", edit_admins_user_path(@user), class:"btn btn-success col-md-2 col-md-offset-4" %>
+		</div>
+		<% if @user.delete_flag == 0 %>
+		<div class="row">
+			<%= link_to "会員情報削除", admins_withdraw_path(@user), method: :patch, class:"btn btn-danger col-md-2 col-md-offset-4", "data-confirm" => "本当に削除しますか？この操作は取り消せません。" %>
+		</div>
+		<% end %>
+	</div>
+
+
+</div>

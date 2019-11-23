@@ -11,13 +11,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <p id="notice">
+      <%=  notice %>
+    </p>
     <header class="navbar navbar-fixed-top navbar-default">
       <div class="container">
         <nav class="nav navbar-nav navbar-left">
           <span>Acolle</span>
         </nav>
         <nav class="search-box">
-            <%= form_tag(search_path, method: :post) do %>
+            <%= form_tag(search_path, method: :get) do %>
 		    		<%= radio_button_tag :search_flag, 1, checked: true %>アーティスト
 					  <%= radio_button_tag :search_flag, 2 %>曲
 					  <%= text_field_tag :search_word %>

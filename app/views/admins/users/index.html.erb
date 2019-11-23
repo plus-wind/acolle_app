@@ -1,27 +1,37 @@
+<%= stylesheet_link_tag "admins/users", :media => "all" %>
+<div class="a_users_container">
 <h1>顧客情報一覧</h1>
-<div class="search-content">
-	<%= form_tag(admins_search_path, method: :post) do %>
-		<%= radio_button_tag :search_flag, 1, checked: true %>顧客ID
-		<%= radio_button_tag :search_flag, 2 %>顧客(漢字)
-		<%= radio_button_tag :search_flag, 3 %>顧客(フリガナ)
-		<%= text_field_tag :search_word %>
-		<%= submit_tag "検索" %>
-	<% end %>
+<%= flash[:notice] %>
+	<div class="search-content">
+		<%= form_tag(admins_search_path, method: :post) do %>
+			<%= radio_button_tag :search_flag, 1, checked: true %>顧客ID
+			<%= radio_button_tag :search_flag, 2 %>顧客(漢字)
+			<%= radio_button_tag :search_flag, 3 %>顧客(フリガナ)
+			<%= text_field_tag :search_word %>
+			<%= submit_tag "検索" %>
+		<% end %>
+	</div>
+	<table class="table table-bordered" >
+		<tr class="active">
+	    	<th>顧客ID</th>
+	    	<th>顧客名</th>
+	    	<th>フリガナ</th>
+	    	<th>メールアドレス</th>
+	    	<th>会員ステータス</th>
+		</tr>
+		<% @users.each do |u| %>
+		<tr>
+	    	<th><%= link_to u.id, admins_user_path(u.id)  %></th>
+	    	<th><%= u.name_family_kanji + u.name_first_kanji %></th>
+	    	<th><%= u.name_family_furigana + u.name_first_furigana %></th>
+	    	<th><%= u.email %></th>
+	    	<% if u.delete_flag == 0 %>
+	    		<th class="bg-success">登録中</th>
+	    		<% else %>
+	    		<th class="bg-danger">退会</th>
+	    		<% end %>
+		</tr>
+	  	<% end %>
+	</table>
 </div>
-<table class="table table-bordered">
-	<tr>
-    	<th>顧客ID</th>
-    	<th>顧客名</th>
-    	<th>フリガナ</th>
-    	<th>メールアドレス</th>
-	</tr>
-	<% @users.each do |u| %>
-	<tr>
-    	<th><%= u.id %></th>
-    	<th><%= u.name_family_kanji + u.name_first_kanji %></th>
-    	<th><%= u.name_family_furigana + u.name_first_furigana %></th>
-    	<th><%= u.email %></th>
-	</tr>
-  	<% end %>
-</table>
 

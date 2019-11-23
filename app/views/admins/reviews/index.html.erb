@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag "admins/reviews", :media => "all" %>
+
+<div class="container">
+	<div class="row1">
+		<div class="col-md-12">
+			<h1>レビュー一覧</h1>
+			<div class="search-content">
+		    	<%= form_tag(admins_search_reviews_path, method: :post) do %>
+		    		<div class="search-word">
+		    		<%= text_field_tag :search_word %>
+					<%= submit_tag "検索" %>
+					</div>
+		    		<div class="search-tag">
+		    		<%= radio_button_tag :search_flag, 1, checked: true %>顧客名(漢字)
+		    		<%= radio_button_tag :search_flag, 2 %>顧客名(フリガナ)
+					<%= radio_button_tag :search_flag, 3 %>商品名
+					<%= radio_button_tag :search_flag, 4 %>日付(YY-MM-DD)
+				<% end %>
+		    </div>
+
+			<table class="table-bordered" style="margin-top:20px;">
+				<tr>
+					<th>No.</th>
+                	<th>日付<%= button_to "▲", admins_sort_reviews_path, {method: :get, params: {sort_type: '1', sort_flag: '1'}} %><%= button_to "▼", admins_sort_reviews_path, {method: :get, params: {sort_type: '1', sort_flag: '2'}} %></th>
+                	<th>顧客名</th>
+                	<th>商品名</th>
+                	<th>満足度<%= button_to "▲", admins_sort_reviews_path, {method: :get, params: {sort_type: '2', sort_flag: '1'}} %><%= button_to "▼", admins_sort_reviews_path, {method: :get, params: {sort_type: '2', sort_flag: '2'}} %></th>
+                	<th>詳細</th>
+		    	</tr>
+		    	<% @reviews.each.with_index(1) do |r,i| %>
+				<tr>
+                	<th style="width: 30px"><%= "#{i}" %></th>
+                	<th style="width: 75px"><%= r.created_at.strftime('%y/%m/%d') %></th>
+                	<th style="width: 100px"><%= r.user.name_family_kanji + r.user.name_first_kanji %></th>
+                	<th style="width: 400px"><%= r.item.item_name %></th>
+                	<th id="star-rate-<%= r.id %>"></th>
+			          <script>
+			          $('#star-rate-<%= r.id %>').raty({
+			            size: 36,
+			            starOff:  '<%= ('star-off.png') %>',
+			            starOn : '<%= ('star-on.png') %>',
+			            starHalf: '<%= ('star-half.png') %>',
+			            half: true,
+			            readOnly: true,
+			            score: <%= r.satisfaction %>,
+			          });
+			          </script>
+                	<th><%= link_to "詳細", admins_review_path(r.id) %></th>
+		    	</tr>
+		    	<% end %>
+		    </table>
+		    <div class="pagenate"><%= paginate @reviews %></div>
+		</div>
+	</div>
+</div>

@@ -5,30 +5,30 @@
 	<h3>お客様情報</h3>
 	<table class="table table-bordered">
 		<tr>
-			<td>氏名</td>
+			<td class="active">氏名</td>
 			<td><%= @user.name_family_kanji %>  <%= @user.name_first_kanji %></td>
 		</tr>
 		<tr>
-			<td>氏名（フリガナ）</td>
+			<td class="active">氏名（フリガナ）</td>
 			<td><%= @user.name_family_furigana %>  <%= @user.name_first_furigana %></td>
 		</tr>
 		<tr>
-			<td>メールアドレス</td>
+			<td class="active">メールアドレス</td>
 			<td><%= @user.email %></td>
 		</tr>
 		<tr>
-			<td>パスワード</td>
+			<td class="active">パスワード</td>
 			<td><%= @user.password %></td>
 		</tr>
 		<tr>
-			<td>ご住所</td>
+			<td class="active">ご住所</td>
 			<td>〒<%= @user.postal_code.insert(3, "-") %>  <%= @user.address_prefecture %>
 				<%= @user.address_city %><%= @user.address_number %>
 				<%= @user.address_building %>
 			</td>
 		</tr>
 		<tr>
-			<td>お電話番号</td>
+			<td class="active">お電話番号</td>
 			<td><%= @user.phone_number %></td>
 		</tr>
 	</table>
@@ -38,15 +38,15 @@
 	<%= i %>
 	<table class="table table-bordered">
 		<tr>
-			<td>氏名</td>
+			<td class="active">氏名</td>
 			<td><%= address.delivery_name_family_kanji %>  <%= address.delivery_name_first_kanji %></td>
 		</tr>
 		<tr>
-			<td>氏名（フリガナ）</td>
+			<td class="active">氏名（フリガナ）</td>
 			<td><%= address.delivery_name_family_furigana %>  <%= address.delivery_name_first_furigana %></td>
 		</tr>
 		<tr>
-			<td>ご住所</td>
+			<td class="active">ご住所</td>
 			<td><div style="float: left">〒<%= address.delivery_postal_code.insert(3, "-") %></div>
 				<div style="float: left, margin-left:5px"><%= address.delivery_address_prefecture %><%= address.delivery_address_city %><%= address.delivery_address_number %><%= address.delivery_address_building %></div></td>
 		</tr>
@@ -60,37 +60,30 @@
 		<% @orders.each do |order| %>
 		<div style="border-bottom:solid ">
 			<div>
-				<%= order.created_at.strftime('%Y/%m/%d') %>  <%= order.order_status %>
+				<%= order.created_at.strftime('%Y/%m/%d') %>
+                <% if order.order_status == 0 %>
+                    <p class="text-danger">受付中</p>
+                <% elsif order.order_status == 1 %>
+                    <p class="text-warning">発送準備中</p>
+                <% else %>
+                    <p class="text-success">発送済み</p>
+                <% end %>
+
 			</div>
-
-
 				<% order.order_items.each do |oi| %>
-				<div><%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
-
-					</div>
-					<span>
-						<%= oi.item.item_name %>
-							<% review = Review.reviewed_by(current_user,oi.item)
+				<div>
+				<%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
+				<%= oi.item.item_name %>
+				<% review = Review.reviewed_by(current_user,oi.item)
 								if review.present?
 							%>
-							 	<%= link_to "レビュー編集", edit_review_path(review)
- %>
-							<% else %>
-							 	<%= link_to "レビューする", new_item_review_path(oi.item) %>
-							<% end %>
-
-					<%= oi.item.item_name %>
-						<% review = Review.reviewed_by(current_user,oi.item)
-							if review.present?
-						%>
-						 	<%= link_to "レビュー編集", edit_review_path(review) %>
+					<%= link_to "レビュー編集", edit_review_path(review) %>
 						<% else %>
-						 	<%= link_to "レビューする", review_path(oi.item) %>
+							 <%= link_to "レビューする", new_item_review_path(oi.item) %>
 						<% end %>
 
 					<%= oi.item.artist_id %><%= oi.order_number %>枚小計<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円
 				</div>
-
 				<% end %>
 
 			<div>送付先：<%= order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji %>   様宛       <%= order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %></div>
@@ -102,5 +95,3 @@
 		<%= link_to "退会手続きへ", users_unsubscribe_path(@user), class:"btn btn-danger col-md-offset-10" %>
 	</div>
 </div>
-</div>
-
