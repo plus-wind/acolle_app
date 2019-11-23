@@ -2,12 +2,20 @@
 
 <div class="a_users_container">
 	<h1>顧客情報詳細</h1>
+	<%= flash[:notice] %>
 		<table class="table table-bordered">
+		<tr>
+			<td class="active">会員ステータス</td>
+				<% if @user.delete_flag == 0 %>
+				<td class="bg-success">登録中</td>
+					<% else %>
+					<td class="bg-danger">退会</td>
+				<% end %>
+		</tr>
 		<tr>
 			<td class="active">顧客ID</td>
 			<td><%= @user.id %></td>
 		</tr>
-		<tr>
 		<tr>
 			<td class="active">氏名</td>
 			<td><%= @user.name_family_kanji %>  <%= @user.name_first_kanji %></td>
@@ -38,11 +46,13 @@
 	</table>
 	<div class="container">
 		<div class="row">
-			<%= link_to "登録情報編集", edit_admins_user_path(@user.id), class:"btn btn-success col-md-2 col-md-offset-4" %>
+			<%= link_to "登録情報編集", edit_admins_user_path(@user), class:"btn btn-success col-md-2 col-md-offset-4" %>
 		</div>
+		<% if @user.delete_flag == 0 %>
 		<div class="row">
-			<%= link_to "会員情報削除", admins_user_path(@user.id), method: :patch, class:"btn btn-danger col-md-2 col-md-offset-4", method: :delete,  "data-confirm" => "本当に削除しますか？この操作は取り消せません。" %>
+			<%= link_to "会員情報削除", admins_withdraw_path(@user), method: :patch, class:"btn btn-danger col-md-2 col-md-offset-4", "data-confirm" => "本当に削除しますか？この操作は取り消せません。" %>
 		</div>
+		<% end %>
 	</div>
 
 

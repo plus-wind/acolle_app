@@ -1,10 +1,9 @@
 <%= stylesheet_link_tag "admins/users", :media => "all" %>
 
 <div class="signin_container container">
-<h2>登録情報の編集 </h2>
+<h2>顧客情報の編集 </h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<%= form_for @user, url:admins_user_path(@user) do |f| %>
 
     <div class="name_kanji field">
       <div class="field">
@@ -29,26 +28,6 @@
         <%= f.label :"メールアドレス　　　　　" %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
-
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-      <% end %>
-    </div>
-
-    <div class="field">
-      <%= f.label :"新規パスワード　　　　　" %>
-      <%= f.password_field :password, autocomplete: "new-password" %>
-      <strong>(変更しない場合は空白)</strong>
-      <% if @minimum_password_length %>
-        <br />
-        <em><%= @minimum_password_length %> characters minimum</em>
-      <% end %>
-    </div>
-
-    <div class="field">
-      <%= f.label :"新規パスワード（再入力）" %>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
 
     <div class="postal_code line">
       <div class="field">
@@ -99,5 +78,5 @@
 <% end %>
 
 
-<%= link_to "戻る", :back, class:"btn" %>
+<%= link_to "戻る", admins_users_path, class:"btn" %>
 </div>

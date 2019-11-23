@@ -100,6 +100,17 @@ Admin.create!(
 )
 
 
+#genres_seed
+Genre.create!(
+  [
+    {
+      genre_name: '洋楽',
+    },
+    {
+      genre_name: '邦楽',
+    }
+  ]
+)
 
 #artists_seed
 Artist.create!(
@@ -109,37 +120,6 @@ Artist.create!(
     },
     {
         artist_name: "歌手2",
-    }
-  ]
-)
-
-#contacts_seed
-Contact.create!(
-  [
-    {
-        user_id: "1",
-        category: "0",
-        contact_status: "0",
-        text: "You're rock!! cancel that !!!!!!",
-        reply_text: "reply to: You're rock!! cancel that !!!!!!",
-    },
-    {
-        user_id: "2",
-        category: "1",
-        contact_status: "0",
-        text: "You're rock!! cancel that !!!!!! WHAT A HELL",
-        reply_text: "reply to: You're rock!! cancel that !!!!!! WHAT A HELL",
-    }
-  ]
-)
-#genres_seed
-Genre.create!(
-  [
-    {
-      genre_name: '洋楽',
-    },
-    {
-      genre_name: '邦楽',
     }
   ]
 )
@@ -209,19 +189,26 @@ Item.create!(
   ]
 )
 
-#arrivals_seed
-Arrival.create!(
+#contacts_seed
+Contact.create!(
   [
     {
-      item_id: '1',
-      arrival_number: '10',
+        user_id: "1",
+        category: "0",
+        contact_status: "0",
+        text: "You're rock!! cancel that !!!!!!",
+        reply_text: "reply to: You're rock!! cancel that !!!!!!",
     },
     {
-      item_id: '2',
-      arrival_number: '5',
+        user_id: "2",
+        category: "1",
+        contact_status: "0",
+        text: "You're rock!! cancel that !!!!!! WHAT A HELL",
+        reply_text: "reply to: You're rock!! cancel that !!!!!! WHAT A HELL",
     }
   ]
 )
+
 #arrivals_seed
 Arrival.create!(
   [
@@ -257,6 +244,7 @@ Arrival.create!(
     }
   ]
 )
+
 
 #orders_seed
 Order.create!(
