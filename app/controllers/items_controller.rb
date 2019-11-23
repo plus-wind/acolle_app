@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 	def index
 		@items = Item.page(params[:page]).where(item_delete_flag: 0).per(3).reverse_order
 		@hash_sales_ranking = OrderItem.rank_sales_items
-        @hash_most_viewed_impression = Impression.where(created_at: 1.week.ago.beginning_of_day..Time.zone.now.end_of_day).group(:impressionable_id).order('count_impressionable_id desc').count(:impressionable_id)
+        @hash_most_viewed_impression = Impression.where(created_at: 1.week.ago.beginning_of_day..Time.zone.now.end_of_day).limit(5).group(:impressionable_id).order('count_impressionable_id desc').count(:impressionable_id)
 		@day = Date.today.strftime('%y/%m/%d')
 		@week_ago = Date.today.ago(1.week).strftime('%y/%m/%d')
 	end

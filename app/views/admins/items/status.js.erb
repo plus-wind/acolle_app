@@ -1,1 +1,9 @@
-$('#status').text('<%= @item.item_delete_flag_i18n %>');
+<% if @item.item_delete_flag_before_type_cast == 1 %>
+$('#status1').text('<%= @item.item_delete_flag_i18n %>');
+$('#status1').css({"font-size": "40px", "color": "white", "background-color": "red"});
+$('#status1').attr("id", "status2");
+<% else %>
+$('#status2').text('<%= @item.item_delete_flag_i18n %>');
+$('#status2').css({"font-size": "40px", "color": "black", "background-color": "white"});
+$('#status2').attr("id", "status1");
+<% end %>

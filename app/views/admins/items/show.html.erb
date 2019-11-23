@@ -31,7 +31,11 @@
 		</div>
 		<div class="col-md-5">
 			<h2>販売ステータス</h2>
-			<%= link_to @item.item_delete_flag_i18n, admins_status_path(@item), method: :patch, remote: true, id:"status", :style=>"font-size: 40px; color: black;" %>
+			<% if @item.item_delete_flag_before_type_cast == 0 %>
+			<%= link_to @item.item_delete_flag_i18n, admins_status_path(@item), method: :patch, remote: true, id:"status1", :style=>"font-size: 40px; color: black;" %>
+			<% elsif @item.item_delete_flag_before_type_cast == 1 %>
+			<%= link_to @item.item_delete_flag_i18n, admins_status_path(@item), method: :patch, remote: true, id:"status2", :style=>"font-size: 40px; color: white; background-color: red;" %>
+			<% end %>
 			<h2>入荷登録</h2>
 			<%= form_for(@arrival, url: admins_item_arrivals_path(@item)) do |f| %>
 			<p>在庫数：<%= @arrivals_sum - @order_items_sum %></p>
