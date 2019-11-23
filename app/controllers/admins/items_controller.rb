@@ -16,10 +16,10 @@ class Admins::ItemsController < ApplicationController
 	end
 	def status
 		@item = Item.find(params[:id])
-		if @item.item_delete_flag == 1
-        	@item.update(item_delete_flag: 0)
-    	elsif @item.item_delete_flag == 0
+		if @item.item_delete_flag_before_type_cast == 0
         	@item.update(item_delete_flag: 1)
+    	elsif @item.item_delete_flag_before_type_cast == 1
+        	@item.update(item_delete_flag: 0)
     	end
 	end
 end
