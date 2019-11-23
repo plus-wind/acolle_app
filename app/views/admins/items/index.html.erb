@@ -1,1 +1,29 @@
-<h1>test</h1>
+<div class="container">
+	<div class="row">
+    <div class="col-md-4">
+      <%= link_to '商品追加画面へ', new_admins_item_path, class: "btn btn-warning btn-lg active" %>
+
+    </div>
+    <div class="col-md-8">
+
+    </div>
+    <%= @items.each_with_index do |item, i|%>
+    <table class="table table-bordered table-hover">
+      <tr>
+        <th>商品id</th>
+        <th>ジャケット名</th>
+        <th>アーティスト名</th>
+        <th>在庫数</th>
+        <th>閲覧数</th>
+        <th>週間売り上げ枚数</th>
+      </tr>
+      <tr>
+        <th><%= item.id %></th>
+        <th><%= item.item_name %></th>
+        <th><%= item.artist.artist_name %></th>
+        <th><%= @sums[i] %>
+      </tr>
+    </table>
+    <% end %>
+  </div>
+</div>
