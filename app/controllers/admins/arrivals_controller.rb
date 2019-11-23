@@ -1,9 +1,5 @@
 class Admins::ArrivalsController < ApplicationController
     layout "admins"
-  def search
-
-  end
-
   def index
     @arrivals = Arrival.all.order("id DESC").page(params[:page]).per(5)
   end
@@ -52,6 +48,10 @@ class Admins::ArrivalsController < ApplicationController
     arrival =Arrival.find(params[:id])
     arrival.update(arrival_params)
     redirect_to admins_arrivals_path
+  end
+
+  def create
+
   end
 
   private
