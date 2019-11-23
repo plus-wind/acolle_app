@@ -1,9 +1,9 @@
 <%= stylesheet_link_tag "admins/users", :media => "all" %>
 
 <div class="signin_container container">
-<h2>登録情報の編集 </h2>
+<h2>顧客情報の編集 </h2>
 
-<%= form_for(@user) do |f| %>
+<%= form_for @user, url:admins_user_path(@user) do |f| %>
 
     <div class="name_kanji field">
       <div class="field">
@@ -78,5 +78,5 @@
 <% end %>
 
 
-<%= link_to "戻る", :back, class:"btn" %>
+<%= link_to "戻る", admins_users_path, class:"btn" %>
 </div>

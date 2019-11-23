@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "admins/users", :media => "all" %>
 <div class="a_users_container">
 <h1>顧客情報一覧</h1>
-
+<%= flash[:notice] %>
 	<div class="search-content">
 		<%= form_tag(admins_search_path, method: :post) do %>
 			<%= radio_button_tag :search_flag, 1, checked: true %>顧客ID

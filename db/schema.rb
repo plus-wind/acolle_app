@@ -144,12 +144,14 @@ ActiveRecord::Schema.define(version: 2019_11_18_045604) do
   end
 
   create_table "order_items", force: :cascade do |t|
-    t.integer "order_id", null: false
-    t.integer "item_id", null: false
+    t.integer "order_id_id", null: false
+    t.integer "item_id_id", null: false
     t.integer "order_price", null: false
     t.integer "order_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["item_id_id"], name: "index_order_items_on_item_id_id"
+    t.index ["order_id_id"], name: "index_order_items_on_order_id_id"
   end
 
   create_table "orders", force: :cascade do |t|

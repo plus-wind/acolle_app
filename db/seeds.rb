@@ -98,16 +98,15 @@ Admin.create!(
              email: "admin@example.jp",
              password:  "11111111",
 )
-#arrivals_seed
-Arrival.create!(
+
+#genres_seed
+Genre.create!(
   [
     {
-      item_id: '1',
-      arrival_number: '1',
+      genre_name: '洋楽',
     },
     {
-      item_id: '2',
-      arrival_number: '2',
+      genre_name: '邦楽',
     }
   ]
 )
@@ -119,37 +118,6 @@ Artist.create!(
     },
     {
         artist_name: "歌手2",
-    }
-  ]
-)
-
-#contacts_seed
-Contact.create!(
-  [
-    {
-        user_id: "1",
-        category: "0",
-        contact_status: "0",
-        text: "You're rock!! cancel that !!!!!!",
-        reply_text: "reply to: You're rock!! cancel that !!!!!!",
-    },
-    {
-        user_id: "2",
-        category: "1",
-        contact_status: "0",
-        text: "You're rock!! cancel that !!!!!! WHAT A HELL",
-        reply_text: "reply to: You're rock!! cancel that !!!!!! WHAT A HELL",
-    }
-  ]
-)
-#genres_seed
-Genre.create!(
-  [
-    {
-      genre_name: '洋楽',
-    },
-    {
-      genre_name: '邦楽',
     }
   ]
 )
@@ -218,6 +186,42 @@ Item.create!(
     }
   ]
 )
+#arrivals_seed
+Arrival.create!(
+  [
+    {
+      item_id: '1',
+      arrival_number: '1',
+    },
+    {
+      item_id: '2',
+      arrival_number: '2',
+    }
+  ]
+)
+
+
+#contacts_seed
+Contact.create!(
+  [
+    {
+        user_id: "1",
+        category: "0",
+        contact_status: "0",
+        text: "You're rock!! cancel that !!!!!!",
+        reply_text: "reply to: You're rock!! cancel that !!!!!!",
+    },
+    {
+        user_id: "2",
+        category: "1",
+        contact_status: "0",
+        text: "You're rock!! cancel that !!!!!! WHAT A HELL",
+        reply_text: "reply to: You're rock!! cancel that !!!!!! WHAT A HELL",
+    }
+  ]
+)
+
+
 #orders_seed
 Order.create!(
   [
