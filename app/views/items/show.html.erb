@@ -1,5 +1,7 @@
 <strong>テスト 閲覧数:</strong><%= @item.impressions_count %>
 
+<% if @item.item_delete_flag_before_type_cast == 0 %>
+
 <div class="container">
 	<div class="row3 clearfix">
 		<h1>商品詳細</h1>
@@ -133,3 +135,6 @@
 			});
 			};
 		</script>
+<% else %>
+<P>　現在、ご覧いただいている商品は販売停止中です。 </P>
+<% end %>

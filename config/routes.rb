@@ -58,6 +58,7 @@ namespace :admins do
   resources :items, only: [:index, :show, :edit, :update, :new, :create] do
       resources :arrivals, only:[:new, :create]
   end
+  patch '/status/:id', to: 'items#status', as: "status"
   patch '/items/:id', to: 'items#change'
 #admins/arrivals controller
   resources :arrivals, only:[:index, :edit, :update, :destroy]
