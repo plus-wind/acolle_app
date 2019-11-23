@@ -37,7 +37,12 @@
 		<%= link_to "お客様情報の編集", edit_user_registration_path(@user), class:"btn btn-success col-md-3 col-md-offset-9" %>
 	</div>
 
-	<h3>その他のお届け先</h3>
+	<div>
+		<h3>その他のお届け先</h3>
+		<div class="row">
+			<%= link_to "その他のお届け先情報追加", new_address_path, class:"btn btn-primary col-md-3" %>
+		</div>
+	</div>
 	<% @addresses.each.with_index(1) do |address,i| %>
 	<%= i %>
 	<table class="table table-bordered">
