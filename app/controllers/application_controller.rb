@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 			@artists = Artist.where("artist_name LIKE ?", "%#{params[:search_word]}%")
 			@items = []
 			@artists.each do |a|
-				a.items.each do |i|
+				a.items.where(item_delete_flag: 0).each do |i|
 					@items << i
 				end
 			end
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 			@day = Date.today.strftime('%y/%m/%d')
 			@week_ago = Date.today.ago(1.week).strftime('%y/%m/%d')
 		elsif params[:search_flag] == "2"
-			@items = Item.joins(discs: :songs).where("song LIKE ?", "%#{params[:search_word]}%")
+			@items = Item.where(item_delete_flag: 0).joins(discs: :songs).where("song LIKE ?", "%#{params[:search_word]}%")
 			@items = @items.reverse.uniq
 			@items = Kaminari.paginate_array(@items).page(params[:page]).per(3)
 			@day = Date.today.strftime('%y/%m/%d')
