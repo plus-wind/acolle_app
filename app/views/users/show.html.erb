@@ -33,6 +33,10 @@
 		</tr>
 	</table>
 
+	<div class="row">
+		<%= link_to "お客様情報の編集", edit_user_registration_path(@user), class:"btn btn-success col-md-3 col-md-offset-9" %>
+	</div>
+
 	<h3>その他のお届け先</h3>
 	<% @addresses.each.with_index(1) do |address,i| %>
 	<%= i %>
@@ -52,10 +56,10 @@
 		</tr>
 
 	</table>
-	<% end %>
 	<div class="row">
-		<%= link_to "登録情報の編集", edit_user_registration_path(@user), class:"btn btn-success col-md-4 col-md-offset-8" %>
+		<%= link_to "その他のお届け先情報#{i}の編集", edit_address_path(address), class:"btn btn-success col-md-3 col-md-offset-9" %>
 	</div>
+	<% end %>
 		<h3>購入履歴</h3>
 		<% @orders.each do |order| %>
 		<div style="border-bottom:solid ">

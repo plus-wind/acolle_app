@@ -45,7 +45,7 @@ end
   # get '/items/:id/reviews', to: 'reviews#new'
   # post '/items/:id/reviews', to: 'reviews#create'
 #addresses controller
-  resources :addresses, only:[:create, :update, :destroy, :change]
+  resources :addresses, only:[:create, :update, :destroy, :change, :edit]
   get '/address/change', to: 'addresses#change'
 #contacts controller
   resources :contacts, only:[:create, :new]
