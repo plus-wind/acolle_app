@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag "admins/reviews", :media => "all" %>
+
+<div class="container">
+	<div class="row2">
+		<div class="col-md-12">
+			<h1>レビュー詳細</h1>
+			<table class="table-bordered">
+				<tr>
+                	<th style="width: 100px">顧客名</th>
+                	<th><%= @review.user.name_family_kanji + @review.user.name_first_kanji %></th>
+		    	</tr>
+		    	<tr>
+                	<th>投稿日時</th>
+                	<th><%= @review.created_at.strftime('%y/%m/%d %I:%M') %></th>
+		    	</tr>
+		    	<tr>
+                	<th>商品名</th>
+                	<th><%= @review.item.item_name %></th>
+		    	</tr>
+		    	<tr>
+                	<th>タイトル</th>
+                	<th><%= @review.review_title %></th>
+		    	</tr>
+		    	<tr>
+                	<th>満足度</th>
+                	<th id="star-rate-<%= @review.id %>"></th>
+			          <script>
+			          $('#star-rate-<%= @review.id %>').raty({
+			            size: 36,
+			            starOff:  '<%= ('star-off.png') %>',
+			            starOn : '<%= ('star-on.png') %>',
+			            starHalf: '<%= ('star-half.png') %>',
+			            half: true,
+			            readOnly: true,
+			            score: <%= @review.satisfaction %>,
+			          });
+			          </script>
+		    	</tr>
+		    	<tr>
+                	<th>本文</th>
+                	<th><%= @review.review_content %></th>
+		    	</tr>
+			</table>
+			<div class="col-md-offset-8"><%= link_to '編集する', edit_admins_review_path, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;" %><%= link_to "削除する", admins_review_path, method: :delete, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;" %></div>
+		</div>
+	</div>
+</div>
+
+

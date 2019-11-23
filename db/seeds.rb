@@ -99,6 +99,7 @@ Admin.create!(
              password:  "11111111",
 )
 
+
 #genres_seed
 Genre.create!(
   [
@@ -110,6 +111,7 @@ Genre.create!(
     }
   ]
 )
+
 #artists_seed
 Artist.create!(
   [
@@ -186,20 +188,6 @@ Item.create!(
     }
   ]
 )
-#arrivals_seed
-Arrival.create!(
-  [
-    {
-      item_id: '1',
-      arrival_number: '1',
-    },
-    {
-      item_id: '2',
-      arrival_number: '2',
-    }
-  ]
-)
-
 
 #contacts_seed
 Contact.create!(
@@ -217,6 +205,42 @@ Contact.create!(
         contact_status: "0",
         text: "You're rock!! cancel that !!!!!! WHAT A HELL",
         reply_text: "reply to: You're rock!! cancel that !!!!!! WHAT A HELL",
+    }
+  ]
+)
+
+#arrivals_seed
+Arrival.create!(
+  [
+    {
+      item_id: '1',
+      arrival_number: '1',
+      arrival_date: '2017-11-14',
+    },
+    {
+      item_id: '2',
+      arrival_number: '2',
+      arrival_date: '2009-11-14',
+    },
+    {
+      item_id: '3',
+      arrival_number: '1',
+      arrival_date: '2015-11-14',
+    },
+    {
+      item_id: '4',
+      arrival_number: '2',
+      arrival_date: '2010-11-14',
+    },
+    {
+      item_id: '1',
+      arrival_number: '1',
+      arrival_date: '2011-12-14',
+    },
+    {
+      item_id: '2',
+      arrival_number: '2',
+      arrival_date: '2013-11-14',
     }
   ]
 )
@@ -264,25 +288,36 @@ OrderItem.create!(
       order_id: "1",
       item_id: "1",
       order_price: "2000",
-      order_number: "1",
+      order_number: "10",
+      created_at: "2019-11-13 02:13:55"
     },
     {
       order_id: "2",
       item_id: "2",
       order_price: "3000",
-      order_number: "2",
+      order_number: "1",
+      created_at: "2019-11-14 02:13:55"
     },
     {
       order_id: "2",
       item_id: "3",
       order_price: "3000",
       order_number: "3",
+      created_at: "2019-11-14 02:13:55"
     },
     {
       order_id: "2",
       item_id: "4",
       order_price: "3000",
       order_number: "2",
+      created_at: "2019-11-14 02:13:55"
+    },
+    {
+      order_id: "2",
+      item_id: "1",
+      order_price: "3000",
+      order_number: "2",
+      created_at: "2019-11-14 02:13:55"
     }
   ]
 )

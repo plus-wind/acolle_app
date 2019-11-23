@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 	def new
 		@review = Review.new
 		@item = Item.find(params[:item_id])
-		@order_item = OrderItem.find(@item.id)
+		@order_item = OrderItem.find_by(item_id: @item.id)
 		@satisfaction_average = @item.reviews.average(:satisfaction)
 		@satisfaction_count = @item.reviews.length
 	end
@@ -16,7 +16,7 @@ class ReviewsController < ApplicationController
     end
     def edit
         @review = Review.find(params[:id])
-    	@order_item = OrderItem.find(params[:id])
+    	@order_item = OrderItem.where(item_id: @review.item_id).order(created_at: :desc).first
     	@item = @order_item.item
     	@satisfaction_average = @item.reviews.average(:satisfaction)
 		@satisfaction_count = @item.reviews.length
@@ -30,6 +30,11 @@ class ReviewsController < ApplicationController
     	review = Review.find(params[:id])
     	review.update(review_params)
     	redirect_to mypage_path
+    end
+    def destroy
+        review = Review.find(params[:id])
+        review.destroy
+        redirect_to mypage_path
     end
     private
     def review_params
