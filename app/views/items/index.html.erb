@@ -14,11 +14,9 @@
 				<h3 class="ranking-headline"><週間売上枚数ランキング></h3>
 				<p class="ranking-date"><%= @week_ago %> 〜 <%= @day %></p>
 			</div>
-			<% item_keys = @hash_sales_ranking.keys %>
-			<% item_keys.each.with_index(1) do |item_key, i| %>
+			<% @item_ranking.each.with_index(1) do |item, i| %>
 			<div class="ranking-content">
 				<h4><%= "第#{i}位" %></h4>
-				<% item = Item.find(item_key) %>
 				<%= attachment_image_tag item, :item_image, :fill, 150, 150, fallback: "no_image.jpg", size:'150x150' %>
 				<p><%= link_to item.item_name, item_path(item.id) %></p>
 				<p><%= item.artist.artist_name %></p>
