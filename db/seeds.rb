@@ -99,19 +99,7 @@ Admin.create!(
              password:  "11111111",
 )
 
-#arrivals_seed
-Arrival.create!(
-  [
-    {
-      item_id: '1',
-      arrival_number: '10',
-    },
-    {
-      item_id: '2',
-      arrival_number: '5',
-    }
-  ]
-)
+
 
 #artists_seed
 Artist.create!(
@@ -220,21 +208,56 @@ Item.create!(
     }
   ]
 )
+
+#arrivals_seed
+Arrival.create!(
+  [
+    {
+      item_id: '1',
+      arrival_number: '10',
+    },
+    {
+      item_id: '2',
+      arrival_number: '5',
+    }
+  ]
+)
 #arrivals_seed
 Arrival.create!(
   [
     {
       item_id: '1',
       arrival_number: '1',
-      arrival_date: '2011-11-14',
+      arrival_date: '2017-11-14',
     },
     {
       item_id: '2',
       arrival_number: '2',
-      arrival_date: '2011-11-14',
+      arrival_date: '2009-11-14',
+    },
+    {
+      item_id: '3',
+      arrival_number: '1',
+      arrival_date: '2015-11-14',
+    },
+    {
+      item_id: '4',
+      arrival_number: '2',
+      arrival_date: '2010-11-14',
+    },
+    {
+      item_id: '1',
+      arrival_number: '1',
+      arrival_date: '2011-12-14',
+    },
+    {
+      item_id: '2',
+      arrival_number: '2',
+      arrival_date: '2013-11-14',
     }
   ]
 )
+
 #orders_seed
 Order.create!(
   [
