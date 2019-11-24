@@ -11,6 +11,9 @@ class Admins::ItemsController < ApplicationController
 			@order_items_sums = OrderItem.where(item_id: item.id).sum(:order_number)
 			@sums << (@arrival_sums - @order_items_sums)
 			@Number_of_sales.group(:item_id).sum(:order_number)
+
+			@orderednumber = OrderItem.group(:item_id).sum(:order_number)
+			# binding.pry
 		end
 	end
 	def show
