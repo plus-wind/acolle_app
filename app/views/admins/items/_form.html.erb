@@ -25,3 +25,12 @@
         <%= f.submit '商品新規追加する', class: "btn btn-default", :style=>"width: 200px; margin-top: 5px; background-color:red;" %>
     </div>
 <% end %>
+
+
+<input type="search" name="q" autocomplete="on" list="keywords">
+<datalist id="keywords">
+  <%= Artist.all.each do |artist| %>
+    <option value="<%= artist.artist_name %>"></option>
+  <% end %>
+</datalist>
+

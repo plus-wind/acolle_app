@@ -2,6 +2,11 @@ class ApplicationController < ActionController::Base
 
 	#before_action :configure_permitted_parameters, if: :devise_controller?
 
+protect_from_forgery with: :exception
+autocomplete :artist, :artist_name, full: true
+autocomplete :label, :label_name, full: true
+autocomplete :genre, :genre_name, full: true
+
 	def search
 		@temp = 1
 		@hash_sales_ranking = OrderItem.rank_sales_items

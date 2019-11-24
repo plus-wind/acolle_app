@@ -18,6 +18,7 @@
 //= require bootstrap-sprockets
 //= require_tree .
 //= require cocoon
+//= require autocomplete-rails
 
 $('#tab-contents .tab[id != "tab1"]').hide();
 	$('#tab-menu a').on('click', function() {

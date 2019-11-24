@@ -67,6 +67,9 @@ class Admins::ItemsController < ApplicationController
 		item.save
 		redirect_to new_admins_item_path
 	end
+	def autocomplete_artist
+	end
+
 private
 	def item_params
 		params.require(:item).permit(:item_name, :item_type, :item_image, :item_price, :artist_id, :label_id, :genre_id, :item_release_date, :item_delete_flag, arrivals_attributes: [:arrival_number, :arrival_date],  discs_attributes: [:id, :disc_name, :_destroy, songs_attributes: [:id, :song, :_destroy]])
