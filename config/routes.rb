@@ -45,7 +45,7 @@ end
   # get '/items/:id/reviews', to: 'reviews#new'
   # post '/items/:id/reviews', to: 'reviews#create'
 #addresses controller
-  resources :addresses, only:[:create, :update, :destroy, :change]
+  resources :addresses, only:[:create, :update, :destroy, :change, :edit, :new]
   get '/address/change', to: 'addresses#change'
 #contacts controller
   resources :contacts, only:[:create, :new]
@@ -66,8 +66,9 @@ namespace :admins do
   get '/sort/arrivals',  to: 'arrivals#sort'
   # post '/items/:id/arrivals', to: 'arrivals#create'   #admins/items controllerに移動してます。
 #admins/users controller
-  resources :users, only:[:index, :show, :edit, :update]
+  resources :users, only:[:index, :show, :edit, :update, :destroy]
   post '/search',  to: 'users#search'
+  patch '/withdraw/:id',  to: 'users#withdraw', as: "withdraw"
   #patch '/uesrs', to: 'users#change'
 #admins/reviews controller
   resources :reviews, only:[:index, :show, :edit, :update, :destroy]

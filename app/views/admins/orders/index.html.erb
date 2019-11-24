@@ -1,0 +1,48 @@
+<%= stylesheet_link_tag "admins/orders", :media => "all" %>
+<h1>受注履歴</h1>
+	<table class="table" id="table_detail" align=center cellpadding=10 >
+		<tr class="active">
+	    	<th>受注ID</th>
+	    	<th>受注日</th>
+	    	<th>商品名</th>
+	    	<th>数量</th>
+	    	<th>受注ステータス</th>
+		</tr>
+		<% @orders.each do |order| %>
+		<tr>
+	    	<th><%= order.id %></th>
+	     	<th><%= order.created_at.strftime('%Y/%m/%d') %></th>
+	    		<th>
+	    			<% order.order_items.each do |oi| %>
+	    		      <!-- 1対多 -->
+	    				<%= oi.item.item_name %></br>
+	    			<% end %>
+	    		</th>
+	    		<th>
+	    			<% order.order_items.each do |oi| %>
+	    				<%= oi.order_number %></br>
+	    			<% end %>
+	    		</th>
+	    	<% if order.order_status == 0 %>
+	    		<th class="bg-danger">受付</th>
+	    	<% elsif order.order_status == 1 %>
+	    		<th class="bg-warning">準備中</th>
+	    	<% else %>
+	    		<th class="bg-success">発送済</th>
+	    	<% end %>
+		</tr>
+		<th>
+			<%= "送付先氏名　" + order.delivery_name_family_kanji + order.delivery_name_first_kanji  %>
+			<span class="text-info"><%= "　　　　注文者　" + order.user.name_family_kanji + order.user.name_first_kanji %></span>
+			</br>
+			</br>
+			<%="送付先住所　" + "〒" + order.delivery_postal_code.insert(3, "-") %>
+			<%= "　" + order.delivery_address_prefecture %>
+			<%= order.delivery_address_city %>
+			<%= order.delivery_address_number %>
+			<%= order.delivery_address_building %>
+		</th>
+
+
+	  	<% end %>
+	</table>

@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require cocoon
 
 $('#tab-contents .tab[id != "tab1"]').hide();
 	$('#tab-menu a').on('click', function() {
@@ -26,3 +27,9 @@ $('#tab-contents .tab[id != "tab1"]').hide();
 	$($(this).attr("href")).show();
 	return false;
 });
+
+
+function show_hide_row(row)
+{
+ $("#"+row).toggle();
+}

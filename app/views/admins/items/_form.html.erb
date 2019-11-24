@@ -1,0 +1,15 @@
+<!--<%= form_for @item do |i| %>
+  <div class="field">
+    <%= i.text_field :item_name %>
+  </div>
+  <div class="field">
+    <%= i.label :discs, "description" %>
+    <%= i.text_field :discs %>
+  </div>
+  <h3>Discs</h3>
+    <%= i.fields_for :discs do |disc| %>
+      <%= render 'disc_fields', i: :disc %>
+    <% end %>
+    <%= i.submit %>
+  </div>
+<% end %>

@@ -5,62 +5,79 @@
 	<h3>お客様情報</h3>
 	<table class="table table-bordered">
 		<tr>
-			<td>氏名</td>
+			<td class="active">氏名</td>
 			<td><%= @user.name_family_kanji %>  <%= @user.name_first_kanji %></td>
 		</tr>
 		<tr>
-			<td>氏名（フリガナ）</td>
+			<td class="active">氏名（フリガナ）</td>
 			<td><%= @user.name_family_furigana %>  <%= @user.name_first_furigana %></td>
 		</tr>
 		<tr>
-			<td>メールアドレス</td>
+			<td class="active">メールアドレス</td>
 			<td><%= @user.email %></td>
 		</tr>
 		<tr>
-			<td>パスワード</td>
+			<td class="active">パスワード</td>
 			<td><%= @user.password %></td>
 		</tr>
 		<tr>
-			<td>ご住所</td>
+			<td class="active">ご住所</td>
 			<td>〒<%= @user.postal_code.insert(3, "-") %>  <%= @user.address_prefecture %>
 				<%= @user.address_city %><%= @user.address_number %>
 				<%= @user.address_building %>
 			</td>
 		</tr>
 		<tr>
-			<td>お電話番号</td>
+			<td class="active">お電話番号</td>
 			<td><%= @user.phone_number %></td>
 		</tr>
 	</table>
 
-	<h3>その他のお届け先</h3>
+	<div class="row">
+		<%= link_to "お客様情報の編集", edit_user_registration_path(@user), class:"btn btn-success col-md-3 col-md-offset-9" %>
+	</div>
+
+	<div>
+		<h3>その他のお届け先</h3>
+		<div class="row">
+			<%= link_to "その他のお届け先情報追加", new_address_path, class:"btn btn-primary col-md-3" %>
+		</div>
+	</div>
 	<% @addresses.each.with_index(1) do |address,i| %>
 	<%= i %>
 	<table class="table table-bordered">
 		<tr>
-			<td>氏名</td>
+			<td class="active">氏名</td>
 			<td><%= address.delivery_name_family_kanji %>  <%= address.delivery_name_first_kanji %></td>
 		</tr>
 		<tr>
-			<td>氏名（フリガナ）</td>
+			<td class="active">氏名（フリガナ）</td>
 			<td><%= address.delivery_name_family_furigana %>  <%= address.delivery_name_first_furigana %></td>
 		</tr>
 		<tr>
-			<td>ご住所</td>
+			<td class="active">ご住所</td>
 			<td><div style="float: left">〒<%= address.delivery_postal_code.insert(3, "-") %></div>
 				<div style="float: left, margin-left:5px"><%= address.delivery_address_prefecture %><%= address.delivery_address_city %><%= address.delivery_address_number %><%= address.delivery_address_building %></div></td>
 		</tr>
 
 	</table>
-	<% end %>
 	<div class="row">
-		<%= link_to "登録情報の編集", edit_user_registration_path(@user), class:"btn btn-success col-md-4 col-md-offset-8" %>
+		<%= link_to "その他のお届け先情報#{i}の編集", edit_address_path(address), class:"btn btn-success col-md-3 col-md-offset-9" %>
 	</div>
+	<% end %>
 		<h3>購入履歴</h3>
 		<% @orders.each do |order| %>
 		<div style="border-bottom:solid ">
 			<div>
-				<%= order.created_at.strftime('%Y/%m/%d') %>  <%= order.order_status %>
+				<%= order.created_at.strftime('%Y/%m/%d') %>
+                <% if order.order_status == 0 %>
+                    <p class="text-danger">受付中</p>
+                <% elsif order.order_status == 1 %>
+                    <p class="text-warning">発送準備中</p>
+                <% else %>
+                    <p class="text-success">発送済み</p>
+                <% end %>
+
 			</div>
 				<% order.order_items.each do |oi| %>
 				<div>

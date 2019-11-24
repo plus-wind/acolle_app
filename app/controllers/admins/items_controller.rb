@@ -28,7 +28,10 @@ class Admins::ItemsController < ApplicationController
         @reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(1)
 	end
 	def edit
-		@item = Item.find(params[:item_id])
+		@item = Item.find(params[:id])
+		@disc = @item.discs
+		# @song = @disc.songs
+
 	end
 	def status
 		@item = Item.find(params[:id])
@@ -38,7 +41,23 @@ class Admins::ItemsController < ApplicationController
         	@item.update(item_delete_flag: 0)
     	end
 	end
+	def update
+		@item = Item.find(params[:id])
+		if @item.update(item_params)
+			flash[:notice] = "You have updated item successfully."
+			redirect_to admins_item_path(@item.id)
+		 else
+			render :edit
+		 end
+	 end
 
+private
+	def item_params
+		params.require(:item).permit(:item_name, :item_type, :item_image, :item_price, discs_attributes: [:id, :disc_name, :_destroy, songs_attributes: [:id, :song, :_destroy]])
+	end
+	# def item_params
+	# 	params.require(:item).permit(:item_name, :item_type, :item_image, :item_price)
+	# end
 	# private
 	# def item_params
 	# 	params.require(:item).permit(:, :body)

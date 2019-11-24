@@ -100,6 +100,17 @@ Admin.create!(
 )
 
 
+#genres_seed
+Genre.create!(
+  [
+    {
+      genre_name: '洋楽',
+    },
+    {
+      genre_name: '邦楽',
+    }
+  ]
+)
 
 #artists_seed
 Artist.create!(
@@ -109,37 +120,6 @@ Artist.create!(
     },
     {
         artist_name: "歌手2",
-    }
-  ]
-)
-
-#contacts_seed
-Contact.create!(
-  [
-    {
-        user_id: "1",
-        category: "0",
-        contact_status: "0",
-        text: "You're rock!! cancel that !!!!!!",
-        reply_text: "reply to: You're rock!! cancel that !!!!!!",
-    },
-    {
-        user_id: "2",
-        category: "1",
-        contact_status: "0",
-        text: "You're rock!! cancel that !!!!!! WHAT A HELL",
-        reply_text: "reply to: You're rock!! cancel that !!!!!! WHAT A HELL",
-    }
-  ]
-)
-#genres_seed
-Genre.create!(
-  [
-    {
-      genre_name: '洋楽',
-    },
-    {
-      genre_name: '邦楽',
     }
   ]
 )
@@ -204,6 +184,27 @@ Item.create!(
     }
   ]
 )
+
+#contacts_seed
+Contact.create!(
+  [
+    {
+        user_id: "1",
+        category: "0",
+        contact_status: "0",
+        text: "You're rock!! cancel that !!!!!!",
+        reply_text: "reply to: You're rock!! cancel that !!!!!!",
+    },
+    {
+        user_id: "2",
+        category: "1",
+        contact_status: "0",
+        text: "You're rock!! cancel that !!!!!! WHAT A HELL",
+        reply_text: "reply to: You're rock!! cancel that !!!!!! WHAT A HELL",
+    }
+  ]
+)
+
 #arrivals_seed
 Arrival.create!(
   [
@@ -239,6 +240,7 @@ Arrival.create!(
     }
   ]
 )
+
 
 #orders_seed
 Order.create!(
@@ -283,14 +285,12 @@ OrderItem.create!(
       item_id: "1",
       order_price: "2000",
       order_number: "10",
-      created_at: "2019-11-13 02:13:55",
     },
     {
       order_id: "2",
       item_id: "2",
       order_price: "3000",
       order_number: "1",
-      created_at: "2019-11-14 02:13:55",
     },
     {
       order_id: "2",
@@ -304,14 +304,12 @@ OrderItem.create!(
       item_id: "4",
       order_price: "3000",
       order_number: "2",
-      created_at: "2019-11-14 02:13:55",
     },
     {
       order_id: "2",
       item_id: "1",
       order_price: "3000",
       order_number: "2",
-      created_at: "2019-11-14 02:13:55",
     }
   ]
 )

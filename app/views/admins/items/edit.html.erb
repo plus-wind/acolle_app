@@ -1,0 +1,39 @@
+<div class = "container">
+    <div class = "row">
+        <h2 class = "edit-title" >商品詳細編集</h2>
+    </div>
+    <%= form_for @item, url: admins_item_path(@item) do |i| %>
+        <%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'350x350' %>
+        <%= i.attachment_field :item_image %>
+        <%= i.text_field :item_name %>
+        <%= i.number_field :item_price %>
+        <%= i.text_field :item_release_date %>
+        <%= i.submit "変更"%>
+        <%= i.select :item_type, [["シングル","シングル"],["アルバム","アルバム"],["EP","EP"]] %>
+            <%= fields_for @item.artist do |ia| %>
+                <%= ia.number_field :id %>
+                <%= ia.text_field :artist_name  %>
+            <% end %>
+            <%= fields_for @item.label do |il| %>
+                <%= il.number_field :id %>
+                <%= @item.label.label_name %>
+            <% end %>
+            <%= fields_for @item.genre do |ig| %>
+                ジャンル名
+                <%= ig.number_field :id %>
+                <%= ig.text_field :genre_name  %>
+            <% end %>
+   
+    <% end %>
+
+    <% @item.discs.each.with_index(1) do |d, n| %>
+        <%= form_for(d, url: admins_item_path ) do |df| %>
+            <%= df.text_field :disc_name %>
+                <%= df.fields_for :songs do |s| %>
+                    <%= "#{n}" %>
+                    <%= s.text_field :song %>
+                <% end %>
+            <%= df.submit "変更" %>
+        <% end %>
+    <% end %>
+</div>
