@@ -145,6 +145,7 @@ ActiveRecord::Schema.define(version: 2019_11_22_064948) do
   end
 
   create_table "order_items", force: :cascade do |t|
+
     t.integer "order_id"
     t.integer "item_id"
     t.integer "order_price", null: false

@@ -36,10 +36,24 @@ class Admins::ItemsController < ApplicationController
     	end
 	end
 
+	def update
+		@item = Item.find(params[:id])
+		if @item.update(item_params)
+			flash[:notice] = "You have updated item successfully."
+			redirect_to admins_item_path(@item.id)
+		 else
+			render :edit
+		 end
+	 end
+
 private
+	def item_params
+		params.require(:item).permit(:item_name, :item_type, :item_image, :item_price, discs_attributes: [:id, :disc_name, :_destroy, songs_attributes: [:id, :song, :_destroy]])
+	end
+	
 	# def item_params
-	# 	params.require(:item).permit(:item_name, :description, discs_attributes: [:id, :description, :done, :_destroy, songs_attributes: [:id, :description, :_destroy]])
-    # end
+	# 	params.require(:item).permit(:item_name, :item_type, :item_image, :item_price)
+	# end
 
 	# private
 	# def item_params
