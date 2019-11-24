@@ -27,3 +27,9 @@ $('#tab-contents .tab[id != "tab1"]').hide();
 	$($(this).attr("href")).show();
 	return false;
 });
+
+
+function show_hide_row(row)
+{
+ $("#"+row).toggle();
+}
