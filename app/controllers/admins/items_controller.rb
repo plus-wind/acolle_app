@@ -49,11 +49,27 @@ class Admins::ItemsController < ApplicationController
 		 else
 			render :edit
 		 end
-	 end
-
+	end
+	def new
+		@item = Item.new
+		@item.arrivals.build
+		@disc = @item.discs.build
+		@song = @disc.songs.build
+	end
+	def create
+		item = Item.new(item_params)
+		artist = Artist.where("artist_name = '#{params[:item][:artist_id]}'").first
+		item.artist_id = artist.id
+		label = Label.where("label_name = '#{params[:item][:label_id]}'").first
+		item.label_id = label.id
+		genre = Genre.where("genre_name = '#{params[:item][:genre_id]}'").first
+		item.genre_id = genre.id
+		item.save
+		redirect_to new_admins_item_path
+	end
 private
 	def item_params
-		params.require(:item).permit(:item_name, :item_type, :item_image, :item_price, discs_attributes: [:id, :disc_name, :_destroy, songs_attributes: [:id, :song, :_destroy]])
+		params.require(:item).permit(:item_name, :item_type, :item_image, :item_price, :artist_id, :label_id, :genre_id, :item_release_date, :item_delete_flag, arrivals_attributes: [:arrival_number, :arrival_date],  discs_attributes: [:id, :disc_name, :_destroy, songs_attributes: [:id, :song, :_destroy]])
 	end
 	# def item_params
 	# 	params.require(:item).permit(:item_name, :item_type, :item_image, :item_price)

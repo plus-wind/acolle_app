@@ -1,16 +1,15 @@
-<!--<div class="nested-fields well well-compact">
-  <div class="form-group">
-    <%# <%= i.label :discs %>
-    <%# <%= i.number_field :description %>
-    <%# <%= link_to_remove_association "remove disk", i %>
+<div>
+  <div class="nested-fields">
+    <%= f.text_field :disc_name %><br>
+    <%= link_to_remove_association "remove disc", f %>
   </div>
 
   <div class="songs">
-    <%= disc.fields_for :songs do |song| %>
-      <%= render 'song_fields', i: song %>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association "add song", i, :songs %>
+    <%= f.fields_for :songs do |song| %>
+    <%= render 'song_fields', f: song %>
+    <%end%>
+    <div id="links">
+    <%= link_to_add_association "add song", f, :songs %>
     </div>
   </div>
 </div>

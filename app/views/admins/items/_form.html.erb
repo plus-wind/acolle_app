@@ -1,15 +1,27 @@
-<!--<%= form_for @item do |i| %>
-  <div class="field">
-    <%= i.text_field :item_name %>
-  </div>
-  <div class="field">
-    <%= i.label :discs, "description" %>
-    <%= i.text_field :discs %>
-  </div>
-  <h3>Discs</h3>
-    <%= i.fields_for :discs do |disc| %>
-      <%= render 'disc_fields', i: :disc %>
-    <% end %>
-    <%= i.submit %>
-  </div>
+<%= form_for(@item, url: admins_items_path) do |f| %>
+    <div class="form_for_field">
+        <p>シングル名/アルバム名：<%= f.text_field :item_name, :style=>"width: 400px;" %></p>
+        <p>CDタイプ：<%= f.select :item_type, [["シングル", "シングル"], ["アルバム", "アルバム"],  ["EP", "EP"]], :style=>"width: 200px;" %></p>
+        <p>アーティスト名：<%= f.text_field :artist_id, :style=>"width: 200px;" %></p>
+        <p>レーベル名：<%= f.text_field :label_id, :style=>"width: 200px;" %></p>
+        <p>ジャンル名：<%= f.text_field :genre_id, :style=>"width: 200px;" %></p>
+        <p>価格(税別)：<%= f.text_field :item_price, :style=>"width: 100px;" %>円</p>
+        <p>発売日：<%= f.text_field :item_release_date, :style=>"width: 100px;" %></p>
+        <p>ジャケット画像：<%= f.attachment_field :item_image %></p>
+        <p>販売ステータス：<%= f.select :item_delete_flag, [["販売中", "sales"], ["停止中", "stop"]] %></p>
+        <%= f.fields_for :arrivals do |a| %>
+          <p>入荷数追加：<%= a.text_field :arrival_number, :style=>"width: 50px;" %>枚</p>
+          <p>入荷日：<%= a.text_field :arrival_date, :style=>"width: 100px;" %></p>
+        <% end %>
+    </div>
+    <h3>ディスクフィールド</h3>
+    <div id="discs">
+        <%= f.fields_for :discs do |disc| %>
+          <%= render 'disc_fields', f: disc %>
+        <% end %>
+        <div id="links">
+            <%= link_to_add_association 'add disc',f, :discs %>
+        </div>
+        <%= f.submit '商品新規追加する', class: "btn btn-default", :style=>"width: 200px; margin-top: 5px; background-color:red;" %>
+    </div>
 <% end %>
