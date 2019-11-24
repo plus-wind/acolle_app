@@ -78,17 +78,5 @@ namespace :admins do
   resources :contacts, only:[:index, :show, :create]
   get '/contacts/new', to: 'contacts#new'
 end
-
-Rails.application.routes.draw do
-  resources :artists do
-    get :autocomplete_artist, on: :collection # 追加
-  end
-  resources :labels do
-    get :autocomplete_label, on: :collection # 追加
-  end
-  resources :genres do
-    get :autocomplete_genre, on: :collection # 追加
-  end
-end
 end
 

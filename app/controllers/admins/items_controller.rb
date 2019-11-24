@@ -67,8 +67,6 @@ class Admins::ItemsController < ApplicationController
 		item.save
 		redirect_to new_admins_item_path
 	end
-	def autocomplete_artist
-	end
 
 private
 	def item_params
