@@ -10,10 +10,8 @@ class Admins::ItemsController < ApplicationController
 			@arrival_sums = Arrival.where(item_id: item.id).sum(:arrival_number)
 			@order_items_sums = OrderItem.where(item_id: item.id).sum(:order_number)
 			@sums << (@arrival_sums - @order_items_sums)
+			@Number_of_sales.group(:item_id).sum(:order_number)
 		end
-		@arrival = Arrival.new
-			# @arrivals_sum = Arrival.where(item_id: @item.id).sum(:arrival_number)
-			# @order_items_sum = OrderItem.where(item_id: @item.id).sum(:order_number)
 	end
 	def show
 		@item = Item.find(params[:id])
@@ -36,10 +34,10 @@ class Admins::ItemsController < ApplicationController
 	def status
 		@item = Item.find(params[:id])
 		if @item.item_delete_flag_before_type_cast == 0
-        	@item.update(item_delete_flag: 1)
-    	elsif @item.item_delete_flag_before_type_cast == 1
-        	@item.update(item_delete_flag: 0)
-    	end
+			@item.update(item_delete_flag: 1)
+    elsif @item.item_delete_flag_before_type_cast == 1
+      @item.update(item_delete_flag: 0)
+    end
 	end
 	def update
 		@item = Item.find(params[:id])
