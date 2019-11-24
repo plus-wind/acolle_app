@@ -55,6 +55,9 @@ class Admins::ItemsController < ApplicationController
 		@item.arrivals.build
 		@disc = @item.discs.build
 		@song = @disc.songs.build
+		@artists = Artist.all
+		@labels = Label.all
+		@genres = Genre.all
 	end
 	def create
 		item = Item.new(item_params)
