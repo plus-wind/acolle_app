@@ -30,8 +30,3 @@ $('#tab-contents .tab[id != "tab1"]').hide();
 	return false;
 });
 
-
-function show_hide_row(row)
-{
- $("#"+row).toggle();
-}

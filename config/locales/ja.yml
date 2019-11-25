@@ -4,8 +4,8 @@ ja:
       item_delete_flag:
         sales: 販売中
         stop: 停止中
-    order:
-      order_status:
-        checked: 受付
-        ongoing: 準備中
-        shipped: 出荷済
+    # order:
+    #   order_status:
+    #     checked: 受付
+    #     ongoing: 準備中
+    #     shipped: 出荷済
