@@ -27,8 +27,21 @@
 					<%= radio_button_tag :search_flag, 2 %>レーベル
 					<%= radio_button_tag :search_flag, 3 %>ジャンル
 					<%= text_field_tag :search_word %>
-					<%= submit_tag "検索" %>
+				<%= submit_tag "検索" %>
 				<% end %>
+			<% if @artist_name.present? %>
+				<% @artist_name.each do |a| %>
+					<p><%= a.id %>.<%= a.artist_name %><%= link_to "編集", admins_artist_edit_path(a.id) %></p>
+				<% end %>
+			<% elsif @label_name.present? %>
+				<% @label_name.each do |l| %>
+					<p><%= l.id %>.<%= l.label_name %><%= link_to "編集", admins_label_edit_path(l.id) %></p>
+				<% end %>
+			<% elsif @genre_name.present? %>
+				<% @genre_name.each do |g| %>
+					<P><%= g.id %>.<%= g.genre_name %><%= link_to "編集", admins_genre_edit_path(g.id) %></p>
+				<% end %>
+			<% end %>
 		    </div>
 		</div>
 	</div>

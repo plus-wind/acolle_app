@@ -1,0 +1,4 @@
+<%= form_for(@artist, url:admins_artist_update_path) do |a| %>
+	アーティスト：<%= a.text_field :artist_name %>
+	<%= a.submit '更新' %>
+<% end %>

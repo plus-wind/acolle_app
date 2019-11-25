@@ -118,6 +118,50 @@ class Admins::ItemsController < ApplicationController
 		@genre = Genre.new
 		render :new
 	end
+	def edit_search
+		if params[:search_flag] == "1"
+			@artist_name = Artist.where("artist_name LIKE ?", "%#{params[:search_word]}%")
+		elsif params[:search_flag] == "2"
+			@label_name = Label.where("label_name LIKE ?", "%#{params[:search_word]}%")
+		elsif params[:search_flag] == "3"
+			@genre_name = Genre.where("genre_name LIKE ?", "%#{params[:search_word]}%")
+		end
+		@item = Item.new
+		@item.arrivals.build
+		@disc = @item.discs.build
+		@song = @disc.songs.build
+		@artists = Artist.all
+		@labels = Label.all
+		@genres = Genre.all
+		@artist = Artist.new
+		@label = Label.new
+		@genre = Genre.new
+		render :new
+	end
+	def artist_edit
+		@artist = Artist.find(params[:id])
+	end
+	def label_edit
+		@label = Label.find(params[:id])
+	end
+	def genre_edit
+		@genre = Genre.find(params[:id])
+	end
+	def artist_update
+        @artist = Artist.find(params[:id])
+        @artist.update(artist_params)
+		redirect_to new_admins_item_path
+	end
+	def label_update
+        @label = Label.find(params[:id])
+        @label.update(label_params)
+		redirect_to new_admins_item_path
+	end
+	def genre_update
+        @genre = Genre.find(params[:id])
+        @genre.update(genre_params)
+		redirect_to new_admins_item_path
+	end
 
 private
 	def item_params

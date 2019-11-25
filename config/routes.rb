@@ -62,6 +62,12 @@ namespace :admins do
   post '/items/label/new', to: 'items#label_create'
   post '/items/genre/new', to: 'items#genre_create'
   get '/items/edit/search', to: 'items#edit_search'
+  get '/artist/:id/edit', to: 'items#artist_edit', as: "artist_edit"
+  get '/label/:id/edit', to: 'items#label_edit', as: "label_edit"
+  get '/genre/:id/edit', to: 'items#genre_edit', as: "genre_edit"
+  patch '/artist/:id/update', to: 'items#artist_update', as: "artist_update"
+  patch '/label/:id/update', to: 'items#label_update', as: "label_update"
+  patch '/genre/:id/update', to: 'items#genre_update', as: "genre_update"
   patch '/status/:id', to: 'items#status', as: "status"
   patch '/items/:id', to: 'items#change'
 #admins/arrivals controller
