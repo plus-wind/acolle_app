@@ -8,8 +8,9 @@ class ItemsController < ApplicationController
 			item  = Item.find(i)
 			if item.item_delete_flag_before_type_cast == 0
 				@item_sales_ranking << item
-			    if @item_sales_ranking.count == 5
-				   return
+				if @item_sales_ranking.count == 5
+					break
+				#    return
 			    end
 			end
 		end
@@ -22,7 +23,7 @@ class ItemsController < ApplicationController
 			if item.item_delete_flag_before_type_cast == 0
 				@item_view_ranking << item
 			    if @item_view_ranking.count == 5
-				   return
+				   break
 			    end
 			end
 		end
