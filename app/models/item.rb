@@ -1,7 +1,8 @@
 class Item < ApplicationRecord
   has_many :discs, inverse_of: :item
   has_many :songs, through: :discs
-  accepts_nested_attributes_for :discs, reject_if: :all_blank, allow_destroy: true
+#   accepts_nested_attributes_for :discs, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :discs
   has_many :reviews
   has_many :carts
   has_many :users, through: :carts
