@@ -10,6 +10,7 @@ class CartsController < ApplicationController
 
   # 商品一覧画面から、「商品購入」を押した時のアクション
   def add
+    unless current_user.nil?
     @cart = Cart.find_by(user_id: current_user.id, item_id: params[:cart][:item_id])
     if @cart.blank?
       @cart = Cart.new(cart_params)
@@ -20,6 +21,9 @@ class CartsController < ApplicationController
     @cart.save
     pp @cart
     redirect_to cart_path
+    else
+    redirect_to new_user_session_path
+    end
   end
 
   def update

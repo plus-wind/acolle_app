@@ -41,7 +41,7 @@
               <%= f.hidden_field :delivery_address_number, value: @order.delivery_address_number %>
               <%= f.hidden_field :delivery_address_building, value: @order.delivery_address_building %>
               <%= f.hidden_field :delivery_address_number, value: @order.delivery_address_number %>
-              <%= f.hidden_field :order_status, value: 0 %>
+              <%= f.hidden_field :order_status, value: "0" %>
               <%= f.hidden_field :total_fee, value: @order.total_fee %>
               <%= f.hidden_field :postage, value: @order.postage %>
           <% end %>
