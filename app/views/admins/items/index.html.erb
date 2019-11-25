@@ -18,10 +18,12 @@
         <th>週間売り上げ枚数</th>
       </tr>
       <tr>
-        <th><%= item.id %></th>
-        <th><%= item.item_name %></th>
-        <th><%= item.artist.artist_name %></th>
-        <th><%= @sums[i] %>
+        <td><%= item.id %></td>
+        <td><%= item.item_name %></td>
+        <td><%= item.artist.artist_name %></td>
+        <td><%= @sums[i] %></td>
+        <td><%= item.impressions_count %></td>
+        <td><%= @Number_of_sales.group%></td>
       </tr>
     </table>
     <% end %>
