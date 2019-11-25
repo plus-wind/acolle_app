@@ -39,6 +39,7 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @user = current_user
     @order = Order.new(order_params)
     @order.save
     redirect_to order_complete_path

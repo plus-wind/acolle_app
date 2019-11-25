@@ -92,10 +92,143 @@ class Admins::ItemsController < ApplicationController
 		 else
 			render :edit
 		 end
-	 end
+	end
+	def new
+		@item = Item.new
+		@item.arrivals.build
+		@disc = @item.discs.build
+		@song = @disc.songs.build
+		@artists = Artist.all
+		@labels = Label.all
+		@genres = Genre.all
+		@artist = Artist.new
+		@label = Label.new
+		@genre = Genre.new
+	end
+	def create
+		item = Item.new(item_params)
+		artist = Artist.where("artist_name = '#{params[:item][:artist_id]}'").first
+		item.artist_id = artist.id
+		label = Label.where("label_name = '#{params[:item][:label_id]}'").first
+		item.label_id = label.id
+		genre = Genre.where("genre_name = '#{params[:item][:genre_id]}'").first
+		item.genre_id = genre.id
+		item.save
+		redirect_to new_admins_item_path
+	end
+	def artist_create
+		artist = Artist.new(artist_params)
+		artist.save
+		@item = Item.new
+		@item.arrivals.build
+		@disc = @item.discs.build
+		@song = @disc.songs.build
+		@artists = Artist.all
+		@labels = Label.all
+		@genres = Genre.all
+		@artist = Artist.new
+		@label = Label.new
+		@genre = Genre.new
+		render :new
+	end
+	def label_create
+		label = Label.new(label_params)
+		label.save
+		@item = Item.new
+		@item.arrivals.build
+		@disc = @item.discs.build
+		@song = @disc.songs.build
+		@artists = Artist.all
+		@labels = Label.all
+		@genres = Genre.all
+		@artist = Artist.new
+		@label = Label.new
+		@genre = Genre.new
+		render :new
+	end
+	def genre_create
+		genre = Genre.new(genre_params)
+		genre.save
+		@item = Item.new
+		@item.arrivals.build
+		@disc = @item.discs.build
+		@song = @disc.songs.build
+		@artists = Artist.all
+		@labels = Label.all
+		@genres = Genre.all
+		@artist = Artist.new
+		@label = Label.new
+		@genre = Genre.new
+		render :new
+	end
+	def edit_search
+		if params[:search_flag] == "1"
+			@artist_name = Artist.where("artist_name LIKE ?", "%#{params[:search_word]}%")
+		elsif params[:search_flag] == "2"
+			@label_name = Label.where("label_name LIKE ?", "%#{params[:search_word]}%")
+		elsif params[:search_flag] == "3"
+			@genre_name = Genre.where("genre_name LIKE ?", "%#{params[:search_word]}%")
+		end
+		@item = Item.new
+		@item.arrivals.build
+		@disc = @item.discs.build
+		@song = @disc.songs.build
+		@artists = Artist.all
+		@labels = Label.all
+		@genres = Genre.all
+		@artist = Artist.new
+		@label = Label.new
+		@genre = Genre.new
+		render :new
+	end
+	def artist_edit
+		@artist = Artist.find(params[:id])
+	end
+	def label_edit
+		@label = Label.find(params[:id])
+	end
+	def genre_edit
+		@genre = Genre.find(params[:id])
+	end
+	def artist_update
+        @artist = Artist.find(params[:id])
+        @artist.update(artist_params)
+		redirect_to new_admins_item_path
+	end
+	def label_update
+        @label = Label.find(params[:id])
+        @label.update(label_params)
+		redirect_to new_admins_item_path
+	end
+	def genre_update
+        @genre = Genre.find(params[:id])
+        @genre.update(genre_params)
+		redirect_to new_admins_item_path
+	end
 
 private
 	def item_params
-		params.require(:item).permit(:item_name, :item_type, :item_image, :item_price, discs_attributes: [:id, :disc_name, :_destroy, songs_attributes: [:id, :song, :_destroy]])
+		params.require(:item).permit(:item_name, :item_type, :item_image, :item_price, :artist_id, :label_id, :genre_id, :item_release_date, :item_delete_flag, arrivals_attributes: [:arrival_number, :arrival_date],  discs_attributes: [:id, :disc_name, :_destroy, songs_attributes: [:id, :song, :_destroy]])
 	end
+	def artist_params
+		params.require(:artist).permit(:artist_name)
+	end
+
+	def label_params
+		params.require(:label).permit(:label_name)
+	end
+	def genre_params
+		params.require(:genre).permit(:genre_name)
+	end
+
+
+
+	# def item_params
+	# 	params.require(:item).permit(:item_name, :item_type, :item_image, :item_price)
+	# end
+	# private
+	# def item_params
+	# 	params.require(:item).permit(:, :body)
+	# end
+
 end
