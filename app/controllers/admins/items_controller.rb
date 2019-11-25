@@ -6,15 +6,31 @@ class Admins::ItemsController < ApplicationController
 	def index
 		@items = Item.all
 		@sums = []
+		@orderednumber = []
 		@items.each do |item|
 			@arrival_sums = Arrival.where(item_id: item.id).sum(:arrival_number)
 			@order_items_sums = OrderItem.where(item_id: item.id).sum(:order_number)
 			@sums << (@arrival_sums - @order_items_sums)
-			@Number_of_sales.group(:item_id).sum(:order_number)
-
-			@orderednumber = OrderItem.group(:item_id).sum(:order_number)
-			# binding.pry
+			@orderednumber << (item.order_items.where(created_at: 1.week.ago.beginning_of_day..Time.zone.now.end_of_day).sum(:order_number))
 		end
+	end
+
+	def search
+		if params[:search_flag] == "1"
+			@artists = Artist.where("artist_name LIKE ?", "%#{params[:search_word]}%")
+			# binding.pry
+			@items = [] 								#配列の箱作成
+			@artists.each do |a|				#検索したアーティストを繰り返す
+				a.items.where(item_delete_flag: 0).each do |i|
+					@items << i
+				end
+			end
+		elsif params[:search_flag] == "2"
+			@items = Item.where("item_name LIKE ?", "%#{params[:search_word]}%")
+			@items = @items.reverse.uniq
+			@items = Kaminari.paginate_array(@items).page(params[:page]).per(3)
+		end
+		render :index
 	end
 	def show
 		@item = Item.find(params[:id])

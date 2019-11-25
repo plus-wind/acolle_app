@@ -1,31 +1,58 @@
 <div class="container">
-	<div class="row">
+  <div class="row">
     <div class="col-md-4">
-      <%= link_to '商品追加画面へ', new_admins_item_path, class: "btn btn-warning btn-lg active" %>
-
+      <%= link_to '商品追加画面へ', new_admins_item_path, class: "btn btn-warning btn-lg active" %><br>
+      <input type="search" class="light-table-filter" data-table="item-table" placeholder="検索">
     </div>
-    <div class="col-md-8">
-
-    </div>
-    <%= @items.each_with_index do |item, i|%>
-    <table class="table table-bordered table-hover">
-      <tr>
-        <th>商品id</th>
-        <th>ジャケット名</th>
-        <th>アーティスト名</th>
-        <th>在庫数</th>
-        <th>閲覧数</th>
-        <th>週間売り上げ枚数</th>
-      </tr>
-      <tr>
-        <td><%= item.id %></td>
-        <td><%= item.item_name %></td>
-        <td><%= item.artist.artist_name %></td>
-        <td><%= @sums[i] %></td>
-        <td><%= item.impressions_count %></td>
-        <td><%= @Number_of_sales.group%></td>
-      </tr>
-    </table>
-    <% end %>
   </div>
 </div>
+
+<table class="table table-bordered table-hover item-table">
+  <tr>
+    <th>商品id</th>
+    <th>ジャケット名</th>
+    <th>アーティスト名</th>
+    <th>在庫数</th>
+    <th>閲覧数</th>
+    <th>週間売り上げ枚数</th>
+  </tr>
+  <% @items.each_with_index do |item, i|%>
+  <tr>
+    <td><%= item.id %></td>
+    <td><%= item.item_name %></td>
+    <td class="artist_name" data-artist="<%= item.artist.artist_name %>"><%= item.artist.artist_name %></td>
+    <td><%= @sums[i] %></td>
+    <td><%= item.impressions_count %></td>
+    <td><%= @orderednumber[i] %></td>
+  </tr>
+  <% end %>
+</table>
+
+<script>
+  $(function () {
+    // ここに処理内容を記述します。
+    $('.light-table-filter').on('keyup', function () {
+      $('.artist_name').each(function () {
+        if ($(this).data('artist').indexOf($('.light-table-filter').val()) > -1) {
+          $(this).parent().show();
+        } else {
+          $(this).parent().hide();
+        }
+        if ($('.light-table-filter').val() === "") {
+          $(this).parent().show();
+        }
+      });
+    })
+  });
+
+
+</script>
+
+<ul></ul>
+  <li>1</li>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>1</li>
+  <li>1</li>
+</ul>

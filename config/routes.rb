@@ -60,6 +60,7 @@ namespace :admins do
   end
   patch '/status/:id', to: 'items#status', as: "status"
   patch '/items/:id', to: 'items#change'
+  get  '/search/items', to: 'items#search'
 #admins/arrivals controller
   resources :arrivals, only:[:index, :edit, :update, :destroy]
   get '/search/arrivals',  to: 'arrivals#search'
