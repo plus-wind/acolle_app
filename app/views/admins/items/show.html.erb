@@ -10,7 +10,7 @@
 				<p>ジャンル: <%= @item.genre.genre_name %></p>
 				<p>発売日: <%= @item.item_release_date.strftime('%y/%m/%d') %></p>
 				<p>価格(税別): <%= @item.item_price %>円</p>
-				<%= button_to "編集する", edit_admins_item_path, :style=>"background-color:yellow;" %>
+				<%= link_to "編集する", edit_admins_item_path(@item.id), :style=>"background-color:yellow;" %>
 			</div>
 			<div class="item-container-right">
 				<p>商品名: <%= @item.item_name %></p>
@@ -40,10 +40,118 @@
 			<%= form_for(@arrival, url: admins_item_arrivals_path(@item)) do |f| %>
 			<p>在庫数：<%= @arrivals_sum - @order_items_sum %></p>
 			<p>追加数：<%= f.text_field :arrival_number, :style=>"width: 50px;" %>枚</p>
-			<p>入荷日時：<%= f.text_field :arrival_date, :style=>"width: 100px;" %>(yyyy-mm-dd)</p>
+			<p>入荷日：<%= f.text_field :arrival_date, :style=>"width: 100px;" %>(yyyy-mm-dd)</p>
 			<%= f.hidden_field :item_id, value:@item.id %>
 			<%= f.submit "入荷登録する", class:"btn btn-default", :style=>"background-color:yellow;" %>
 			<% end %>
 		</div>
 	</div>
+
+	<div class="row2">
+		<div class="col-md-12">
+		    <div class="wrap">
+				<ul id="tab-menu">
+					<li><a href="#tab1" class="active">入荷履歴</a></li>
+					<li><a href="#tab2" class="">受注履歴</a></li>
+					<li><a href="#tab3" class="">レビュー一覧</a></li>
+				</ul>
+
+		      	<div id="tab-contents" class="clearfix">
+		        <div id="tab1" class="tab">
+		          	<div class="containers">
+						<table style="margin: 40px 50px 0 50px;">
+							<tr style="background-color: #AFCDE4; ">
+								<th>入荷ID</th>
+			                	<th>入荷日</th>
+			                	<th>枚数</th>
+			                	<th></th>
+			                	<th></th>
+					    	</tr>
+					    	<% @arrivals.each do |a| %>
+							<tr style="border-bottom-style: ridge; border-color: #AFCDE4;">
+			                	<th style="width: 200px;"><%= a.id %></th>
+			                	<th style="width: 300px;"><%= a.arrival_date %></th>
+			                	<th style="width: 200px;"><%= a.arrival_number %></th>
+			                	<th style="width: 50px; background-color: yellow; text-align: center;"><%= link_to "編集", edit_admins_arrival_path(a.id) %></th>
+			                	<th style="width: 50px; background-color: red; text-align: center;"><%= link_to "削除", admins_arrival_path(a.id), method: :delete %></th>
+					    	</tr>
+					    	<% end %>
+					    </table>
+					    <div class="pagenate"><%= paginate @arrivals %></div>
+		      	  	</div>
+		        </div>
+
+		        <div id="tab2" class="tab">
+		          	<div class="containers">
+						<table style="margin: 40px 50px 0 50px;">
+							<tr style="background-color: #D7D088; ">
+								<th>受注ID</th>
+			                	<th>受注日</th>
+			                	<th>枚数</th>
+			                	<th>受注ステータス</th>
+					    	</tr>
+					    	<% @order_items.each do |o| %>
+							<tr style="border-bottom-style: ridge; border-color: #D7D088;">
+			                	<th style="width: 200px;"><%= o.id %></th>
+			                	<th style="width: 300px;"><%= o.created_at.strftime('%Y-%m-%d') %></th>
+			                	<th style="width: 150px;"><%= o.order_number %></th>
+			                	<% if o.order.order_status_before_type_cast == 0 %>
+			                	<th style="width: 150px; background-color: red; text-align: center;"><%= o.order.order_status_i18n %></th>
+			                	<% elsif o.order.order_status_before_type_cast == 1 %>
+			                	<th style="width: 150px; background-color: yellow; text-align: center;"><%= o.order.order_status_i18n %></th>
+			                	<% else %>
+			                	<th style="width: 150px; text-align: center;"><%= o.order.order_status_i18n %></th>
+			                	<% end %>
+					    	</tr>
+					    	<% end %>
+					    </table>
+					    <div class="pagenate"><%= paginate @order_items %></div>
+		      	  	</div>
+		        </div>
+
+		        <div id="tab3" class="tab">
+		          	<div class="containers">
+						<table style="margin: 40px 50px 0 50px;">
+							<tr style="background-color: #CFDF9F; ">
+								<th>レビューID</th>
+			                	<th>レビュー日</th>
+			                	<th>ユーザ名</th>
+			                	<th>満足度</th>
+					    	</tr>
+					    	<% @reviews.each do |r| %>
+							<tr style="border-bottom-style: ridge; border-color: #CFDF9F;">
+			                	<th style="width: 200px;"><%= link_to "#{r.id}", admins_review_path(r.id) %></th>
+			                	<th style="width: 250px;"><%= r.created_at.strftime('%Y-%m-%d') %></th>
+			                	<th style="width: 300px;"><%= link_to "#{(r.user.name_family_kanji + r.user.name_first_kanji)}", admins_user_path(r.user.id) %></th>
+			                	<th id="star-rate-<%= r.id %>"></th>
+						          <script>
+						          $('#star-rate-<%= r.id %>').raty({
+						            size: 36,
+						            starOff:  '<%= ('star-off.png') %>',
+						            starOn : '<%= ('star-on.png') %>',
+						            starHalf: '<%= ('star-half.png') %>',
+						            half: true,
+						            readOnly: true,
+						            score: <%= r.satisfaction %>,
+						          });
+						          </script>
+							</tr>
+					    	<% end %>
+					    </table>
+						<div class="pagenate"><%= paginate @reviews %></div>
+		      	  	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<script>
+		$('#tab-contents .tab[id != "tab1"]').hide();
+		$('#tab-menu a').on('click', function() {
+		  $("#tab-contents .tab").hide();
+		  $("#tab-menu .active").removeClass("active");
+		  $(this).addClass("active");
+		  $($(this).attr("href")).show();
+		  return false;
+		});
+	</script>
 </div>

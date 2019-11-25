@@ -1,29 +1,130 @@
 <div class="container">
-	<div class="row">
+  <div class="row">
     <div class="col-md-4">
-      <%= link_to '商品追加画面へ', new_admins_item_path, class: "btn btn-warning btn-lg active" %>
-
+      <%= link_to '商品追加画面へ', new_admins_item_path, class: "btn btn-warning btn-lg active" %><br>
+      <form>
+        <select name="select">
+          <option id="artist" >歌手名</option>
+          <option id="item">曲名</option>
+        </select>
+        <input type="search" class="light-table-filter" data-table="item-table" placeholder="検索">
+      </form>
     </div>
-    <div class="col-md-8">
-
-    </div>
-    <%= @items.each_with_index do |item, i|%>
-    <table class="table table-bordered table-hover">
-      <tr>
-        <th>商品id</th>
-        <th>ジャケット名</th>
-        <th>アーティスト名</th>
-        <th>在庫数</th>
-        <th>閲覧数</th>
-        <th>週間売り上げ枚数</th>
-      </tr>
-      <tr>
-        <th><%= item.id %></th>
-        <th><%= item.item_name %></th>
-        <th><%= item.artist.artist_name %></th>
-        <th><%= @sums[i] %>
-      </tr>
-    </table>
-    <% end %>
   </div>
 </div>
+
+<table class="table table-bordered table-hover item-table">
+  <thead>
+  <tr>
+    <th>商品id</th>
+    <th>ジャケット名</th>
+    <th>アーティスト名</th>
+    <th class="dothesort" data-type="integer">在庫数<span></span>
+      <!-- 昇順・降順 -->
+      <!-- <%= button_to "▲", admins_sort_items_path, {method: :get, params: {sotrt_type: '1', sort_flag: '1'}} %><%= button_to "▼", admins_sort_items_path, {method: :get, params: {sort_type: '1', sort_flag: '2'}} %> -->
+    </th>
+    <th>閲覧数
+      <!-- 昇順・降順 -->
+      <!-- <%= button_to "▲", admins_sort_items_path, {method: :get, params: {sotrt_type: '2', sort_flag: '1'}} %><%= button_to "▼", admins_sort_items_path, {method: :get, params: {sort_type: '2', sort_flag: '2'}} %> -->
+      </th>
+    <th>週間売り上げ枚数
+      <!-- 昇順・降順 -->
+      <!-- <%= button_to "▲", admins_sort_items_path, {method: :get, params: {sotrt_type: '3', sort_flag: '1'}} %><%= button_to "▼", admins_sort_items_path, {method: :get, params: {sort_type: '3', sort_flag: '2'}} %> -->
+    </th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @items.each_with_index do |item, i|%>
+  <tr>
+    <td><%= item.id %></td>
+    <td class="item_name" data-item="<%= item.item_name %>"><%= item.item_name %></td>
+    <td class="artist_name" data-artist="<%= item.artist.artist_name %>"><%= item.artist.artist_name %></td>
+    <td><%= @sums[i] %></td>
+    <td><%= item.impressions_count %></td>
+    <td><%= @orderednumber[i] %></td>
+    <td><%= link_to "選択", admins_item_path(item.id) %></td>
+    <div id="samplRemote"></div>
+  </tr>
+  <% end %>
+</tbody>
+</table>
+
+<script src=“http://code.jquery.com/jquery-1.10.2.min.js”></script>
+
+<script>
+  $(function () {
+    // ここに処理内容を記述します。
+      $('.light-table-filter').on('keyup', function () {
+      // <option>要素のIDが'artist'だったら
+      var id = $('option:selected').attr('id');
+      if(id == "artist"){
+        $('.artist_name').each(function () {
+          if ($(this).data('artist').indexOf($('.light-table-filter').val()) > -1) {
+            $(this).parent().show();
+          } else {
+            $(this).parent().hide();
+          }
+          if ($('.light-table-filter').val() === "") {
+            $(this).parent().show();
+          }
+        });
+      // <option>要素のIDが'item'だったら
+    } else if(id == "item"){
+        $('.item_name').each(function () {
+          if ($(this).data('item').indexOf($('.light-table-filter').val()) > -1) {
+            $(this).parent().show();
+          } else {
+            $(this).parent().hide();
+          }
+          if ($('.light-table-filter').val() === "") {
+            $(this).parent().show();
+          }
+        });
+      };
+    });
+  });
+
+//   $(function(){
+//     //並び替え順を設定
+//     var sortOrder = 1; //1:昇順, -1:降順
+//     //列をクリックしたら
+//     $('.dothesort').click(function(){
+//       var type = $(this).data('type');
+//       var col = $(this).index(); //0, 1 ...
+
+//       //行全体を取得
+//       var $rows = $('tbody>tr');
+
+//       //行を並び替え（点数で）
+//       $rows.sort(function(a,b){
+//       return compare(a, b, type)*sortOrder;
+
+//       var arrow.empty.append($rows);
+
+//       var arrow = sortOrder === 1 ? "▲":"▼";
+//       $('.dothesort > span').text('');
+//       $(this).find('span').text(arrow)
+//       //並び替え順を反転
+//       sortOrder *= -1;
+//       });
+//       function  compare(a, b, type, col){
+//         var  _a = $(a).find('td').eq(col).text() *1;
+//         var  _b = $(b).find('td').eq(col).text() *1;
+
+//         if(type == "string"){
+//           if(_a < _b)
+//           return -1;
+//         }
+//         if(_a > _b){
+//               return 1;
+//         }
+//         return 0;
+//         } else {
+//         _a *= 1;
+//         _b *= 1;
+//         return _a - _b
+//       }
+//     });
+//   });
+// </script>

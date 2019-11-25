@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
 
 	#before_action :configure_permitted_parameters, if: :devise_controller?
 
+
 	def search
 		@temp = 1
 		@hash_sales_ranking = OrderItem.rank_sales_items

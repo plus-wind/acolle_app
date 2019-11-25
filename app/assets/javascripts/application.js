@@ -16,8 +16,10 @@
 //= require activestorage
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require_tree .
 //= require cocoon
+//= require_tree .
+
+
 
 $('#tab-contents .tab[id != "tab1"]').hide();
 	$('#tab-menu a').on('click', function() {

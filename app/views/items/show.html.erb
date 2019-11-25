@@ -1,5 +1,3 @@
-<strong>テスト 閲覧数:</strong><%= @item.impressions_count %>
-
 <% if @item.item_delete_flag_before_type_cast == 0 %>
 
 <div class="container">
@@ -109,6 +107,7 @@
 			</div>
     	</div>
     </div>
+    <p style="margin: 0 auto; width: 200px;"> <%= link_to "商品一覧へ戻る", root_path %> </p>
 </div>
 	<!-- タブ用javascript -->
 		<script>
@@ -136,5 +135,6 @@
 			};
 		</script>
 <% else %>
-<P>　現在、ご覧いただいている商品は販売停止中です。 </P>
+<P> 現在、ご覧いただいている商品は販売停止中です。 </P>
+<P> <%= link_to "商品一覧へ戻る", root_path %> </P>
 <% end %>

@@ -49,6 +49,9 @@ Label.create!(
     },
     {
         label_name: "カニーミュージック",
+    },
+    {
+        label_name: "トニーミュージック",
     }
   ]
 )
@@ -108,6 +111,12 @@ Genre.create!(
     },
     {
       genre_name: '邦楽',
+    },
+    {
+      genre_name: '90年代',
+    },
+    {
+      genre_name: '80年代',
     }
   ]
 )
@@ -120,6 +129,12 @@ Artist.create!(
     },
     {
         artist_name: "歌手2",
+    },
+    {
+        artist_name: "宇多田ヒカル",
+    },
+    {
+        artist_name: "Aiko",
     }
   ]
 )
@@ -179,6 +194,7 @@ Item.create!(
       item_image_id: '',
       item_price: '5555',
       item_release_date: '2019/02/02',
+      item_delete_flag: 0,
       impressions_count: '0',
     }
   ]
@@ -255,7 +271,7 @@ Order.create!(
       delivery_address_city: "テスト市",
       delivery_address_number: "テスト3-3-3",
       delivery_address_building: "テストビル",
-      order_status: "0",
+      order_status: 0,
       total_fee: "2500",
       postage: "500",
     },
@@ -270,7 +286,7 @@ Order.create!(
       delivery_address_city: "DMM市",
       delivery_address_number: "DMM3-3-3",
       delivery_address_building: "DMM",
-      order_status: "0",
+      order_status: 0,
       total_fee: "1500",
       postage: "500",
     }
@@ -284,7 +300,7 @@ OrderItem.create!(
       item_id: "1",
       order_price: "2000",
       order_number: "10",
-    },
+},
     {
       order_id: "2",
       item_id: "2",
@@ -296,6 +312,7 @@ OrderItem.create!(
       item_id: "3",
       order_price: "3000",
       order_number: "3",
+      created_at: "2019-11-14 02:13:55",
     },
     {
       order_id: "2",
