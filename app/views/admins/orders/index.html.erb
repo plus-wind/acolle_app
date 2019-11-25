@@ -1,48 +1,122 @@
 <%= stylesheet_link_tag "admins/orders", :media => "all" %>
-<h1>受注履歴</h1>
-	<table class="table" id="table_detail" align=center cellpadding=10 >
-		<tr class="active">
-	    	<th>受注ID</th>
-	    	<th>受注日</th>
-	    	<th>商品名</th>
-	    	<th>数量</th>
-	    	<th>受注ステータス</th>
-		</tr>
-		<% @orders.each do |order| %>
-		<tr>
-	    	<th><%= order.id %></th>
-	     	<th><%= order.created_at.strftime('%Y/%m/%d') %></th>
-	    		<th>
-	    			<% order.order_items.each do |oi| %>
-	    		      <!-- 1対多 -->
-	    				<%= oi.item.item_name %></br>
-	    			<% end %>
-	    		</th>
-	    		<th>
-	    			<% order.order_items.each do |oi| %>
-	    				<%= oi.order_number %></br>
-	    			<% end %>
-	    		</th>
-	    	<% if order.order_status == 0 %>
-	    		<th class="bg-danger">受付</th>
-	    	<% elsif order.order_status == 1 %>
-	    		<th class="bg-warning">準備中</th>
-	    	<% else %>
-	    		<th class="bg-success">発送済</th>
-	    	<% end %>
-		</tr>
-		<th>
-			<%= "送付先氏名　" + order.delivery_name_family_kanji + order.delivery_name_first_kanji  %>
-			<span class="text-info"><%= "　　　　注文者　" + order.user.name_family_kanji + order.user.name_first_kanji %></span>
-			</br>
-			</br>
-			<%="送付先住所　" + "〒" + order.delivery_postal_code.insert(3, "-") %>
-			<%= "　" + order.delivery_address_prefecture %>
-			<%= order.delivery_address_city %>
-			<%= order.delivery_address_number %>
-			<%= order.delivery_address_building %>
-		</th>
+<div class="container" style="width:95%">
+	<h1>受注履歴</h1>
+	<!--検索フォーム-->
+	<div class="search-content">
+		<%= form_tag({controller: "orders", action: "search" }, {method: "post"}) do %>
+			<%= radio_button_tag :search_flag, 1, checked: true %>受注ID
+			<%= radio_button_tag :search_flag, 2 %>受注日(yyyy-mm-dd)
+			<%= radio_button_tag :search_flag, 3 %>商品名
+			<%= text_field_tag :search_word %>
+			<%= submit_tag "検索" %>
+		<% end %>
+	</div>
+	<!--絞り込み検索-->
+	<div class="refine_content" style="float:right;">
+		<%= form_tag({controller: "orders", action: "search" }, {method: "post"}) do %>
+		  <%= select_tag(:status, options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]])) %>
+		  <%= submit_tag "絞り込み" %>
+		<% end %>
+	</div>
+	<!--一覧テーブル-->
+		<table class="table table-bordered table-hover">
+			<tr class="active">
+		    	<th style="width: 15%;">受注ID
+		    		<%= button_to "受注ID▼", admins_sort_orders_path, {method: :get, params: {sort_type: '1'}} %>
+		    	</th>
+		    	<th style="width: 15%;">受注日
+		    		<%= button_to "入荷日▼", admins_sort_orders_path, {method: :get, params: {sort_type: '2'}} %>
+		    	</th>
+		    	<th>商品名</th>
+		    	<th style="width: 15%;">数量</th>
+		    	<th style="width: 15%;">受注ステータス</th>
+			</tr>
 
+			<% @orders.each.with_index do |order, i| %>
+			<tr class= "orders<%= i %>">
+		    	<td>
+		    		<%= order.id %>
+		    	</td>
+		     	<td>
+		     		<%= order.created_at.strftime('%Y/%m/%d') %></th>
+		    	<td>
+		    		<% order.order_items.each.with_index(1) do |oi, i| %>
+		    		      <!-- 1対多 -->
+		    			<div style="border-bottom: dotted;">
+		    				<span class='badge'>
+		    					<%= i %>
+		    				</span>
+		    				<%= oi.item.item_name %>
+		    				</br>
+		    			</div>
+		    		<% end %>
+		    	</td>
+		    	<td>
+		    		<% order.order_items.each do |oi| %>
+		    			<div style="border-bottom: dotted;">
+		    				<%= oi.order_number %>
+		    				</br>
+		    			</div>
+		    		<% end %>
+		    	</td>
+		    	<% if order.order_status == 0 %>
+		    		<td class="bg-danger">受付</td>
+		    	<% elsif order.order_status == 1 %>
+		    		<td class="bg-warning">準備中</td>
+		    	<% else %>
+		    		<td class="bg-success">発送済</td>
+		    	<% end %>
+			</tr>
+			<!-- 以下プルダウン表示-->
+			<td colspan="3" class="bg-info orders_show<%= i %>">
+				<span>
+					<%= "送付先氏名　" + order.delivery_name_family_kanji + order.delivery_name_first_kanji  %>
+					<span class="text-info">
+						<%= "　　　　注文者　" + order.user.name_family_kanji + order.user.name_first_kanji %>
+					</span>
+					</br>
+					</br>
+					<%="送付先住所　" + "〒" + order.delivery_postal_code.insert(3, "-") %>
+					<%= "　" + order.delivery_address_prefecture %>
+					<%= order.delivery_address_city %>
+					<%= order.delivery_address_number %>
+					<%= order.delivery_address_building %>
+				</span>
+				<div>
+					<i style="color:red;">小計：</i><%= (order.total_fee * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</br>
+					<i style="color:red;">送料：</i><%= order.postage %>円(税込)</br>
+					<i style="color:red;">合計：</i><%= (order.total_fee * 1.1).round(0) + order.postage %>円(税込)
+				</div>
+			</td>
+			<td colspan="2" class="bg-info orders_show<%= i %>">
+				<div>
+					商品金額
+				</div>
+	    		<% order.order_items.each.with_index(1) do |oi, i| %>
+	    			<div style="border-bottom: dotted;">
+	    				<span class='badge'><%= i %>
+	    				</span>
+	    				<span><%= (oi.item.item_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円
+	    				</span>
+	    				<span>×<%= oi.order_number %>枚
+	    				</span>
+	    				<span>
+	    					<%= ((oi.item.item_price * 1.1).round(0) * oi.order_number).to_s(:delimited, delimiter: ',') %>円
+	    				</span>
+	    				</br>
+	    			</div>
+	    		<% end %>
+			</td>
+			<script>
+				$(".orders_show<%= i %>").hide();
+			    $(".orders<%= i %>").click(function(){
+			        $(".orders_show<%= i %>").toggle(200);
+			    })
+			</script>
+		  	<% end %>
+		</table>
 
-	  	<% end %>
-	</table>
+	<div class="pagenate" style="margin: 0 auto;">
+		<%= paginate @orders %>
+	</div>
+</div>
