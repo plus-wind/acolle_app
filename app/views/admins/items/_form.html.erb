@@ -1,43 +1,41 @@
 <%= form_for(@item, url: admins_items_path) do |f| %>
     <div class="form_for_field">
         <p>シングル名/アルバム名：<%= f.text_field :item_name, :style=>"width: 400px;" %></p>
-        <p>CDタイプ：<%= f.select :item_type, [["シングル", "シングル"], ["アルバム", "アルバム"],  ["EP", "EP"]], :style=>"width: 200px;" %></p>
-        <p>アーティスト名：<%= f.text_field :artist_id, :style=>"width: 200px;", type:"search", autocomplete:"on", list:"keywords1" %></p>
+        <p> CDタイプ：<%= f.select :item_type, [["シングル", "シングル"], ["アルバム", "アルバム"],  ["EP", "EP"]], :style=>"width: 200px;" %>　アーティスト名：<%= f.text_field :artist_id, :style=>"width: 200px;", type:"search", autocomplete:"on", list:"keywords1" %></p>
+        <p> レーベル名：<%= f.text_field :label_id, :style=>"width: 200px;", type:"search", autocomplete:"on", list:"keywords2" %> ジャンル名：<%= f.text_field :genre_id, :style=>"width: 200px;", type:"search", autocomplete:"on", list:"keywords3" %></p>
         <datalist id="keywords1">
           <%= @artists.all.each do |artist| %>
             <option value="<%= artist.artist_name %>"></option>
           <% end %>
         </datalist>
-        <p>レーベル名：<%= f.text_field :label_id, :style=>"width: 200px;", type:"search", autocomplete:"on", list:"keywords2" %></p>
         <datalist id="keywords2">
           <%= @labels.all.each do |label| %>
             <option value="<%= label.label_name %>"></option>
           <% end %>
         </datalist>
-        <p>ジャンル名：<%= f.text_field :genre_id, :style=>"width: 200px;", type:"search", autocomplete:"on", list:"keywords3" %></p>
         <datalist id="keywords3">
           <%= @genres.all.each do |genre| %>
             <option value="<%= genre.genre_name %>"></option>
           <% end %>
         </datalist>
-        <p>価格(税別)：<%= f.text_field :item_price, :style=>"width: 100px;" %>円</p>
-        <p>発売日：<%= f.text_field :item_release_date, :style=>"width: 100px;" %></p>
+        <p>価格(税別)：<%= f.text_field :item_price, :style=>"width: 100px;" %>円　発売日：<%= f.text_field :item_release_date, :style=>"width: 100px;" %>　販売ステータス：<%= f.select :item_delete_flag, [["販売中", "sales"], ["停止中", "stop"]] %></p>
         <p>ジャケット画像：<%= f.attachment_field :item_image %></p>
-        <p>販売ステータス：<%= f.select :item_delete_flag, [["販売中", "sales"], ["停止中", "stop"]] %></p>
         <%= f.fields_for :arrivals do |a| %>
-          <p>入荷数追加：<%= a.text_field :arrival_number, :style=>"width: 50px;" %>枚</p>
-          <p>入荷日：<%= a.text_field :arrival_date, :style=>"width: 100px;" %></p>
+          <p>入荷数追加：<%= a.text_field :arrival_number, :style=>"width: 50px;" %>枚 入荷日：<%= a.text_field :arrival_date, :style=>"width: 100px;" %></p>
         <% end %>
     </div>
-    <h3>ディスクフィールド</h3>
-    <div id="discs">
-        <%= f.fields_for :discs do |disc| %>
-          <%= render 'disc_fields', f: disc %>
-        <% end %>
-        <div id="links">
-            <%= link_to_add_association 'add disc',f, :discs %>
+    <div class="clearfix">
+        <h3>ディスク＆曲目</h3>
+        <div id="discs">
+            <%= f.fields_for :discs do |disc| %>
+              <%= render 'disc_fields', f: disc %>
+            <% end %>
         </div>
-        <%= f.submit '商品新規追加する', class: "btn btn-default", :style=>"width: 200px; margin-top: 5px; background-color:red;" %>
+        <div id="links">
+           <%= link_to_add_association '追加',f, :discs %>
+        </div>
+    </div>
+    <div style="float: right; margin-left: 100px; width: 200px;"><%= f.submit '商品新規追加する', class: "btn btn-default", :style=>"background-color:red;" %>
     </div>
 <% end %>
 

@@ -1,7 +1,7 @@
-<div>
-  <div class="nested-fields">
-    <%= f.text_field :disc_name %><br>
-    <%= link_to_remove_association "remove disc", f %>
+<div class="nested-fields well well-compact" style="width:285px; float:left">
+  <div class="form-group">
+    <%= f.text_field :disc_name %>
+    <%= link_to_remove_association "ディスク削除", f %>
   </div>
 
   <div class="songs">
@@ -9,7 +9,7 @@
     <%= render 'song_fields', f: song %>
     <%end%>
     <div id="links">
-    <%= link_to_add_association "add song", f, :songs %>
+    <%= link_to_add_association "曲追加", f, :songs %>
     </div>
   </div>
 </div>

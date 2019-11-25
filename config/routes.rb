@@ -58,6 +58,10 @@ namespace :admins do
   resources :items, only: [:index, :show, :edit, :update, :new, :create] do
       resources :arrivals, only:[:new, :create]
   end
+  post '/items/artist/new', to: 'items#artist_create'
+  post '/items/label/new', to: 'items#label_create'
+  post '/items/genre/new', to: 'items#genre_create'
+  get '/items/edit/search', to: 'items#edit_search'
   patch '/status/:id', to: 'items#status', as: "status"
   patch '/items/:id', to: 'items#change'
 #admins/arrivals controller
