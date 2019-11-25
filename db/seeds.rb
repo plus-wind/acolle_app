@@ -499,130 +499,127 @@ Arrival.create!(
     }
   ]
 )
-
-
-#orders_seed
-# Order.create!(
-#   [
-#     {
-#       user_id: "1",
-#       delivery_name_family_kanji: "橋下",
-#       delivery_name_first_kanji: "徹",
-#       delivery_name_family_furigana: "ハシモト",
-#       delivery_name_first_furigana: "トオル",
-#       delivery_postal_code: "0000000",
-#       delivery_address_prefecture: "北海道",
-#       delivery_address_city: "テスト市",
-#       delivery_address_number: "テスト3-3-3",
-#       delivery_address_building: "テストビル",
-#       order_status: 0,
-#       total_fee: "2500",
-#       postage: "500",
-#     },
-#     {
-#       user_id: "1",
-#       delivery_name_family_kanji: "高橋",
-#       delivery_name_first_kanji: "克実",
-#       delivery_name_family_furigana: "タカハシ",
-#       delivery_name_first_furigana: "カツミ",
-#       delivery_postal_code: "1234567",
-#       delivery_address_prefecture: "北海道",
-#       delivery_address_city: "DMM市",
-#       delivery_address_number: "DMM3-3-3",
-#       delivery_address_building: "DMM",
-#       order_status: 0,
-#       total_fee: "1500",
-#       postage: "500",
-#     },
-#     {
-#       user_id: "2",
-#       delivery_name_family_kanji: "小沢",
-#       delivery_name_first_kanji: "一郎",
-#       delivery_name_family_furigana: "オザワ",
-#       delivery_name_first_furigana: "イチロウ",
-#       delivery_postal_code: "1233443",
-#       delivery_address_prefecture: "東京都",
-#       delivery_address_city: "DMM市",
-#       delivery_address_number: "DMM3-3-3",
-#       delivery_address_building: "DMM",
-#       order_status: 0,
-#       total_fee: "1500",
-#       postage: "500",
-#     },
-#     {
-#       user_id: "3",
-#       delivery_name_family_kanji: "鳩山",
-#       delivery_name_first_kanji: "由紀夫",
-#       delivery_name_family_furigana: "ハトヤマ",
-#       delivery_name_first_furigana: "ユキオ",
-#       delivery_postal_code: "1234567",
-#       delivery_address_prefecture: "東京都",
-#       delivery_address_city: "DMM市",
-#       delivery_address_number: "DMM1-3-3",
-#       delivery_address_building: "DMM",
-#       order_status: 0,
-#       total_fee: "1500",
-#       postage: "500",
-#     },
-#     {
-#       user_id: "4",
-#       delivery_name_family_kanji: "野田",
-#       delivery_name_first_kanji: "佳彦",
-#       delivery_name_family_furigana: "ノダ",
-#       delivery_name_first_furigana: "ヨシヒコ",
-#       delivery_postal_code: "1234347",
-#       delivery_address_prefecture: "千葉県",
-#       delivery_address_city: "DMM市",
-#       delivery_address_number: "DMM3-3-4",
-#       delivery_address_building: "DMM",
-#       order_status: 0,
-#       total_fee: "11000",
-#       postage: "500",
-#     },
-#   ]
-# )
+Order.create!(
+  [
+    {
+      user_id: "1",
+      delivery_name_family_kanji: "橋下",
+      delivery_name_first_kanji: "徹",
+      delivery_name_family_furigana: "ハシモト",
+      delivery_name_first_furigana: "トオル",
+      delivery_postal_code: "0000000",
+      delivery_address_prefecture: "北海道",
+      delivery_address_city: "テスト市",
+      delivery_address_number: "テスト3-3-3",
+      delivery_address_building: "テストビル",
+      order_status: 0,
+      total_fee: "2500",
+      postage: "500",
+    },
+    {
+      user_id: "1",
+      delivery_name_family_kanji: "高橋",
+      delivery_name_first_kanji: "克実",
+      delivery_name_family_furigana: "タカハシ",
+      delivery_name_first_furigana: "カツミ",
+      delivery_postal_code: "1234567",
+      delivery_address_prefecture: "北海道",
+      delivery_address_city: "DMM市",
+      delivery_address_number: "DMM3-3-3",
+      delivery_address_building: "DMM",
+      order_status: 0,
+      total_fee: "1500",
+      postage: "500",
+    },
+    {
+      user_id: "2",
+      delivery_name_family_kanji: "小沢",
+      delivery_name_first_kanji: "一郎",
+      delivery_name_family_furigana: "オザワ",
+      delivery_name_first_furigana: "イチロウ",
+      delivery_postal_code: "1233443",
+      delivery_address_prefecture: "東京都",
+      delivery_address_city: "DMM市",
+      delivery_address_number: "DMM3-3-3",
+      delivery_address_building: "DMM",
+      order_status: 0,
+      total_fee: "1500",
+      postage: "500",
+    },
+    {
+      user_id: "3",
+      delivery_name_family_kanji: "鳩山",
+      delivery_name_first_kanji: "由紀夫",
+      delivery_name_family_furigana: "ハトヤマ",
+      delivery_name_first_furigana: "ユキオ",
+      delivery_postal_code: "1234567",
+      delivery_address_prefecture: "東京都",
+      delivery_address_city: "DMM市",
+      delivery_address_number: "DMM1-3-3",
+      delivery_address_building: "DMM",
+      order_status: 0,
+      total_fee: "1500",
+      postage: "500",
+    },
+    {
+      user_id: "4",
+      delivery_name_family_kanji: "野田",
+      delivery_name_first_kanji: "佳彦",
+      delivery_name_family_furigana: "ノダ",
+      delivery_name_first_furigana: "ヨシヒコ",
+      delivery_postal_code: "1234347",
+      delivery_address_prefecture: "千葉県",
+      delivery_address_city: "DMM市",
+      delivery_address_number: "DMM3-3-4",
+      delivery_address_building: "DMM",
+      order_status: 0,
+      total_fee: "11000",
+      postage: "500",
+    },
+  ]
+)
 #order_items_seed
-# OrderItem.create!(
-#   [
-#     {
-#       order_id: "1",
-#       item_id: "1",
-#       order_price: "2000",
-#       order_number: "10",
-# },
-#     {
-#       order_id: "2",
-#       item_id: "2",
-#       order_price: "3000",
-#       order_number: "1",
-#     },
-#     {
-#       order_id: "2",
-#       item_id: "3",
-#       order_price: "3000",
-#       order_number: "3",
-#       created_at: "2019-11-14 02:13:55",
-#     },
-#     {
-#       order_id: "3",
-#       item_id: "4",
-#       order_price: "3000",
-#       order_number: "2",
-#     },
-#     {
-#       order_id: "3",
-#       item_id: "9",
-#       order_price: "3000",
-#       order_number: "2",
-#     },
-#     {
-#       order_id: "4",
-#       item_id: "15",
-#       order_price: "3000",
-#       order_number: "2",
-#     },
-#   ]
-# )
+OrderItem.create!(
+  [
+    {
+      order_id: "1",
+      item_id: "1",
+      order_price: "2000",
+      order_number: "10",
+    },
+    {
+      order_id: "2",
+      item_id: "2",
+      order_price: "3000",
+      order_number: "1",
+    },
+    {
+      order_id: "2",
+      item_id: "3",
+      order_price: "3000",
+      order_number: "3",
+    },
+    {
+      order_id: "3",
+      item_id: "4",
+      order_price: "3000",
+      order_number: "2",
+    },
+    {
+      order_id: "3",
+      item_id: "9",
+      order_price: "3000",
+      order_number: "2",
+    },
+    {
+      order_id: "4",
+      item_id: "15",
+      order_price: "3000",
+      order_number: "2",
+    },
+  ]
+)
+>>>>>>> develop
 #reviews_seed
 Review.create!(
     [
@@ -661,7 +658,6 @@ Review.create!(
             review_content: "だめでした",
             satisfaction: "2",
         }
-        
     ]
 )
 #discs_seed
@@ -1426,7 +1422,6 @@ Song.create!(
     }
   ]
 )
-  
 
 
 

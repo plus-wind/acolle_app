@@ -95,12 +95,12 @@
 			                	<th style="width: 200px;"><%= o.id %></th>
 			                	<th style="width: 300px;"><%= o.created_at.strftime('%Y-%m-%d') %></th>
 			                	<th style="width: 150px;"><%= o.order_number %></th>
-			                	<% if o.order.order_status_before_type_cast == 0 %>
-			                	<th style="width: 150px; background-color: red; text-align: center;"><%= o.order.order_status_i18n %></th>
-			                	<% elsif o.order.order_status_before_type_cast == 1 %>
-			                	<th style="width: 150px; background-color: yellow; text-align: center;"><%= o.order.order_status_i18n %></th>
+			                	<% if o.order.order_status == 0 %>
+			                	<th style="width: 150px; background-color: red; text-align: center;">受付</th>
+			                	<% elsif o.order.order_status == 1 %>
+			                	<th style="width: 150px; background-color: yellow; text-align: center;">準備中</th>
 			                	<% else %>
-			                	<th style="width: 150px; text-align: center;"><%= o.order.order_status_i18n %></th>
+			                	<th style="width: 150px; text-align: center;">出荷済</th>
 			                	<% end %>
 					    	</tr>
 					    	<% end %>

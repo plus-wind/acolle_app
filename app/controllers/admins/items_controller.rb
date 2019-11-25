@@ -63,11 +63,11 @@ class Admins::ItemsController < ApplicationController
         @arrivals_sum =  Arrival.where(item_id: @item.id).sum(:arrival_number)
         @order_items_sum = OrderItem.where(item_id: @item.id).sum(:order_number)
         @arrivals = @item.arrivals.order('id desc')
-		@arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(1)
+		@arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(10)
         @order_items = @item.order_items.order('id desc')
-        @order_items = Kaminari.paginate_array(@order_items).page(params[:page]).per(1)
+        @order_items = Kaminari.paginate_array(@order_items).page(params[:page]).per(10)
         @reviews = @item.reviews.order('id desc')
-        @reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(1)
+        @reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(10)
 	end
 
 	def edit
