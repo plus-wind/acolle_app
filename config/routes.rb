@@ -54,6 +54,8 @@ namespace :admins do
 #admins/orders controller
   get '/orders', to: 'orders#index'
   patch '/orders/:id', to: 'orders#change'
+  post '/search',  to: 'orders#search'
+  get '/sort/orders',  to: 'orders#sort'
 #admins/items controller
   resources :items, only: [:index, :show, :edit, :update, :new, :create] do
       resources :arrivals, only:[:new, :create]
@@ -70,6 +72,8 @@ namespace :admins do
   patch '/genre/:id/update', to: 'items#genre_update', as: "genre_update"
   patch '/status/:id', to: 'items#status', as: "status"
   patch '/items/:id', to: 'items#change'
+  get  '/search/items', to: 'items#search'
+  get '/sort/items',  to: 'items#sort'
 #admins/arrivals controller
   resources :arrivals, only:[:index, :edit, :update, :destroy]
   get '/search/arrivals',  to: 'arrivals#search'

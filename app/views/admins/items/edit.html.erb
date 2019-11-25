@@ -8,32 +8,40 @@
         <%= i.text_field :item_name %>
         <%= i.number_field :item_price %>
         <%= i.text_field :item_release_date %>
-        <%= i.submit "変更"%>
         <%= i.select :item_type, [["シングル","シングル"],["アルバム","アルバム"],["EP","EP"]] %>
-            <%= fields_for @item.artist do |ia| %>
-                <%= ia.number_field :id %>
-                <%= ia.text_field :artist_name  %>
+        <%= fields_for @item.artist do |ia| %>
+            <%= ia.number_field :id %>
+            <%= ia.text_field :artist_name  %>
+        <% end %>
+        <%= fields_for @item.label do |il| %>
+            <%= il.number_field :id %>
+            <%= il.text_field :label_name  %>
+        <% end %>
+        <%= fields_for @item.genre do |ig| %>
+            <%= ig.number_field :id %>
+            <%= ig.text_field :genre_name %>
+        <% end %>
+        <% @item.discs.each do |id| %>
+            <%= i.fields_for id , index: id.id do |idf| %>
+                <%= idf.text_field :disc_name %>
+                <% id.songs.each do |is| %>
+                    <%= idf.fields_for is , index: is.id do |isf| %>
+                        <%= isf.text_field :song %>
+                    <% end %>
+                <% end %>
             <% end %>
-            <%= fields_for @item.label do |il| %>
-                <%= il.number_field :id %>
-                <%= @item.label.label_name %>
-            <% end %>
-            <%= fields_for @item.genre do |ig| %>
-                ジャンル名
-                <%= ig.number_field :id %>
-                <%= ig.text_field :genre_name  %>
-            <% end %>
-   
+        <% end %>
+                <%= i.submit "商品情報更新"%>
     <% end %>
 
-    <% @item.discs.each.with_index(1) do |d, n| %>
-        <%= form_for(d, url: admins_item_path ) do |df| %>
-            <%= df.text_field :disc_name %>
-                <%= df.fields_for :songs do |s| %>
-                    <%= "#{n}" %>
-                    <%= s.text_field :song %>
-                <% end %>
-            <%= df.submit "変更" %>
-        <% end %>
-    <% end %>
+<!--    <% @item.discs.each.with_index(1) do |d, n| %>
+            <%= form_for(d, url: admins_item_path ) do |df| %>
+                <%= df.text_field :disc_name %>
+                    <%= df.fields_for :songs do |s| %>
+                        <%= "#{n}" %>
+                        <%= s.text_field :song %>
+                    <% end %>
+                <%= df.submit "変更" %>
+            <% end %>
+        <% end %> -->
 </div>
