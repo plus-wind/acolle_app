@@ -22,7 +22,7 @@ class Admins::OrdersController < ApplicationController
      		end
      		@orders = Kaminari.paginate_array(@orders).page(params[:page]).per(20)
 		else
-			@orders = Order.where("order_status LIKE ?", "%#{params[:status]}%")
+			@orders = Order.where("order_status LIKE ?", "%#{params[:status]}%").order("id DESC")
 			@orders = Kaminari.paginate_array(@orders).page(params[:page]).per(20)
 		end
 		render :index
@@ -36,5 +36,17 @@ class Admins::OrdersController < ApplicationController
 	      @orders = Order.all.order('date(order_date) DESC').page(params[:page]).per(20)
 	      render :index
 	    end
+    end
+
+    def change
+		@orders = Order.where("order_status LIKE ?", "%#{params[:status]}%")
+		@orders.update(order_params)
+		redirect_to admins_orders_path
+    end
+
+    private
+
+    def order_params
+        params.require(:order).permit(:order_status)
     end
 end

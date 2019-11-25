@@ -20,7 +20,7 @@
 	</div>
 	<!--一覧テーブル-->
 		<table class="table table-bordered table-hover">
-			<tr class="active">
+			<tr class="active" style="pointer-events:none;">
 		    	<th style="width: 15%;">受注ID
 		    		<%= button_to "受注ID▼", admins_sort_orders_path, {method: :get, params: {sort_type: '1'}} %>
 		    	</th>
@@ -33,13 +33,13 @@
 			</tr>
 
 			<% @orders.each.with_index do |order, i| %>
-			<tr class= "orders<%= i %>">
-		    	<td>
+			<tr>
+		    	<td class= "orders<%= i %>">
 		    		<%= order.id %>
 		    	</td>
-		     	<td>
+		     	<td class= "orders<%= i %>">
 		     		<%= order.created_at.strftime('%Y/%m/%d') %></th>
-		    	<td>
+		    	<td class= "orders<%= i %>">
 		    		<% order.order_items.each.with_index(1) do |oi, i| %>
 		    		      <!-- 1対多 -->
 		    			<div style="border-bottom: dotted;">
@@ -51,7 +51,7 @@
 		    			</div>
 		    		<% end %>
 		    	</td>
-		    	<td>
+		    	<td class= "orders<%= i %>">
 		    		<% order.order_items.each do |oi| %>
 		    			<div style="border-bottom: dotted;">
 		    				<%= oi.order_number %>
@@ -59,15 +59,31 @@
 		    			</div>
 		    		<% end %>
 		    	</td>
+		    	<!--受付ステータス-->
 		    	<% if order.order_status == 0 %>
-		    		<td class="bg-danger">受付</td>
+		    		<td class="bg-danger">
+		    			<%= form_tag(admins_path(order.id), method: :patch) do %>
+			    			<%= select_tag(:status, options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]]), { :selected => "0"}) %>
+			    			<%= submit_tag "更新" %>
+					    <% end %>
+		    		</td>
 		    	<% elsif order.order_status == 1 %>
-		    		<td class="bg-warning">準備中</td>
+		    		<td class="bg-warning">
+		    			<%= form_tag(admins_path(order.id), method: :patch) do %>
+			    			<%= select_tag(:status, options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]]), { :selected => "1"}) %>
+			    			<%= submit_tag "更新" %>
+					    <% end %>
+		    		</td>
 		    	<% else %>
-		    		<td class="bg-success">発送済</td>
+		    		<td class="bg-success">
+		    			<%= form_tag(admins_path(order.id), method: :patch) do %>
+			    			<%= select_tag(:status, options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]]), { :selected => "2"}) %>
+			    			<%= submit_tag "更新" %>
+					    <% end %>
+		    		</td>
 		    	<% end %>
 			</tr>
-			<!-- 以下プルダウン表示-->
+			<!-- 以下アコーディオン表示-->
 			<td colspan="3" class="bg-info orders_show<%= i %>">
 				<span>
 					<%= "送付先氏名　" + order.delivery_name_family_kanji + order.delivery_name_first_kanji  %>
@@ -85,13 +101,13 @@
 				<div>
 					<i style="color:red;">小計：</i><%= (order.total_fee * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</br>
 					<i style="color:red;">送料：</i><%= order.postage %>円(税込)</br>
-					<i style="color:red;">合計：</i><%= (order.total_fee * 1.1).round(0) + order.postage %>円(税込)
+					<i style="color:red;">合計：</i><%= ((order.total_fee * 1.1).round(0) + order.postage).to_s(:delimited, delimiter: ',') %>円(税込)
 				</div>
 			</td>
 			<td colspan="2" class="bg-info orders_show<%= i %>">
-				<div>
+				<strong style="padding: 5px; background-color: #CCCCCC;">
 					商品金額
-				</div>
+				</strong>
 	    		<% order.order_items.each.with_index(1) do |oi, i| %>
 	    			<div style="border-bottom: dotted;">
 	    				<span class='badge'><%= i %>
@@ -110,13 +126,13 @@
 			<script>
 				$(".orders_show<%= i %>").hide();
 			    $(".orders<%= i %>").click(function(){
-			        $(".orders_show<%= i %>").toggle(200);
+			        $(".orders_show<%= i %>").slideToggle(100);
 			    })
 			</script>
 		  	<% end %>
 		</table>
 
-	<div class="pagenate" style="margin: 0 auto;">
+	<div class="pagenate">
 		<%= paginate @orders %>
 	</div>
 </div>
