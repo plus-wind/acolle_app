@@ -211,7 +211,7 @@ Item.create!(
       item_price: '1111',
       item_release_date: '1998/10/21',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '2',
@@ -223,7 +223,7 @@ Item.create!(
       item_price: '2222',
       item_release_date: '2001/03/28',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '2',
@@ -235,7 +235,7 @@ Item.create!(
       item_price: '3333',
       item_release_date: '2002/06/19',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '2',
@@ -247,7 +247,7 @@ Item.create!(
       item_price: '4444',
       item_release_date: '2006/06/14',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '2',
@@ -259,7 +259,7 @@ Item.create!(
       item_price: '5555',
       item_release_date: '2008/03/19',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '3',
@@ -271,7 +271,7 @@ Item.create!(
       item_price: '5555',
       item_release_date: '2019/07/10',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '3',
@@ -283,7 +283,7 @@ Item.create!(
       item_price: '2500',
       item_release_date: '2017/08/23',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '4',
@@ -295,7 +295,7 @@ Item.create!(
       item_price: '3204',
       item_release_date: '1997/09/03',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '4',
@@ -307,7 +307,7 @@ Item.create!(
       item_price: '1100',
       item_release_date: '2003/05/01',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '4',
@@ -319,7 +319,7 @@ Item.create!(
       item_price: '1324',
       item_release_date: '2017/08/23',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '4',
@@ -331,7 +331,7 @@ Item.create!(
       item_price: '2937',
       item_release_date: '2006/02/08',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '2',
@@ -343,7 +343,7 @@ Item.create!(
       item_price: '650',
       item_release_date: '2006/11/22',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '5',
@@ -355,7 +355,7 @@ Item.create!(
       item_price: '1100',
       item_release_date: '2000/07/12',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '5',
@@ -367,7 +367,7 @@ Item.create!(
       item_price: '1100',
       item_release_date: '2004/10/14',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '6',
@@ -379,7 +379,7 @@ Item.create!(
       item_price: '2420',
       item_release_date: '2017/12/27',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '6',
@@ -391,7 +391,7 @@ Item.create!(
       item_price: '2695',
       item_release_date: '2015/12/30',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '7',
@@ -403,7 +403,7 @@ Item.create!(
       item_price: '2222',
       item_release_date: '2018/11/30',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '7',
@@ -415,7 +415,7 @@ Item.create!(
       item_price: '2000',
       item_release_date: '2019/09/06',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '7',
@@ -427,7 +427,7 @@ Item.create!(
       item_price: '2100',
       item_release_date: '2017/02/08',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     },
     {
       artist_id: '2',
@@ -439,7 +439,7 @@ Item.create!(
       item_price: '1400',
       item_release_date: '2019/01/18',
       impressions_count: '0',
-      item_delete_flag: '0',
+      item_delete_flag: 0,
     }
   ]
 )
@@ -502,128 +502,127 @@ Arrival.create!(
 
 
 #orders_seed
-Order.create!(
-  [
-    {
-      user_id: "1",
-      delivery_name_family_kanji: "橋下",
-      delivery_name_first_kanji: "徹",
-      delivery_name_family_furigana: "ハシモト",
-      delivery_name_first_furigana: "トオル",
-      delivery_postal_code: "0000000",
-      delivery_address_prefecture: "北海道",
-      delivery_address_city: "テスト市",
-      delivery_address_number: "テスト3-3-3",
-      delivery_address_building: "テストビル",
-      order_status: 0,
-      total_fee: "2500",
-      postage: "500",
-    },
-    {
-      user_id: "1",
-      delivery_name_family_kanji: "高橋",
-      delivery_name_first_kanji: "克実",
-      delivery_name_family_furigana: "タカハシ",
-      delivery_name_first_furigana: "カツミ",
-      delivery_postal_code: "1234567",
-      delivery_address_prefecture: "北海道",
-      delivery_address_city: "DMM市",
-      delivery_address_number: "DMM3-3-3",
-      delivery_address_building: "DMM",
-      order_status: 0,
-      total_fee: "1500",
-      postage: "500",
-    },
-    {
-      user_id: "2",
-      delivery_name_family_kanji: "小沢",
-      delivery_name_first_kanji: "一郎",
-      delivery_name_family_furigana: "オザワ",
-      delivery_name_first_furigana: "イチロウ",
-      delivery_postal_code: "1233443",
-      delivery_address_prefecture: "東京都",
-      delivery_address_city: "DMM市",
-      delivery_address_number: "DMM3-3-3",
-      delivery_address_building: "DMM",
-      order_status: "0",
-      total_fee: "1500",
-      postage: "500",
-    },
-    {
-      user_id: "3",
-      delivery_name_family_kanji: "鳩山",
-      delivery_name_first_kanji: "由紀夫",
-      delivery_name_family_furigana: "ハトヤマ",
-      delivery_name_first_furigana: "ユキオ",
-      delivery_postal_code: "1234567",
-      delivery_address_prefecture: "東京都",
-      delivery_address_city: "DMM市",
-      delivery_address_number: "DMM1-3-3",
-      delivery_address_building: "DMM",
-      order_status: "0",
-      total_fee: "1500",
-      postage: "500",
-    },
-    {
-      user_id: "4",
-      delivery_name_family_kanji: "野田",
-      delivery_name_first_kanji: "佳彦",
-      delivery_name_family_furigana: "ノダ",
-      delivery_name_first_furigana: "ヨシヒコ",
-      delivery_postal_code: "1234347",
-      delivery_address_prefecture: "千葉県",
-      delivery_address_city: "DMM市",
-      delivery_address_number: "DMM3-3-4",
-      delivery_address_building: "DMM",
-      order_status: "0",
-      total_fee: "11000",
-      postage: "500",
-    },
-  ]
-)
+# Order.create!(
+#   [
+#     {
+#       user_id: "1",
+#       delivery_name_family_kanji: "橋下",
+#       delivery_name_first_kanji: "徹",
+#       delivery_name_family_furigana: "ハシモト",
+#       delivery_name_first_furigana: "トオル",
+#       delivery_postal_code: "0000000",
+#       delivery_address_prefecture: "北海道",
+#       delivery_address_city: "テスト市",
+#       delivery_address_number: "テスト3-3-3",
+#       delivery_address_building: "テストビル",
+#       order_status: 0,
+#       total_fee: "2500",
+#       postage: "500",
+#     },
+#     {
+#       user_id: "1",
+#       delivery_name_family_kanji: "高橋",
+#       delivery_name_first_kanji: "克実",
+#       delivery_name_family_furigana: "タカハシ",
+#       delivery_name_first_furigana: "カツミ",
+#       delivery_postal_code: "1234567",
+#       delivery_address_prefecture: "北海道",
+#       delivery_address_city: "DMM市",
+#       delivery_address_number: "DMM3-3-3",
+#       delivery_address_building: "DMM",
+#       order_status: 0,
+#       total_fee: "1500",
+#       postage: "500",
+#     },
+#     {
+#       user_id: "2",
+#       delivery_name_family_kanji: "小沢",
+#       delivery_name_first_kanji: "一郎",
+#       delivery_name_family_furigana: "オザワ",
+#       delivery_name_first_furigana: "イチロウ",
+#       delivery_postal_code: "1233443",
+#       delivery_address_prefecture: "東京都",
+#       delivery_address_city: "DMM市",
+#       delivery_address_number: "DMM3-3-3",
+#       delivery_address_building: "DMM",
+#       order_status: 0,
+#       total_fee: "1500",
+#       postage: "500",
+#     },
+#     {
+#       user_id: "3",
+#       delivery_name_family_kanji: "鳩山",
+#       delivery_name_first_kanji: "由紀夫",
+#       delivery_name_family_furigana: "ハトヤマ",
+#       delivery_name_first_furigana: "ユキオ",
+#       delivery_postal_code: "1234567",
+#       delivery_address_prefecture: "東京都",
+#       delivery_address_city: "DMM市",
+#       delivery_address_number: "DMM1-3-3",
+#       delivery_address_building: "DMM",
+#       order_status: 0,
+#       total_fee: "1500",
+#       postage: "500",
+#     },
+#     {
+#       user_id: "4",
+#       delivery_name_family_kanji: "野田",
+#       delivery_name_first_kanji: "佳彦",
+#       delivery_name_family_furigana: "ノダ",
+#       delivery_name_first_furigana: "ヨシヒコ",
+#       delivery_postal_code: "1234347",
+#       delivery_address_prefecture: "千葉県",
+#       delivery_address_city: "DMM市",
+#       delivery_address_number: "DMM3-3-4",
+#       delivery_address_building: "DMM",
+#       order_status: 0,
+#       total_fee: "11000",
+#       postage: "500",
+#     },
+#   ]
+# )
 #order_items_seed
-OrderItem.create!(
-  [
-    {
-      order_id: "1",
-      item_id: "1",
-      order_price: "2000",
-      order_number: "10",
-},
-    {
-      order_id: "2",
-      item_id: "2",
-      order_price: "3000",
-      order_number: "1",
-    },
-    {
-      order_id: "2",
-      item_id: "3",
-      order_price: "3000",
-      order_number: "3",
-      created_at: "2019-11-14 02:13:55",
-    },
-    {
-      order_id: "3",
-      item_id: "4",
-      order_price: "3000",
-      order_number: "2",
-    },
-    {
-      order_id: "3",
-      item_id: "9",
-      order_price: "3000",
-      order_number: "2",
-    },
-    {
-      order_id: "4",
-      item_id: "15",
-      order_price: "3000",
-      order_number: "2",
-    },
-    
-  ]
-)
+# OrderItem.create!(
+#   [
+#     {
+#       order_id: "1",
+#       item_id: "1",
+#       order_price: "2000",
+#       order_number: "10",
+# },
+#     {
+#       order_id: "2",
+#       item_id: "2",
+#       order_price: "3000",
+#       order_number: "1",
+#     },
+#     {
+#       order_id: "2",
+#       item_id: "3",
+#       order_price: "3000",
+#       order_number: "3",
+#       created_at: "2019-11-14 02:13:55",
+#     },
+#     {
+#       order_id: "3",
+#       item_id: "4",
+#       order_price: "3000",
+#       order_number: "2",
+#     },
+#     {
+#       order_id: "3",
+#       item_id: "9",
+#       order_price: "3000",
+#       order_number: "2",
+#     },
+#     {
+#       order_id: "4",
+#       item_id: "15",
+#       order_price: "3000",
+#       order_number: "2",
+#     },
+#   ]
+# )
 #reviews_seed
 Review.create!(
     [

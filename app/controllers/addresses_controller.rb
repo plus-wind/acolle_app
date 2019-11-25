@@ -27,7 +27,7 @@ class AddressesController < ApplicationController
     @address = Address.new(address_params)
     @address.user_id = current_user.id
     @address.save
-    redirect_back(fallback_location: root_path)
+    redirect_to mypage_path
   end
 
   private

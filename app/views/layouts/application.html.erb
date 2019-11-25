@@ -14,17 +14,19 @@
     <p id="notice">
       <%=  notice %>
     </p>
-    <header class="navbar navbar-fixed-top navbar-default">
+    <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <nav class="nav navbar-nav navbar-left">
-          <span>Acolle</span>
+          <h1 class="title-acolle">Acolle</h1>
         </nav>
         <nav class="search-box">
             <%= form_tag(search_path, method: :get) do %>
-		    		<%= radio_button_tag :search_flag, 1, checked: true %>アーティスト
-					  <%= radio_button_tag :search_flag, 2 %>曲
+            <ul>
+		    		<%= radio_button_tag :search_flag, 1, checked: true %><span class="search-title">アーティスト</span>
+					  <%= radio_button_tag :search_flag, 2 %><span class="search-title">曲</span>
 					  <%= text_field_tag :search_word %>
 					  <%= submit_tag "検索" %>
+            </ul>
 				    <% end %>
           <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
