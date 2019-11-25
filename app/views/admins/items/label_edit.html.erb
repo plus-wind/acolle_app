@@ -1,0 +1,4 @@
+<%= form_for(@label, url:admins_label_update_path) do |l| %>
+	レーベル：<%= l.text_field :label_name %>
+	<%= l.submit '更新' %>
+<% end %>

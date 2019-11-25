@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div>
+				<h1>商品新規追加</h1>
+			</div>
+			<%= render 'form', item: @item %>
+		</div>
+		<div class="col-md-4">
+			<h1>新規登録</h1>
+			<%= form_for(@artist, url:admins_items_artist_new_path) do |a| %>
+				アーティスト：<%= a.text_field :artist_name %>
+				<%= a.submit '追加' %>
+		    <% end %>
+		    <%= form_for(@label, url:admins_items_label_new_path) do |l| %>
+				レーベル：<%= l.text_field :label_name %>
+				<%= l.submit '追加' %>
+		    <% end %>
+		    <%= form_for(@genre, url:admins_items_genre_new_path) do |g| %>
+				ジャンル：<%= g.text_field :genre_name %>
+				<%= g.submit '追加' %>
+			<% end %>
+			<h1>編集</h1>
+			<div class="edit-searth">
+		    	<%= form_tag(admins_items_edit_search_path, method: :get) do %>
+		    		<%= radio_button_tag :search_flag, 1, checked: true %>アーティスト
+					<%= radio_button_tag :search_flag, 2 %>レーベル
+					<%= radio_button_tag :search_flag, 3 %>ジャンル
+					<%= text_field_tag :search_word %>
+				<%= submit_tag "検索" %>
+				<% end %>
+			<% if @artist_name.present? %>
+				<% @artist_name.each do |a| %>
+					<p><%= a.id %>.<%= a.artist_name %><%= link_to "編集", admins_artist_edit_path(a.id) %></p>
+				<% end %>
+			<% elsif @label_name.present? %>
+				<% @label_name.each do |l| %>
+					<p><%= l.id %>.<%= l.label_name %><%= link_to "編集", admins_label_edit_path(l.id) %></p>
+				<% end %>
+			<% elsif @genre_name.present? %>
+				<% @genre_name.each do |g| %>
+					<P><%= g.id %>.<%= g.genre_name %><%= link_to "編集", admins_genre_edit_path(g.id) %></p>
+				<% end %>
+			<% end %>
+		    </div>
+		</div>
+	</div>
+</div>
