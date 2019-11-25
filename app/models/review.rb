@@ -3,7 +3,7 @@ class Review < ApplicationRecord
 	belongs_to :user
 	ratyrate_rateable "satisfaction"
 	validates :review_title, length: { in: 1..20 }
-	validates :review_content, length: { in: 10..150 }
+	validates :review_content, length: { in: 1..150 }
 	validates :satisfaction, length: { in: 1..20 }
 
   	def self.reviewed_by(user,item)
