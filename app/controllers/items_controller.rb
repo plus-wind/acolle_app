@@ -6,15 +6,13 @@ class ItemsController < ApplicationController
 		@hash_sales_ranking = OrderItem.rank_sales_items
 		@item_sales_key = @hash_sales_ranking.keys
 		@item_sales_ranking = []
-		unless @item_sales_ranking.blank?
-			@item_sales_key.each do |i|
-				item  = Item.find(i)
-				if item.item_delete_flag_before_type_cast == 0
-					@item_sales_ranking << item
-						if @item_sales_ranking.count == 5
-						return
-						end
-				end
+		@item_sales_key.each do |i|
+			item  = Item.find(i)
+			if item.item_delete_flag_before_type_cast == 0
+				@item_sales_ranking << item
+					if @item_sales_ranking.count == 5
+					break
+					end
 			end
 		end
 
@@ -27,7 +25,7 @@ class ItemsController < ApplicationController
 				if item.item_delete_flag_before_type_cast == 0
 					@item_view_ranking << item
 						if @item_view_ranking.count == 5
-						return
+						break
 						end
 				end
 			end
