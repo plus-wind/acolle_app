@@ -1,0 +1,4 @@
+<%= form_for(@genre, url:admins_genre_update_path) do |g| %>
+	ジャンル：<%= g.text_field :genre_name %>
+	<%= g.submit '更新' %>
+<% end %>

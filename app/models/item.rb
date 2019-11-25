@@ -14,5 +14,6 @@ class Item < ApplicationRecord
 	has_many :order_items
 	has_many :orders, through: :order_items
 	has_many :arrivals, dependent: :destroy
+	accepts_nested_attributes_for :arrivals
 	enum item_delete_flag: { sales: 0, stop: 1 }
 end

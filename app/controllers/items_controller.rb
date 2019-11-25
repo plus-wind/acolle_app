@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
 	def index
-		@items = Item.page(params[:page]).where(item_delete_flag: 0).per(3).reverse_order
+		@items = Item.page(params[:page]).where(item_delete_flag: 0).per(14).reverse_order
+		@day = Date.today.strftime('%y/%m/%d')
+		@week_ago = Date.today.ago(1.week).strftime('%y/%m/%d')
 		@hash_sales_ranking = OrderItem.rank_sales_items
 		@item_sales_key = @hash_sales_ranking.keys
 		@item_sales_ranking = []
@@ -10,12 +12,11 @@ class ItemsController < ApplicationController
 				@item_sales_ranking << item
 				if @item_sales_ranking.count == 5
 					break
-				#    return
 			    end
 			end
 		end
-		
-        @hash_most_viewed_impression = Impression.where(created_at: 1.week.ago.beginning_of_day..Time.zone.now.end_of_day).limit(5).group(:impressionable_id).order('count_impressionable_id desc').count(:impressionable_id)
+
+    	@hash_most_viewed_impression = Impression.where(created_at: 1.week.ago.beginning_of_day..Time.zone.now.end_of_day).limit(5).group(:impressionable_id).order('count_impressionable_id desc').count(:impressionable_id)
 		@item_view_keys = @hash_most_viewed_impression.keys
 		@item_view_ranking = []
 		@item_view_keys.each do |i|
@@ -27,8 +28,6 @@ class ItemsController < ApplicationController
 			    end
 			end
 		end
-		@day = Date.today.strftime('%y/%m/%d')
-		@week_ago = Date.today.ago(1.week).strftime('%y/%m/%d')
 	end
 	# ApplicationControllerへ
 	# def search
