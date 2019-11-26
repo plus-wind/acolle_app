@@ -54,7 +54,7 @@ namespace :admins do
 #admins/orders controller
   get '/orders', to: 'orders#index'
   patch '/orders/:id', to: 'orders#change'
-  post '/search',  to: 'orders#search'
+  get '/search',  to: 'orders#search'
   get '/sort/orders',  to: 'orders#sort'
 #admins/items controller
   resources :items, only: [:index, :show, :edit, :update, :new, :create] do

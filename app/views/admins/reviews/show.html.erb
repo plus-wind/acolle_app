@@ -41,7 +41,7 @@
                 	<th><%= @review.review_content %></th>
 		    	</tr>
 			</table>
-			<div class="col-md-offset-8"><%= link_to '編集する', edit_admins_review_path, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;" %><%= link_to "削除する", admins_review_path, method: :delete, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;" %></div>
+			<div class="col-md-offset-6"><%= link_to '編集する', edit_admins_review_path, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;" %><%= link_to "削除する", admins_review_path, method: :delete, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;", data: { confirm: "削除しますがよろしいですか?" } %><%= link_to "レビュー一覧へ戻る", admins_reviews_path, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;" %></div>
 		</div>
 	</div>
 </div>

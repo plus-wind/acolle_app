@@ -21,8 +21,9 @@
         <p>価格(税別)：<%= f.text_field :item_price, :style=>"width: 100px;" %>円　発売日：<%= f.text_field :item_release_date, :style=>"width: 100px;" %>　販売ステータス：<%= f.select :item_delete_flag, [["販売中", "sales"], ["停止中", "stop"]] %></p>
         <p>ジャケット画像：<%= f.attachment_field :item_image %></p>
         <%= f.fields_for :arrivals do |a| %>
-          <p>入荷数追加：<%= a.text_field :arrival_number, :style=>"width: 50px;" %>枚 入荷日：<%= a.text_field :arrival_date, :style=>"width: 100px;" %></p>
+          <p>入荷数追加：<%= a.text_field :arrival_number, :style=>"width: 50px;" %>枚 入荷日：<%= a.text_field :arrival_date, :style=>"width: 100px;" %> <%= link_to "商品一覧へ戻る", admins_items_path, class: "btn btn-default", :style=>"background-color:yellow; margin-left: 120px;" %></p>
         <% end %>
+
     </div>
     <div class="clearfix">
         <h3>ディスク＆曲目</h3>
