@@ -9,7 +9,7 @@
   <%= stylesheet_link_tag self_css_path, :media => "all" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+    <% if admin_signed_in? %>
   <body>
     <header class="navbar navbar-fixed-top navbar-default">
       <div class="container">

@@ -48,10 +48,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def complete
   end
-
+  #ユーザ情報編集後の処理。お届け先情報書き換えとリダイレクト先指定
   def after_update_path_for(resource)
     @user = current_user
-    @address = Address.where(user_id: @user.id).first
+    @address = Address.where(user_id: @user.id).first  #ユーザIDに紐づいたお届け先情報の先頭(ユーザのお届け先)
     @address.update(
       user_id: current_user.id,
       delivery_name_family_kanji: @user.name_family_kanji,
@@ -66,11 +66,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
       )
     mypage_path
   end
-
+  #新規登録後の処理。お届け先テーブルに保存とリダイレクト先指定。
   def after_sign_up_path_for(resource)
       @user = current_user
       Address.create(   #create = newとsaveを同時に行う
-      user_id: @user.id,
+      user_id: @user.id,    #ユーザIDを保存
       delivery_name_family_kanji: @user.name_family_kanji,
       delivery_name_first_kanji: @user.name_first_kanji,
       delivery_name_family_furigana: @user.name_family_furigana,
@@ -85,7 +85,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   protected
-
+  #新規登録、エディットのストロングパラメータ。オーバーライドしている
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name_family_kanji, :name_first_kanji, :name_family_furigana, :name_first_furigana, :postal_code, :address_prefecture, :address_city, :address_number, :address_building, :phone_number, :delete_flag])

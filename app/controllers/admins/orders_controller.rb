@@ -39,9 +39,24 @@ class Admins::OrdersController < ApplicationController
     end
 
     def change
-		@orders = Order.where("order_status LIKE ?", "%#{params[:status]}%")
-		@orders.update(order_params)
-		redirect_to admins_orders_path
+    	@order = Order.find(params[:id])
+    	if params[:status] == "0"
+    	@order.update(order_status: 0)
+    	@orders = Order.all.order("id DESC").page(params[:page]).per(20)
+    	render :index
+	    elsif params[:status] == "1"
+    	@order.update(order_status: 1)
+    	@orders = Order.all.order("id DESC").page(params[:page]).per(20)
+    	render :index
+	    elsif params[:status] == "2"
+	   	@order.update(order_status: 2)
+   		@orders = Order.all.order("id DESC").page(params[:page]).per(20)
+    	render :index
+	    end
+
+		# @orders = Order.where("order_status LIKE ?", "%#{params[:status]}%")
+		# @orders.update(order_params)
+		# redirect_to admins_orders_path
     end
 
     private
