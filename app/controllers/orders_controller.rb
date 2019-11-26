@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
       @delivery_flag = 1
       # binding.pry                         #分岐に対するフラグ
       @carts = current_user.carts
-      @order = Order.new(postage:500)
+      @order = Order.new(order_status:0, postage:500)
     end
   end
 
@@ -41,12 +41,20 @@ class OrdersController < ApplicationController
   def create
     @user = current_user
     @order = Order.new(order_params)
-    @order.save
-    redirect_to order_complete_path
-
+    @user.carts.each  do |cart_item|
+    @orderitem = @order.order_items.build #buildで関連した
+    @orderitem.item_id = cart_item.item_id
+    @orderitem.order_number = cart_item.cart_item_number
+    @orderitem.order_price = cart_item.item.item_price
+    # cart_item.destroy
   end
-  def complete
+    if @order.save
+      @user.carts.destroy_all
+      redirect_to order_complete_path
+    end
+  end
 
+  def complete
   end
 
   private
