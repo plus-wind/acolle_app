@@ -19,8 +19,8 @@ class User < ApplicationRecord
   validates :name_family_kanji, presence: true
   validates :name_first_kanji, presence: true
   VALID_NAME_FURIGANA_REGEX = /\A[ァ-ヶー－]+\z/
-  validates :name_family_furigana, presence: true, uniqueness: true, format: { with: VALID_NAME_FURIGANA_REGEX }
-  validates :name_first_furigana, presence: true, uniqueness: true, format: { with: VALID_NAME_FURIGANA_REGEX }
+  validates :name_family_furigana, presence: true, format: { with: VALID_NAME_FURIGANA_REGEX }
+  validates :name_first_furigana, presence: true, format: { with: VALID_NAME_FURIGANA_REGEX }
   validates :postal_code, presence: true, length: { is: 7 }
   validates :address_prefecture, presence: true
   validates :address_city, presence: true

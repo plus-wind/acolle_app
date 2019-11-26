@@ -38,9 +38,10 @@
 	</div>
 
 	<div>
-		<h3>その他のお届け先</h3>
+<!--お届け先情報 -->
+		<h3>お届け先情報</h3>
 		<div class="row">
-			<%= link_to "その他のお届け先情報追加", new_address_path, class:"btn btn-primary col-md-3" %>
+			<%= link_to "お届け先情報追加", new_address_path, class:"btn btn-primary col-md-3" %>
 		</div>
 	</div>
 	<% @addresses.each.with_index(1) do |address,i| %>
@@ -65,6 +66,7 @@
 		<%= link_to "その他のお届け先情報#{i}の編集", edit_address_path(address), class:"btn btn-success col-md-3 col-md-offset-9" %>
 	</div>
 	<% end %>
+	<!--- 購入履歴 -->
 		<h3>購入履歴</h3>
 		<% @orders.each do |order| %>
 		<div style="border-bottom:solid ">
@@ -104,7 +106,7 @@
 
 			<div>送付先：<%= order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji %>   様宛       <%= order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %></div>
 			<div>送料:<%= order.postage %>   円(税込)</div>
-			<div>合計：<%= order.total_fee.to_s(:delimited, delimiter: ',') %>円(税込)</div>
+			<div>合計：<%= ((order.total_fee * 1.1) + (order.postage)).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</div>
 		</div>
 		<% end %>
 	<div class="row">
