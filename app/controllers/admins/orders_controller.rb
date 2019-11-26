@@ -10,7 +10,7 @@ class Admins::OrdersController < ApplicationController
 	  		@orders = Order.where("id LIKE ?", "#{params[:search_word]}")
 	  		@orders = Kaminari.paginate_array(@orders).page(params[:page]).per(20)
 		elsif params[:search_flag] == "2"
-			@orders = Order.where("date(order_date) LIKE ?", "%#{params[:search_word]}%")
+			@orders = Order.where("created_at LIKE ?", "%#{params[:search_word]}%")
 			@orders = Kaminari.paginate_array(@orders).page(params[:page]).per(20)
 		elsif params[:search_flag] == "3"
 			@items = Item.where("item_name LIKE ?", "%#{params[:search_word]}%")

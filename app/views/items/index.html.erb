@@ -18,9 +18,9 @@
 			<div class="ranking-content">
 				<h4><%= "第#{i}位" %></h4>
 				<%= attachment_image_tag item, :item_image, :fill, 150, 150, fallback: "no_image.jpg", size:'150x150' %>
-				<p><%= link_to item.item_name, item_path(item.id) %></p>
+				<p style="margin-top: 3px;"><%= link_to item.item_name.truncate(13, omission: '...'), item_path(item.id) %></p>
 				<p><%= item.artist.artist_name %></p>
-				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
+				<p><%= (item.item_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</p>
 			</div>
 			<% end %>
 		</div>
@@ -36,9 +36,9 @@
 			<div class="ranking-content">
 		    	<h4><%= "第#{i}位" %></h4>
 				<%= attachment_image_tag item, :item_image, :fill, 150, 150, fallback: "no_image.jpg", size:'150x150' %>
-				<p><%= link_to item.item_name, item_path(item.id) %></p>
+				<p style="margin-top: 3px;"><%= link_to item.item_name.truncate(13, omission: '...'), item_path(item.id) %></p>
 				<p><%= item.artist.artist_name %></p>
-  				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
+  				<p><%= (item.item_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</p>
   			</div>
   			<% end %>
 		</div>
@@ -59,9 +59,9 @@
 		    <% @items.each do |item| %>
 		    <div class="index-content">
 				<%= attachment_image_tag item, :item_image, :fill, 120, 120, fallback: "no_image.jpg", size:'120x120' %>
-				<p><%= link_to item.item_name, item_path(item.id) %></p>
+				<p style="margin-top: 3px;"><%= link_to item.item_name.truncate(11, omission: '...'), item_path(item.id) %></p>
 				<p><%= item.artist.artist_name %></p>
-  				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
+  				<p><%= (item.item_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</p>
 		    </div>
 			<% end %>
 		</div>

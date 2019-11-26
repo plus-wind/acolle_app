@@ -71,6 +71,8 @@
 	}
 	.index-content{
 		float:left;
+		width: 125px;
+		margin-bottom: 20px;
 
 		p{
 			margin: -5px;
@@ -103,10 +105,18 @@
 		margin: 20px 0 0 230px;
 		width: 200px;
 	}
-	.sales-status{
+	.sales-status1{
 		width: 100px;
 		heigth: 50px;
 		margin-left: 300px;
+		background-color: red;
+		text-align: center;
+		color: white;
+	}
+	.sales-status2{
+		width: 200px;
+		heigth: 50px;
+		margin-left: 200px;
 		background-color: red;
 		text-align: center;
 		color: white;

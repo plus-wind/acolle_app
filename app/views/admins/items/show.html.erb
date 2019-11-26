@@ -9,7 +9,7 @@
 				<p>タイプ: <%= @item.item_type %></p>
 				<p>ジャンル: <%= @item.genre.genre_name %></p>
 				<p>発売日: <%= @item.item_release_date.strftime('%y/%m/%d') %></p>
-				<p>価格(税別): <%= @item.item_price %>円</p>
+				<p>価格(別): <%= @item.item_price.to_s(:delimited, delimiter: ',') %>円</p>
 				<%= link_to "編集する", edit_admins_item_path(@item.id), :style=>"background-color:yellow;" %>
 			</div>
 			<div class="item-container-right">
