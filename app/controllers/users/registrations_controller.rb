@@ -52,7 +52,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def after_update_path_for(resource)
     @user = current_user
     @address = Address.where(user_id: @user.id).first
-
     @address.update(
       user_id: current_user.id,
       delivery_name_family_kanji: @user.name_family_kanji,
