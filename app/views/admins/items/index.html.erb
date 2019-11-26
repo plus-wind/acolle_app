@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <%= link_to '商品追加画面へ', new_admins_item_path, class: "btn btn-warning btn-lg active" %><br>
       <form>
         <select name="select">
@@ -43,14 +43,14 @@
     <td><%= @sums[i] %></td>
     <td><%= item.impressions_count %></td>
     <td><%= @orderednumber[i] %></td>
-    <td><%= link_to "選択", admins_item_path(item.id) %></td>
+    <td><%= link_to "商品詳細へ", admins_item_path(item.id) %></td>
     <div id="samplRemote"></div>
   </tr>
   <% end %>
 </tbody>
 </table>
 
-<%= paginate @items %>
+	<div class="pagenate"><%= paginate @items %></div>
 
 <script src=“http://code.jquery.com/jquery-1.10.2.min.js”></script>
 
