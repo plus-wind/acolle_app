@@ -53,7 +53,7 @@
 					<p>本文：</p>
 					<%= f.text_area :review_content, :style=>"width: 460px;"  %>
 				</div>
-		    	<div class="col-md-offset-5"><%= f.submit '更新する', class: "btn btn-default", :style=>"background-color:00FFFF;" %><%= link_to "削除する", review_path, method: :delete, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;" %></div>
+		    	<div class="col-md-offset-3"><%= f.submit '更新する', class: "btn btn-default", :style=>"background-color:00FFFF;" %><%= link_to "削除する", review_path, method: :delete, :type=>"button", class: "btn btn-default", :style=>"background-color:00FFFF;", data: { confirm: "削除しますがよろしいですか?" } %><%= link_to "マイページへ戻る", mypage_path, class: "btn btn-default", :style=>"background-color:00FFFF;" %></div>
 			<% end %>
 
 		</div>

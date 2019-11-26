@@ -1,5 +1,5 @@
 <body>
-
+<div class="white-box">
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -8,7 +8,7 @@
       <%= form_for(@order,url:order_confirmation_path) do |f|%>
         <section>
           <div class="title">注文者情報</div><br>
-          <%= link_to '変更', edit_user_registration_path, class: "btn btn-default", style:"float: right;" %>
+          <%= link_to '変更', edit_user_registration_path, class: "btn btn-default middle", style:"float: right;" %>
           <br>
           <%= @full_name %>
           <br>
@@ -17,7 +17,7 @@
         <!-- お届け先を情報を表示 -->
         <section>
         <div class="title">送付先</div><br>
-        <%= link_to '変更', address_change_path, class: "btn btn-default", style:"float: right;" %>
+        <%= link_to '変更', address_change_path, class: "btn btn-default middle", style:"float: right;" %>
         <br>
         <% if @delivery_flag == 0 %>
           <% @delivery_list.first(1).each do |d| %>
@@ -31,28 +31,34 @@
         </section>
         <!-- 支払い方法を選択 -->
         <section>
-          <div class="title">支払い方法</div><br>
+          <div class="title">支払い方法</div><br><br>
             <%= radio_button_tag :pay_flag, 1, checked: true %>クレジット<br>
             <%= radio_button_tag :pay_flag, 2 %>銀行振込<br>
             <%= radio_button_tag :pay_flag, 3 %>代引き<br>
-        </section>
+        </section><br>
         <!-- 商品情報を表示 -->
         <div class="title">商品情報</div><br>
           <% total_price = 0 %>
           <% @carts.each do |cart| %>
-            <section>
+            <section class="itme-info">
+              <div class="img">
               <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
-              <%= cart.item.item_name %>
-              <%= cart.cart_item_number %> 枚
-              <%= cart.item.item_price %> 円(税込)
-              <% total_price += cart.item.item_price * cart.cart_item_number %>
+              </div>
+              <div class="itemname"><%= cart.item.item_name %></div>
+              <div class="item-info-price">
+               金額：<%= cart.item.item_price %> 円(税込)<br>
+               個数：<%= cart.cart_item_number %> 枚
+                <% total_price += cart.item.item_price * cart.cart_item_number %>
+              </div>
             </section>
           <% end %>
           <p style="text-align: right">送料:<%= @order.postage %>円 </p>
           <p style="text-align: right">合計金額:<%= total_price + @order.postage %>円(税込)</p>
           <% @total_fee = total_price%>
-          <%= link_to '戻る', :back , class: "btn btn-default back" %>
-          <%= submit_tag "注文内容確認ページへ" ,:class=>"order-Confirmation" %>
+          <div class="button-under">
+            <%= link_to '戻る', :back , class: "btn btn-default back" %>
+            <%= submit_tag "注文内容確認ページへ" ,:class=>"ok btn btn-success" %>
+          </div>
           <%= f.hidden_field :user_id, value: @delivery.user_id %>
           <%= f.hidden_field :delivery_name_family_kanji, value: @delivery.delivery_name_family_kanji %>
           <%= f.hidden_field :delivery_name_first_kanji, value: @delivery.delivery_name_first_kanji %>
@@ -67,5 +73,6 @@
       <% end %>
     </div>
   </div>
+</div>
 </div>
 </body>

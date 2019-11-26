@@ -1,5 +1,6 @@
+<div class="jumbotron mypage-box">
 <div class="mypage_title container">
-	<h1 class="c1-2exam5">こんにちは  <%= @user.name_family_kanji %>  <%= @user.name_first_kanji %>  様</h1>
+	<h2 class="c1-2exam5">こんにちは  <%= @user.name_family_kanji %>  <%= @user.name_first_kanji %>  様</h2>
 </div>
 <div class="info_container container">
 	<h3>お客様情報</h3>
@@ -63,7 +64,7 @@
 
 	</table>
 	<div class="row">
-		<%= link_to "その他のお届け先情報#{i}の編集", edit_address_path(address), class:"btn btn-success col-md-3 col-md-offset-9" %>
+		<%= link_to "お届け先情報#{i}の編集", edit_address_path(address), class:"btn btn-success col-md-3 col-md-offset-9" %>
 	</div>
 	<% end %>
 	<!--- 購入履歴 -->
@@ -112,4 +113,5 @@
 	<div class="row">
 		<%= link_to "退会手続きへ", users_unsubscribe_path(@user), class:"btn btn-danger col-md-offset-10" %>
 	</div>
+</div>
 </div>

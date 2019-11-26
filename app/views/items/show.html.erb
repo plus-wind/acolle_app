@@ -1,5 +1,5 @@
 <% if @item.item_delete_flag_before_type_cast == 0 %>
-
+<div class="jumbotron page-box">
 <div class="container">
 	<div class="row3 clearfix">
 		<h1>商品詳細</h1>
@@ -7,7 +7,7 @@
 	    <%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'350x350' %>
 		</div>
 		<div class="col-md-7">
-			<h3>アルバム名：<%= @item.item_name %></h3>
+			<h3><%= @item.item_type %>名：<%= @item.item_name %></h3>
 			<h3>アーティスト名：<%= @item.artist.artist_name %></h3>
 			<table border="2">
             	<tr>
@@ -24,19 +24,28 @@
 		    	</tr>
 		    	<tr>
                 	<th style="font-weight: bold;">価格</th>
-                	<th><%= (@item.item_price*1.1).round(0) %>円(税込)</th>
+                	<th><%= (@item.item_price*1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</th>
 		    	</tr>
 		    </table>
-		    <% if @arrivals_sum - @order_items_sum > 0 %>
+		    <% if @arrivals_sum - @order_items_sum > 10 %>
 		    <div class="cart-content">
 				<%= form_for(@cart, url: cart_path(@item)) do |f| %>
-				<p><%= f.number_field :cart_item_number, min: "1", :style=>"width: 30px;" %>枚</p>
+				<p><%= f.number_field :cart_item_number, min: "1", :style=>"width: 30px;", max: "#{@arrivals_sum - @order_items_sum}" %>枚</p>
+				<p><%= f.hidden_field :item_id, value:@item.id %></p>
+				<%= f.submit 'カートへ追加' %>
+				<% end %>
+			</div>
+			<% elsif @arrivals_sum - @order_items_sum <= 10 && @arrivals_sum - @order_items_sum > 0 %>
+			<div class="sales-status2">残りわずか 在庫数 <%= "#{@arrivals_sum - @order_items_sum}" %>枚 </div>
+			<div class="cart-content">
+				<%= form_for(@cart, url: cart_path(@item)) do |f| %>
+				<p><%= f.number_field :cart_item_number, min: "1", :style=>"width: 30px;", max: "#{@arrivals_sum - @order_items_sum}" %>枚</p>
 				<p><%= f.hidden_field :item_id, value:@item.id %></p>
 				<%= f.submit 'カートへ追加' %>
 				<% end %>
 			</div>
 			<% else %>
-			   <div class="sales-status">売り切れ</div>
+			   <div class="sales-status1">売り切れ</div>
 			<% end %>
 		</div>
 	</div>
@@ -50,13 +59,14 @@
 	        <div id="tab1" class="tab">
 				<div class="dics-container">
 				<% @item.discs.each do |d| %>
-					<h3><%= "#{d.disc_name}" %></h3>
+					<table><h3><%= "#{d.disc_name}" %></h3>
 					<div class="songs-container clearfix">
 					<% d.songs.each.with_index(1) do |s, i| %>
-						<p><%= "#{i}.""#{s.song}"%></p>
+						<ul><%= "#{i}.""#{s.song}"%></ul>
 					<% end %>
 					</div>
 				<% end %>
+				</table>
 				</div>
 	        </div>
 
@@ -138,3 +148,4 @@
 <P> 現在、ご覧いただいている商品は販売停止中です。 </P>
 <P> <%= link_to "商品一覧へ戻る", root_path %> </P>
 <% end %>
+</div>

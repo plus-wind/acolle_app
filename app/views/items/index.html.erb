@@ -3,29 +3,34 @@
 	<div class="row1">
 		<div class="col-md-12">
 			<h1><strong>Acolle</strong><br>
-				アーティスト愛の詰まった<br>
+				アーティストの愛が詰まった<br>
 				CDコレクション</h1>
 		</div>
 	</div>
-
+ <div class="jumbotron ranking-sale">
+	<div class="container">
 	<div class="row2">
 		<div class="col-md-12">
 			<div class="headline clearfix">
-				<h3 class="ranking-headline"><週間売上枚数ランキング></h3>
-				<p class="ranking-date"><%= @week_ago %> 〜 <%= @day %></p>
+				<h3 class="ranking-headline">週間売上枚数ランキング</h3>
+				<p class="ranking-date"><<%= @week_ago %> 〜 <%= @day %>></p>
 			</div>
 			<% @item_sales_ranking.each.with_index(1) do |item, i| %>
 			<div class="ranking-content">
 				<h4><%= "第#{i}位" %></h4>
 				<%= attachment_image_tag item, :item_image, :fill, 150, 150, fallback: "no_image.jpg", size:'150x150' %>
-				<p><%= link_to item.item_name, item_path(item.id) %></p>
+				<p style="margin-top: 3px;"><%= link_to item.item_name.truncate(13, omission: '...'), item_path(item.id) %></p>
 				<p><%= item.artist.artist_name %></p>
-				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
+				<p><%= (item.item_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</p>
 			</div>
 			<% end %>
 		</div>
 	</div>
+	</div>
+</div>
 
+ <div class="jumbotron ranking-access">
+	<div class="container">
 	<div class="row2">
 		<div class="col-md-12">
 			<div class="headline clearfix">
@@ -36,15 +41,18 @@
 			<div class="ranking-content">
 		    	<h4><%= "第#{i}位" %></h4>
 				<%= attachment_image_tag item, :item_image, :fill, 150, 150, fallback: "no_image.jpg", size:'150x150' %>
-				<p><%= link_to item.item_name, item_path(item.id) %></p>
+				<p style="margin-top: 3px;"><%= link_to item.item_name.truncate(13, omission: '...'), item_path(item.id) %></p>
 				<p><%= item.artist.artist_name %></p>
-  				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
+  				<p><%= (item.item_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</p>
   			</div>
   			<% end %>
 		</div>
 	</div>
 	<% end %>
+	</div>
+</div>
 
+<div class="white-box">
 	<div class="row2">
 		<div class="col-md-12">
 			<h3 class="headline clearfix"><歌手名/曲名 検索></h3>
@@ -59,12 +67,13 @@
 		    <% @items.each do |item| %>
 		    <div class="index-content">
 				<%= attachment_image_tag item, :item_image, :fill, 120, 120, fallback: "no_image.jpg", size:'120x120' %>
-				<p><%= link_to item.item_name, item_path(item.id) %></p>
+				<p style="margin-top: 3px;"><%= link_to item.item_name.truncate(11, omission: '...'), item_path(item.id) %></p>
 				<p><%= item.artist.artist_name %></p>
-  				<p><%= (item.item_price * 1.1).round(0) %>円(税込)</p>
+  				<p><%= (item.item_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</p>
 		    </div>
 			<% end %>
 		</div>
 		<div class="pagenate"><%= paginate @items %></div>
 	</div>
+</div>
 </div>

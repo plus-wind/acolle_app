@@ -469,39 +469,106 @@ Arrival.create!(
   [
     {
       item_id: '1',
-      arrival_number: '1',
+      arrival_number: '100',
       arrival_date: '2017-11-14',
     },
     {
       item_id: '2',
-      arrival_number: '2',
+      arrival_number: '120',
       arrival_date: '2018-11-14',
     },
     {
       item_id: '3',
-      arrival_number: '1',
+      arrival_number: '56',
       arrival_date: '2018-11-14',
     },
     {
       item_id: '4',
-      arrival_number: '2',
+      arrival_number: '150',
       arrival_date: '2018-11-14',
     },
     {
-      item_id: '1',
-      arrival_number: '1',
+      item_id: '5',
+      arrival_number: '0',
       arrival_date: '2018-12-14',
     },
     {
-      item_id: '2',
-      arrival_number: '2',
+      item_id: '6',
+      arrival_number: '111',
       arrival_date: '2019-11-14',
+    },
+    {
+      item_id: '7',
+      arrival_number: '143',
+      arrival_date: '2018-12-14',
+    },
+    {
+      item_id: '8',
+      arrival_number: '165',
+      arrival_date: '2011-12-14',
+    },
+    {
+      item_id: '9',
+      arrival_number: '145',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '10',
+      arrival_number: '110',
+      arrival_date: '2018-06-24',
+    },
+    {
+      item_id: '11',
+      arrival_number: '198',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '12',
+      arrival_number: '645',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '13',
+      arrival_number: '89',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '14',
+      arrival_number: '244',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '15',
+      arrival_number: '255',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '16',
+      arrival_number: '712',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '17',
+      arrival_number: '987',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '18',
+      arrival_number: '66',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '19',
+      arrival_number: '145',
+      arrival_date: '2018-12-24',
+    },
+    {
+      item_id: '20',
+      arrival_number: '235',
+      arrival_date: '2018-10-24',
     }
   ]
 )
-
-
-#orders_seed
 Order.create!(
   [
     {
