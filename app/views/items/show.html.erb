@@ -50,13 +50,14 @@
 	        <div id="tab1" class="tab">
 				<div class="dics-container">
 				<% @item.discs.each do |d| %>
-					<h3><%= "#{d.disc_name}" %></h3>
+					<table><h3><%= "#{d.disc_name}" %></h3>
 					<div class="songs-container clearfix">
 					<% d.songs.each.with_index(1) do |s, i| %>
-						<p><%= "#{i}.""#{s.song}"%></p>
+						<ul><%= "#{i}.""#{s.song}"%></ul>
 					<% end %>
 					</div>
 				<% end %>
+				</table>
 				</div>
 	        </div>
 

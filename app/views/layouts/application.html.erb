@@ -10,7 +10,7 @@
   <%= stylesheet_link_tag self_css_path, :media => "all" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
+  <body class="bodycolor">
     <p id="notice">
       <%=  notice %>
     </p>
@@ -21,12 +21,12 @@
         </nav>
         <nav class="search-box">
             <%= form_tag(search_path, method: :get) do %>
-            <ul>
-		    		<%= radio_button_tag :search_flag, 1, checked: true %><span class="search-title">アーティスト</span>
-					  <%= radio_button_tag :search_flag, 2 %><span class="search-title">曲</span>
+            <div class = "search-field">
+		    		<%= radio_button_tag :search_flag, 1, checked: true %><span class="search-title"> アーティスト</span>
+					  <%= radio_button_tag :search_flag, 2 %><span class="search-title"> 曲</span>
 					  <%= text_field_tag :search_word %>
 					  <%= submit_tag "検索" %>
-            </ul>
+            </div>
 				    <% end %>
           <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
@@ -63,11 +63,11 @@
       </div>
     </header>
 
-    <div class = "space" style = "height: 70px;"></div>
+    <div class = "space" style = "height: 80px;"></div>
     <%= yield %>
     <div class="wrapper">
     <footer>
-            <p><%= link_to "お問い合わせ",  new_contact_path%></p>
+            <p>Copyright © 2019 Acolle Inc. All rights reserved.</p>
     </footer>
     </div>
   </body>
