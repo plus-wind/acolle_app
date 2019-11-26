@@ -81,7 +81,7 @@ namespace :admins do
   # post '/items/:id/arrivals', to: 'arrivals#create'   #admins/items controllerに移動してます。
 #admins/users controller
   resources :users, only:[:index, :show, :edit, :update, :destroy]
-  post '/search',  to: 'users#search'
+  get '/search/users',  to: 'users#search'
   patch '/withdraw/:id',  to: 'users#withdraw', as: "withdraw"
   #patch '/uesrs', to: 'users#change'
 #admins/reviews controller

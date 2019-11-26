@@ -3,7 +3,7 @@
 <h1>顧客情報一覧</h1>
 <%= flash[:notice] %>
 	<div class="search-content">
-		<%= form_tag(admins_search_path, method: :post) do %>
+		<%= form_tag(admins_search_users_path, method: :get) do %>
 			<%= radio_button_tag :search_flag, 1, checked: true %>顧客ID
 			<%= radio_button_tag :search_flag, 2 %>顧客(漢字)
 			<%= radio_button_tag :search_flag, 3 %>顧客(フリガナ)

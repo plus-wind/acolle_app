@@ -26,6 +26,7 @@
       <div class="field">
         <%= f.label :"郵便番号　　　　　　　　" %>
         <%= f.text_field :delivery_postal_code, autofocus: true  %>
+        <span>(ハイフン無し)</span>
       </div>
     </div>
 
@@ -58,7 +59,8 @@
     </div>
 
   <div class="actions">
-      <%= f.submit "新規追加", class:"btn btn-primary" %>
+      <%= f.submit "新規追加", class:"btn btn-primary" %></br>
+      <%= link_to "戻る", mypage_path, class:"btn" %>
   </div>
 <% end %>
 </div>

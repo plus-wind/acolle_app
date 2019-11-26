@@ -26,6 +26,7 @@
       <div class="field">
         <%= f.label :"郵便番号　　　　　　　　" %>
         <%= f.text_field :delivery_postal_code, autofocus: true  %>
+        <span>（ハイフン無し）</span>
       </div>
     </div>
 
@@ -58,8 +59,11 @@
     </div>
 
   <div class="actions">
-      <%= f.submit "更新", class:"btn btn-primary" %>
+      <%= f.submit "更新", class:"btn btn-primary" %></br>
+      <%= link_to "戻る", mypage_path, class:"btn" %></br>
+      <%= link_to "情報を削除", address_path(@address), class:"btn-sm btn-danger", method: :delete, "data-confirm" => "本当に削除しますか？この操作は取り消せません。" %>
   </div>
+
 <% end %>
 </div>
 

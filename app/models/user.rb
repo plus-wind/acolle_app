@@ -15,4 +15,15 @@ class User < ApplicationRecord
   def self.find_first_by_auth_conditions(warden_conditions)
     User.where(:email => warden_conditions[:email],:delete_flag=>0).first
   end
+
+  validates :name_family_kanji, presence: true
+  validates :name_first_kanji, presence: true
+  VALID_NAME_FURIGANA_REGEX = /\A[ァ-ヶー－]+\z/
+  validates :name_family_furigana, presence: true, format: { with: VALID_NAME_FURIGANA_REGEX }
+  validates :name_first_furigana, presence: true, format: { with: VALID_NAME_FURIGANA_REGEX }
+  validates :postal_code, presence: true, length: { is: 7 }
+  validates :address_prefecture, presence: true
+  validates :address_city, presence: true
+  validates :address_number, presence: true
+  validates :phone_number, presence: true
 end
