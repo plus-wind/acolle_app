@@ -6,18 +6,15 @@ class ItemsController < ApplicationController
 		@hash_sales_ranking = OrderItem.rank_sales_items
 		@item_sales_key = @hash_sales_ranking.keys
 		@item_sales_ranking = []
-		unless @item_sales_ranking.blank?
-			@item_sales_key.each do |i|
-				item  = Item.find(i)
-				if item.item_delete_flag_before_type_cast == 0
-					@item_sales_ranking << item
-						if @item_sales_ranking.count == 5
-						return
-						end
-				end
+		@item_sales_key.each do |i|
+			item  = Item.find(i)
+			if item.item_delete_flag_before_type_cast == 0
+				@item_sales_ranking << item
+				if @item_sales_ranking.count == 5
+					break
+			    end
 			end
 		end
-
     	@hash_most_viewed_impression = Impression.where(created_at: 1.week.ago.beginning_of_day..Time.zone.now.end_of_day).limit(5).group(:impressionable_id).order('count_impressionable_id desc').count(:impressionable_id)
 		@item_view_keys = @hash_most_viewed_impression.keys
 		@item_view_ranking = []
@@ -26,9 +23,9 @@ class ItemsController < ApplicationController
 				item  = Item.find(i)
 				if item.item_delete_flag_before_type_cast == 0
 					@item_view_ranking << item
-						if @item_view_ranking.count == 5
-						return
-						end
+				    if @item_view_ranking.count == 5
+					   break
+				    end
 				end
 			end
 		end

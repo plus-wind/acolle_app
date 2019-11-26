@@ -4,7 +4,7 @@ class Admins::ItemsController < ApplicationController
 # protect_from_forgery except: :status
 
 	def index
-		@items = Item.all
+		@items = Item.all.page(params[:page]).per(10)
 		@sums = []
 		@orderednumber = []
 		@items.each do |item|
@@ -63,16 +63,16 @@ class Admins::ItemsController < ApplicationController
         @arrivals_sum =  Arrival.where(item_id: @item.id).sum(:arrival_number)
         @order_items_sum = OrderItem.where(item_id: @item.id).sum(:order_number)
         @arrivals = @item.arrivals.order('id desc')
-		@arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(1)
+		@arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(10)
         @order_items = @item.order_items.order('id desc')
-        @order_items = Kaminari.paginate_array(@order_items).page(params[:page]).per(1)
+        @order_items = Kaminari.paginate_array(@order_items).page(params[:page]).per(10)
         @reviews = @item.reviews.order('id desc')
-        @reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(1)
+        @reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(10)
 	end
 
 	def edit
 		@item = Item.find(params[:id])
-		@disc = @item.discs
+		# @disc = @item.discs
 		# @song = @disc.songs
 	end
 	def status
@@ -86,13 +86,35 @@ class Admins::ItemsController < ApplicationController
 
 	def update
 		@item = Item.find(params[:id])
+		@artist = Artist.find(params[:artist][:id])
+		@artist.update!(artist_params)
+		@label = Label.find(params[:artist][:id])
+		@label.update!(label_params)
+		@genre = Genre.find(params[:artist][:id])
+		@genre.update!(genre_params)
+		params[:item][:disc].each do |key,disc|
+			@disc = Disc.find(key.to_i)
+			@disc.update!({
+				disc_name: disc[:disc_name]
+			})
+			disc[:song].each do |key, song|
+				@song = Song.find(key.to_i)
+				@song.update!({
+					song: song[:song]
+				})
+			end
+		end
+		# @disc.update!(disc_params)
+		# @song = Song.find(params[:id])
+		# @song.update!(song_params)
 		if @item.update(item_params)
-			flash[:notice] = "You have updated item successfully."
+			flash[:notice] = "編集完了"
 			redirect_to admins_item_path(@item.id)
 		 else
 			render :edit
 		 end
 	end
+
 	def new
 		@item = Item.new
 		@item.arrivals.build
@@ -220,15 +242,5 @@ private
 	def genre_params
 		params.require(:genre).permit(:genre_name)
 	end
-
-
-
-	# def item_params
-	# 	params.require(:item).permit(:item_name, :item_type, :item_image, :item_price)
-	# end
-	# private
-	# def item_params
-	# 	params.require(:item).permit(:, :body)
-	# end
 
 end
