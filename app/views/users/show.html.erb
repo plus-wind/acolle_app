@@ -79,25 +79,32 @@
                 <% end %>
 
 			</div>
-				<% order.order_items.each do |oi| %>
-				<div>
+			<% order.order_items.each do |oi| %>
+			<div>
 				<%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
 				<%= oi.item.item_name %>
 				<% review = Review.reviewed_by(current_user,oi.item)
 								if review.present?
 							%>
 					<%= link_to "レビュー編集", edit_review_path(review) %>
-						<% else %>
-							 <%= link_to "レビューする", new_item_review_path(oi.item) %>
-						<% end %>
-
-					<%= oi.item.artist_id %><%= oi.order_number %>枚小計<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円
-				</div>
+				<% else %>
+					<%= link_to "レビューする", new_item_review_path(oi.item) %>
 				<% end %>
+				<div>
+					<%= oi.item.artist.artist_name %>
+				</div>
+				<div>
+					購入数：<%= oi.order_number %>枚
+				</div>
+				<div>
+					小計<%= (oi.order_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円
+				</div>
+			</div>
+			<% end %>
 
 			<div>送付先：<%= order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji %>   様宛       <%= order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %></div>
 			<div>送料:<%= order.postage %>   円(税込)</div>
-			<div>決済方法：クレジットカード決済             合計：<%= order.total_fee.to_s(:delimited, delimiter: ',') %>円(税込)</div>
+			<div>合計：<%= order.total_fee.to_s(:delimited, delimiter: ',') %>円(税込)</div>
 		</div>
 		<% end %>
 	<div class="row">

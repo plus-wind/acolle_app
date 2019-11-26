@@ -91,6 +91,13 @@
       </div>
     </div>
 
+    <div class="field">
+      <span class="field bg-danger">
+        <%= f.label :"変更するには、現在のパスワードを入力してください。" %></br>
+        <%= f.password_field :current_password, autocomplete: "off" %>
+      </span>
+    </div>
+
   <div class="actions">
       <%= f.submit "更新", class:"btn btn-primary" %>
   </div>

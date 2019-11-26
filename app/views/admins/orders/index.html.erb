@@ -3,7 +3,7 @@
 	<h1>受注履歴</h1>
 	<!--検索フォーム-->
 	<div class="search-content">
-		<%= form_tag({controller: "orders", action: "search" }, {method: "post"}) do %>
+		<%= form_tag({controller: "orders", action: "search" }, {method: "get"}) do %>
 			<%= radio_button_tag :search_flag, 1, checked: true %>受注ID
 			<%= radio_button_tag :search_flag, 2 %>受注日(yyyy-mm-dd)
 			<%= radio_button_tag :search_flag, 3 %>商品名
