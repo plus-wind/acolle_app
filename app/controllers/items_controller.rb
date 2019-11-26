@@ -57,12 +57,16 @@ class ItemsController < ApplicationController
 	# end
 	def show
 		@item = Item.find(params[:id])
-		@reviews = @item.reviews
+		@users = User.where(delete_flag: 0)
+		@reviews = []
+		@users.each do |r|
+			@reviews << Review.where(user_id: r.id, item_id: @item.id)
+		end
 	    impressionist(@item, nil)
+	    @reviews = @reviews.flatten
 	    @cart = Cart.new
         @satisfaction_average = @item.reviews.average(:satisfaction)
         @satisfaction_count = @item.reviews.length
-        @reviews = @item.reviews.reverse
         @reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(3)
         @arrivals_sum =  Arrival.where(item_id: @item.id).sum(:arrival_number)
         @order_items_sum = OrderItem.where(item_id: @item.id).sum(:order_number)

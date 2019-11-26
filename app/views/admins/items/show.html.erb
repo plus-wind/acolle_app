@@ -10,7 +10,8 @@
 				<p>ジャンル: <%= @item.genre.genre_name %></p>
 				<p>発売日: <%= @item.item_release_date.strftime('%y/%m/%d') %></p>
 				<p>価格(別): <%= @item.item_price.to_s(:delimited, delimiter: ',') %>円</p>
-				<%= link_to "編集する", edit_admins_item_path(@item.id), :style=>"background-color:yellow;" %>
+				<p><%= link_to "編集する", edit_admins_item_path(@item.id), :style=>"background-color:yellow;" %></p>
+				<p><%= link_to "商品一覧へ", admins_items_path, :style=>"background-color:yellow;" %></p>
 			</div>
 			<div class="item-container-right">
 				<p>商品名: <%= @item.item_name %></p>
@@ -73,7 +74,7 @@
 			                	<th style="width: 300px;"><%= a.arrival_date %></th>
 			                	<th style="width: 200px;"><%= a.arrival_number %></th>
 			                	<th style="width: 50px; background-color: yellow; text-align: center;"><%= link_to "編集", edit_admins_arrival_path(a.id) %></th>
-			                	<th style="width: 50px; background-color: red; text-align: center;"><%= link_to "削除", admins_arrival_path(a.id), method: :delete %></th>
+			                	<th style="width: 50px; background-color: red; text-align: center;"><%= link_to "削除", admins_arrival_path(a.id), method: :delete, data: { confirm: "削除しますがよろしいですか?" }  %></th>
 					    	</tr>
 					    	<% end %>
 					    </table>

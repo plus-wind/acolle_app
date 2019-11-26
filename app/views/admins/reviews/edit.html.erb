@@ -6,7 +6,7 @@
 			<h1>レビュー編集</h1>
 			<table class="table-edit" style="margin-top:30px;">
 				<tr>
-                	<th>顧客名：</th>
+                	<th style="width:100px;">顧客名：</th>
                 	<th><%= @review.user.name_family_kanji + @review.user.name_first_kanji %></th>
 		    	</tr>
 				<tr>
@@ -45,7 +45,7 @@
 					<p>本文：</p>
 					<%= f.text_area :review_content, :style=>"width: 460px;"  %>
 				</div>
-		    	<div class="col-md-offset-5"><%= f.submit '更新する', class:"btn btn-default", :style=>"background-color:00FFFF;" %>
+		    	<div class="col-md-offset-3"><%= f.submit '更新する', class:"btn btn-default", :style=>"background-color:00FFFF;" %><%= link_to "レビュー詳細へ戻る", admins_review_path(@review.id), class:"btn btn-default", :style=>"background-color:00FFFF;" %>
 		    	</div>
 			<% end %>
 		</div>
