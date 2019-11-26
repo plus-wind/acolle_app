@@ -3,16 +3,17 @@
 	<div class="row1">
 		<div class="col-md-12">
 			<h1><strong>Acolle</strong><br>
-				アーティスト愛の詰まった<br>
+				アーティストの愛が詰まった<br>
 				CDコレクション</h1>
 		</div>
 	</div>
-
+ <div class="jumbotron ranking-sale">
+	<div class="container">
 	<div class="row2">
 		<div class="col-md-12">
 			<div class="headline clearfix">
-				<h3 class="ranking-headline"><週間売上枚数ランキング></h3>
-				<p class="ranking-date"><%= @week_ago %> 〜 <%= @day %></p>
+				<h3 class="ranking-headline">週間売上枚数ランキング</h3>
+				<p class="ranking-date"><<%= @week_ago %> 〜 <%= @day %>></p>
 			</div>
 			<% @item_sales_ranking.each.with_index(1) do |item, i| %>
 			<div class="ranking-content">
@@ -25,7 +26,11 @@
 			<% end %>
 		</div>
 	</div>
+	</div>
+</div>
 
+ <div class="jumbotron ranking-access">
+	<div class="container">
 	<div class="row2">
 		<div class="col-md-12">
 			<div class="headline clearfix">
@@ -44,7 +49,10 @@
 		</div>
 	</div>
 	<% end %>
+	</div>
+</div>
 
+<div class="white-box">
 	<div class="row2">
 		<div class="col-md-12">
 			<h3 class="headline clearfix"><歌手名/曲名 検索></h3>
@@ -67,4 +75,5 @@
 		</div>
 		<div class="pagenate"><%= paginate @items %></div>
 	</div>
+</div>
 </div>
