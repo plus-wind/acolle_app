@@ -20,12 +20,16 @@
 	</div>
 	<!--一覧テーブル-->
 		<table class="table table-bordered table-hover">
-			<tr class="active" style="pointer-events:none;">
-		    	<th style="width: 15%;">受注ID
-		    		<%= button_to "受注ID▼", admins_sort_orders_path, {method: :get, params: {sort_type: '1'}} %>
+			<tr class="active" style="">
+		    	<th style="width: 15%;">
+		    		受注ID
+		    		<%= button_to "▲", {controller:'orders', action:'sort'}, {method: :get, params: {sort_type: '1', sort_flag: '1'}} %>
+		    		<%= button_to "▼", admins_sort_orders_path, {method: :get, params: {sort_type: '1', sort_flag: '2'}} %>
 		    	</th>
-		    	<th style="width: 15%;">受注日
-		    		<%= button_to "入荷日▼", admins_sort_orders_path, {method: :get, params: {sort_type: '2'}} %>
+		    	<th style="width: 15%;">
+		    		受注日
+		    		<%= button_to "▲", admins_sort_orders_path, {method: :get, params: {sort_type: '2', sort_flag: '1'}} %>
+		    		<%= button_to "▼", admins_sort_orders_path, {method: :get, params: {sort_type: '2', sort_flag: '2'}} %>
 		    	</th>
 		    	<th>商品名</th>
 		    	<th style="width: 15%;">数量</th>
@@ -99,9 +103,9 @@
 					<%= order.delivery_address_building %>
 				</span>
 				<div>
-					<i style="color:red;">小計：</i><%= (order.total_fee * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</br>
+					<i style="color:red;">小計：</i><%= order.total_fee.to_s(:delimited, delimiter: ',') %>円(税込)</br>
 					<i style="color:red;">送料：</i><%= order.postage %>円(税込)</br>
-					<i style="color:red;">合計：</i><%= ((order.total_fee * 1.1).round(0) + order.postage).to_s(:delimited, delimiter: ',') %>円(税込)
+					<i style="color:red;">合計：</i><%= (order.total_fee + order.postage).to_s(:delimited, delimiter: ',') %>円(税込)
 				</div>
 			</td>
 			<td colspan="2" class="bg-info orders_show<%= i %>">

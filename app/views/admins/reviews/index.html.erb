@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "admins/reviews", :media => "all" %>
 
 <div class="container">
-	<div class="row1 aiueo">
+	<div class="row">
 		<div class="col-md-12">
 			<h1>レビュー一覧</h1>
 			<div class="search-content">
@@ -18,7 +18,7 @@
 				<% end %>
 		    </div>
 
-			<table class="table-bordered" style="margin-top:20px;">
+			<table class="table-bordered review-box" style="margin-top:20px;">
 				<tr>
 					<th>No.</th>
                 	<th>日付<%= button_to "▲", admins_sort_reviews_path, {method: :get, params: {sort_type: '1', sort_flag: '1'}} %><%= button_to "▼", admins_sort_reviews_path, {method: :get, params: {sort_type: '1', sort_flag: '2'}} %></th>

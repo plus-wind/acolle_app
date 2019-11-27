@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 section {
   border: solid 1px;/*表全体を線で囲う*/
   height: 140px;
@@ -49,7 +51,7 @@ section.pay {
   display: inline-block;
   height: 50px;
   width: 150px;
-  float: right;
+  // float: right;
   text-align: right;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -57,4 +59,10 @@ section.pay {
 
 .img {
   padding-top: 20px;
+}
+
+h2 {
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px ;/*上線*/
+  border-bottom: solid 3px ;/*下線*/
 }

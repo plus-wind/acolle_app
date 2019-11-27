@@ -2,16 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.col-md-12{
+	.col-md-12{
 	height: 325px;
+		.item-info{
+			margin-top: 90px;
+			height: 235px;
 
-	.item-info{
-		margin-top: 90px;
-		height: 235px;
-
-		img {
-	    width: 30px;
-		}
+			img {
+				width: 30px;
+			}
 
 		.star-average{
 			font-size: 40px;
@@ -29,6 +28,7 @@
 		}
 	}
 }
+
 
 .col-md-offset-1{
 	p{

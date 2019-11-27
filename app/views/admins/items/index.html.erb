@@ -2,8 +2,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <%= link_to '商品追加画面へ', new_admins_item_path, class: "btn btn-warning btn-lg active" %><br>
-      <form>
+    <div class="linkadditem">
+      <%= link_to '商品追加画面へ', new_admins_item_path, class: "btn btn-warning btn-lg active" %>
+    </div>
+      <form class="searchbox">
         <select name="select">
           <option id="artist" >歌手名</option>
           <option id="item">曲名</option>
@@ -20,18 +22,9 @@
     <th>商品id</th>
     <th>ジャケット名</th>
     <th>アーティスト名</th>
-    <th class="dothesort" data-type="integer">在庫数<span></span>
-      <!-- 昇順・降順 -->
-      <!-- <%= button_to "▲", admins_sort_items_path, {method: :get, params: {sotrt_type: '1', sort_flag: '1'}} %><%= button_to "▼", admins_sort_items_path, {method: :get, params: {sort_type: '1', sort_flag: '2'}} %> -->
-    </th>
-    <th>閲覧数
-      <!-- 昇順・降順 -->
-      <!-- <%= button_to "▲", admins_sort_items_path, {method: :get, params: {sotrt_type: '2', sort_flag: '1'}} %><%= button_to "▼", admins_sort_items_path, {method: :get, params: {sort_type: '2', sort_flag: '2'}} %> -->
-      </th>
-    <th>週間売り上げ枚数
-      <!-- 昇順・降順 -->
-      <!-- <%= button_to "▲", admins_sort_items_path, {method: :get, params: {sotrt_type: '3', sort_flag: '1'}} %><%= button_to "▼", admins_sort_items_path, {method: :get, params: {sort_type: '3', sort_flag: '2'}} %> -->
-    </th>
+    <th class="dothesort" data-type="integer">在庫数</th>
+    <th>閲覧数</th>
+    <th>週間売り上げ枚数</th>
     <th></th>
   </tr>
   </thead>
