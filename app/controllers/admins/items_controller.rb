@@ -2,7 +2,7 @@ class Admins::ItemsController < ApplicationController
 	layout "admins"
 
 # protect_from_forgery except: :status
-
+	before_action :authenticate_admin!
 	def index
 		@items = Item.all.page(params[:page]).per(10)
 		@sums = []
