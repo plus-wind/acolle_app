@@ -29,13 +29,19 @@ class Admins::OrdersController < ApplicationController
     end
 
     def sort
-    	if params[:sort_type] == "1"
-	      @orders = Order.all.order('id DESC').page(params[:page]).per(20)
-	      render :index
-	    elsif params[:sort_type] == "2"
-	      @orders = Order.all.order('date(order_date) DESC').page(params[:page]).per(20)
-	      render :index
-	    end
+		if params[:sort_type] == "1" && params[:sort_flag] == "1"
+			@orders = Order.all.order('id ASC').page(params[:page]).per(20)
+			render :index
+		elsif params[:sort_type] == "1" && params[:sort_flag] == "2"
+			@orders = Order.all.order('id DESC').page(params[:page]).per(20)
+			render :index
+		elsif params[:sort_type] == "2" && params[:sort_flag] == "1"
+			@orders = Order.all.order('created_at ASC').page(params[:page]).per(20)
+			render :index
+		elsif params[:sort_type] == "2" && params[:sort_flag] == "2"
+			@orders = Order.all.order('created_at DESC').page(params[:page]).per(20)
+			render :index
+		end
     end
 
     def change
