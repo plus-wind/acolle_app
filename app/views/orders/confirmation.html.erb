@@ -15,9 +15,9 @@
                   </div>
                   <div class="itemname"><%= cart.item.item_name %></div>
                   <div class="item-info-price">
-                    金額：<%= cart.item.item_price %> 円(税込)<br>
+                    金額：<%= (cart.item.item_price * 1.1).round(0) %> 円(税込)<br>
                     個数：<%= cart.cart_item_number %> 枚
-                    <% total_price += cart.item.item_price * cart.cart_item_number%>
+                    <% total_price += (cart.item.item_price * 1.1).round(0) * cart.cart_item_number%>
                   </div>
                 </section>
               <% end %>
