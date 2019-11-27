@@ -44,8 +44,8 @@
 //
 .wrapper{
 	position: relative;
-    padding-bottom: 80px;/*←footerの高さ*/
-    box-sizing: border-box;
+  padding-bottom: 80px;/*←footerの高さ*/
+  box-sizing: border-box;
 }
 
 footer{
@@ -100,7 +100,7 @@ footer{
   background: linear-gradient(-135deg, #E4A972, #9941D8);
 }
 .signin_container {
-  width: 250px;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
