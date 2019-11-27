@@ -29,7 +29,8 @@ class ReviewsController < ApplicationController
     def update
     	review = Review.find(params[:id])
     	review.update(review_params)
-    	redirect_to mypage_path
+        @item = Item.find_by(id: review.item_id)
+    	redirect_to item_path(@item.id)
     end
     def destroy
         review = Review.find(params[:id])

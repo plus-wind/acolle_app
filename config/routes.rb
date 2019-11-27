@@ -54,7 +54,7 @@ namespace :admins do
 #admins/orders controller
   get '/orders', to: 'orders#index'
   patch '/orders/:id', to: 'orders#change'
-  post '/search',  to: 'orders#search'
+  get '/search',  to: 'orders#search'
   get '/sort/orders',  to: 'orders#sort'
 #admins/items controller
   resources :items, only: [:index, :show, :edit, :update, :new, :create] do
@@ -81,7 +81,7 @@ namespace :admins do
   # post '/items/:id/arrivals', to: 'arrivals#create'   #admins/items controllerに移動してます。
 #admins/users controller
   resources :users, only:[:index, :show, :edit, :update, :destroy]
-  post '/search',  to: 'users#search'
+  get '/search/users',  to: 'users#search'
   patch '/withdraw/:id',  to: 'users#withdraw', as: "withdraw"
   #patch '/uesrs', to: 'users#change'
 #admins/reviews controller

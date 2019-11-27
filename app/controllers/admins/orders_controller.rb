@@ -1,6 +1,6 @@
 class Admins::OrdersController < ApplicationController
     layout "admins"
-
+ 	before_action :authenticate_admin!
     def index
     	@orders = Order.all.order("id DESC").page(params[:page]).per(20)
     end
@@ -10,7 +10,7 @@ class Admins::OrdersController < ApplicationController
 	  		@orders = Order.where("id LIKE ?", "#{params[:search_word]}")
 	  		@orders = Kaminari.paginate_array(@orders).page(params[:page]).per(20)
 		elsif params[:search_flag] == "2"
-			@orders = Order.where("date(order_date) LIKE ?", "%#{params[:search_word]}%")
+			@orders = Order.where("created_at LIKE ?", "%#{params[:search_word]}%")
 			@orders = Kaminari.paginate_array(@orders).page(params[:page]).per(20)
 		elsif params[:search_flag] == "3"
 			@items = Item.where("item_name LIKE ?", "%#{params[:search_word]}%")
@@ -39,10 +39,22 @@ class Admins::OrdersController < ApplicationController
     end
 
     def change
-		@orders = Order.where("order_status LIKE ?", "%#{params[:status]}%")
-		@orders.update(order_params)
-		redirect_to admins_orders_path
+    	@order = Order.find(params[:id])
+    	if params[:status] == "0"
+    	@order.update(order_status: 0)
+    	@orders = Order.all.order("id DESC").page(params[:page]).per(20)
+	    elsif params[:status] == "1"
+    	@order.update(order_status: 1)
+    	@orders = Order.all.order("id DESC").page(params[:page]).per(20)
+	    elsif params[:status] == "2"
+	   	@order.update(order_status: 2)
+   		@orders = Order.all.order("id DESC").page(params[:page]).per(20)
+	    end
+	    render :index
     end
+    	# @orders = Order.where("order_status LIKE ?", "%#{params[:status]}%")
+		# @orders.update(order_params)
+		# redirect_to admins_orders_path
 
     private
 

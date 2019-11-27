@@ -1,5 +1,6 @@
 class Admins::ArrivalsController < ApplicationController
     layout "admins"
+  before_action :authenticate_admin!
   def index
     @arrivals = Arrival.all.order("id DESC").page(params[:page]).per(5)
   end

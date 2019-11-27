@@ -3,7 +3,7 @@
 	<h1>受注履歴</h1>
 	<!--検索フォーム-->
 	<div class="search-content">
-		<%= form_tag({controller: "orders", action: "search" }, {method: "post"}) do %>
+		<%= form_tag({controller: "orders", action: "search" }, {method: "get"}) do %>
 			<%= radio_button_tag :search_flag, 1, checked: true %>受注ID
 			<%= radio_button_tag :search_flag, 2 %>受注日(yyyy-mm-dd)
 			<%= radio_button_tag :search_flag, 3 %>商品名
@@ -13,7 +13,7 @@
 	</div>
 	<!--絞り込み検索-->
 	<div class="refine_content" style="float:right;">
-		<%= form_tag({controller: "orders", action: "search" }, {method: "post"}) do %>
+		<%= form_tag({controller: "orders", action: "search" }, {method: "get"}) do %>
 		  <%= select_tag(:status, options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]])) %>
 		  <%= submit_tag "絞り込み" %>
 		<% end %>
@@ -63,21 +63,21 @@
 		    	<% if order.order_status == 0 %>
 		    		<td class="bg-danger">
 		    			<%= form_tag(admins_path(order.id), method: :patch) do %>
-			    			<%= select_tag(:status, options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]]), { :selected => "0"}) %>
+			    			<%= select_tag "status", options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]], :selected=> "0") %>
 			    			<%= submit_tag "更新" %>
 					    <% end %>
 		    		</td>
 		    	<% elsif order.order_status == 1 %>
 		    		<td class="bg-warning">
 		    			<%= form_tag(admins_path(order.id), method: :patch) do %>
-			    			<%= select_tag(:status, options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]]), { :selected => "1"}) %>
+			    			<%= select_tag "status", options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]], :selected=> "1") %>
 			    			<%= submit_tag "更新" %>
 					    <% end %>
 		    		</td>
 		    	<% else %>
 		    		<td class="bg-success">
 		    			<%= form_tag(admins_path(order.id), method: :patch) do %>
-			    			<%= select_tag(:status, options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]]), { :selected => "2"}) %>
+			    			<%= select_tag "status", options_for_select([["受付","0"],["準備中","1"],["出荷済","2"]], :selected=> "2") %>
 			    			<%= submit_tag "更新" %>
 					    <% end %>
 		    		</td>

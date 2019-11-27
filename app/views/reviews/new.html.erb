@@ -72,7 +72,7 @@
 					<p>本文：</p>
 					<%= f.text_area :review_content, :style=>"width: 460px;"  %>
 				</div>
-		    	<div class="col-md-offset-5"><%= f.submit '投稿する', class: "btn btn-default", :style=>"background-color:00FFFF;" %></div>
+		    	<div class="col-md-offset-4"><%= f.submit '投稿する', class: "btn btn-default", :style=>"background-color:00FFFF;" %><%= link_to "マイページへ戻る", mypage_path, class: "btn btn-default", :style=>"background-color:00FFFF;" %></div>
 			<% end %>
 		</div>
 	</div>

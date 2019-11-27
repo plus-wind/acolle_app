@@ -1,9 +1,9 @@
 class Admins::ReviewsController < ApplicationController
 
     layout "admins"
-
+    before_action :authenticate_admin!
 	def index
-		@reviews = Review.page(params[:page]).per(2).reverse_order
+		@reviews = Review.page(params[:page]).per(10).reverse_order
 	end
 	def search
 		if params[:search_flag] == "1"
@@ -14,7 +14,7 @@ class Admins::ReviewsController < ApplicationController
 					@reviews << i
 				end
 			end
-			@reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(2)
+			@reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(10)
 		elsif params[:search_flag] == "2"
 			@users = User.where("name_family_furigana || name_first_furigana LIKE ?", "%#{params[:search_word]}%")
 			@reviews = []
@@ -23,7 +23,7 @@ class Admins::ReviewsController < ApplicationController
 					@reviews << r
 				end
 			end
-			@reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(2)
+			@reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(10)
 		elsif params[:search_flag] == "3"
 			@items = Item.where("item_name LIKE ?", "%#{params[:search_word]}%")
 			@reviews = []
@@ -32,10 +32,10 @@ class Admins::ReviewsController < ApplicationController
 					@reviews << r
 				end
 			end
-			@reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(2)
+			@reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(10)
 		else params[:search_flag] == "4"
 			@reviews = Review.where("datetime(created_at) LIKE ?", "%#{params[:search_word]}%")
-			@reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(2)
+			@reviews = Kaminari.paginate_array(@reviews).page(params[:page]).per(10)
 		end
 		render :index
 	end
@@ -57,16 +57,16 @@ class Admins::ReviewsController < ApplicationController
 	end
 	def sort
 		if params[:sort_type] == "1" && params[:sort_flag] == "1"
-			@reviews = Review.all.order('created_at ASC').page(params[:page]).per(2)
+			@reviews = Review.all.order('created_at ASC').page(params[:page]).per(10)
 			render :index
 		elsif params[:sort_type] == "1" && params[:sort_flag] == "2"
-			@reviews = Review.all.order('created_at DESC').page(params[:page]).per(2)
+			@reviews = Review.all.order('created_at DESC').page(params[:page]).per(10)
 			render :index
 		elsif params[:sort_type] == "2" && params[:sort_flag] == "1"
-			@reviews = Review.all.order('satisfaction ASC').page(params[:page]).per(2)
+			@reviews = Review.all.order('satisfaction ASC').page(params[:page]).per(10)
 			render :index
 		elsif params[:sort_type] == "2" && params[:sort_flag] == "2"
-			@reviews = Review.all.order('satisfaction DESC').page(params[:page]).per(2)
+			@reviews = Review.all.order('satisfaction DESC').page(params[:page]).per(10)
 			render :index
 		end
 	end

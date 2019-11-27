@@ -53,6 +53,7 @@
       <div class="field">
         <%= f.label :"郵便番号　　　　　　　　" %>
         <%= f.text_field :postal_code, autofocus: true  %>
+        <strong>(ハイフン不要)</strong>
       </div>
     </div>
 
@@ -89,7 +90,15 @@
         <%= f.label :"お電話番号　　　　　　　" %>
         <%= f.text_field :phone_number, autofocus: true  %>
         <%= f.hidden_field :delete_flag, :value => 0 %>
+        <strong>(ハイフン不要)</strong>
       </div>
+    </div>
+
+    <div class="field">
+      <span class="field bg-danger">
+        <%= f.label :"変更するには、現在のパスワードを入力してください。" %></br>
+        <%= f.password_field :current_password, autocomplete: "off" %>
+      </span>
     </div>
 
   <div class="actions">
