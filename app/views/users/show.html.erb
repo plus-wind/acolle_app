@@ -71,7 +71,7 @@
 		<!--- 購入履歴 -->
 		<h3>購入履歴</h3>
 		<% @orders.each do |order| %>
-		<div style="border-bottom:solid ">
+		<div style="border-bottom:double 10px; ">
 			<div>
 				<%= order.created_at.strftime('%Y/%m/%d') %>
                 <% if order.order_status == 0 %>
@@ -85,31 +85,36 @@
 			</div>
 			<!--購入履歴・商品情報-->
 			<% order.order_items.each do |oi| %>
-			<div>
-				<%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
-				<%= oi.item.item_name %>
-				<% review = Review.reviewed_by(current_user,oi.item)
-								if review.present?
-							%>
-					<%= link_to "レビュー編集", edit_review_path(review) %>
-				<% else %>
-					<%= link_to "レビューする", new_item_review_path(oi.item) %>
-				<% end %>
-				<div>
-					<%= oi.item.artist.artist_name %>
+			<div style="border:ridge;">
+				<div class="clearfix">
+					<span style="float:left;">
+						<%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
+					</span>
+						<span style="float:left;">
+						商品名：<%= oi.item.item_name %>
+							<% review = Review.reviewed_by(current_user,oi.item)
+											if review.present?
+										%>
+								<%= link_to "レビュー編集", edit_review_path(review) %>
+							<% else %>
+								<%= link_to "レビューする", new_item_review_path(oi.item) %>
+							<% end %>
+						</span>
+						</br>
+					<span>
+						アーティスト名：<%= oi.item.artist.artist_name %>
+					</span>
 				</div>
 				<div>
+					単価：<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円(税込)
+				</div>
 					購入数：<%= oi.order_number %>枚
-				</div>
-				<div>
-					小計<%= (oi.order_price * 1.1).round(0).to_s(:delimited, delimiter: ',') %>円
-				</div>
 			</div>
 			<% end %>
 			<!--購入履歴・宛先、料金-->
 			<div>送付先：<%= order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji %>   様宛       <%= order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %></div>
 			<div>送料:<%= order.postage %>   円(税込)</div>
-			<div>合計：<%= ((order.total_fee * 1.1) + (order.postage)).round(0).to_s(:delimited, delimiter: ',') %>円(税込)</div>
+			<div>合計：<%= (order.total_fee + order.postage).to_s(:delimited, delimiter: ',') %>円(税込)</div>
 		</div>
 		<% end %>
 	<div class="row">
