@@ -1,47 +1,58 @@
+<%= stylesheet_link_tag "admins/items", :media => "all" %>
 <div class = "container">
     <div class = "row">
         <h2 class = "edit-title" >商品詳細編集</h2>
     </div>
-    <%= form_for @item, url: admins_item_path(@item) do |i| %>
-        <%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'350x350' %>
-        <%= i.attachment_field :item_image %>
-        <%= i.text_field :item_name %>
-        <%= i.number_field :item_price %>
-        <%= i.text_field :item_release_date %>
-        <%= i.select :item_type, [["シングル","シングル"],["アルバム","アルバム"],["EP","EP"]] %>
-        <%= fields_for @item.artist do |ia| %>
-            <%= ia.number_field :id %>
-            <%= ia.text_field :artist_name  %>
-        <% end %>
-        <%= fields_for @item.label do |il| %>
-            <%= il.number_field :id %>
-            <%= il.text_field :label_name  %>
-        <% end %>
-        <%= fields_for @item.genre do |ig| %>
-            <%= ig.number_field :id %>
-            <%= ig.text_field :genre_name %>
-        <% end %>
+    <div class="row">
+        <div class="col-md-4 image-field-box">
+            <%= form_for @item, url: admins_item_path(@item) do |i| %>
+                <%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'250x250' %>
+                <%= i.attachment_field :item_image %>
+        </div>
+        <div class="col-md-4 item-edit-table">
+            <ul>商品名</ul><ul><%= i.text_field :item_name %></ul>
+            <ul>価格</ul><ul><%= i.number_field :item_price %></ul>
+            <ul>発売日</ul><ul><%= i.text_field :item_release_date %></ul>
+            <ul>種類</ul><ul><%= i.select :item_type, [["シングル","シングル"],["アルバム","アルバム"],["EP","EP"]] %></ul>
+        </div>
+        <div class="col-md-4 artist-label-genre">
+            <%= fields_for @item.artist do |ia| %>
+                <%= ia.hidden_field :id %>
+                <ul>アーティスト名</ul>
+                <ul><%= ia.text_field :artist_name %></ul>
+            <% end %>
+            <%= fields_for @item.label do |il| %>
+                <%= il.hidden_field :id %>
+                <ul>レーベル名</ul>
+                <ul><%= il.text_field :label_name  %></ul>
+            <% end %>
+            <%= fields_for @item.genre do |ig| %>
+                <%= ig.hidden_field :id %>
+                <ul>ジャンル名</ul>
+                <ul><%= ig.text_field :genre_name %></ul>
+            <% end %>
+        </div>
+    </div>
+    <div class="row edit-disc-box">
+    <h3>収録曲</h3>
         <% @item.discs.each do |id| %>
+        <div class="col-md-3 edit-disc-field">
             <%= i.fields_for id , index: id.id do |idf| %>
-                <%= idf.text_field :disc_name %>
-                <% id.songs.each do |is| %>
-                    <%= idf.fields_for is , index: is.id do |isf| %>
-                        <%= isf.text_field :song %>
+                <ul><%= idf.text_field :disc_name %>
+                    <% id.songs.each do |is| %>
+                        <%= idf.fields_for is , index: is.id do |isf| %>
+                            <li><%= isf.text_field :song %></li>
+                        <% end %>
                     <% end %>
-                <% end %>
+                </ul>
             <% end %>
+        </div>
         <% end %>
-                <%= i.submit "商品情報更新"%>
-    <% end %>
-
-<!--    <% @item.discs.each.with_index(1) do |d, n| %>
-            <%= form_for(d, url: admins_item_path ) do |df| %>
-                <%= df.text_field :disc_name %>
-                    <%= df.fields_for :songs do |s| %>
-                        <%= "#{n}" %>
-                        <%= s.text_field :song %>
-                    <% end %>
-                <%= df.submit "変更" %>
-            <% end %>
-        <% end %> -->
+    </div>
+    <div class="edit-submit">
+        <span><%= link_to "戻る", admins_item_path(@item.id), :class=>"btn btn-lg btn-default" %></span>
+        <span><%= i.submit "商品情報更新", :class=>"btn btn-lg btn-success" %></span>
+    </div>
+        <% end %>
+    </div>
 </div>
