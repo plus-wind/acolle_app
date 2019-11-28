@@ -1,12 +1,19 @@
+<%= stylesheet_link_tag "admins/arrivals", :media => "all" %>
 <body>
-<h2>入荷編集</h2>
-<%= form_for(@arrival, url:"/admins/arrivals/#{@arrival.id}") do |a| %>
-  <h5>入荷編集</h5>
-  <%= @arrival.item.item_name %>
-  <h6>日時</h6>
-  <%= a.text_field :arrival_date %><p>※yyyy-mm-ddの形で入力してください</p>
-  <h6>個数</h6>
-  <%= a.text_field :arrival_number %><br>
-  <%= a.submit '完了' %>
-<% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>入荷編集</h2>
+        <%= form_for(@arrival, url:"/admins/arrivals/#{@arrival.id}") do |a| %>
+          <h5>入荷編集</h5>
+          <%= @arrival.item.item_name %>
+          <h6>日時</h6>
+          <%= a.text_field :arrival_date %><p>※yyyy-mm-ddの形で入力してください</p>
+          <h6>個数</h6>
+          <%= a.text_field :arrival_number %><br>
+          <%= a.submit '完了' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </body>

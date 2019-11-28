@@ -2,13 +2,13 @@ class Admins::ArrivalsController < ApplicationController
     layout "admins"
   before_action :authenticate_admin!
   def index
-    @arrivals = Arrival.all.order("id DESC").page(params[:page]).per(5)
+    @arrivals = Arrival.all.order("id DESC").page(params[:page]).per(7)
   end
 
   def search
     if params[:search_flag] == "1"
       @arrivals = Arrival.where("date(arrival_date) LIKE ?", "%#{params[:search_word]}%")
-      @arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(5)
+      @arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(7)
     elsif params[:search_flag] == "2"
       @items = Item.where("item_name LIKE ?", "%#{params[:search_word]}%")
       @arrivals = []
@@ -17,20 +17,20 @@ class Admins::ArrivalsController < ApplicationController
           @arrivals << a
         end
       end
-      @arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(5)
+      @arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(7)
     else params[:search_flag] == "3"
       @arrivals = Arrival.where("integer(id) LIKE ?", "%#{params[:search_word]}")
-      @arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(5)
+      @arrivals = Kaminari.paginate_array(@arrivals).page(params[:page]).per(7)
     end
     render :index
   end
 
   def sort
     if params[:sort_type] == "1"
-      @arrivals = Arrival.all.order('id DESC').page(params[:page]).per(5)
+      @arrivals = Arrival.all.order('id DESC').page(params[:page]).per(7)
       render :index
     elsif params[:sort_type] == "2"
-      @arrivals = Arrival.all.order('arrival_date DESC').page(params[:page]).per(5)
+      @arrivals = Arrival.all.order('arrival_date DESC').page(params[:page]).per(7)
       render :index
     end
   end
