@@ -49,7 +49,7 @@
           <% @carts.each do |cart| %>
             <section class="itme-info">
               <!-- <div class="img"> -->
-              <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img pull-left profile-img img", fallback: "no_image.jpg" %>
+              <%= attachment_image_tag cart.item, :item_image, :fill, 90, 90, format: 'jpeg', class:"img pull-left profile-img img", fallback: "no_image.jpg", size: '90x90'%>
               <!-- </div> -->
               <p class="itemname"><%= cart.item.item_name %></p>
               <p class="item-info-price">
