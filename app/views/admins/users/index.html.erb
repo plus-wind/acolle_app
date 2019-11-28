@@ -1,7 +1,9 @@
 <%= stylesheet_link_tag "admins/users", :media => "all" %>
 <div class="a_users_container">
-<h1>顧客情報一覧</h1>
-<%= flash[:notice] %>
+	<h1>顧客情報一覧</h1>
+<!-- 	<div style="color:red;">
+		<%= notice %>
+	</div><br> -->
 	<div class="search-content">
 		<%= form_tag(admins_search_users_path, method: :get) do %>
 			<%= radio_button_tag :search_flag, 1, checked: true %>顧客ID
@@ -10,7 +12,7 @@
 			<%= text_field_tag :search_word %>
 			<%= submit_tag "検索" %>
 		<% end %>
-	</div>
+	</div><br>
 	<table class="table table-bordered" >
 		<tr class="active">
 	    	<th>顧客ID</th>
@@ -21,14 +23,18 @@
 		</tr>
 		<% @users.each do |u| %>
 		<tr>
-	    	<th><%= link_to u.id, admins_user_path(u.id)  %></th>
-	    	<th><%= u.name_family_kanji + u.name_first_kanji %></th>
-	    	<th><%= u.name_family_furigana + u.name_first_furigana %></th>
-	    	<th><%= u.email %></th>
+	    	<td>
+	    		<div>
+	    			<%= link_to u.id, admins_user_path(u.id),class: "btn-square-slant"  %>
+	    		</div>
+	    	</td>
+	    	<td><%= u.name_family_kanji + u.name_first_kanji %></td>
+	    	<td><%= u.name_family_furigana + u.name_first_furigana %></td>
+	    	<td><%= u.email %></td>
 	    	<% if u.delete_flag == 0 %>
-	    		<th class="bg-success">登録中</th>
+	    		<td class="bg-success">登録中</td>
 	    		<% else %>
-	    		<th class="bg-danger">退会</th>
+	    		<td class="bg-danger">退会</td>
 	    		<% end %>
 		</tr>
 	  	<% end %>

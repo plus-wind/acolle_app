@@ -24,7 +24,7 @@ class Admins::UsersController < ApplicationController
 		user = User.find(params[:id])
 		user.update(delete_flag: 1)
 		flash[:notice] = "ユーザ情報の更新が完了しました。"
-		redirect_to admins_users_path
+		redirect_to admins_user_path(user)
 	end
 
 	def edit

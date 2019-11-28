@@ -56,7 +56,7 @@ class Admins::OrdersController < ApplicationController
 	   	@order.update(order_status: 2)
    		@orders = Order.all.order("id DESC").page(params[:page]).per(20)
 	    end
-	    render :index
+	    redirect_to admins_orders_path
     end
     	# @orders = Order.where("order_status LIKE ?", "%#{params[:status]}%")
 		# @orders.update(order_params)

@@ -13,7 +13,7 @@
 					<div class="col-md-12">
 						<div class="headline clearfix">
 							<h3 class="ranking-headline">週間売上枚数ランキング</h3>
-							<p class="ranking-date"><<%= @week_ago %> 〜 <%= @day %>></p>
+							<p class="ranking-date"><%= @week_ago %> 〜 <%= @day %></p>
 						</div>
 						<% @item_sales_ranking.each.with_index(1) do |item, i| %>
 							<div class="ranking-content">
@@ -34,7 +34,7 @@
 				<div class="row2">
 					<div class="col-md-12">
 						<div class="headline clearfix">
-							<h3 class="ranking-headline"><週間アクセス数ランキング></h3>
+							<h3 class="ranking-headline">週間アクセス数ランキング</h3>
 							<p class="ranking-date"><%= @week_ago %> 〜 <%= @day %></p>
 						</div> 
 						<% @item_view_ranking.each.with_index(1) do |item, i| %>
@@ -54,7 +54,7 @@
 		<div class="container white-box">
 			<div class="row2">
 				<div class="col-md-12">
-					<h3 class="headline clearfix"><歌手名/曲名 検索></h3>
+					<h3 class="headline clearfix">歌手名/曲名 検索</h3>
 					<div class="search-content">
 						<%= form_tag(search_path, method: :get) do %>
 						<%= radio_button_tag :search_flag, 1, checked: true %>アーティスト

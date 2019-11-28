@@ -1,8 +1,10 @@
 <%= stylesheet_link_tag "admins/users", :media => "all" %>
 
 <div class="a_users_container">
-	<h1>顧客情報詳細</h1>
-	<%= flash[:notice] %>
+	<h1 style="padding-bottom:20px;">顧客情報詳細</h1>
+	<div style="color:red;">
+		<%= flash[:notice] %>
+	</div><br>
 		<table class="table table-bordered">
 		<tr>
 			<td class="active">会員ステータス</td>
@@ -47,6 +49,9 @@
 	<div class="container">
 		<div class="row">
 			<%= link_to "登録情報編集", edit_admins_user_path(@user), class:"btn btn-success col-md-2 col-md-offset-4" %>
+		</div>
+		<div class="row">
+			<%= link_to "顧客一覧へ", admins_users_path, class:"btn btn-info col-md-2 col-md-offset-4" %>
 		</div>
 		<% if @user.delete_flag == 0 %>
 		<div class="row">
