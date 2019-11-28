@@ -583,7 +583,7 @@ Order.create!(
       delivery_address_number: "テスト3-3-3",
       delivery_address_building: "テストビル",
       order_status: 0,
-      total_fee: "2500",
+      total_fee: "12220",
       postage: "500",
     },
     {
@@ -598,7 +598,7 @@ Order.create!(
       delivery_address_number: "DMM3-3-3",
       delivery_address_building: "DMM",
       order_status: 0,
-      total_fee: "1500",
+      total_fee: "13442",
       postage: "500",
     },
     {
@@ -613,7 +613,7 @@ Order.create!(
       delivery_address_number: "DMM3-3-3",
       delivery_address_building: "DMM",
       order_status: 0,
-      total_fee: "1500",
+      total_fee: "12196",
       postage: "500",
     },
     {
@@ -628,7 +628,7 @@ Order.create!(
       delivery_address_number: "DMM1-3-3",
       delivery_address_building: "DMM",
       order_status: 0,
-      total_fee: "1500",
+      total_fee: "5324",
       postage: "500",
     },
     {
@@ -643,7 +643,7 @@ Order.create!(
       delivery_address_number: "DMM3-3-4",
       delivery_address_building: "DMM",
       order_status: 0,
-      total_fee: "11000",
+      total_fee: "2444",
       postage: "500",
     },
   ]
@@ -654,37 +654,43 @@ OrderItem.create!(
     {
       order_id: "1",
       item_id: "1",
-      order_price: "2000",
+      order_price: "1222",
       order_number: "10",
     },
     {
       order_id: "2",
       item_id: "2",
-      order_price: "3000",
+      order_price: "2444",
       order_number: "1",
     },
     {
       order_id: "2",
       item_id: "3",
-      order_price: "3000",
+      order_price: "3666",
       order_number: "3",
     },
     {
       order_id: "3",
       item_id: "4",
-      order_price: "3000",
+      order_price: "4888",
       order_number: "2",
     },
     {
       order_id: "3",
       item_id: "9",
-      order_price: "3000",
+      order_price: "1210",
       order_number: "2",
     },
     {
       order_id: "4",
       item_id: "15",
-      order_price: "3000",
+      order_price: "2662",
+      order_number: "2",
+    },
+    {
+      order_id: "5",
+      item_id: "1",
+      order_price: "1222",
       order_number: "2",
     },
   ]

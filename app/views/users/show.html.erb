@@ -1,10 +1,16 @@
 <div class="jumbotron mypage-box">
 <div class="mypage_title container">
-	<h2 class="c1-2exam5">こんにちは  <%= @user.name_family_kanji %>  <%= @user.name_first_kanji %>  様</h2>
+	<h2 class="c1-2exam5">
+		こんにちは
+		<span style="color:blue; font-weight: bold;">
+			<%= @user.name_family_kanji %>  <%= @user.name_first_kanji %>
+		</span>
+		様
+	</h2>
 </div>
 <div class="info_container container">
 	<!--ユーザ情報-->
-	<h3>お客様情報</h3>
+	<h3 class="mypage-title">お客様情報</h3>
 	<table class="table table-bordered">
 		<tr>
 			<td class="active">氏名</td>
@@ -41,13 +47,15 @@
 
 	<div>
 	<!--お届け先情報 -->
-		<h3>お届け先情報</h3>
+		<h3 class="mypage-title">お届け先情報</h3>
 		<div class="row">
 			<%= link_to "お届け先情報追加", new_address_path, class:"btn btn-primary col-md-3" %>
-		</div>
+		</div></br>
 	</div>
 	<% @addresses.each.with_index(1) do |address,i| %>
-	<%= i %>
+	<div style="display:inline-block; font-weight: bold; font-size: 20px;">
+		<%= i %>
+	</div>
 	<table class="table table-bordered">
 		<tr>
 			<td class="active">氏名</td>
@@ -59,8 +67,14 @@
 		</tr>
 		<tr>
 			<td class="active">ご住所</td>
-			<td><div style="float: left">〒<%= address.delivery_postal_code.insert(3, "-") %></div>
-				<div style="float: left, margin-left:5px"><%= address.delivery_address_prefecture %><%= address.delivery_address_city %><%= address.delivery_address_number %><%= address.delivery_address_building %></div></td>
+			<td>
+				<div style="float: left">
+					〒<%= address.delivery_postal_code.insert(3, "-") %>
+				</div>
+				<div style="float: left, margin-left:5px">
+					<%= address.delivery_address_prefecture %><%= address.delivery_address_city %><%= address.delivery_address_number %><%= address.delivery_address_building %>
+				</div>
+			</td>
 		</tr>
 
 	</table>
@@ -69,9 +83,9 @@
 	</div>
 	<% end %>
 		<!--- 購入履歴 -->
-		<h3>購入履歴</h3>
+		<h3 class="mypage-title">購入履歴</h3>
 		<% @orders.each do |order| %>
-		<div style="border-bottom:double 10px; ">
+		<div style="border-bottom:double 10px;">
 			<div>
 				<%= order.created_at.strftime('%Y/%m/%d') %>
                 <% if order.order_status == 0 %>
@@ -91,33 +105,48 @@
 						<%= attachment_image_tag oi.item, :item_image, :fill, 60, 60, fallback: "no_image.jpg", size:'60x60' %>
 					</span>
 						<span style="float:left;">
-						商品名：<%= oi.item.item_name %>
-							<% review = Review.reviewed_by(current_user,oi.item)
-											if review.present?
-										%>
-								<%= link_to "レビュー編集", edit_review_path(review) %>
-							<% else %>
-								<%= link_to "レビューする", new_item_review_path(oi.item) %>
-							<% end %>
+							商品名：<%= oi.item.item_name %>
 						</span>
 						</br>
 					<span>
 						アーティスト名：<%= oi.item.artist.artist_name %>
 					</span>
+					</br>
+					<span style="float:left; font-weight:bold;">
+						<% review = Review.reviewed_by(current_user,oi.item)
+							if review.present? %>
+							<%= link_to "レビュー編集", edit_review_path(review) %>
+						<% else %>
+							<%= link_to "レビューする", new_item_review_path(oi.item) %>
+						<% end %>
+					</span>
 				</div>
 				<div>
-					単価：<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円(税込)
+					価格：<%= oi.order_price.to_s(:delimited, delimiter: ',') %>円(税込)
 				</div>
 					購入数：<%= oi.order_number %>枚
 			</div>
 			<% end %>
 			<!--購入履歴・宛先、料金-->
-			<div>送付先：<%= order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji %>   様宛       <%= order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %></div>
-			<div>送料:<%= order.postage %>   円(税込)</div>
-			<div>合計：<%= (order.total_fee + order.postage).to_s(:delimited, delimiter: ',') %>円(税込)</div>
-		</div>
+			<div>
+				<%= "送付先：" + order.delivery_name_family_kanji %><%= order.delivery_name_first_kanji + "　様宛" %>
+			</div>
+				<%= "　　　　" + order.delivery_address_prefecture %><%= order.delivery_address_city %><%= order.delivery_address_number %><%= order.delivery_address_building %>
+			<div>
+			</div>
+			<div class="clearfix">
+				<span style="float:right;">
+					送料:<%= order.postage %>   円(税込)
+				</span>
+			</div>
+			<div class="clearfix">
+				<span style="float:right;">
+					合計：<%= (order.total_fee + order.postage).to_s(:delimited, delimiter: ',') %>円(税込)
+				</span>
+			</div>
+		</div></br>
 		<% end %>
-	<div class="row">
+	<div class="row" style="margin-top: 10px;">
 		<%= link_to "退会手続きへ", users_unsubscribe_path(@user), class:"btn btn-danger col-md-offset-10" %>
 	</div>
 </div>

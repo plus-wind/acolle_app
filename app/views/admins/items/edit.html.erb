@@ -3,9 +3,9 @@
     <div class = "row">
         <h2 class = "edit-title" >商品詳細編集</h2>
     </div>
+    <%= form_for @item, url: admins_item_path(@item) do |i| %>
     <div class="row">
         <div class="col-md-4 image-field-box">
-            <%= form_for @item, url: admins_item_path(@item) do |i| %>
                 <%= attachment_image_tag @item, :item_image, :fill, 350, 350, fallback: "no_image.jpg", size:'250x250' %>
                 <%= i.attachment_field :item_image %>
         </div>
