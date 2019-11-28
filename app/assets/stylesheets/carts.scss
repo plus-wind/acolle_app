@@ -50,9 +50,11 @@ tbody {
 .cart-item-name {
 	font-size: 20px;
 }
-// h2 {
-// 	margin-bottom: 15px;
-// }
-// .cart-all-d {
-// 	margin-bottom: 15px;
-// }
+.cart-page-title {
+	font-family: Verdana;
+  	border-top: solid 3px;
+  	border-bottom: solid 3px;
+	padding: 0.5em 0;
+	width: 100%; 
+	padding-left: 20px;
+}

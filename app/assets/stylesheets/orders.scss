@@ -64,9 +64,9 @@ p {
 .price-info {
   margin-top:20px;
 }
-.img {
-  margin-top: 20px;
-}
+// .img {
+//   margin-top: 20px;
+// }
 
 h2 {
   padding: 0.5em 0;/*上下の余白*/
@@ -84,6 +84,7 @@ h2 {
 .total-price {
     border-top: double;
     background-color: yellow;
+    margin-bottom: 30px;
   }
 
 .pay-select {
