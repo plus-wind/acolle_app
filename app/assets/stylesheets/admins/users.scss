@@ -6,9 +6,11 @@
 	width: 70%;
 	margin: 0 auto;
 }
+
 .btn-danger{
 	margin-top: 40px;
 }
+
 .btn-info{
 	margin-top: 40px;
 }
@@ -24,7 +26,7 @@
   border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
 }
 
-.btn-square-slant:before {  
+.btn-square-slant:before {
   content: " ";
   position: absolute;
   bottom: -5px;
@@ -37,7 +39,7 @@
   border-bottom-color: #FFF;
 }
 
-.btn-square-slant:after {  
+.btn-square-slant:after {
   content: " ";
   position: absolute;
   top: -1px;
