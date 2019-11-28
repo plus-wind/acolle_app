@@ -38,7 +38,7 @@
       <td><%= arrival.arrival_date %></td>
       <td><%= arrival.item.item_name %></td>
       <td><%= arrival.arrival_number %></td>
-      <td>
+      <td style="width: 20%;">
         <%= link_to "編集", edit_admins_arrival_path(arrival), class: 'btn btn-success' %>
         <%= link_to "削除", admins_arrival_path(arrival), method: :delete, class: 'btn btn-danger' %>
       </td>

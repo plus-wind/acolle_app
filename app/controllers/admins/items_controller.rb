@@ -4,7 +4,7 @@ class Admins::ItemsController < ApplicationController
 # protect_from_forgery except: :status
 	before_action :authenticate_admin!
 	def index
-		@items = Item.all.page(params[:page]).per(30)
+		@items = Item.all.order("id DESC").page(params[:page]).per(30)
 		@sums = []
 		@orderednumber = []
 		@items.each do |item|
