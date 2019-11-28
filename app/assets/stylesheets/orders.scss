@@ -35,34 +35,74 @@ section.pay {
 }
 
 .middle {
-  margin-top: 30px;
+  margin-top: 30px; //ボタンを上にしたいけど行かない？
   background-color: grey;
   color: white;
-}
-
-.itemname {
-  display: inline-block;
-  width: 500px;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .item-info-price {
   display: inline-block;
   height: 50px;
   width: 150px;
-  // float: right;
+  float: right;
   text-align: right;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  // padding-top: 50px;
+  // padding-bottom: 50px;
+  margin-top: 40px;
 }
 
+p {
+  font-size: 16px
+  }.itemname{
+    display: inline-block;
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+
+.price-info {
+  margin-top:20px;
+}
 .img {
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 h2 {
   padding: 0.5em 0;/*上下の余白*/
   border-top: solid 3px ;/*上線*/
   border-bottom: solid 3px ;/*下線*/
+  text-align: center;
+}
+
+.price-info-confimation {
+  float: right;
+  margin-bottom: 30px;
+  width: 300px;
+}
+
+.total-price {
+    border-top: double;
+    background-color: yellow;
+  }
+
+.pay-select {
+  display: inline-block;
+  width: 400px;
+}
+
+.background-info {
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  // background-color: white;
+  text-align: center;
+  // background-image: url("rakutenpanda.jpeg");
+  // background-size: cover;
+}
+
+.item-index {
+  width: 100px;
+  margin: 20px auto;
+
 }

@@ -10,9 +10,11 @@
           <div class="title">注文者情報</div><br>
           <%= link_to '変更', edit_user_registration_path, class: "btn btn-default middle", style:"float: right;" %>
           <br>
-          <%= @full_name %>
-          <br>
-          <%= @user_address%>
+          <p>
+            <%= @full_name %>
+            <br>
+            <%= @user_address%>
+          </p>
         </section>
         <!-- お届け先を情報を表示 -->
         <section>
@@ -21,40 +23,48 @@
         <br>
         <% if @delivery_flag == 0 %>
           <% @delivery_list.first(1).each do |d| %>
+          <p>
             <%= d.delivery_name_family_kanji+ " " + d.delivery_name_first_kanji %><br>
             <%= "〒" + d.delivery_postal_code.insert(3, "-") + "　" + d.delivery_address_prefecture + d.delivery_address_city + d.delivery_address_number + d.delivery_address_building %>
+          </p>
           <% end %>
         <% elsif @delivery_flag == 1 %>
+          <p>
             <%= @delivery.delivery_name_family_kanji+ " " + @delivery.delivery_name_first_kanji %><br>
             <%= "〒" + @delivery.delivery_postal_code.insert(3, "-") + "　" + @delivery.delivery_address_prefecture + @delivery.delivery_address_city + @delivery.delivery_address_number + @delivery.delivery_address_building %>
+          </p>
         <% end %>
         </section>
         <!-- 支払い方法を選択 -->
         <section>
           <div class="title">支払い方法</div><br><br>
+          <p>
             <%= radio_button_tag :pay_flag, 1, checked: true %><span>クレジット</span><br>
             <%= radio_button_tag :pay_flag, 2 %><span>銀行振込</span><br>
             <%= radio_button_tag :pay_flag, 3 %><span>代引き<span><br>
+          </p>
         </section><br>
         <!-- 商品情報を表示 -->
         <div class="title">商品情報</div><br>
           <% total_price = 0 %>
           <% @carts.each do |cart| %>
             <section class="itme-info">
-              <div class="img">
-              <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
-              </div>
-              <div class="itemname"><%= cart.item.item_name %></div>
-              <div class="item-info-price">
+              <!-- <div class="img"> -->
+              <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img img", fallback: "no_image.jpg" %>
+              <!-- </div> -->
+              <p class="itemname"><%= cart.item.item_name %></p>
+              <p class="item-info-price">
                金額：<%= (cart.item.item_price * 1.1).round(0) %> 円(税込)<br>
                個数：<%= cart.cart_item_number %> 枚
                 <% total_price += (cart.item.item_price * 1.1).round(0) * cart.cart_item_number %>
-              </div>
+              </p>
             </section>
           <% end %>
-          <p style="text-align: right">送料:<%= @order.postage %>円 </p>
-          <p style="text-align: right">合計金額:<%= total_price + @order.postage %>円(税込)</p>
-          <% @total_fee = total_price%>
+          <div class="price-info">
+            <p style="text-align: right">送料:<%= @order.postage %>円 </p>
+            <p style="text-align: right">合計金額:<%= total_price + @order.postage %>円(税込)</p>
+            <% @total_fee = total_price%>
+          </div>
           <div class="button-under">
             <%= link_to '戻る', :back , class: "btn btn-default back" %>
             <%= submit_tag "注文内容確認ページへ" ,:class=>"ok btn btn-success" %>
