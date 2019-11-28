@@ -71,12 +71,17 @@
         <%= f.hidden_field :delete_flag, :value => 0 %>
       </div>
     </div>
-
+  <% if @user.delete_flag == 0 %>
   <div class="actions">
       <%= f.submit "更新", class:"btn btn-primary" %>
   </div>
+  <% else %>
+    <div class="actions">
+      <%= f.submit "更新して登録状態に戻す", class:"btn btn-primary" %>
+  </div>
+  <% end %>
 <% end %>
 
 
-<%= link_to "戻る", admins_users_path, class:"btn" %>
+<%= link_to "戻る", admins_user_path(@user), class:"btn btn-info" %>
 </div>
