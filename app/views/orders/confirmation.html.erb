@@ -1,7 +1,7 @@
 <div class="container white-com-box">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <h2 class=>注文内容確認</h2>
+        <h2>注文内容確認</h2>
           <!-- 商品情報を表示 -->
           <%= form_for(@order,url:order_confirmation_path, html: {method: "put"} ) do |f|%>
           <div class="title">商品情報</div><br>
@@ -9,7 +9,7 @@
               <% @carts.each do |cart| %>
                 <section class="item">
                   <div class="img">
-                  <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img pull-left profile-img", fallback: "no_image.jpg" %>
+                  <%= attachment_image_tag cart.item, :item_image, :fill, 90, 90, format: 'jpeg', class:"img pull-left profile-img", fallback: "no_image.jpg", size: '90x90' %>
                   </div>
                     <p class="itemname"><%= cart.item.item_name %></p>
                     <p class="item-info-price">
