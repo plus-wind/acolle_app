@@ -2,15 +2,15 @@
 <p><%= flash[:notice] %></p>
 <div class = "container">
     <div class = "row-1 clearfix">
+        <h2 class="cart-page-title">カート情報</h2>
         <div class = "col-md-4" style = "padding-bottom: 10px;">
-            <h2 class="page-title">カート情報</h2>
             <%= link_to "カートを空にする", carts_path, method: :delete, class:"btn btn-default btn-lg cart-all-d" %>
         </div>
     </div>
     <% total_price = total_price.to_i %>
     <% @carts.each do |cart| %>
         <div class = "row-12 clearfix cart-box">
-            <th><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+            <th><%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img pull-left profile-img", fallback: "no_image.jpg" %>
             </th>
             <th>
             <span class="cart-item-name"><%= cart.item.item_name %></span>

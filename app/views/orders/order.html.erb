@@ -1,6 +1,5 @@
 <body>
-<div class="white-box">
-<div class="container display-box">
+<div class="container white-box display-box">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 grey">
       <!-- 注文者情報を表示 -->
@@ -50,7 +49,7 @@
           <% @carts.each do |cart| %>
             <section class="itme-info">
               <!-- <div class="img"> -->
-              <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img img", fallback: "no_image.jpg" %>
+              <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img pull-left profile-img img", fallback: "no_image.jpg" %>
               <!-- </div> -->
               <p class="itemname"><%= cart.item.item_name %></p>
               <p class="item-info-price">
@@ -83,6 +82,5 @@
       <% end %>
     </div>
   </div>
-</div>
 </div>
 </body>
