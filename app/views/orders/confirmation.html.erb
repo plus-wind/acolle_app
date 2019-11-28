@@ -9,7 +9,7 @@
               <% @carts.each do |cart| %>
                 <section class="item">
                   <div class="img">
-                  <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+                  <%= attachment_image_tag cart.item, :item_image, :fill, 60, 60, format: 'jpeg', class:"img pull-left profile-img", fallback: "no_image.jpg" %>
                   </div>
                     <p class="itemname"><%= cart.item.item_name %></p>
                     <p class="item-info-price">
